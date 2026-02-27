@@ -2,6 +2,7 @@ import { AnimatedBeam } from './ui/animated-beam';
 import React, { useRef } from 'react';
 import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
 import { Handshake, Eye, ShieldCheck, Network, Archive, Smartphone } from 'lucide-react';
+import logoImage from '../static/marketing/logos/logo-without-text.png';
 
 /* ─── Stagger parent variant ────────────────────────────────────── */
 const containerVariants = {
@@ -291,14 +292,11 @@ export function PremiumActivation() {
               animate={{ scale: [1, 1.85, 1], opacity: [0.15, 0, 0.15] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 2.66 }}
             />
-            <svg
-              className="w-14 h-14 xl:w-16 xl:h-16 text-jc-teal mb-2
-                         transition-transform duration-500 group-hover:scale-110 drop-shadow-[0_0_12px_rgba(0,212,178,0.4)]"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-            </svg>
+            <img 
+              src={logoImage} 
+              alt="JointCommerce" 
+              className="w-14 h-14 xl:w-16 xl:h-16 mb-2 object-contain filter brightness-0 invert drop-shadow-[0_0_12px_rgba(0,212,178,0.4)] transition-transform duration-500 group-hover:scale-110" 
+            />
             <span className="text-[10px] xl:text-[12px] font-black tracking-widest text-white relative z-10">
               JOINTCOMMERCE
             </span>
@@ -374,9 +372,11 @@ export function PremiumActivation() {
               animate={{ scale: [1, 1.75, 1], opacity: [0.15, 0, 0.15] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 2.66 }}
             />
-            <svg className="w-12 h-12 text-jc-teal mb-1 drop-shadow-[0_0_10px_rgba(0,212,178,0.4)]" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-            </svg>
+            <img 
+              src={logoImage} 
+              alt="JointCommerce" 
+              className="w-12 h-12 mb-1 object-contain filter brightness-0 invert drop-shadow-[0_0_10px_rgba(0,212,178,0.4)]" 
+            />
             <span className="text-[10px] font-black tracking-widest text-white">JOINTCOMMERCE</span>
           </motion.div>
 
