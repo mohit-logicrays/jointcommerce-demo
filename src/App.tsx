@@ -10,7 +10,6 @@ import { CommerceNetwork } from './components/CommerceNetwork';
 import { ShoppableMedia } from './components/ShoppableMedia';
 import { ConnectedSystem } from './components/ConnectedSystem';
 import { InvestingInMedia } from './components/InvestingInMedia';
-import { HowItWorks } from './components/HowItWorks';
 import { PremiumActivation } from './components/PremiumActivation';
 import { LaunchFaster } from './components/LaunchFaster';
 import { DirectPurchase } from './components/DirectPurchase';

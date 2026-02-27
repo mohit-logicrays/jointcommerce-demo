@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Target, Users, RadioTower } from 'lucide-react';
+import bgVideo from '../static/marketing/videos/6802bef7f0d9c9a024a79671_5eca3fffe575b1eed852c2467f9b2a0f90f4ea6f (1)-transcode.mp4';
 
 export function ExtendedAudience() {
   const cards = [
@@ -21,8 +22,31 @@ export function ExtendedAudience() {
   ];
 
   return (
-    <section className="py-32 bg-jc-dark text-white relative z-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative text-white z-0 mt-[-100px] pt-[200px] pb-32 overflow-hidden bg-jc-dark">
+      {/* Angled Background Divider */}
+      <div className="absolute top-0 left-0 w-full h-full clip-path-curve-bottom"></div>
+      
+      {/* Angled Top clip-path for the container */}
+      <div 
+        className="absolute inset-0 bg-[#14151a]"
+        style={{ clipPath: "polygon(0 8%, 100% 0, 100% 100%, 0 100%)" }}
+      >
+        {/* Background Video inside the angled section */}
+        <div className="absolute inset-0 opacity-40 mix-blend-screen">
+           <video 
+             src={bgVideo} 
+             autoPlay 
+             muted 
+             loop 
+             playsInline 
+             className="w-full h-full object-cover"
+           />
+           {/* Gradient Overlay for better text legibility */}
+           <div className="absolute inset-0 bg-gradient-to-b from-[#14151a]/80 via-transparent to-[#14151a]"></div>
+        </div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
