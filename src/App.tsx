@@ -21,6 +21,7 @@ import { EnterprisePage } from './pages/EnterprisePage';
 import { ContactPage } from './pages/ContactPage';
 import { TechnologyPage } from './pages/TechnologyPage';
 import { CaseStudiesPage } from './pages/CaseStudiesPage';
+import { WhyJointCommercePage } from './pages/WhyJointCommercePage';
 
 export default function App() {
   useEffect(() => {
@@ -51,7 +52,7 @@ export default function App() {
         <Route path="/enterprise" element={<EnterprisePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/our-technology" element={<TechnologyPage />} />
-        <Route path="/why-jointcommerce" element={<CaseStudiesPage />} />
+        <Route path="/why-jointcommerce" element={<WhyJointCommercePage />} />
       </Route>
     </Routes>
   );

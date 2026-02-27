@@ -17,12 +17,12 @@ export function Navbar() {
   });
 
   const navItems = [
+    { name: 'Why JointCommerce', href: '/why-jointcommerce' },
     {
       name: 'Platform',
       children: [
         { name: 'Core Infrastructure', href: '/platform' },
         { name: 'Our Technology', href: '/our-technology' },
-        { name: 'Why JointCommerce', href: '/why-jointcommerce' },
         { name: 'Demand Network', href: '/demand-infrastructure' },
         { name: 'Shopper Directory', href: '/directory' },
       ]
