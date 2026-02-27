@@ -1,125 +1,228 @@
 import { motion } from 'framer-motion';
-import { BarChart3, ShoppingCart, Eye } from 'lucide-react';
+import { BarChart3, ShoppingCart, Eye, CheckCircle2, ChevronRight } from 'lucide-react';
+import shoppableVideo from '../static/marketing/videos/Comp dsds1.mp4';
+import logoViacom from '../static/marketing/logos/Viacom_logo.svg.png';
+import logoABC from '../static/marketing/logos/American_Broadcasting_Company_Logo.svg.png';
+import logoESPN from '../static/marketing/logos/ESPN_logos.png';
+import logoMax from '../static/marketing/logos/Max_logo.svg';
+import logoHulu from '../static/marketing/logos/Hulu_logo_(2018).svg.png';
+import logoTBS from '../static/marketing/logos/TBS_logo_2016.svg';
+import logoCNN from '../static/marketing/logos/CNN-Logo.wine.png';
+import logoSling from '../static/marketing/logos/Sling_Logo_Navy.png';
+import logoMTV from '../static/marketing/logos/MTV_New_Official_Logo_2021.png';
+import logoBravo from '../static/marketing/logos/Bravo_LOGO_2017_Black.png';
 
 export function ShoppableMedia() {
   const logos = [
-    { name: 'Viacom', src: 'https://picsum.photos/seed/viacom/100/40' },
-    { name: 'ABC', src: 'https://picsum.photos/seed/abc/100/40' },
-    { name: 'ESPN', src: 'https://picsum.photos/seed/espn/100/40' },
-    { name: 'Max', src: 'https://picsum.photos/seed/max/100/40' },
-    { name: 'Hulu', src: 'https://picsum.photos/seed/hulu/100/40' },
-    { name: 'TBS', src: 'https://picsum.photos/seed/tbs/100/40' },
-    { name: 'CNN', src: 'https://picsum.photos/seed/cnn/100/40' },
-    { name: 'Sling', src: 'https://picsum.photos/seed/sling/100/40' },
-    { name: 'MTV', src: 'https://picsum.photos/seed/mtv/100/40' },
-    { name: 'Bravo', src: 'https://picsum.photos/seed/bravo/100/40' },
+    { name: 'Viacom', src: logoViacom },
+    { name: 'ABC', src: logoABC },
+    { name: 'ESPN', src: logoESPN },
+    { name: 'Max', src: logoMax },
+    { name: 'Hulu', src: logoHulu },
+    { name: 'TBS', src: logoTBS },
+    { name: 'CNN', src: logoCNN },
+    { name: 'Sling', src: logoSling },
+    { name: 'MTV', src: logoMTV },
+    { name: 'Bravo', src: logoBravo },
+  ];
+
+  const retailerItems = [
+    "Geo-targeted activation",
+    "Brand-funded co-op participation",
+    "Routing priority",
+    "Direct purchase eligibility",
+    "Real-time revenue visibility"
+  ];
+
+  const retailerPrograms = [
+    "🚀 Growth Launch",
+    "🔁 Always-On Trade Area",
+    "🌎 Market Expansion"
+  ];
+
+  const brandItems = [
+    "Retailer menus",
+    "Direct purchase-enabled JointCommerce menus",
+    "Brand product pages",
+    "Marketplace listing pages (where available)"
+  ];
+
+  const brandPrograms = [
+    "Retail Sell-Through Starter",
+    "Statewide Performance Activation",
+    "National Co-Op Deployment"
   ];
 
   return (
-    <section className="py-24 bg-jc-light-teal overflow-hidden">
+    <section className="py-24 md:py-32 bg-[#9ef0d4] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
+        
+        {/* Main Header */}
+        <div className="text-center mb-16 lg:mb-20">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-5xl sm:text-6xl lg:text-7xl text-jc-dark font-light leading-[1.1] tracking-wide"
           >
-            <h2 className="text-5xl lg:text-7xl font-bold text-jc-dark leading-[1.1] tracking-tight mb-8">
-              SHOPPABLE<br />
-              MEDIA
-            </h2>
-            <p className="text-2xl lg:text-4xl text-jc-dark/80 font-light leading-snug">
-              BRAND&<br />
-              RETAILERS
-            </p>
-          </motion.div>
+            SHOPPABLE MEDIA
+          </motion.h2>
+        </div>
 
+        {/* Top Content Area: TV Mockup focused */}
+        <div className="flex justify-center mb-20 lg:mb-24">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="relative"
+            className="relative w-full max-w-4xl"
           >
-            {/* TV Frame Mockup */}
-            <div className="relative bg-black rounded-3xl p-4 shadow-2xl border-4 border-gray-800 aspect-video flex items-center justify-center overflow-hidden">
-              <img 
-                src="https://picsum.photos/seed/tv/800/450" 
-                alt="TV Content" 
-                className="w-full h-full object-cover rounded-xl opacity-50"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 flex items-center justify-center p-8">
-                <div className="bg-black/60 backdrop-blur-sm p-8 rounded-2xl flex gap-8 items-center border border-white/10">
-                  <img 
-                    src="https://picsum.photos/seed/product/150/300" 
-                    alt="Product" 
-                    className="w-32 h-auto rounded-lg shadow-lg"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="text-white">
-                    <h3 className="text-3xl font-bold mb-2">Cannabis<br />with a <span className="text-blue-400">Smile</span></h3>
-                    <p className="text-sm text-white/80 mb-6">Your happy place for the best weed in New Jersey</p>
-                    <div className="bg-white p-2 rounded-lg inline-block">
-                      <img 
-                        src="https://picsum.photos/seed/qr/100/100" 
-                        alt="QR Code" 
-                        className="w-24 h-24"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
-                    <p className="text-xs text-white/60 mt-2 text-center">Scan to shop now</p>
-                  </div>
-                </div>
-              </div>
+            {/* TV Screen / Frame */}
+            <div className="relative z-10 bg-[#111] rounded-md p-2 md:p-3 shadow-[0_20px_50px_rgba(0,0,0,0.3)] border-2 md:border-[3px] border-gray-800 aspect-[16/9] overflow-hidden">
+               <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-full object-cover rounded-sm"
+              >
+                <source src={shoppableVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
-            {/* TV Stand */}
-            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-48 h-8 bg-gray-800 rounded-b-xl flex justify-between px-4">
-               <div className="w-2 h-16 bg-gray-800 transform rotate-12 origin-top"></div>
-               <div className="w-2 h-16 bg-gray-800 transform -rotate-12 origin-top"></div>
+            
+            {/* Bottom bezel shadow/depth */}
+            <div className="absolute top-0 inset-x-0 h-full bg-gray-900 rounded-md translate-y-1 -z-10" />
+            
+            {/* TV Stand legs */}
+            <div className="absolute -bottom-8 md:-bottom-12 left-1/2 -translate-x-1/2 flex justify-between w-[50%] z-0">
+               <div className="w-2.5 md:w-3.5 h-10 md:h-14 bg-gray-800 transform rotate-[30deg] origin-top rounded-b-sm shadow-md"></div>
+               <div className="w-2.5 md:w-3.5 h-10 md:h-14 bg-gray-800 transform -rotate-[30deg] origin-top rounded-b-sm shadow-md"></div>
             </div>
           </motion.div>
         </div>
 
+        {/* Split Content Area: Retailers vs Brands */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-24">
+          
+          {/* Retailers Column */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-white/40 p-8 sm:p-10 rounded-3xl border border-white/60 shadow-lg backdrop-blur-sm"
+          >
+            <h3 className="text-4xl font-bold text-jc-dark mb-4 tracking-tight">RETAILERS</h3>
+            <p className="text-xl text-jc-dark/80 font-medium mb-8">
+              Enable Direct Purchase.<br />Launch Always-On Growth.
+            </p>
+            
+            <div className="mb-8">
+              <h4 className="text-lg font-bold text-jc-dark mb-4 uppercase tracking-wider">Unlock:</h4>
+              <ul className="space-y-3">
+                {retailerItems.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-jc-teal flex-shrink-0" />
+                    <span className="text-jc-dark font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-bold text-jc-dark mb-4 uppercase tracking-wider">Retailer Activation Programs:</h4>
+              <ul className="space-y-4">
+                {retailerPrograms.map((program, idx) => (
+                  <li key={idx} className="bg-white/80 py-3 px-5 rounded-xl text-jc-dark font-semibold shadow-sm flex items-center gap-2">
+                     <span className="text-lg">{program.split(" ")[0]}</span>
+                     <span>{program.substring(program.indexOf(" ") + 1)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+
+          {/* Brands Column */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-jc-dark p-8 sm:p-10 rounded-3xl border border-gray-800 shadow-xl"
+          >
+            <h3 className="text-4xl font-bold text-[#9ef0d4] mb-4 tracking-tight">BRANDS</h3>
+            <p className="text-xl text-white/90 font-medium mb-8">
+              Drive Retail Sell-Through With Measurable Revenue Performance.
+            </p>
+            
+            <div className="mb-8">
+              <h4 className="text-lg font-bold text-white/70 mb-4 uppercase tracking-wider">Route activation traffic to:</h4>
+              <ul className="space-y-3">
+                {brandItems.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <ChevronRight className="w-5 h-5 text-[#9ef0d4] mt-0.5 flex-shrink-0" />
+                    <span className="text-white/90 font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-bold text-white/70 mb-4 uppercase tracking-wider">Brand Programs:</h4>
+              <div className="space-y-3">
+                {brandPrograms.map((program, idx) => (
+                  <div key={idx} className="group flex items-center justify-between bg-gray-900/50 hover:bg-gray-800 transition-colors p-4 rounded-xl border border-gray-800 cursor-pointer">
+                    <span className="text-white font-medium group-hover:text-[#9ef0d4] transition-colors">{program}</span>
+                    <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-[#9ef0d4] transition-colors" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
+        </div>
+
         {/* Features Bar */}
         <motion.div 
-          className="mt-24 bg-white rounded-full py-6 px-8 shadow-xl flex flex-wrap justify-center gap-8 lg:gap-16 items-center max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 50 }}
+          className="bg-white rounded-full py-5 px-6 lg:py-6 lg:px-12 shadow-[0_10px_30px_rgba(0,0,0,0.08)] flex flex-wrap justify-center lg:justify-between gap-6 lg:gap-8 items-center max-w-5xl mx-auto border border-white/50 relative z-20"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="flex items-center gap-3 text-jc-dark font-medium">
-            <BarChart3 className="w-6 h-6 text-jc-teal" />
+          <div className="flex items-center gap-3 text-jc-dark font-medium text-sm lg:text-base">
+            <BarChart3 className="w-5 h-5 lg:w-6 lg:h-6 text-jc-teal" />
             <span>Always-on growth</span>
           </div>
           <div className="w-px h-8 bg-gray-200 hidden md:block"></div>
-          <div className="flex items-center gap-3 text-jc-dark font-medium">
-            <ShoppingCart className="w-6 h-6 text-jc-teal" />
+          <div className="flex items-center gap-3 text-jc-dark font-medium text-sm lg:text-base">
+            <ShoppingCart className="w-5 h-5 lg:w-6 lg:h-6 text-jc-teal" />
             <span>Direct-to-purchase routing</span>
           </div>
           <div className="w-px h-8 bg-gray-200 hidden md:block"></div>
-          <div className="flex items-center gap-3 text-jc-dark font-medium">
-            <Eye className="w-6 h-6 text-jc-teal" />
+          <div className="flex items-center gap-3 text-jc-dark font-medium text-sm lg:text-base">
+            <Eye className="w-5 h-5 lg:w-6 lg:h-6 text-jc-teal" />
             <span>Proven ROAS visibility</span>
           </div>
         </motion.div>
 
         {/* Logos Marquee */}
-        <div className="mt-20 overflow-hidden">
+        <div className="mt-16 lg:mt-20 overflow-hidden relative z-10">
           <div className="flex gap-12 items-center animate-marquee whitespace-nowrap">
             {[...logos, ...logos].map((logo, i) => (
               <img 
                 key={i} 
                 src={logo.src} 
                 alt={logo.name} 
-                className="h-8 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all"
+                className="h-8 object-contain transition-all hover:scale-110 cursor-pointer"
                 referrerPolicy="no-referrer"
               />
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );

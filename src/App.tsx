@@ -5,7 +5,9 @@
 
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { CommerceNetwork } from './components/CommerceNetwork';
 import { ShoppableMedia } from './components/ShoppableMedia';
+import { ConnectedSystem } from './components/ConnectedSystem';
 import { InvestingInMedia } from './components/InvestingInMedia';
 import { HowItWorks } from './components/HowItWorks';
 import { PremiumActivation } from './components/PremiumActivation';
@@ -21,7 +23,9 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <CommerceNetwork />
         <ShoppableMedia />
+        <ConnectedSystem />
         <InvestingInMedia />
         <HowItWorks />
         <PremiumActivation />
