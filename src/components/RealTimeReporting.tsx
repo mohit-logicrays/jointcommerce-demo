@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { CheckCircle2, BarChart3, PieChart, TrendingUp } from 'lucide-react';
+import { CheckCircle2, BarChart3, Receipt } from 'lucide-react';
 
 export function RealTimeReporting() {
   const metrics = [
@@ -63,161 +63,114 @@ export function RealTimeReporting() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            {/* Dashboard Mockup */}
-            <div className="relative bg-white rounded-3xl p-6 shadow-2xl border border-gray-100">
-              {/* Header */}
-              <div className="flex justify-between items-center mb-8 pb-4 border-b border-gray-100">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                  <span className="ml-4 text-xs font-mono text-gray-400">analytics_v2_live.sh</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-jc-teal animate-pulse"></div>
-                  <span className="text-xs font-bold text-jc-teal uppercase tracking-widest">LIVE FEED</span>
-                </div>
-              </div>
+            {/* Laptop Mockup Background Glow */}
+            <div className="absolute inset-0 bg-jc-teal/10 blur-[100px] rounded-full scale-110 -z-10"></div>
 
-              {/* Main Content */}
-              <div className="space-y-8">
-                {/* Top Metrics */}
-                <div className="flex justify-between items-end">
-                  <div>
-                    <h3 className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">REVENUE ATTRIBUTION</h3>
-                    <div className="flex gap-4">
-                      <div className="bg-gray-50 px-4 py-2 rounded-lg border border-gray-100">
-                        <p className="text-[10px] text-gray-500 uppercase font-bold mb-1">ROAS</p>
-                        <p className="text-xl font-bold text-jc-teal">14.2x</p>
-                      </div>
-                      <div className="bg-gray-50 px-4 py-2 rounded-lg border border-gray-100">
-                        <p className="text-[10px] text-gray-500 uppercase font-bold mb-1">CONVERSION</p>
-                        <p className="text-xl font-bold text-gray-900">4.8%</p>
-                      </div>
-                    </div>
+            {/* Laptop Screen Body */}
+            <div className="relative w-full aspect-[16/10] bg-[#1a1c23] rounded-t-2xl md:rounded-t-3xl p-2 md:p-3 shadow-2xl z-20 flex flex-col items-center">
+              {/* Camera Notch */}
+              <div className="absolute top-2 md:top-3 left-1/2 -translate-x-1/2 w-16 md:w-24 h-3 md:h-4 bg-[#1a1c23] rounded-b-md md:rounded-b-lg z-30"></div>
+              
+              {/* Display Area */}
+              <div className="bg-white w-full h-full rounded-lg md:rounded-xl overflow-hidden relative flex flex-col text-[#0f172a]">
+                
+                {/* Dashboard Top Header */}
+                <div className="flex justify-between items-center p-3 md:p-6 pb-2 md:pb-4 border-b border-gray-100">
+                  <div className="h-6 md:h-8 px-4 rounded-full border border-gray-200 flex items-center bg-gray-50 text-[8px] md:text-[10px] text-gray-500 font-mono tracking-wider w-1/2 md:w-1/3">
+                    04/18/2023 - 09/25/2023
                   </div>
-                  <div className="text-right">
-                    <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Last 24 Hours</p>
-                    <div className="flex items-end gap-2 h-24">
-                      {[40, 70, 45, 90, 60, 80].map((height, i) => (
-                        <div 
-                          key={i} 
-                          className="w-8 bg-jc-teal/20 rounded-t-sm relative group"
-                          style={{ height: `${height}%` }}
-                        >
-                          <div 
-                            className="absolute bottom-0 left-0 right-0 bg-jc-teal rounded-t-sm transition-all duration-500"
-                            style={{ height: `${height * 0.8}%` }}
-                          />
+                  <div className="h-6 md:h-8 px-4 md:px-6 bg-[#b9f2e5] text-jc-dark text-[8px] md:text-[10px] font-bold tracking-widest uppercase flex items-center rounded-full">
+                    Submit
+                  </div>
+                </div>
+
+                {/* Dashboard Tabs */}
+                <div className="flex px-3 md:px-6 gap-6 md:gap-8 border-b border-gray-100 text-[10px] md:text-xs">
+                  <div className="font-bold border-b-2 border-jc-dark pb-3 text-jc-dark -mb-[1px]">Overall Summary</div>
+                  <div className="font-medium text-gray-400 pb-3 hover:text-gray-600 transition-colors cursor-pointer">Audience Trends</div>
+                </div>
+
+                <div className="flex-1 p-3 md:p-6 flex flex-col relative">
+                  
+                  {/* Blurred Background Grid */}
+                  <div className="grid grid-cols-4 gap-2 md:gap-4 mb-4 md:mb-8 filter blur-sm opacity-60">
+                    {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+                      <div key={i} className="aspect-[2/1] bg-[#e6fcf5] rounded-xl hidden md:flex flex-col justify-center items-center">
+                        <div className="w-8 h-8 rounded-full bg-[#d0f4e8] mb-2 mx-auto"></div>
+                        <div className="h-2 w-16 bg-[#bcece0] rounded-full mx-auto"></div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Graph Area */}
+                  <div className="flex-1 mt-auto relative min-h-[100px] md:min-h-[160px] border-l border-b border-gray-100/50">
+                    {/* Y-axis labels */}
+                    <div className="absolute -left-6 top-0 text-[8px] text-gray-400">2,00<br/>0</div>
+                    <div className="absolute -left-6 top-1/2 -translate-y-1/2 text-[8px] text-gray-400">1,00<br/>0</div>
+                    <div className="absolute -left-4 bottom-0 text-[8px] text-gray-400">0</div>
+                    
+                    {/* Grid lines */}
+                    <div className="absolute top-0 left-0 right-0 h-px bg-gray-100/50"></div>
+                    <div className="absolute top-1/2 left-0 right-0 h-px bg-gray-100/50"></div>
+                    <div className="absolute top-1/4 left-0 right-0 w-px h-full bg-gray-100/50"></div>
+                    <div className="absolute top-1/2 left-0 right-0 w-px h-full bg-gray-100/50" style={{ left: '25%' }}></div>
+                    <div className="absolute top-1/2 left-0 right-0 w-px h-full bg-gray-100/50" style={{ left: '50%' }}></div>
+                    <div className="absolute top-1/2 left-0 right-0 w-px h-full bg-gray-100/50" style={{ left: '75%' }}></div>
+
+                    {/* Bars & Lines */}
+                    <div className="absolute inset-0 flex items-end justify-between px-4 md:px-12 pointer-events-none">
+                      {[
+                        { bar1: 50, bar2: 5, label: "Nov '23" },
+                        { bar1: 50, bar2: 30, label: "02 Nov '23" },
+                        { bar1: 50, bar2: 0, label: "03 Nov '23" },
+                        { bar1: 50, bar2: 45, label: "04 Nov '23" },
+                        { bar1: 50, bar2: 45, label: "05 Nov '23" },
+                        { bar1: 50, bar2: 45, label: "06 Nov '23" },
+                        { bar1: 50, bar2: 0, label: "07 Nov '23" }
+                      ].map((data, idx) => (
+                        <div key={idx} className="relative flex flex-col items-center h-[90%] w-8 justify-end">
+                           <div className="flex items-end gap-1 w-full h-full relative">
+                             {/* Light Teal Bar */}
+                             <div className="w-1/2 bg-[#b9f2e5] opacity-50 absolute bottom-0 left-0" style={{ height: `${data.bar1}%` }}></div>
+                             {/* Black Bar */}
+                             <div className="w-1/2 bg-jc-dark absolute bottom-0 right-0 z-10" style={{ height: `${data.bar2}%` }}></div>
+                           </div>
+                           <span className="absolute -bottom-6 text-[8px] text-gray-400 text-center uppercase tracking-widest">{data.label}</span>
                         </div>
                       ))}
                     </div>
-                  </div>
-                </div>
 
-                {/* Data Table */}
-                <div className="border border-gray-100 rounded-xl overflow-hidden">
-                  <table className="w-full text-left text-sm">
-                    <thead className="bg-gray-50 text-gray-500 text-xs uppercase font-bold">
-                      <tr>
-                        <th className="px-4 py-3">ORDER ID</th>
-                        <th className="px-4 py-3">BRAND</th>
-                        <th className="px-4 py-3 text-right">REVENUE</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-100">
-                      {[
-                        { id: "#JC-99210", brand: "Enterprise Store A", rev: "$1,240.00" },
-                        { id: "#JC-99209", brand: "Global Brand X", rev: "$842.15" },
-                        { id: "#JC-99208", brand: "Lifestyle Gear", rev: "$2,105.50" },
-                      ].map((row, i) => (
-                        <tr key={i} className="hover:bg-gray-50 transition-colors">
-                          <td className="px-4 py-3 font-mono text-xs text-gray-500">{row.id}</td>
-                          <td className="px-4 py-3 font-medium text-gray-900">{row.brand}</td>
-                          <td className="px-4 py-3 font-bold text-gray-900 text-right">{row.rev}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                    {/* Connecting Line Graph */}
+                    <svg className="absolute inset-0 w-full h-[90%] left-0 bottom-[10%] drop-shadow-sm pointer-events-none" preserveAspectRatio="none" viewBox="0 0 100 100">
+                      <path d="M 8 98 L 22 55 L 36 98 L 50 15 L 64 5 L 78 15 L 92 98" fill="none" stroke="#0f172a" strokeWidth="0.8" />
+                    </svg>
+
+                  </div>
+
+                  {/* Floating Interactive "Driven Revenue" Card */}
+                  <motion.div 
+                    className="absolute top-4 md:top-8 left-4 md:left-8 bg-[#b9f2e5] rounded-xl md:rounded-2xl p-4 md:p-6 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border border-[#a6eade] z-30 min-w-[140px] md:min-w-[200px] cursor-pointer"
+                    whileHover={{ scale: 1.05, y: -5 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  >
+                    <div className="w-8 md:w-12 h-8 md:h-12 rounded-lg md:rounded-xl bg-jc-dark flex items-center justify-center mb-3 md:mb-4 shadow-inner">
+                      <Receipt className="w-4 md:w-6 h-4 md:h-6 text-[#b9f2e5]" />
+                    </div>
+                    <h3 className="text-sm md:text-lg font-bold text-jc-dark tracking-wide">Driven Revenue</h3>
+                  </motion.div>
+
                 </div>
               </div>
+            </div>
 
-              {/* Floating Elements */}
-              <motion.div 
-                className="absolute -bottom-12 -right-12 bg-white p-6 rounded-2xl shadow-2xl border border-gray-100 w-64 z-30"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-jc-teal/10 flex items-center justify-center">
-                    <PieChart className="w-5 h-5 text-jc-teal" />
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold text-gray-500 uppercase tracking-widest">MARKET SHARE</h4>
-                    <p className="text-lg font-bold text-gray-900">California</p>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex justify-between text-xs">
-                    <span className="text-gray-500">Los Angeles</span>
-                    <span className="font-bold text-gray-900">45%</span>
-                  </div>
-                  <div className="w-full bg-gray-100 rounded-full h-1.5">
-                    <div className="bg-jc-teal h-1.5 rounded-full" style={{ width: '45%' }}></div>
-                  </div>
-                  <div className="flex justify-between text-xs pt-2">
-                    <span className="text-gray-500">San Francisco</span>
-                    <span className="font-bold text-gray-900">30%</span>
-                  </div>
-                  <div className="w-full bg-gray-100 rounded-full h-1.5">
-                    <div className="bg-jc-teal/60 h-1.5 rounded-full" style={{ width: '30%' }}></div>
-                  </div>
-                </div>
-              </motion.div>
+            {/* Laptop Base Lip & Hinge */}
+            <div className="relative w-[114%] -ml-[7%] h-3 md:h-5 bg-gradient-to-b from-[#e2e8f0] to-[#94a3b8] rounded-b-xl md:rounded-b-2xl shadow-xl z-20 flex justify-center items-start border border-[#cbd5e1]">
+               {/* Indent / Opening lip */}
+               <div className="w-1/4 h-1 md:h-1.5 bg-[#cbd5e1] rounded-b-md mx-auto shadow-inner"></div>
             </div>
             
-            {/* Small Laptop Mockup Below */}
-            <motion.div 
-              className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-full max-w-md z-20"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <div className="relative bg-gray-800 rounded-t-xl p-2 shadow-2xl border-2 border-gray-900 aspect-[16/10] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-white m-1 rounded-lg overflow-hidden flex flex-col">
-                  <div className="h-6 bg-gray-100 border-b border-gray-200 flex items-center px-2 gap-1">
-                    <div className="w-2 h-2 rounded-full bg-red-400"></div>
-                    <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
-                    <div className="w-2 h-2 rounded-full bg-green-400"></div>
-                  </div>
-                  <div className="flex-1 p-4 flex flex-col gap-4">
-                    <div className="flex justify-between items-center">
-                      <div className="h-4 bg-gray-200 rounded w-1/4"></div>
-                      <div className="h-4 bg-gray-200 rounded w-1/6"></div>
-                    </div>
-                    <div className="flex-1 flex items-end gap-2">
-                      {[30, 50, 40, 80, 60, 90, 70].map((h, i) => (
-                        <div key={i} className="flex-1 bg-jc-teal rounded-t-sm" style={{ height: `${h}%` }}></div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="relative z-20 h-3 bg-gray-300 rounded-b-lg shadow-xl w-[110%] -ml-[5%] flex justify-center">
-                <div className="w-16 h-1 bg-gray-400 rounded-b-sm"></div>
-              </div>
-              
-              {/* Text next to laptop */}
-              <div className="absolute top-1/2 -right-32 -translate-y-1/2 hidden xl:block">
-                <h3 className="text-xl font-bold text-jc-dark uppercase tracking-widest leading-tight">
-                  BUILT FOR<br />
-                  ACCOUNTABILITY.
-                </h3>
-              </div>
-            </motion.div>
+            {/* Laptop Base Shadow Extender */}
+            <div className="relative w-[110%] -ml-[5%] h-6 md:h-10 bg-[#e2e8f0]/40 -mt-2 md:-mt-4 rounded-b-3xl blur-md -z-10"></div>
           </motion.div>
         </div>
       </div>
