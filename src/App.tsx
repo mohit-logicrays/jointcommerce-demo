@@ -18,6 +18,7 @@ import { AdvertisersPage } from './pages/AdvertisersPage';
 import { DirectoryPage } from './pages/DirectoryPage';
 import { ShoppersPage } from './pages/ShoppersPage';
 import { EnterprisePage } from './pages/EnterprisePage';
+import { ContactPage } from './pages/ContactPage';
 
 export default function App() {
   useEffect(() => {
@@ -46,6 +47,7 @@ export default function App() {
         <Route path="/directory" element={<DirectoryPage />} />
         <Route path="/shoppers" element={<ShoppersPage />} />
         <Route path="/enterprise" element={<EnterprisePage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Route>
     </Routes>
   );

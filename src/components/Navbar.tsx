@@ -100,9 +100,9 @@ export function Navbar() {
 
           {/* Contact Button */}
           <div className="hidden lg:flex items-center">
-            <button className="px-6 py-2.5 rounded-full border border-jc-teal text-jc-teal hover:bg-jc-teal hover:text-jc-dark transition-colors text-sm font-bold shadow-lg shadow-jc-teal/10">
+            <Link to="/contact" className="px-6 py-2.5 rounded-full border border-jc-teal text-jc-teal hover:bg-jc-teal hover:text-jc-dark transition-colors text-sm font-bold shadow-lg shadow-jc-teal/10 inline-block">
               Contact Us
-            </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -174,9 +174,9 @@ export function Navbar() {
                 </div>
               ))}
               <div className="pt-6 pb-2 px-3">
-                <button className="w-full px-6 py-4 rounded-full border-2 border-jc-teal font-bold bg-jc-teal text-jc-dark transition-colors shadow-lg shadow-jc-teal/20 text-lg">
+                <Link to="/contact" onClick={handleMobileNavClick} className="w-full px-6 py-4 rounded-full border-2 border-jc-teal font-bold bg-jc-teal text-jc-dark transition-colors shadow-lg shadow-jc-teal/20 text-lg block text-center">
                   Contact Us
-                </button>
+                </Link>
               </div>
             </div>
           </motion.div>

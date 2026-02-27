@@ -68,6 +68,7 @@ export function Footer() {
               <ul className="space-y-4 text-xs font-medium text-jc-dark/70">
                 <li><Link to="/enterprise" className="hover:text-jc-teal transition-colors">Enterprise</Link></li>
                 <li><Link to="/advertisers" className="hover:text-jc-teal transition-colors">Advertisers</Link></li>
+                <li><Link to="/contact" className="hover:text-jc-teal transition-colors">Contact Us</Link></li>
                 <li><a href="#" className="hover:text-jc-teal transition-colors">Privacy Policy</a></li>
                 <li><a href="#" className="hover:text-jc-teal transition-colors">Terms of Service</a></li>
               </ul>
