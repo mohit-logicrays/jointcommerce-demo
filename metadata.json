@@ -1,0 +1,5 @@
+{
+  "name": "JointCommerce Marketing Site",
+  "description": "A marketing website with parallax and scroll animations built using React, Vite, Tailwind CSS, and Framer Motion.",
+  "requestFramePermissions": []
+}
