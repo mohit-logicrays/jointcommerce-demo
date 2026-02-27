@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Search, ShoppingCart, Lock, Info, CheckCircle2, Menu, Bell, User, Star, ShieldCheck } from 'lucide-react';
+import logoImage from '../static/marketing/logos/logo-without-text.png';
 
 export function DirectPurchase() {
   const features = [
@@ -84,11 +85,9 @@ export function DirectPurchase() {
                 <div className="px-3 border-b border-gray-100 pb-2">
                    <div className="flex items-center justify-between">
                      <div className="flex items-center gap-4">
-                       <div className="flex items-center gap-1">
-                          <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-black">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                          </svg>
-                          <span className="font-black text-sm tracking-tight">JointCommerce</span>
+                       <div className="flex items-center gap-1.5">
+                          <img src={logoImage} alt="JointCommerce Link" className="w-5 h-5 object-contain filter brightness-0" />
+                          <span className="font-black text-[13px] tracking-tight text-black">JointCommerce</span>
                        </div>
                        <div className="hidden sm:flex text-[9px] font-bold text-gray-700 gap-3">
                          <span className="flex items-center gap-0.5">Dispensaries <span className="text-[6px]">▼</span></span>

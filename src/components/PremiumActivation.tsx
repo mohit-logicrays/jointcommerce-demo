@@ -90,8 +90,9 @@ export function PremiumActivation() {
   const maskImage = useMotionTemplate`radial-gradient(300px at ${mouseX}px ${mouseY}px, black 0%, transparent 100%)`;
 
   const beamProps = {
-    pathColor: '#e0fcf6', // Light teal line
-    gradientStartColor: '#00D4B2', // jc-teal
+    pathColor: '#00D4B2', // Teal line
+    pathOpacity: 0.3,     // Increased opacity for visibility
+    gradientStartColor: '#0efbba', // Bright mint
     gradientStopColor: '#00D4B2', // jc-teal
   };
 

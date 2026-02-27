@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { BarChart3, ShoppingCart, Eye, CheckCircle2, ChevronRight } from 'lucide-react';
+import { BarChart3, ShoppingCart, Eye, CheckCircle2, ChevronRight, Rocket, Repeat, Globe } from 'lucide-react';
 import shoppableVideo from '../static/marketing/videos/Comp dsds1.mp4';
 import logoViacom from '../static/marketing/logos/Viacom_logo.svg.png';
 import logoABC from '../static/marketing/logos/American_Broadcasting_Company_Logo.svg.png';
@@ -35,9 +35,9 @@ export function ShoppableMedia() {
   ];
 
   const retailerPrograms = [
-    "🚀 Growth Launch",
-    "🔁 Always-On Trade Area",
-    "🌎 Market Expansion"
+    { icon: <Rocket className="w-5 h-5 text-jc-teal" />, text: "Growth Launch" },
+    { icon: <Repeat className="w-5 h-5 text-jc-teal" />, text: "Always-On Trade Area" },
+    { icon: <Globe className="w-5 h-5 text-jc-teal" />, text: "Market Expansion" }
   ];
 
   const brandItems = [
@@ -181,9 +181,11 @@ export function ShoppableMedia() {
               <h4 className="text-lg font-bold text-jc-dark mb-4 uppercase tracking-wider">Retailer Activation Programs:</h4>
               <ul className="space-y-4">
                 {retailerPrograms.map((program, idx) => (
-                  <li key={idx} className="bg-white/80 py-3 px-5 rounded-xl text-jc-dark font-semibold shadow-sm flex items-center gap-2">
-                     <span className="text-lg">{program.split(" ")[0]}</span>
-                     <span>{program.substring(program.indexOf(" ") + 1)}</span>
+                  <li key={idx} className="bg-white/80 py-3 px-5 rounded-xl text-jc-dark font-semibold shadow-sm flex items-center gap-3">
+                     <div className="bg-jc-teal/10 p-1.5 rounded-lg">
+                       {program.icon}
+                     </div>
+                     <span>{program.text}</span>
                   </li>
                 ))}
               </ul>
