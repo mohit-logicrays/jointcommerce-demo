@@ -231,7 +231,7 @@ export function AdTechSolutions() {
                                 className="w-full text-left flex justify-between items-center py-4 focus:outline-none"
                                 onClick={() => setOpenIndex(idx)}
                              >
-                                 <h3 className={`text-lg sm:text-xl md:text-2xl font-bold pr-8 transition-colors duration-300 ${isOpen ? 'text-[#0efbba]' : 'text-white/70 hover:text-white'}`}>
+                                 <h3 className={`text-lg sm:text-xl md:text-2xl font-extrabold pr-8 transition-colors duration-300 tracking-tight ${isOpen ? 'text-[#0efbba]' : 'text-white/70 hover:text-white'}`}>
                                      {sol.title}
                                  </h3>
                                  <motion.div animate={{ rotate: isOpen ? 180 : 0 }} className="flex-shrink-0">
@@ -251,7 +251,7 @@ export function AdTechSolutions() {
                                          </p>
                                          <Link 
                                             to="/solutions" 
-                                            className="inline-block px-8 py-3 bg-transparent border border-white/20 text-white rounded-full hover:bg-white/10 transition-colors font-bold tracking-widest text-xs uppercase"
+                                            className="inline-block px-8 py-3 bg-white/5 border border-white/20 text-white rounded-lg hover:bg-white/10 hover:border-white/30 transition-all font-semibold tracking-wide text-sm"
                                          >
                                             Learn More
                                          </Link>

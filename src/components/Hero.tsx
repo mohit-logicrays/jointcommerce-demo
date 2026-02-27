@@ -74,17 +74,17 @@ export function Hero() {
         >
           <div className="relative max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 w-full mt-auto mb-auto">
             {/* Title */}
-            <div className="w-full mb-8">
-              <h1 className="text-4xl sm:text-5xl lg:text-[4.5rem] font-extrabold text-white tracking-tight drop-shadow-lg leading-[1.1]">
+            <div className="w-full mb-10">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight drop-shadow-md leading-[1.1]">
                 Turn High-Intent Discovery<br />
-                Into <span className="text-jc-teal border-b-[6px] border-jc-teal pb-1">Direct Purchases</span>
+                Into <span className="text-jc-teal border-b-[4px] border-jc-teal pb-1">Direct Purchases</span>
               </h1>
             </div>
 
             {/* Two Columns */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
               {/* Left Column */}
-              <div className="lg:col-span-8 bg-black/40 backdrop-blur-md rounded-[2rem] p-8 lg:p-10 border border-white/10 shadow-xl flex flex-col justify-center">
+              <div className="lg:col-span-8 bg-black/40 backdrop-blur-md rounded-2xl p-8 lg:p-10 border border-white/10 shadow-lg flex flex-col justify-center">
                 <div className="text-white/80 text-[1.05rem] lg:text-[1.1rem] leading-relaxed space-y-6 font-medium">
                   <p>
                     <strong className="text-white">JointCommerce</strong> captures <span className="text-jc-teal font-bold">A21+ shoppers</span> actively searching <span className="text-jc-teal font-bold">"where to buy"</span> through our SEO-powered shopper directory and amplifies that demand with shoppable activation across curated premium publisher environments — routing consumers directly to purchase on JointCommerce (when enabled) and across participating retailer, brand, and marketplace commerce systems.
@@ -92,7 +92,7 @@ export function Hero() {
                   <p>
                     As the <span className="text-jc-teal font-bold">infrastructure layer</span> connecting discovery to commerce, JointCommerce enables <strong className="text-white">always-on activation</strong> with <strong className="text-white">real-time, measurable online revenue performance.</strong>
                   </p>
-                  <p className="font-extrabold text-white text-2xl pt-2">
+                  <p className="font-extrabold text-white text-2xl pt-2 tracking-tight">
                     Launch quickly. Scale continuously. Measure confidently.
                   </p>
                 </div>
@@ -100,16 +100,16 @@ export function Hero() {
 
               {/* Right Column */}
               <div className="lg:col-span-4 flex flex-col">
-                <div className="w-full h-full bg-[#0a1111]/80 backdrop-blur-md p-8 rounded-[2rem] border-2 border-jc-teal/40 shadow-[0_0_20px_rgba(0,163,143,0.15)] flex flex-col items-center text-center justify-center">
+                <div className="w-full h-full bg-[#0a1111]/80 backdrop-blur-md p-8 rounded-2xl border border-jc-teal/30 shadow-lg flex flex-col items-center text-center justify-center">
                   {/* Circular A21+ Badge */}
                   <div className="relative w-[100px] h-[100px] rounded-full flex items-center justify-center mb-6">
                     {/* Rotating SVG Text */}
                     <motion.div 
-                      className="absolute inset-0 z-0"
+                      className="absolute inset-0 z-0 opacity-80"
                       animate={{ rotate: 360 }}
                       transition={{ repeat: Infinity, ease: "linear", duration: 15 }}
                     >
-                      <svg viewBox="0 0 100 100" className="w-full h-full text-jc-teal overflow-visible drop-shadow-md">
+                      <svg viewBox="0 0 100 100" className="w-full h-full text-jc-teal overflow-visible drop-shadow-sm">
                         <path id="curvePathRight" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
                         <text className="text-[13px] font-bold tracking-[0.2em] fill-current uppercase">
                           <textPath href="#curvePathRight" startOffset="0%">
@@ -120,19 +120,19 @@ export function Hero() {
                     </motion.div>
                     
                     {/* Inner Badge */}
-                    <div className="relative w-14 h-14 rounded-full flex items-center justify-center bg-jc-teal z-10 shadow-[0_0_15px_rgba(0,163,143,0.4)] border-2 border-jc-dark/20">
+                    <div className="relative w-14 h-14 rounded-full flex items-center justify-center bg-[#00D4B2] z-10 shadow-md border-2 border-[#111]">
                       <span className="text-jc-dark font-extrabold text-lg">A21+</span>
                     </div>
                   </div>
                   
-                  <h3 className="text-white font-bold text-lg leading-snug mb-4">
+                  <h3 className="text-white font-bold text-lg leading-snug mb-4 tracking-tight">
                     Drive Measurable Online Sales<br />From<br />
                     <span className="text-jc-teal">Verified A21+</span><br />
                     <span className="text-[0.9rem] font-medium text-white/80">Zero Party High-Intent Shoppers</span>
                   </h3>
                   
                   <p className="text-white/80 text-[0.85rem] leading-relaxed mx-auto">
-                    <span className="text-jc-teal">JointCommerce</span> captures shoppers actively searching <span className="text-jc-teal">"where to buy,"</span> activates them across <span className="text-jc-teal">premium publisher environments</span>, and routes them directly to purchase - with <span className="text-jc-teal font-medium">real-time revenue reporting.</span>
+                    <span className="text-jc-teal font-semibold">JointCommerce</span> captures shoppers actively searching <span className="text-jc-teal">"where to buy,"</span> activates them across <span className="text-jc-teal">premium publisher environments</span>, and routes them directly to purchase - with <span className="text-jc-teal font-medium">real-time revenue reporting.</span>
                   </p>
                 </div>
               </div>
@@ -140,37 +140,37 @@ export function Hero() {
 
             {/* Buttons */}
             <div className="flex flex-wrap items-center gap-4 mt-8">
-              <button className="h-[48px] px-8 rounded-full bg-jc-teal text-jc-dark font-bold hover:bg-white transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg group">
+              <button className="h-[48px] px-8 rounded-lg bg-jc-teal text-jc-dark font-bold hover:bg-white transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md group border border-transparent">
                 Book Demo <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
-              <button className="h-[48px] px-8 rounded-full bg-white text-jc-dark font-bold hover:bg-[#e0e0e0] transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg group">
+              <button className="h-[48px] px-8 rounded-lg bg-white text-jc-dark font-bold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md border border-gray-200 group">
                 Claim Your Dispensary Listing <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
-              <button className="h-[48px] pl-8 pr-1.5 rounded-full bg-black/60 backdrop-blur-sm border border-white/20 text-white font-bold hover:bg-white/10 transition-colors flex items-center gap-4 group cursor-pointer shadow-lg">
-                Enable Direct Purchase on Your Menu
-                <div className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center transition-all group-hover:bg-white flex-shrink-0">
+              <button className="h-[48px] pl-6 pr-1.5 rounded-lg bg-black/60 backdrop-blur-sm border border-white/20 text-white font-semibold hover:bg-white/10 transition-colors flex items-center gap-3 group cursor-pointer shadow-sm">
+                Enable Direct Purchase
+                <div className="w-8 h-8 rounded-md bg-white/10 border border-white/20 flex items-center justify-center transition-all group-hover:bg-white flex-shrink-0">
                   <ArrowRight className="w-4 h-4 text-white group-hover:text-jc-dark transition-colors stroke-[2.5]" />
                 </div>
               </button>
             </div>
 
             {/* Bottom Stats Pills */}
-            <div className="inline-flex flex-wrap items-center justify-start gap-x-8 gap-y-4 px-6 md:px-10 py-4 bg-black/60 backdrop-blur-md rounded-2xl md:rounded-full border border-white/10 mt-6 lg:mt-8 w-full sm:w-auto">
+            <div className="inline-flex flex-wrap items-center justify-start gap-x-8 gap-y-4 px-6 md:px-8 py-4 bg-black/60 backdrop-blur-md rounded-2xl border border-white/10 mt-6 lg:mt-8 w-full sm:w-auto shadow-sm">
               <div className="flex items-center gap-2.5">
-                <div className="w-2 h-2 rounded-full bg-jc-teal shadow-[0_0_8px_rgba(0,163,143,0.8)]"></div>
-                <span className="text-white text-sm font-bold">12,000+ Retail Menus Connected</span>
+                <div className="w-2 h-2 rounded-full bg-jc-teal shadow-[0_0_6px_rgba(0,212,178,0.5)]"></div>
+                <span className="text-white/90 text-[13px] font-semibold tracking-wide">12,000+ Retail Menus Connected</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <div className="w-2 h-2 rounded-full bg-jc-teal shadow-[0_0_8px_rgba(0,163,143,0.8)]"></div>
-                <span className="text-white text-sm font-bold">A21+ Verified Discovery</span>
+                <div className="w-2 h-2 rounded-full bg-jc-teal shadow-[0_0_6px_rgba(0,212,178,0.5)]"></div>
+                <span className="text-white/90 text-[13px] font-semibold tracking-wide">A21+ Verified Discovery</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <div className="w-2 h-2 rounded-full bg-jc-teal shadow-[0_0_8px_rgba(0,163,143,0.8)]"></div>
-                <span className="text-white text-sm font-bold">Premium Publisher Activation</span>
+                <div className="w-2 h-2 rounded-full bg-jc-teal shadow-[0_0_6px_rgba(0,212,178,0.5)]"></div>
+                <span className="text-white/90 text-[13px] font-semibold tracking-wide">Premium Publisher Activation</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <div className="w-2 h-2 rounded-full bg-jc-teal shadow-[0_0_8px_rgba(0,163,143,0.8)]"></div>
-                <span className="text-white text-sm font-bold">100% Viewable Standards</span>
+                <div className="w-2 h-2 rounded-full bg-jc-teal shadow-[0_0_6px_rgba(0,212,178,0.5)]"></div>
+                <span className="text-white/90 text-[13px] font-semibold tracking-wide">100% Viewable Standards</span>
               </div>
             </div>
             

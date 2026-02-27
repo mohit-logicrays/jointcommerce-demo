@@ -63,7 +63,7 @@ export function ShoppableMedia() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl sm:text-6xl lg:text-7xl text-jc-dark font-light leading-[1.1] tracking-wide"
+            className="text-5xl sm:text-6xl lg:text-7xl text-jc-dark font-extrabold leading-[1.1] tracking-tight uppercase"
           >
             SHOPPABLE MEDIA
           </motion.h2>
@@ -160,7 +160,7 @@ export function ShoppableMedia() {
             transition={{ duration: 0.8 }}
             className="bg-white/40 p-8 sm:p-10 rounded-3xl border border-white/60 shadow-lg backdrop-blur-sm"
           >
-            <h3 className="text-4xl font-bold text-jc-dark mb-4 tracking-tight">RETAILERS</h3>
+            <h3 className="text-4xl font-extrabold text-jc-dark mb-4 tracking-tight uppercase">RETAILERS</h3>
             <p className="text-xl text-jc-dark/80 font-medium mb-8">
               Enable Direct Purchase.<br />Launch Always-On Growth.
             </p>
@@ -200,8 +200,8 @@ export function ShoppableMedia() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-jc-dark p-8 sm:p-10 rounded-3xl border border-gray-800 shadow-xl"
           >
-            <h3 className="text-4xl font-bold text-[#9ef0d4] mb-4 tracking-tight">BRANDS</h3>
-            <p className="text-xl text-white/90 font-medium mb-8">
+            <h3 className="text-4xl font-extrabold text-[#9ef0d4] mb-4 tracking-tight uppercase">BRANDS</h3>
+            <p className="text-xl text-white/90 font-medium mb-8 tracking-tight">
               Drive Retail Sell-Through With Measurable Revenue Performance.
             </p>
             
@@ -234,7 +234,7 @@ export function ShoppableMedia() {
 
         {/* Features Bar */}
         <motion.div 
-          className="bg-white rounded-full py-5 px-6 lg:py-6 lg:px-12 shadow-[0_10px_30px_rgba(0,0,0,0.08)] flex flex-wrap justify-center lg:justify-between gap-6 lg:gap-8 items-center max-w-5xl mx-auto border border-white/50 relative z-20"
+          className="bg-white rounded-2xl py-5 px-6 lg:py-6 lg:px-12 shadow-[0_10px_30px_rgba(0,0,0,0.08)] flex flex-wrap justify-center lg:justify-between gap-6 lg:gap-8 items-center max-w-5xl mx-auto border border-gray-100 relative z-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

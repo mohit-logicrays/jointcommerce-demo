@@ -164,7 +164,7 @@ export function PremiumActivation() {
         {/* ── Header ─────────────────────────────────────────────── */}
         <div className="text-center mb-16 lg:mb-4">
           <motion.h2
-            className="text-4xl lg:text-5xl xl:text-6xl font-black tracking-widest uppercase mb-4"
+            className="text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight uppercase mb-4"
             variants={headingVariants}
             initial="hidden"
             whileInView="visible"
@@ -189,7 +189,7 @@ export function PremiumActivation() {
           />
 
           <motion.p
-            className="text-lg lg:text-xl xl:text-2xl font-bold tracking-widest uppercase text-gray-500"
+            className="text-lg lg:text-xl xl:text-2xl font-bold tracking-tight uppercase text-gray-500"
             variants={subVariants}
             initial="hidden"
             whileInView="visible"
@@ -320,11 +320,11 @@ export function PremiumActivation() {
                   className={`absolute flex items-center gap-4
                               bg-white
                               border border-gray-100/60
-                              shadow-[0_8px_30px_rgba(0,0,0,0.06)]
+                              shadow-sm
                               px-5 py-4 rounded-3xl
                               max-w-[320px] w-max
                               whitespace-pre-line text-[12px] xl:text-[13px]
-                              font-[900] tracking-widest leading-[1.5]
+                              font-[800] tracking-wide leading-[1.5]
                               z-20 cursor-default
                               transition-all duration-300 ease-out
                               group

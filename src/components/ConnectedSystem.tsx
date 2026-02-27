@@ -51,7 +51,7 @@ export function ConnectedSystem() {
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
-             className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black text-white tracking-tight leading-tight w-full max-w-none break-words"
+             className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-white tracking-tight leading-tight w-full max-w-none break-words"
           >
             From Search to Sale — <span className="text-jc-teal">One Connected System</span>
           </motion.h2>
@@ -109,14 +109,14 @@ export function ConnectedSystem() {
                   }`}
                 >
                   <div className="flex-shrink-0 mt-1">
-                    <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 ${
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300 ${
                       isActive ? "bg-[#0c2419] border border-jc-teal/40" : "bg-transparent border border-gray-700 group-hover:border-jc-teal/50"
                     }`}>
-                      <feature.icon className={`w-4 h-4 transition-colors duration-300 ${isActive ? "text-jc-teal" : "text-gray-500 group-hover:text-jc-teal"}`} />
+                      <feature.icon className={`w-5 h-5 transition-colors duration-300 ${isActive ? "text-jc-teal" : "text-gray-500 group-hover:text-jc-teal"}`} />
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className={`text-xl font-bold mb-1 transition-colors duration-300 ${isActive ? "text-white" : "text-gray-400 group-hover:text-gray-200"}`}>
+                    <h3 className={`text-lg font-bold mb-1 transition-colors duration-300 ${isActive ? "text-white" : "text-gray-400 group-hover:text-gray-200"}`}>
                       {feature.title}
                     </h3>
                     
@@ -129,7 +129,7 @@ export function ConnectedSystem() {
                           transition={{ duration: 0.3, ease: "easeInOut" }}
                           className="overflow-hidden"
                         >
-                          <p className="text-[15px] sm:text-base text-gray-400 leading-relaxed font-medium pb-2 pt-1 pr-4">
+                          <p className="text-[14px] sm:text-[15px] text-gray-400 leading-relaxed font-medium pb-2 pt-1 pr-4">
                             {feature.description}
                           </p>
                         </motion.div>

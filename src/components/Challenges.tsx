@@ -160,7 +160,7 @@ export function Challenges() {
                            animate={{ opacity: 1, y: 0 }}
                            exit={{ opacity: 0, y: 5 }}
                            transition={{ duration: 0.2 }}
-                           className="absolute bottom-[calc(100%+12px)] left-0 w-full min-w-[280px] bg-[#111] border border-white/20 p-6 z-50 pointer-events-auto"
+                           className="absolute bottom-[calc(100%+12px)] left-0 w-full min-w-[280px] bg-[#111] border border-white/10 rounded-xl p-6 shadow-xl z-50 pointer-events-auto"
                         >
                            <h3 className="text-lg font-bold text-[#bcf4e9] mb-4 whitespace-pre-line tracking-wide">
                               {tab.title}
@@ -170,7 +170,7 @@ export function Challenges() {
                            </p>
                            <Link 
                               to="/solutions" 
-                              className="inline-block w-full text-center px-4 py-3 border border-white/30 rounded-lg hover:border-jc-teal hover:text-white transition-colors text-white font-medium text-sm bg-transparent"
+                              className="inline-block w-full text-center px-4 py-3 border border-white/20 rounded-lg hover:border-jc-teal hover:bg-white/5 hover:text-white transition-all text-white font-medium text-sm bg-transparent"
                            >
                               Discover More
                            </Link>
@@ -179,11 +179,11 @@ export function Challenges() {
                   </AnimatePresence>
 
                   {/* The Bottom Box Outline */}
-                  <div className={`w-full p-4 lg:p-6 border transition-all h-[100px] flex items-center ${
-                     activeTab === i ? 'border-white/40 bg-white/5' : 'border-white/10 hover:border-white/30 bg-black/40 backdrop-blur-sm'
+                  <div className={`w-full p-4 lg:p-6 border rounded-xl transition-all h-[100px] flex items-center ${
+                     activeTab === i ? 'border-jc-teal/50 bg-[#111]/80 shadow-md' : 'border-white/10 hover:border-white/30 bg-black/40 backdrop-blur-sm'
                   }`}>
-                     <h3 className={`font-bold whitespace-pre-line text-sm lg:text-base transition-colors ${
-                        activeTab === i ? 'text-[#bcf4e9]' : 'text-gray-400'
+                     <h3 className={`font-semibold whitespace-pre-line text-sm lg:text-base transition-colors ${
+                        activeTab === i ? 'text-white' : 'text-gray-400'
                      }`}>
                         {tab.title}
                      </h3>
