@@ -19,6 +19,8 @@ import { DirectoryPage } from './pages/DirectoryPage';
 import { ShoppersPage } from './pages/ShoppersPage';
 import { EnterprisePage } from './pages/EnterprisePage';
 import { ContactPage } from './pages/ContactPage';
+import { TechnologyPage } from './pages/TechnologyPage';
+import { CaseStudiesPage } from './pages/CaseStudiesPage';
 
 export default function App() {
   useEffect(() => {
@@ -48,6 +50,8 @@ export default function App() {
         <Route path="/shoppers" element={<ShoppersPage />} />
         <Route path="/enterprise" element={<EnterprisePage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/our-technology" element={<TechnologyPage />} />
+        <Route path="/why-jointcommerce" element={<CaseStudiesPage />} />
       </Route>
     </Routes>
   );

@@ -45,6 +45,8 @@ export function Footer() {
               <h4 className="font-medium text-jc-dark mb-6 text-sm">Platform & Discovery</h4>
               <ul className="space-y-4 text-xs font-medium text-jc-dark/70">
                 <li><Link to="/platform" className="hover:text-jc-teal transition-colors">Platform</Link></li>
+                <li><Link to="/our-technology" className="hover:text-jc-teal transition-colors">Our Technology</Link></li>
+                <li><Link to="/why-jointcommerce" className="hover:text-jc-teal transition-colors">Why JointCommerce</Link></li>
                 <li><Link to="/demand-infrastructure" className="hover:text-jc-teal transition-colors">Demand</Link></li>
                 <li><Link to="/directory" className="hover:text-jc-teal transition-colors">Directory</Link></li>
                 <li><Link to="/shoppers" className="hover:text-jc-teal transition-colors">For Shoppers</Link></li>
