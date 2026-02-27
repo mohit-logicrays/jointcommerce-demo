@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Mail, Phone } from 'lucide-react';
 import footerVideo from '../static/marketing/videos/ijijijli.mp4';
 import logoImage from '../static/marketing/logos/logo-without-text.png';
@@ -39,32 +40,36 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
             
-            {/* Column 1: Company Links */}
+            {/* Column 1: Platform & Discovery */}
             <div className="col-span-1">
-              <h4 className="font-medium text-jc-dark mb-6 text-sm">Company Links</h4>
+              <h4 className="font-medium text-jc-dark mb-6 text-sm">Platform & Discovery</h4>
               <ul className="space-y-4 text-xs font-medium text-jc-dark/70">
-                <li><a href="#" className="hover:text-jc-teal transition-colors">Solutions</a></li>
-                <li><a href="#" className="hover:text-jc-teal transition-colors">How It Works</a></li>
-                <li><a href="#" className="hover:text-jc-teal transition-colors">Why JointCommerce</a></li>
-                <li><a href="#" className="hover:text-jc-teal transition-colors">Contact Us</a></li>
+                <li><Link to="/platform" className="hover:text-jc-teal transition-colors">Platform</Link></li>
+                <li><Link to="/demand-infrastructure" className="hover:text-jc-teal transition-colors">Demand</Link></li>
+                <li><Link to="/directory" className="hover:text-jc-teal transition-colors">Directory</Link></li>
+                <li><Link to="/shoppers" className="hover:text-jc-teal transition-colors">For Shoppers</Link></li>
               </ul>
             </div>
 
-            {/* Column 2: Contact Us */}
+            {/* Column 2: Ecosystem */}
             <div className="col-span-1">
-              <h4 className="font-medium text-jc-dark mb-6 text-sm">Contact Us</h4>
+              <h4 className="font-medium text-jc-dark mb-6 text-sm">Ecosystem</h4>
               <ul className="space-y-4 text-xs font-medium text-jc-dark/70">
-                <li><a href="#" className="hover:text-jc-teal transition-colors">Client Login</a></li>
-                <li><a href="#" className="hover:text-jc-teal transition-colors">Schedule Demo</a></li>
+                <li><Link to="/retailers" className="hover:text-jc-teal transition-colors">Retailers</Link></li>
+                <li><Link to="/brands" className="hover:text-jc-teal transition-colors">Brands</Link></li>
+                <li><Link to="/partners" className="hover:text-jc-teal transition-colors">Partners</Link></li>
+                <li><Link to="/agencies" className="hover:text-jc-teal transition-colors">Agencies</Link></li>
               </ul>
             </div>
 
-            {/* Column 3: Website */}
+            {/* Column 3: Contact & Legal */}
             <div className="col-span-1">
-              <h4 className="font-medium text-jc-dark mb-6 text-sm">Website</h4>
+              <h4 className="font-medium text-jc-dark mb-6 text-sm">Contact & Legal</h4>
               <ul className="space-y-4 text-xs font-medium text-jc-dark/70">
+                <li><Link to="/enterprise" className="hover:text-jc-teal transition-colors">Enterprise</Link></li>
+                <li><Link to="/advertisers" className="hover:text-jc-teal transition-colors">Advertisers</Link></li>
                 <li><a href="#" className="hover:text-jc-teal transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-jc-teal transition-colors">Terms & Conditions</a></li>
+                <li><a href="#" className="hover:text-jc-teal transition-colors">Terms of Service</a></li>
               </ul>
             </div>
 
