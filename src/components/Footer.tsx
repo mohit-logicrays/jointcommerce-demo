@@ -36,7 +36,7 @@ export function Footer() {
       </div>
 
       {/* Main Footer Content */}
-      <div className="bg-[#c1fbe9] pt-24 overflow-hidden relative">
+      <div className="bg-[#9ef0d4] pt-24 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
             

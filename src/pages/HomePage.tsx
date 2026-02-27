@@ -1,4 +1,5 @@
 import { Hero } from '../components/Hero';
+import { Challenges } from '../components/Challenges';
 import { DirectoryPromo } from '../components/DirectoryPromo';
 import { CommerceNetwork } from '../components/CommerceNetwork';
 import { ShoppableMedia } from '../components/ShoppableMedia';
@@ -15,6 +16,7 @@ export function HomePage() {
     <>
       <Hero />
       <DirectoryPromo />
+      <Challenges />
       <CommerceNetwork />
       <ShoppableMedia />
       <ConnectedSystem />
