@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { cn } from '../lib/utils';
+import logoImage from '../static/marketing/logos/logo-without-text.png';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,10 +37,8 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center gap-2 text-white font-bold text-xl tracking-tight">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L15 8L22 9L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9L9 8L12 2Z" fill="white"/>
-            </svg>
+          <div className="flex-shrink-0 flex items-center gap-3 text-white font-bold text-xl tracking-tight">
+            <img src={logoImage} alt="JointCommerce Logo" className="h-8 w-auto brightness-0 invert" />
             JointCommerce
           </div>
 

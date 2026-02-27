@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone } from 'lucide-react';
 import footerVideo from '../static/marketing/videos/ijijijli.mp4';
+import logoImage from '../static/marketing/logos/logo-without-text.png';
 
 export function Footer() {
   return (
