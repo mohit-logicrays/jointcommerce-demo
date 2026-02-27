@@ -10,6 +10,7 @@ import { LaunchFaster } from '../components/LaunchFaster';
 import { DirectPurchase } from '../components/DirectPurchase';
 import { RealTimeReporting } from '../components/RealTimeReporting';
 import { ExtendedAudience } from '../components/ExtendedAudience';
+import { AdTechSolutions } from '../components/AdTechSolutions';
 
 export function HomePage() {
   return (
@@ -22,6 +23,7 @@ export function HomePage() {
       <ConnectedSystem />
       <InvestingInMedia />
       <PremiumActivation />
+      <AdTechSolutions />
       <LaunchFaster />
       <DirectPurchase />
       <RealTimeReporting />
