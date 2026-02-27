@@ -69,17 +69,60 @@ export function ShoppableMedia() {
           </motion.h2>
         </div>
 
-        {/* Top Content Area: TV Mockup focused */}
-        <div className="flex justify-center mb-20 lg:mb-24">
+        {/* Hero Section: Text Left, TV Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20 lg:mb-28">
+          
+          {/* Left: Text Content */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative w-full max-w-4xl"
+            className="space-y-6 lg:pr-8"
+          > 
+            <div className="space-y-4 text-lg sm:text-xl text-jc-dark/80 leading-relaxed">
+              <p>
+                Our advanced <span className="font-semibold text-jc-dark">Demand Side Platform (DSP)</span> and{' '}
+                <span className="font-semibold text-jc-dark">Consumer Data Platform (CDP)</span> maximize advertising 
+                effectiveness to help you accomplish your business objectives.
+              </p>
+              
+              <p>
+                We navigate strict advertising restrictions, find new customers, and boost sales growth. 
+                Our unique buying practices optimize your ad placement across curated publishers and drive 
+                positive ROI to help relieve inequitable high tax rates.
+              </p>
+              
+              <p className="font-medium text-jc-dark">
+                JointCommerce empowers your businesses with a data-driven, strategic approach to overcome 
+                these industry-specific challenges.
+              </p>
+            </div>
+
+            {/* Feature Pills */}
+            <div className="flex flex-wrap gap-3 pt-4">
+              <div className="bg-white/60 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/80 shadow-sm">
+                <span className="text-jc-dark font-semibold text-sm">DSP Technology</span>
+              </div>
+              <div className="bg-white/60 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/80 shadow-sm">
+                <span className="text-jc-dark font-semibold text-sm">CDP Integration</span>
+              </div>
+              <div className="bg-white/60 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/80 shadow-sm">
+                <span className="text-jc-dark font-semibold text-sm">Positive ROI</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right: TV Mockup */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, x: 50 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative w-full"
           >
             {/* TV Screen / Frame */}
-            <div className="relative z-10 bg-[#111] rounded-md p-2 md:p-3 shadow-[0_20px_50px_rgba(0,0,0,0.3)] border-2 md:border-[3px] border-gray-800 aspect-[16/9] overflow-hidden">
+            <div className="relative z-10 bg-[#111] rounded-lg p-2 md:p-3 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border-2 md:border-[3px] border-gray-800 aspect-[16/9] overflow-hidden">
                <video 
                 autoPlay 
                 loop 
@@ -93,13 +136,16 @@ export function ShoppableMedia() {
             </div>
             
             {/* Bottom bezel shadow/depth */}
-            <div className="absolute top-0 inset-x-0 h-full bg-gray-900 rounded-md translate-y-1 -z-10" />
+            <div className="absolute top-0 inset-x-0 h-full bg-gray-900 rounded-lg translate-y-1 -z-10" />
             
             {/* TV Stand legs */}
             <div className="absolute -bottom-8 md:-bottom-12 left-1/2 -translate-x-1/2 flex justify-between w-[50%] z-0">
                <div className="w-2.5 md:w-3.5 h-10 md:h-14 bg-gray-800 transform rotate-[30deg] origin-top rounded-b-sm shadow-md"></div>
                <div className="w-2.5 md:w-3.5 h-10 md:h-14 bg-gray-800 transform -rotate-[30deg] origin-top rounded-b-sm shadow-md"></div>
             </div>
+
+            {/* Decorative glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-jc-teal/10 to-transparent rounded-lg -z-20 blur-2xl"></div>
           </motion.div>
         </div>
 

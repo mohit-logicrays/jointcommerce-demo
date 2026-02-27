@@ -65,77 +65,115 @@ export function Hero() {
         {/* Floating Content over the Video */}
         {/* We absolutely position it in the center of the viewport and animate its Y, Scale, and Opacity */}
         <motion.div 
-          className="absolute inset-0 z-20 flex items-center pt-20 pb-10"
+          className="absolute inset-0 z-20 flex flex-col justify-center pt-24 pb-10"
           style={{ 
             y: contentY, 
             opacity: contentOpacity, 
             scale: contentScale 
           }}
         >
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-auto mb-auto lg:mb-20">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
-              <div className="lg:col-span-7">
-                {/* Changed text back to match a bright overlay theme if desired, or keep white since it's on a darkened video */}
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-8 drop-shadow-lg">
-                  THE DISCOVERY-<br />
-                  TO-<br />
-                  COMMERCE<br />
-                  ACTIVATION<br />
-                  INFRASTRUCTURE
-                </h1>
-                
-                <div className="flex flex-wrap items-center gap-4 pt-4">
-                  <button className="h-[56px] px-8 rounded-full bg-jc-teal text-jc-dark font-bold hover:bg-white transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg">
-                    Launch Activation
-                  </button>
-                  <button className="h-[56px] pl-8 pr-2 rounded-full bg-white text-jc-dark font-bold hover:bg-jc-teal transition-colors flex items-center gap-4 group cursor-pointer shadow-lg">
-                    Enable Direct Purchase
-                    <div className="w-10 h-10 rounded-full bg-jc-dark flex items-center justify-center group-hover:scale-105 transition-transform flex-shrink-0">
-                      <ArrowRight className="w-5 h-5 text-white stroke-[2.5]" />
-                    </div>
-                  </button>
+          <div className="relative max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 w-full mt-auto mb-auto">
+            {/* Title */}
+            <div className="w-full mb-8">
+              <h1 className="text-4xl sm:text-5xl lg:text-[4.5rem] font-extrabold text-white tracking-tight drop-shadow-lg leading-[1.1]">
+                Turn High-Intent Discovery<br />
+                Into <span className="text-jc-teal border-b-[6px] border-jc-teal pb-1">Direct Purchases</span>
+              </h1>
+            </div>
+
+            {/* Two Columns */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+              {/* Left Column */}
+              <div className="lg:col-span-8 bg-black/40 backdrop-blur-md rounded-[2rem] p-8 lg:p-10 border border-white/10 shadow-xl flex flex-col justify-center">
+                <div className="text-white/80 text-[1.05rem] lg:text-[1.1rem] leading-relaxed space-y-6 font-medium">
+                  <p>
+                    <strong className="text-white">JointCommerce</strong> captures <span className="text-jc-teal font-bold">A21+ shoppers</span> actively searching <span className="text-jc-teal font-bold">"where to buy"</span> through our SEO-powered shopper directory and amplifies that demand with shoppable activation across curated premium publisher environments — routing consumers directly to purchase on JointCommerce (when enabled) and across participating retailer, brand, and marketplace commerce systems.
+                  </p>
+                  <p>
+                    As the <span className="text-jc-teal font-bold">infrastructure layer</span> connecting discovery to commerce, JointCommerce enables <strong className="text-white">always-on activation</strong> with <strong className="text-white">real-time, measurable online revenue performance.</strong>
+                  </p>
+                  <p className="font-extrabold text-white text-2xl pt-2">
+                    Launch quickly. Scale continuously. Measure confidently.
+                  </p>
                 </div>
               </div>
 
-              <div className="lg:col-span-5 flex flex-col items-start lg:items-end text-left lg:text-right">
-                <div className="max-w-md w-full bg-black/20 backdrop-blur-md p-6 rounded-3xl border border-white/10 shadow-2xl">
-                  <div className="flex flex-row items-center justify-between gap-6 mb-8 lg:justify-end">
-                    <p className="text-white font-medium text-lg lg:text-xl leading-snug flex-1 text-left lg:text-right drop-shadow-md">
-                      Drive Measurable Online Sales From<br />
-                      <span className="font-bold text-jc-teal">Verified A21+</span> Zero Party High-Intent Shoppers.
-                    </p>
+              {/* Right Column */}
+              <div className="lg:col-span-4 flex flex-col">
+                <div className="w-full h-full bg-[#0a1111]/80 backdrop-blur-md p-8 rounded-[2rem] border-2 border-jc-teal/40 shadow-[0_0_20px_rgba(0,163,143,0.15)] flex flex-col items-center text-center justify-center">
+                  {/* Circular A21+ Badge */}
+                  <div className="relative w-[100px] h-[100px] rounded-full flex items-center justify-center mb-6">
+                    {/* Rotating SVG Text */}
+                    <motion.div 
+                      className="absolute inset-0 z-0"
+                      animate={{ rotate: 360 }}
+                      transition={{ repeat: Infinity, ease: "linear", duration: 15 }}
+                    >
+                      <svg viewBox="0 0 100 100" className="w-full h-full text-jc-teal overflow-visible drop-shadow-md">
+                        <path id="curvePathRight" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
+                        <text className="text-[13px] font-bold tracking-[0.2em] fill-current uppercase">
+                          <textPath href="#curvePathRight" startOffset="0%">
+                            shopper • shopper •
+                          </textPath>
+                        </text>
+                      </svg>
+                    </motion.div>
                     
-                    {/* Circular A21+ Badge */}
-                    <div className="relative w-24 h-24 rounded-full flex items-center justify-center flex-shrink-0">
-                      {/* Rotating SVG Text */}
-                      <motion.div 
-                        className="absolute inset-0 z-0"
-                        animate={{ rotate: 360 }}
-                        transition={{ repeat: Infinity, ease: "linear", duration: 15 }}
-                      >
-                        <svg viewBox="0 0 100 100" className="w-full h-full text-white overflow-visible drop-shadow-md">
-                          <path id="curvePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
-                          <text className="text-[14px] font-bold tracking-[0.2em] fill-current uppercase">
-                            <textPath href="#curvePath" startOffset="0%">
-                              shopper • shopper •
-                            </textPath>
-                          </text>
-                        </svg>
-                      </motion.div>
-                      
-                      {/* Inner Badge */}
-                      <div className="relative w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 bg-jc-teal z-10 shadow-lg border-2 border-jc-dark/20">
-                        <span className="text-jc-dark font-bold text-lg">A21+</span>
-                      </div>
+                    {/* Inner Badge */}
+                    <div className="relative w-14 h-14 rounded-full flex items-center justify-center bg-jc-teal z-10 shadow-[0_0_15px_rgba(0,163,143,0.4)] border-2 border-jc-dark/20">
+                      <span className="text-jc-dark font-extrabold text-lg">A21+</span>
                     </div>
                   </div>
                   
-                  <p className="text-white/90 text-sm leading-relaxed text-left lg:text-right max-w-[360px] ml-auto drop-shadow-md">
-                    <strong className="text-white font-bold">JointCommerce</strong> captures shoppers actively searching <strong className="text-white font-bold">"where to buy,"</strong> activates them across <strong className="text-white font-bold">premium publisher environments</strong>, and routes them directly to purchase - with real-time revenue reporting.
+                  <h3 className="text-white font-bold text-lg leading-snug mb-4">
+                    Drive Measurable Online Sales<br />From<br />
+                    <span className="text-jc-teal">Verified A21+</span><br />
+                    <span className="text-[0.9rem] font-medium text-white/80">Zero Party High-Intent Shoppers</span>
+                  </h3>
+                  
+                  <p className="text-white/80 text-[0.85rem] leading-relaxed mx-auto">
+                    <span className="text-jc-teal">JointCommerce</span> captures shoppers actively searching <span className="text-jc-teal">"where to buy,"</span> activates them across <span className="text-jc-teal">premium publisher environments</span>, and routes them directly to purchase - with <span className="text-jc-teal font-medium">real-time revenue reporting.</span>
                   </p>
                 </div>
               </div>
             </div>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap items-center gap-4 mt-8">
+              <button className="h-[48px] px-8 rounded-full bg-jc-teal text-jc-dark font-bold hover:bg-white transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg group">
+                Book Demo <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </button>
+              <button className="h-[48px] px-8 rounded-full bg-white text-jc-dark font-bold hover:bg-[#e0e0e0] transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg group">
+                Claim Your Dispensary Listing <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </button>
+              <button className="h-[48px] pl-8 pr-1.5 rounded-full bg-black/60 backdrop-blur-sm border border-white/20 text-white font-bold hover:bg-white/10 transition-colors flex items-center gap-4 group cursor-pointer shadow-lg">
+                Enable Direct Purchase on Your Menu
+                <div className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center transition-all group-hover:bg-white flex-shrink-0">
+                  <ArrowRight className="w-4 h-4 text-white group-hover:text-jc-dark transition-colors stroke-[2.5]" />
+                </div>
+              </button>
+            </div>
+
+            {/* Bottom Stats Pills */}
+            <div className="inline-flex flex-wrap items-center justify-start gap-x-8 gap-y-4 px-6 md:px-10 py-4 bg-black/60 backdrop-blur-md rounded-2xl md:rounded-full border border-white/10 mt-6 lg:mt-8 w-full sm:w-auto">
+              <div className="flex items-center gap-2.5">
+                <div className="w-2 h-2 rounded-full bg-jc-teal shadow-[0_0_8px_rgba(0,163,143,0.8)]"></div>
+                <span className="text-white text-sm font-bold">12,000+ Retail Menus Connected</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <div className="w-2 h-2 rounded-full bg-jc-teal shadow-[0_0_8px_rgba(0,163,143,0.8)]"></div>
+                <span className="text-white text-sm font-bold">A21+ Verified Discovery</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <div className="w-2 h-2 rounded-full bg-jc-teal shadow-[0_0_8px_rgba(0,163,143,0.8)]"></div>
+                <span className="text-white text-sm font-bold">Premium Publisher Activation</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <div className="w-2 h-2 rounded-full bg-jc-teal shadow-[0_0_8px_rgba(0,163,143,0.8)]"></div>
+                <span className="text-white text-sm font-bold">100% Viewable Standards</span>
+              </div>
+            </div>
+            
           </div>
         </motion.div>
       </div>
