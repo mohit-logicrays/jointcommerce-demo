@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
+import brandCarouselVideo from '../static/marketing/videos/6802bef7f0d9c9a024a7960e_683890a46e00ce1107736896_Brand Carousel-transcode.mp4';
 
 const solutions = [
   {
@@ -263,7 +264,7 @@ export function AdTechSolutions() {
                  })}
              </div>
 
-             {/* SVGs Right */}
+             {/* Visuals Right */}
              <div className="flex-1 w-full relative min-h-[300px] lg:min-h-[500px] flex items-center justify-center lg:mt-0">
                  <AnimatePresence mode="wait">
                      <motion.div
@@ -272,13 +273,25 @@ export function AdTechSolutions() {
                         animate={{ opacity: 1, scale: 1, x: 0 }}
                         exit={{ opacity: 0, scale: 0.95, x: -20 }}
                         transition={{ duration: 0.4 }}
-                        className="w-full max-w-sm md:max-w-md aspect-square relative"
+                        className="w-full max-w-sm md:max-w-md aspect-square relative flex items-center justify-center"
                      >
                          <div className="absolute inset-0 bg-[#00D4B2] blur-[100px] opacity-10 rounded-full pointer-events-none" />
-                         {(() => {
-                             const ActiveSvg = SVGs[openIndex];
-                             return <ActiveSvg />;
-                         })()}
+                         {openIndex === 0 ? (
+                             <video 
+                                autoPlay 
+                                loop 
+                                muted 
+                                playsInline
+                                className="w-full h-full object-contain relative z-10 mix-blend-screen"
+                             >
+                                <source src={brandCarouselVideo} type="video/mp4" />
+                             </video>
+                         ) : (
+                             (() => {
+                                 const ActiveSvg = SVGs[openIndex];
+                                 return ActiveSvg ? <ActiveSvg /> : null;
+                             })()
+                         )}
                      </motion.div>
                  </AnimatePresence>
              </div>
