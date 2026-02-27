@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ShieldCheck, ArrowRight } from 'lucide-react';
 import ijijijli from '../static/marketing/videos/ijijijli.mp4';
 import investing from '../static/marketing/videos/investing.mp4';
 
@@ -34,9 +34,10 @@ export function CaseStudiesPage() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight">
                Real Results / Case <br className="hidden md:block" /> Studies
             </h1>
-            <p className="text-lg text-white/70 font-medium">
-               Private inventory marketplace of cannabis-compliant website and app publishers
-            </p>
+            <div className="flex items-center gap-3">
+               <ShieldCheck className="w-5 h-5 text-jc-teal" />
+               Private inventory marketplace of policy-compliant website and app publishers
+            </div>
          </motion.div>
       </div>
 

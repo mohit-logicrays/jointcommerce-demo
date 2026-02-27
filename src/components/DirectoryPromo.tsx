@@ -56,7 +56,7 @@ export function DirectoryPromo() {
         {/* Content */}
         <div className="relative z-10 max-w-lg">
           <h2 className="text-4xl md:text-5xl font-black text-[#a1a1a1] mb-6 tracking-tight leading-tight transition-transform duration-500 group-hover:-translate-y-1">
-            Looking for a trusted<br/>cannabis provider?
+            Looking for a trusted<br/>local provider?
           </h2>
           <p className="text-[#c1c1c1] text-lg lg:text-xl font-medium mb-10 transition-transform duration-500 delay-75 group-hover:-translate-y-1">
             Enter your location and customize your search to find the best local dispensaries and brands near you.

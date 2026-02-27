@@ -27,7 +27,7 @@ export function Footer() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-8 tracking-tight">
-            Ready to scale your cannabis brand?
+            Ready to scale your brand?
           </h2>
           <button className="px-8 py-3.5 rounded-full bg-[#0efbba] text-jc-dark font-bold hover:bg-white transition-colors uppercase tracking-widest text-xs shadow-[0_0_20px_rgba(14,251,186,0.4)]">
             BOOK LIVE DEMO

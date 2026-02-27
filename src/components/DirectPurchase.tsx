@@ -118,12 +118,12 @@ export function DirectPurchase() {
                     {/* Left - Image */}
                     <div className="w-1/3 flex flex-col gap-2">
                       <div className="bg-white border border-gray-100 rounded-lg flex-1 flex items-center justify-center p-4">
-                        <img src="https://picsum.photos/seed/cannabis/200/250" className="max-h-full object-contain mix-blend-multiply opacity-80" alt="Product" />
+                        <img src="https://picsum.photos/seed/retail/200/250" className="max-h-full object-contain mix-blend-multiply opacity-80" alt="Product" />
                       </div>
-                      <div className="flex gap-1 h-10">
-                        <div className="w-10 bg-white border border-gray-200 rounded p-1"><img src="https://picsum.photos/seed/cannabis1/40/40" className="w-full h-full object-cover" /></div>
-                        <div className="w-10 bg-white border border-[#20c997] rounded p-1"><img src="https://picsum.photos/seed/cannabis/40/40" className="w-full h-full object-cover" /></div>
-                        <div className="w-10 bg-[#0b5cff] rounded p-1 flex relative overflow-hidden"><img src="https://picsum.photos/seed/cannabis2/40/40" className="w-full h-full object-cover opacity-50 mix-blend-overlay" /> <div className="absolute inset-0 flex items-center justify-center"><div className="w-3 h-3 bg-white rotate-45"></div></div></div>
+                      <div className="flex gap-2 mb-6">
+                        <div className="w-10 bg-white border border-gray-200 rounded p-1"><img src="https://picsum.photos/seed/retail1/40/40" className="w-full h-full object-cover" /></div>
+                        <div className="w-10 bg-white border border-[#20c997] rounded p-1"><img src="https://picsum.photos/seed/retail/40/40" className="w-full h-full object-cover" /></div>
+                        <div className="w-10 bg-[#0b5cff] rounded p-1 flex relative overflow-hidden"><img src="https://picsum.photos/seed/retail2/40/40" className="w-full h-full object-cover opacity-50 mix-blend-overlay" /> <div className="absolute inset-0 flex items-center justify-center"><div className="w-3 h-3 bg-white rotate-45"></div></div></div>
                       </div>
                     </div>
 

@@ -7,7 +7,7 @@ import brandCarouselVideo from '../static/marketing/videos/6802bef7f0d9c9a024a79
 const solutions = [
   {
     title: "Private Inventory Marketplace of Compliant Website and App Publishers",
-    content: "Run your ad placements across premium cannabis-compliant publishers such as ESPN, HGTV, Food Network, Hollywood Reporter, and more."
+    content: "Run your ad placements across premium policy-compliant publishers such as ESPN, HGTV, Food Network, Hollywood Reporter, and more."
   },
   {
     title: "Proven Customer Acquisition and Retention Strategies",

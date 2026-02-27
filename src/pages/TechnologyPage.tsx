@@ -18,8 +18,8 @@ export function TechnologyPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6">
               World-class advertising technology to drive <span className="text-jc-teal">e-commerce sales</span>
             </h1>
-            <p className="text-lg text-white/80 leading-relaxed font-medium">
-              JointCommerce is the leading cannabis consumer data and digital ad tech platform helping cannabis companies drive online sales with measurable results.
+            <p className="text-lg md:text-xl text-white/70 max-w-3xl leading-relaxed">
+              JointCommerce is the leading consumer data and digital ad tech platform helping regulated companies drive online sales with measurable results.
             </p>
           </div>
 
@@ -52,8 +52,8 @@ export function TechnologyPage() {
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-3">
                      <BarChart3 className="w-5 h-5 text-jc-teal" /> Predictive Bidding
                   </h3>
-                  <p className="text-white/70 leading-relaxed">
-                     Predictive bidding accurately forecasts cannabis shopper engagement, conversion, and average order value, allowing us to bid the right price for each ad inventory to reach your audience.
+                  <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
+                     Predictive bidding accurately forecasts high-intent shopper engagement, conversion, and average order value, allowing us to bid the right price for each ad inventory to reach your audience.
                   </p>
                </div>
             </div>
@@ -185,7 +185,7 @@ export function TechnologyPage() {
                  Utilizing <span className="text-transparent bg-clip-text bg-gradient-to-r from-jc-teal to-[#0efbba]">dynamic CPM (dCPM)</span>
               </h2>
               <p className="text-lg text-white/80 leading-relaxed">
-                 Our bid strategy wins every time, serving ads high on the publisher page and increasing in-view rate and click-through opportunities for cannabis advertisers.
+                 Our bid strategy wins every time, serving ads high on the publisher page and increasing in-view rate and click-through opportunities for regulated advertisers.
               </p>
               <p className="text-lg text-white/80 leading-relaxed">
                  We specialize in running programmatic digital advertising campaigns, helping you find new customers, and boosting overall sales growth from your existing customer base.
