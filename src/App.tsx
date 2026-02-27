@@ -5,6 +5,7 @@
 
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { DirectoryPromo } from './components/DirectoryPromo';
 import { CommerceNetwork } from './components/CommerceNetwork';
 import { ShoppableMedia } from './components/ShoppableMedia';
 import { ConnectedSystem } from './components/ConnectedSystem';
@@ -23,6 +24,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <DirectoryPromo />
         <CommerceNetwork />
         <ShoppableMedia />
         <ConnectedSystem />

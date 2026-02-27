@@ -15,7 +15,7 @@ export function CommerceNetwork() {
   const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
 
   return (
-    <section ref={containerRef} className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-black py-32">
+    <section ref={containerRef} className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black py-32">
       {/* Background Video with Parallax */}
       <motion.div 
         className="absolute inset-0 w-full h-[140%] -top-[20%] z-0"

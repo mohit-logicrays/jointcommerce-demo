@@ -54,8 +54,8 @@ export function ShoppableMedia() {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-[#9ef0d4] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 md:py-32 bg-[#9ef0d4] overflow-hidden min-h-screen flex flex-col justify-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         {/* Main Header */}
         <div className="text-center mb-16 lg:mb-20">

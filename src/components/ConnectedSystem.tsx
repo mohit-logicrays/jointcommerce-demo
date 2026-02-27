@@ -43,8 +43,8 @@ export function ConnectedSystem() {
   ];
 
   return (
-    <section ref={containerRef} className="py-24 md:py-32 bg-jc-dark overflow-hidden relative">
-      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={containerRef} className="py-24 md:py-32 bg-jc-dark overflow-hidden relative min-h-screen flex flex-col justify-center">
+      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         <div className="text-center mb-16 lg:mb-24 flex justify-center">
           <motion.h2 
