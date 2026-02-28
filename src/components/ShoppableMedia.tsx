@@ -32,24 +32,24 @@ function Counter({ value, suffix = '' }: { value: number | string; suffix?: stri
   return <>{isNum ? n.toLocaleString() : value}{suffix}</>;
 }
 
-// ── Ad images — bundled as base64 data URIs by Vite's inlineAdImagesPlugin ────
-// (immune to ad-blockers — data: URIs are never blocked)
-import adIlera       from '../static/marketing/ads/AYO/v1/Ilera - Ask - 300x250.jpg';
-import adAiroNY      from '../static/marketing/ads/Airo Ny/Airo Ny/AIRO_NY_300x250.jpg';
-import adAuraMav1    from '../static/marketing/ads/Aura finals/Aura finals/MA/v1/Aura_v1_MA_300x250.jpg';
-import adAuraMav2    from '../static/marketing/ads/Aura finals/Aura finals/MA/v2/Aura_v2_MA_300x250.jpg';
-import adBlueOak     from '../static/marketing/ads/BlueOak 15% Off/BlueOak 15% Off/BlueOak_Sale_300x250.jpg';
-import adDime        from '../static/marketing/ads/DIME Finals/DIME Finals/DIME_300x250.jpg';
-import adFlowerPower from '../static/marketing/ads/FlowerPower/FlowerPower_300x250.jpg';
-import adLowell      from '../static/marketing/ads/Lowell Dec Finals/Lowell Dec Finals/Lowell_300x250.jpg';
-import adNJPure      from '../static/marketing/ads/NJ Pure Final/NJ Pure Final/NJPURE_300x250.jpg';
-import adRoam        from '../static/marketing/ads/ROAM/v1/ROAM_v1_300x250.jpg';
-import adTheTrust    from '../static/marketing/ads/TheTrust/TheTrust_300x250.jpg';
+// ── Ad images from public/brands/ — neutral URLs, never ad-blocked ────────────
+const adIlera       = '/brands/brand-01.jpg';
+const adAiroNY      = '/brands/brand-02.jpg';
+const adAuraMav1    = '/brands/brand-03.jpg';
+const adAuraMav2    = '/brands/brand-04.jpg';
+const adBlueOak     = '/brands/brand-05.jpg';
+const adDime        = '/brands/brand-06.jpg';
+const adFlowerPower = '/brands/brand-07.jpg';
+const adLowell      = '/brands/brand-08.jpg';
+const adNJPure      = '/brands/brand-09.jpg';
+const adRoam        = '/brands/brand-10.jpg';
+const adTheTrust    = '/brands/brand-11.jpg';
 // Leaderboard (728×90)
-import adIlera728    from '../static/marketing/ads/AYO/v1/Ilera - Ask - 728x90.jpg';
-import adAiro728     from '../static/marketing/ads/Airo Ny/Airo Ny/AIRO_NY__728x90.jpg';
-import adBlueOak728  from '../static/marketing/ads/BlueOak 15% Off/BlueOak 15% Off/BlueOak_Sale_728x90.jpg';
-import adLowell728   from '../static/marketing/ads/Lowell Dec Finals/Lowell Dec Finals/Lowell_728x90.jpg';
+const adIlera728    = '/brands/leader-01.jpg';
+const adAiro728     = '/brands/leader-02.jpg';
+const adBlueOak728  = '/brands/leader-03.jpg';
+const adLowell728   = '/brands/leader-04.jpg';
+
 
 
 // ── Carousel hook ─────────────────────────────────────────────────────────────
