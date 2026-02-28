@@ -72,7 +72,7 @@ export function ExtendedAudience() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors group"
             >
-              <div className="w-12 h-12 rounded-full border border-jc-teal/30 flex items-center justify-center mb-6 group-hover:bg-jc-teal/10 transition-colors">
+              <div className="w-12 h-12 rounded-full border border-jc-teal/30 flex items-center justify-center mb-6 group-hover:bg-jc-mint/10 transition-colors">
                 {card.icon}
               </div>
               <h3 className="text-xl font-bold mb-4">{card.title}</h3>

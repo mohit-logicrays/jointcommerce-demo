@@ -120,7 +120,7 @@ export function Hero() {
                     </motion.div>
                     
                     {/* Inner Badge */}
-                    <div className="relative w-14 h-14 rounded-full flex items-center justify-center bg-[#00D4B2] z-10 shadow-md border-2 border-[#111]">
+                    <div className="relative w-14 h-14 rounded-full flex items-center justify-center bg-[#14B8A6] z-10 shadow-md border-2 border-[#111]">
                       <span className="text-jc-dark font-extrabold text-lg">A21+</span>
                     </div>
                   </div>

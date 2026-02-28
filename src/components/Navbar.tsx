@@ -102,7 +102,7 @@ export function Navbar() {
 
           {/* Contact Button */}
           <div className="hidden lg:flex items-center">
-            <Link to="/contact" className="px-6 py-2.5 rounded-full border border-jc-teal text-jc-teal hover:bg-jc-teal hover:text-jc-dark transition-colors text-sm font-bold shadow-lg shadow-jc-teal/10 inline-block">
+            <Link to="/contact" className="px-6 py-2.5 rounded-full border border-jc-teal text-jc-teal hover:bg-jc-mint hover:text-jc-dark transition-colors text-sm font-bold shadow-lg shadow-jc-teal/10 inline-block">
               Contact Us
             </Link>
           </div>

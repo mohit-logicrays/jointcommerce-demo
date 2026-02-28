@@ -75,7 +75,7 @@ export function CaseStudiesPage() {
                className="bg-white/5 rounded-[2rem] overflow-hidden border border-white/10 group"
             >
                <div className="aspect-[4/3] bg-black relative overflow-hidden flex items-center justify-center p-8">
-                  <div className="absolute inset-0 bg-jc-teal/10 group-hover:bg-jc-teal/0 transition-colors z-10" />
+                  <div className="absolute inset-0 bg-jc-teal/10 group-hover:bg-jc-mint/0 transition-colors z-10" />
                   <video 
                      src={ijijijli} 
                      autoPlay 
@@ -111,7 +111,7 @@ export function CaseStudiesPage() {
                className="bg-white/5 rounded-[2rem] overflow-hidden border border-white/10 group"
             >
                <div className="aspect-[4/3] bg-black relative overflow-hidden flex items-center justify-center p-8">
-                  <div className="absolute inset-0 bg-jc-teal/10 group-hover:bg-jc-teal/0 transition-colors z-10" />
+                  <div className="absolute inset-0 bg-jc-teal/10 group-hover:bg-jc-mint/0 transition-colors z-10" />
                   <video 
                      src={investing} 
                      autoPlay 

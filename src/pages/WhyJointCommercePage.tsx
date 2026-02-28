@@ -25,8 +25,8 @@ const FlowSvg = () => (
     />
     <defs>
       <linearGradient id="gradient-flow" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="#00D4B2" stopOpacity="0" />
-        <stop offset="50%" stopColor="#00D4B2" stopOpacity="1" />
+        <stop offset="0%" stopColor="#14B8A6" stopOpacity="0" />
+        <stop offset="50%" stopColor="#14B8A6" stopOpacity="1" />
         <stop offset="100%" stopColor="#0efbba" stopOpacity="0" />
       </linearGradient>
     </defs>
@@ -36,17 +36,17 @@ const FlowSvg = () => (
 const AbstractNodes = () => (
   <svg viewBox="0 0 400 400" className="w-[150%] h-[150%] absolute -top-[25%] -right-[25%] opacity-20 pointer-events-none rotate-12">
     <motion.g animate={{ rotate: 360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }} style={{ transformOrigin: "200px 200px" }}>
-      <circle cx="200" cy="200" r="150" fill="none" stroke="#00D4B2" strokeWidth="1" strokeDasharray="10 20" />
-      <circle cx="200" cy="200" r="100" fill="none" stroke="#00D4B2" strokeWidth="2" strokeDasharray="5 15" />
+      <circle cx="200" cy="200" r="150" fill="none" stroke="#14B8A6" strokeWidth="1" strokeDasharray="10 20" />
+      <circle cx="200" cy="200" r="100" fill="none" stroke="#14B8A6" strokeWidth="2" strokeDasharray="5 15" />
       {[0, 1, 2, 3, 4, 5].map((i) => {
         const rad = (i * 60 * Math.PI) / 180;
         return (
           <g key={i}>
-            <circle cx={200 + Math.cos(rad) * 150} cy={200 + Math.sin(rad) * 150} r="4" fill="#00D4B2" />
+            <circle cx={200 + Math.cos(rad) * 150} cy={200 + Math.sin(rad) * 150} r="4" fill="#14B8A6" />
             <motion.line 
               x1="200" y1="200" 
               x2={200 + Math.cos(rad) * 150} y2={200 + Math.sin(rad) * 150} 
-              stroke="#00D4B2" strokeWidth="1" opacity="0.5"
+              stroke="#14B8A6" strokeWidth="1" opacity="0.5"
               animate={{ opacity: [0.1, 0.7, 0.1] }}
               transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}
             />
@@ -313,7 +313,7 @@ export function WhyJointCommercePage() {
             </p>
 
             <motion.button 
-              className="mt-12 inline-flex items-center gap-2 bg-white text-black font-bold px-8 py-4 rounded-full text-sm tracking-widest uppercase hover:bg-jc-teal transition-colors"
+              className="mt-12 inline-flex items-center gap-2 bg-white text-black font-bold px-8 py-4 rounded-full text-sm tracking-widest uppercase hover:bg-jc-mint transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

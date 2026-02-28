@@ -30,19 +30,19 @@ const solutions = [
 const Svg1 = () => (
   <svg viewBox="0 0 400 400" className="w-full h-full drop-shadow-[0_0_20px_rgba(0,212,178,0.4)]">
      {/* Central Hub */}
-     <motion.circle cx="200" cy="200" r="30" fill="#00D4B2" initial={{scale:0}} animate={{scale:1}} transition={{duration:0.6, type:"spring"}} />
-     <motion.circle cx="200" cy="200" r="50" fill="none" stroke="#00D4B2" strokeWidth="2" animate={{scale:[1, 1.4, 1], opacity:[0.5, 0, 0.5]}} transition={{repeat: Infinity, duration: 2}} />
+     <motion.circle cx="200" cy="200" r="30" fill="#14B8A6" initial={{scale:0}} animate={{scale:1}} transition={{duration:0.6, type:"spring"}} />
+     <motion.circle cx="200" cy="200" r="50" fill="none" stroke="#14B8A6" strokeWidth="2" animate={{scale:[1, 1.4, 1], opacity:[0.5, 0, 0.5]}} transition={{repeat: Infinity, duration: 2}} />
      
      {/* Orbiting nodes */}
      <motion.g animate={{rotate: 360}} transition={{repeat: Infinity, duration: 20, ease: "linear"}} style={{transformOrigin: "200px 200px"}}>
-         <circle cx="200" cy="200" r="120" fill="none" stroke="#00D4B2" strokeWidth="1" strokeDasharray="5 15" opacity="0.3"/>
+         <circle cx="200" cy="200" r="120" fill="none" stroke="#14B8A6" strokeWidth="1" strokeDasharray="5 15" opacity="0.3"/>
          {[0, 60, 120, 180, 240, 300].map((angle, i) => {
             const rad = angle * Math.PI / 180;
             const x = 200 + Math.cos(rad) * 120;
             const y = 200 + Math.sin(rad) * 120;
             return (
               <g key={i}>
-                <line x1="200" y1="200" x2={x} y2={y} stroke="#00D4B2" strokeWidth="1" opacity="0.4" />
+                <line x1="200" y1="200" x2={x} y2={y} stroke="#14B8A6" strokeWidth="1" opacity="0.4" />
                 <circle cx={x} cy={y} r="15" fill="#0afbba" />
                 {i > 0 && (
                    <line 
@@ -50,7 +50,7 @@ const Svg1 = () => (
                       y1={200 + Math.sin((angle - 60) * Math.PI / 180) * 120} 
                       x2={x} 
                       y2={y} 
-                      stroke="#00D4B2" strokeWidth="1" opacity="0.5" 
+                      stroke="#14B8A6" strokeWidth="1" opacity="0.5" 
                    />
                 )}
               </g>
@@ -61,7 +61,7 @@ const Svg1 = () => (
             y1={200 + Math.sin(300 * Math.PI / 180) * 120} 
             x2={200 + Math.cos(0) * 120} 
             y2={200 + Math.sin(0) * 120} 
-            stroke="#00D4B2" strokeWidth="1" opacity="0.5" 
+            stroke="#14B8A6" strokeWidth="1" opacity="0.5" 
          />
      </motion.g>
   </svg>
@@ -69,13 +69,13 @@ const Svg1 = () => (
 
 const Svg2 = () => (
   <svg viewBox="0 0 400 400" className="w-full h-full drop-shadow-[0_0_20px_rgba(0,212,178,0.4)]">
-    <motion.ellipse cx="200" cy="80" rx="140" ry="40" fill="none" stroke="#00D4B2" strokeWidth="4" initial={{scale:0}} animate={{scale:1}} transition={{duration:0.5}} />
+    <motion.ellipse cx="200" cy="80" rx="140" ry="40" fill="none" stroke="#14B8A6" strokeWidth="4" initial={{scale:0}} animate={{scale:1}} transition={{duration:0.5}} />
     <motion.ellipse cx="200" cy="160" rx="100" ry="30" fill="none" stroke="#0efbba" strokeWidth="3" initial={{scale:0}} animate={{scale:1}} transition={{duration:0.5, delay:0.2}} />
     <motion.ellipse cx="200" cy="240" rx="60" ry="20" fill="none" stroke="#bcf4e9" strokeWidth="2" initial={{scale:0}} animate={{scale:1}} transition={{duration:0.5, delay:0.4}} />
     
-    <motion.path d="M 60 80 L 140 240 M 340 80 L 260 240" stroke="#00D4B2" strokeWidth="2" opacity="0.5" initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:1}} />
+    <motion.path d="M 60 80 L 140 240 M 340 80 L 260 240" stroke="#14B8A6" strokeWidth="2" opacity="0.5" initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:1}} />
 
-    <motion.circle cx="200" cy="330" r="30" fill="#00D4B2" initial={{scale:0}} animate={{scale:1}} transition={{delay: 0.8, type:"spring"}} />
+    <motion.circle cx="200" cy="330" r="30" fill="#14B8A6" initial={{scale:0}} animate={{scale:1}} transition={{delay: 0.8, type:"spring"}} />
     <motion.line x1="200" y1="260" x2="200" y2="300" stroke="#0efbba" strokeWidth="6" strokeDasharray="10 5" animate={{strokeDashoffset: [0, -30]}} transition={{repeat: Infinity, duration: 1, ease:"linear"}} />
     
     {[1,2,3,4,5].map((i) => (
@@ -97,11 +97,11 @@ const Svg3 = () => (
     <motion.g animate={{rotate: 360}} transition={{repeat: Infinity, duration: 15, ease: "linear"}} style={{transformOrigin: "150px 250px"}}>
        <circle cx="150" cy="250" r="70" fill="none" stroke="#0efbba" strokeWidth="15" strokeDasharray="25 10"/>
        <circle cx="150" cy="250" r="50" fill="none" stroke="#0efbba" strokeWidth="5" />
-       <circle cx="150" cy="250" r="20" fill="#00D4B2" />
+       <circle cx="150" cy="250" r="20" fill="#14B8A6" />
     </motion.g>
     
     <motion.g animate={{rotate: -360}} transition={{repeat: Infinity, duration: 10, ease: "linear"}} style={{transformOrigin: "270px 180px"}}>
-       <circle cx="270" cy="180" r="45" fill="none" stroke="#00D4B2" strokeWidth="12" strokeDasharray="15 8"/>
+       <circle cx="270" cy="180" r="45" fill="none" stroke="#14B8A6" strokeWidth="12" strokeDasharray="15 8"/>
        <circle cx="270" cy="180" r="25" fill="#0efbba" />
     </motion.g>
 
@@ -127,8 +127,8 @@ const Svg3 = () => (
 
 const Svg4 = () => (
   <svg viewBox="0 0 400 400" className="w-full h-full drop-shadow-[0_0_20px_rgba(0,212,178,0.4)]">
-    <motion.rect x="40" y="60" width="320" height="260" rx="10" fill="none" stroke="#00D4B2" strokeWidth="4" initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:1}} />
-    <motion.line x1="40" y1="100" x2="360" y2="100" stroke="#00D4B2" strokeWidth="4" initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:0.5, delay:0.2}} />
+    <motion.rect x="40" y="60" width="320" height="260" rx="10" fill="none" stroke="#14B8A6" strokeWidth="4" initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:1}} />
+    <motion.line x1="40" y1="100" x2="360" y2="100" stroke="#14B8A6" strokeWidth="4" initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:0.5, delay:0.2}} />
     
     <circle cx="60" cy="80" r="4" fill="#ef4444" />
     <circle cx="75" cy="80" r="4" fill="#eab308" />
@@ -156,8 +156,8 @@ const Svg4 = () => (
 
     <motion.g initial={{scale:0}} animate={{scale:1}} transition={{delay: 1.2, type:"spring"}}>
        <circle cx="300" cy="170" r="40" fill="none" stroke="#ffffff" strokeWidth="12" strokeDasharray="200" strokeDashoffset="50"  />
-       <circle cx="300" cy="170" r="40" fill="none" stroke="#00D4B2" strokeWidth="12" strokeDasharray="200" strokeDashoffset="180"  />
-       <circle cx="300" cy="170" r="20" fill="#00D4B2" opacity="0.3" />
+       <circle cx="300" cy="170" r="40" fill="none" stroke="#14B8A6" strokeWidth="12" strokeDasharray="200" strokeDashoffset="180"  />
+       <circle cx="300" cy="170" r="20" fill="#14B8A6" opacity="0.3" />
     </motion.g>
 
     <motion.path 
@@ -183,8 +183,8 @@ const Svg5 = () => (
         animate={{pathLength:1}} 
         transition={{duration:1.5}} 
      />
-     <motion.circle cx="210" cy="170" r="80" fill="#00D4B2" opacity="0.1" animate={{scale:[1, 1.1, 1]}} transition={{repeat:Infinity, duration:4}} />
-     <motion.circle cx="210" cy="170" r="30" fill="#00D4B2" animate={{scale:[1, 1.2, 1]}} transition={{repeat:Infinity, duration:2}} />
+     <motion.circle cx="210" cy="170" r="80" fill="#14B8A6" opacity="0.1" animate={{scale:[1, 1.1, 1]}} transition={{repeat:Infinity, duration:4}} />
+     <motion.circle cx="210" cy="170" r="30" fill="#14B8A6" animate={{scale:[1, 1.2, 1]}} transition={{repeat:Infinity, duration:2}} />
      
      {[
        {x: 160, y: 120}, {x: 260, y: 110},
@@ -275,7 +275,7 @@ export function AdTechSolutions() {
                         transition={{ duration: 0.4 }}
                         className="w-full max-w-sm md:max-w-md aspect-square relative flex items-center justify-center"
                      >
-                         <div className="absolute inset-0 bg-[#00D4B2] blur-[100px] opacity-10 rounded-full pointer-events-none" />
+                         <div className="absolute inset-0 bg-[#14B8A6] blur-[100px] opacity-10 rounded-full pointer-events-none" />
                          {openIndex === 0 ? (
                              <video 
                                 autoPlay 

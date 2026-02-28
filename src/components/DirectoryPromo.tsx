@@ -72,7 +72,7 @@ export function DirectoryPromo() {
       </div>
 
       {/* Right Column: Mint */}
-      <div className="w-full lg:w-1/2 bg-[#9ef0d4] relative overflow-hidden group py-24 px-8 lg:px-24 min-h-screen flex flex-col items-center justify-center text-center">
+      <div className="w-full lg:w-1/2 bg-[#6EDDD2] relative overflow-hidden group py-24 px-8 lg:px-24 min-h-screen flex flex-col items-center justify-center text-center">
         
         {/* Animated Background SVGs */}
         <motion.div style={{ x: x1, y: y1 }} className="absolute text-[#87debf] opacity-60 top-10 right-10 transition-transform duration-700 group-hover:scale-110">

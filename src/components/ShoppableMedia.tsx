@@ -124,11 +124,11 @@ function PreviewVideo() {
       <div className="absolute top-3 right-3 bg-black/70 text-white text-[9px] px-2 py-1 rounded">Skip in 5s ›</div>
       {/* Progress bar */}
       <div className="absolute bottom-0 inset-x-0 h-1 bg-white/10">
-        <motion.div className="h-full bg-[#00c98b]" animate={{ width: ['0%', '100%'] }}
+        <motion.div className="h-full bg-[#14B8A6]" animate={{ width: ['0%', '100%'] }}
           transition={{ duration: 3, repeat: Infinity }} />
       </div>
       {/* SPONSORED badge */}
-      <div className="absolute bottom-4 left-3 bg-black/70 text-[#00c98b] text-[9px] font-bold px-2 py-1 rounded tracking-wider">SPONSORED · IN-STREAM</div>
+      <div className="absolute bottom-4 left-3 bg-black/70 text-[#14B8A6] text-[9px] font-bold px-2 py-1 rounded tracking-wider">SPONSORED · IN-STREAM</div>
     </div>
   );
 }
@@ -143,7 +143,7 @@ function PreviewCTV() {
           <source src={ctvVideo} type="video/mp4" />
         </video>
         {/* Channel bug */}
-        <div className="absolute top-2 right-2 bg-black/70 text-[#00c98b] text-[9px] font-bold px-2 py-0.5 rounded tracking-widest">● LIVE AD</div>
+        <div className="absolute top-2 right-2 bg-black/70 text-[#14B8A6] text-[9px] font-bold px-2 py-0.5 rounded tracking-widest">● LIVE AD</div>
       </div>
       {/* TV stand */}
       <div className="flex justify-center gap-14 mt-0">
@@ -184,7 +184,7 @@ function PreviewMobileApp() {
                 initial={{ opacity: 0, scale: 1.04 }} animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }} transition={{ duration: 0.55 }} />
             </AnimatePresence>
-            <div className="absolute bottom-1 right-1 bg-black/70 text-[#00c98b] text-[7px] font-bold px-1.5 py-0.5 rounded tracking-wider">SPONSORED</div>
+            <div className="absolute bottom-1 right-1 bg-black/70 text-[#14B8A6] text-[7px] font-bold px-1.5 py-0.5 rounded tracking-wider">SPONSORED</div>
           </div>
           {/* Content below ad */}
           <div className="px-2 py-2 space-y-1">
@@ -218,7 +218,7 @@ function PreviewSocial() {
         <div className="flex gap-1.5 px-3 py-2 border-b border-white/5">
           {[1,2,3,4].map(i => (
             <div key={i} className="flex flex-col items-center gap-0.5">
-              <div className={`w-7 h-7 rounded-full border ${i===1?'border-[#00c98b]':'border-white/20'} bg-white/10`} />
+              <div className={`w-7 h-7 rounded-full border ${i===1?'border-[#14B8A6]':'border-white/20'} bg-white/10`} />
               <div className="h-1 w-5 bg-white/10 rounded" />
             </div>
           ))}
@@ -226,8 +226,8 @@ function PreviewSocial() {
         {/* Sponsored post with real ad */}
         <div>
           <div className="flex items-center gap-2 px-3 py-1.5">
-            <div className="w-5 h-5 rounded-full bg-[#00c98b]/30 border border-[#00c98b]/50" />
-            <div><div className="h-1.5 w-14 bg-white/20 rounded mb-0.5" /><div className="text-[#00c98b] text-[6px]">Sponsored</div></div>
+            <div className="w-5 h-5 rounded-full bg-[#14B8A6]/30 border border-[#14B8A6]/50" />
+            <div><div className="h-1.5 w-14 bg-white/20 rounded mb-0.5" /><div className="text-[#14B8A6] text-[6px]">Sponsored</div></div>
           </div>
           <div className="relative" style={{ aspectRatio: '1/1' }}>
             <AnimatePresence mode="wait">
@@ -255,25 +255,25 @@ function PreviewOnMenu() {
     <div className="w-full h-full bg-[#0f0f0f] rounded-xl overflow-hidden border border-white/10 flex flex-col">
       {/* Menu header */}
       <div className="bg-[#1a1a1a] px-4 py-2 border-b border-white/8 flex items-center gap-2 flex-shrink-0">
-        <div className="w-3 h-3 rounded-full bg-[#00c98b]/40" />
+        <div className="w-3 h-3 rounded-full bg-[#14B8A6]/40" />
         <span className="text-white/60 text-[10px] font-medium">LeaflyMenu · Dispensary Co-Brand Placement</span>
       </div>
       <div className="flex flex-1 min-h-0 gap-3 p-3">
         {/* Product rows */}
         <div className="flex-1 space-y-2">
           {['Indica', 'Sativa', 'Hybrid', 'Edibles'].map((cat, i) => (
-            <div key={cat} className={`flex items-center gap-2 p-2 rounded-lg ${i===0?'border border-[#00c98b]/40 bg-[#00c98b]/5':'bg-white/4'}`}>
+            <div key={cat} className={`flex items-center gap-2 p-2 rounded-lg ${i===0?'border border-[#14B8A6]/40 bg-[#14B8A6]/5':'bg-white/4'}`}>
               <div className="w-8 h-8 rounded-md bg-white/10 flex-shrink-0" />
               <div className="flex-1 min-w-0">
                 <div className="h-1.5 bg-white/20 rounded w-3/4 mb-1" />
                 <div className="h-1 bg-white/10 rounded w-1/2" />
               </div>
-              {i===0 && <span className="text-[#00c98b] text-[7px] font-bold border border-[#00c98b]/50 px-1 py-0.5 rounded flex-shrink-0">FEATURED</span>}
+              {i===0 && <span className="text-[#14B8A6] text-[7px] font-bold border border-[#14B8A6]/50 px-1 py-0.5 rounded flex-shrink-0">FEATURED</span>}
             </div>
           ))}
         </div>
         {/* Co-brand ad tile */}
-        <div className="relative w-[38%] flex-shrink-0 rounded-xl overflow-hidden border border-[#00c98b]/25">
+        <div className="relative w-[38%] flex-shrink-0 rounded-xl overflow-hidden border border-[#14B8A6]/25">
           <AnimatePresence mode="wait">
             <motion.img key={mi} src={MENU_ADS[mi]} alt="co-brand ad"
               className="absolute inset-0 w-full h-full object-cover"
@@ -281,7 +281,7 @@ function PreviewOnMenu() {
               transition={{ duration: 0.6 }} />
           </AnimatePresence>
           <div className="absolute bottom-1 inset-x-0 text-center">
-            <span className="bg-[#00c98b] text-black text-[7px] font-black px-1.5 py-0.5 rounded">CO-BRAND AD</span>
+            <span className="bg-[#14B8A6] text-black text-[7px] font-black px-1.5 py-0.5 rounded">CO-BRAND AD</span>
           </div>
         </div>
       </div>
@@ -379,7 +379,7 @@ export function ShoppableMedia() {
   const active = ACCORDION_ITEMS[open];
 
   return (
-    <section className="py-16 md:py-24 bg-[#9ef0d4] overflow-hidden">
+    <section className="py-16 md:py-24 bg-[#6EDDD2] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
         {/* Hero: text + video */}
@@ -513,10 +513,10 @@ export function ShoppableMedia() {
               {/* Premium & Direct badge */}
               <div className="flex items-center gap-2">
                 <svg viewBox="0 0 22 22" className="w-5 h-5" fill="none">
-                  <motion.circle cx="11" cy="11" r="9" stroke="#00c98b" strokeWidth="1.5"
+                  <motion.circle cx="11" cy="11" r="9" stroke="#14B8A6" strokeWidth="1.5"
                     animate={{ rotate: 360 }} style={{ originX: '11px', originY: '11px' }}
                     transition={{ duration: 10, repeat: Infinity, ease: 'linear' }} />
-                  <path d="M11 6l1.3 2.8 3.1.5-2.3 2.1.5 3-2.6-1.4-2.6 1.4.5-3-2.3-2.1 3.1-.5Z" fill="#00c98b" />
+                  <path d="M11 6l1.3 2.8 3.1.5-2.3 2.1.5 3-2.6-1.4-2.6 1.4.5-3-2.3-2.1 3.1-.5Z" fill="#14B8A6" />
                 </svg>
                 <span className="text-jc-teal text-xs font-semibold tracking-widest uppercase">Premium &amp; Direct</span>
               </div>
@@ -530,7 +530,7 @@ export function ShoppableMedia() {
               <div className="flex items-center gap-8 pt-1">
                 <div>
                   <div className="flex items-center gap-1 text-white/50 text-xs mb-1">
-                    <svg viewBox="0 0 14 14" className="w-3 h-3" fill="none" stroke="#00c98b" strokeWidth="1.3">
+                    <svg viewBox="0 0 14 14" className="w-3 h-3" fill="none" stroke="#14B8A6" strokeWidth="1.3">
                       <circle cx="7" cy="7" r="5.5" /><path d="M7 2C7 2 5 4 5 7C5 10 7 12 7 12C7 12 9 10 9 7C9 4 7 2 7 2Z" /><line x1="1.5" y1="7" x2="12.5" y2="7" />
                     </svg>
                     {active.stat1Label}
@@ -540,26 +540,26 @@ export function ShoppableMedia() {
                     <motion.svg viewBox="0 0 28 16" className="w-7 h-4" fill="none"
                       initial={{ opacity: 0, x: -4 }} animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.9, duration: 0.4 }}>
-                      <path d="M2 13 L8 7 L14 10 L26 2" stroke="#00c98b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M21 2 H26 V7" stroke="#00c98b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M2 13 L8 7 L14 10 L26 2" stroke="#14B8A6" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M21 2 H26 V7" stroke="#14B8A6" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
                     </motion.svg>
                   </div>
-                  <div className="mt-1.5 h-0.5 w-20 rounded bg-[#00c98b]" />
+                  <div className="mt-1.5 h-0.5 w-20 rounded bg-[#14B8A6]" />
                 </div>
 
                 <div className="w-px h-10 bg-white/10" />
 
                 <div>
                   <div className="flex items-center gap-1 text-white/50 text-xs mb-1">
-                    <svg viewBox="0 0 14 10" className="w-3.5 h-2.5" fill="none" stroke="#00c98b" strokeWidth="1.3">
-                      <path d="M1 5C3 1.5 11 1.5 13 5C11 8.5 3 8.5 1 5Z" /><circle cx="7" cy="5" r="2" fill="#00c98b" />
+                    <svg viewBox="0 0 14 10" className="w-3.5 h-2.5" fill="none" stroke="#14B8A6" strokeWidth="1.3">
+                      <path d="M1 5C3 1.5 11 1.5 13 5C11 8.5 3 8.5 1 5Z" /><circle cx="7" cy="5" r="2" fill="#14B8A6" />
                     </svg>
                     {active.stat2Label}
                   </div>
                   <div className="text-white font-black text-3xl leading-none">
                     <Counter value={active.stat2Value} suffix={active.stat2Suffix} />
                   </div>
-                  <div className="mt-1.5 h-0.5 w-20 rounded bg-[#00c98b]" />
+                  <div className="mt-1.5 h-0.5 w-20 rounded bg-[#14B8A6]" />
                 </div>
               </div>
             </motion.div>

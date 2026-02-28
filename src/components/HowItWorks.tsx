@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 /** Step 1: A21+ cannabis shopper reaching across premium publishers (TV/phone/display) */
 function IconReach({ on }: { on: boolean }) {
-  const s = on ? '#00ffcc' : '#00c98b';
+  const s = on ? '#00ffcc' : '#14B8A6';
   return (
     <svg viewBox="0 0 120 120" fill="none" className="w-full h-full">
       {/* Broadcast / signal source */}
@@ -43,7 +43,7 @@ function IconReach({ on }: { on: boolean }) {
 
 /** Step 2: Brand placement on a dispensary ecommerce menu (cart + store + tag) */
 function IconActivate({ on }: { on: boolean }) {
-  const s = on ? '#00ffcc' : '#00c98b';
+  const s = on ? '#00ffcc' : '#14B8A6';
   return (
     <svg viewBox="0 0 120 120" fill="none" className="w-full h-full">
       {/* Dispensary storefront */}
@@ -74,7 +74,7 @@ function IconActivate({ on }: { on: boolean }) {
 
 /** Step 3: Shopper engaging with product page / store / brand natively */
 function IconEngage({ on }: { on: boolean }) {
-  const s = on ? '#00ffcc' : '#00c98b';
+  const s = on ? '#00ffcc' : '#14B8A6';
   return (
     <svg viewBox="0 0 120 120" fill="none" className="w-full h-full">
       {/* Product card */}
@@ -108,7 +108,7 @@ function IconEngage({ on }: { on: boolean }) {
 
 /** Step 4: Real order / attribution — checkout + rising bar chart + checkmark */
 function IconConvert({ on }: { on: boolean }) {
-  const s = on ? '#00ffcc' : '#00c98b';
+  const s = on ? '#00ffcc' : '#14B8A6';
   const bars = [28, 42, 35, 55, 68];
   return (
     <svg viewBox="0 0 120 120" fill="none" className="w-full h-full">
@@ -235,7 +235,7 @@ export function HowItWorks() {
                   transition={{ delay: i * 0.13, duration: 0.45 }}
                 >
                   {/* Step number badge */}
-                  <div className={`mb-4 text-xs font-bold tracking-[0.2em] uppercase transition-colors duration-200 ${isOn ? 'text-[#00ffcc]' : 'text-[#00c98b]/60'}`}>
+                  <div className={`mb-4 text-xs font-bold tracking-[0.2em] uppercase transition-colors duration-200 ${isOn ? 'text-[#00ffcc]' : 'text-[#14B8A6]/60'}`}>
                     Step {step.num}
                   </div>
 

@@ -90,10 +90,10 @@ export function PremiumActivation() {
   const maskImage = useMotionTemplate`radial-gradient(300px at ${mouseX}px ${mouseY}px, black 0%, transparent 100%)`;
 
   const beamProps = {
-    pathColor: '#00D4B2', // Teal line
+    pathColor: '#14B8A6', // Teal line
     pathOpacity: 0.3,     // Increased opacity for visibility
     gradientStartColor: '#0efbba', // Bright mint
-    gradientStopColor: '#00D4B2', // jc-teal
+    gradientStopColor: '#14B8A6', // jc-teal
   };
 
   const particles = React.useMemo(() => {
@@ -275,7 +275,7 @@ export function PremiumActivation() {
             transition={{ type: 'spring', stiffness: 220, damping: 20 }}
           >
             {/* Ambient inner glow */}
-            <div className="absolute inset-0 rounded-full bg-jc-teal/5 group-hover:bg-jc-teal/10 transition-colors pointer-events-none" />
+            <div className="absolute inset-0 rounded-full bg-jc-teal/5 group-hover:bg-jc-mint/10 transition-colors pointer-events-none" />
             
             {/* Pulsing rings */}
             <motion.span

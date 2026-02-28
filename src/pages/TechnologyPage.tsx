@@ -25,7 +25,7 @@ export function TechnologyPage() {
 
           <div className="space-y-6">
             <div className="bg-white/5 border border-white/10 p-6 rounded-2xl relative overflow-hidden group hover:border-jc-teal/40 transition-colors">
-               <div className="absolute top-0 right-0 w-32 h-32 bg-jc-teal/10 blur-[40px] rounded-full group-hover:bg-jc-teal/20 transition-colors" />
+               <div className="absolute top-0 right-0 w-32 h-32 bg-jc-teal/10 blur-[40px] rounded-full group-hover:bg-jc-mint/20 transition-colors" />
                <div className="relative z-10">
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-3">
                      <Database className="w-5 h-5 text-jc-teal" /> DSP & CDP Integration

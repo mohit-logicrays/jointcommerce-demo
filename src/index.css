@@ -7,8 +7,9 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --color-jc-dark: #111111;
-  --color-jc-teal: #00D4B2;
-  --color-jc-light-teal: #E0F7F4;
+  --color-jc-teal: #14B8A6;
+  --color-jc-light-teal: #6EDDD2;
+  --color-jc-mint: #6EDDD2;
   --color-jc-gray: #F5F5F5;
 }
 
