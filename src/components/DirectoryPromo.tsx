@@ -75,11 +75,11 @@ export function DirectoryPromo() {
       <div className="w-full lg:w-1/2 bg-[#6EDDD2] relative overflow-hidden group py-24 px-8 lg:px-24 min-h-screen flex flex-col items-center justify-center text-center">
         
         {/* Animated Background SVGs */}
-        <motion.div style={{ x: x1, y: y1 }} className="absolute text-[#87debf] opacity-60 top-10 right-10 transition-transform duration-700 group-hover:scale-110">
+        <motion.div style={{ x: x1, y: y1 }} className="absolute text-[#6EDDD2] opacity-60 top-10 right-10 transition-transform duration-700 group-hover:scale-110">
           <LeafSvg className="w-56 h-56 rotate-45" />
         </motion.div>
         
-        <motion.div style={{ x: x2, y: y2 }} className="absolute text-[#8ee6c7] opacity-50 -bottom-20 left-0 transition-transform duration-700 group-hover:scale-110">
+        <motion.div style={{ x: x2, y: y2 }} className="absolute text-[#6EDDD2] opacity-50 -bottom-20 left-0 transition-transform duration-700 group-hover:scale-110">
           <LeafSvg className="w-80 h-80 -rotate-12" />
         </motion.div>
 

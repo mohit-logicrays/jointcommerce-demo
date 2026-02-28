@@ -43,7 +43,7 @@ const Svg1 = () => (
             return (
               <g key={i}>
                 <line x1="200" y1="200" x2={x} y2={y} stroke="#14B8A6" strokeWidth="1" opacity="0.4" />
-                <circle cx={x} cy={y} r="15" fill="#0afbba" />
+                <circle cx={x} cy={y} r="15" fill="#14B8A6" />
                 {i > 0 && (
                    <line 
                       x1={200 + Math.cos((angle - 60) * Math.PI / 180) * 120} 
@@ -70,13 +70,13 @@ const Svg1 = () => (
 const Svg2 = () => (
   <svg viewBox="0 0 400 400" className="w-full h-full drop-shadow-[0_0_20px_rgba(0,212,178,0.4)]">
     <motion.ellipse cx="200" cy="80" rx="140" ry="40" fill="none" stroke="#14B8A6" strokeWidth="4" initial={{scale:0}} animate={{scale:1}} transition={{duration:0.5}} />
-    <motion.ellipse cx="200" cy="160" rx="100" ry="30" fill="none" stroke="#0efbba" strokeWidth="3" initial={{scale:0}} animate={{scale:1}} transition={{duration:0.5, delay:0.2}} />
-    <motion.ellipse cx="200" cy="240" rx="60" ry="20" fill="none" stroke="#bcf4e9" strokeWidth="2" initial={{scale:0}} animate={{scale:1}} transition={{duration:0.5, delay:0.4}} />
+    <motion.ellipse cx="200" cy="160" rx="100" ry="30" fill="none" stroke="#14B8A6" strokeWidth="3" initial={{scale:0}} animate={{scale:1}} transition={{duration:0.5, delay:0.2}} />
+    <motion.ellipse cx="200" cy="240" rx="60" ry="20" fill="none" stroke="#6EDDD2" strokeWidth="2" initial={{scale:0}} animate={{scale:1}} transition={{duration:0.5, delay:0.4}} />
     
     <motion.path d="M 60 80 L 140 240 M 340 80 L 260 240" stroke="#14B8A6" strokeWidth="2" opacity="0.5" initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:1}} />
 
     <motion.circle cx="200" cy="330" r="30" fill="#14B8A6" initial={{scale:0}} animate={{scale:1}} transition={{delay: 0.8, type:"spring"}} />
-    <motion.line x1="200" y1="260" x2="200" y2="300" stroke="#0efbba" strokeWidth="6" strokeDasharray="10 5" animate={{strokeDashoffset: [0, -30]}} transition={{repeat: Infinity, duration: 1, ease:"linear"}} />
+    <motion.line x1="200" y1="260" x2="200" y2="300" stroke="#14B8A6" strokeWidth="6" strokeDasharray="10 5" animate={{strokeDashoffset: [0, -30]}} transition={{repeat: Infinity, duration: 1, ease:"linear"}} />
     
     {[1,2,3,4,5].map((i) => (
        <motion.circle 
@@ -95,14 +95,14 @@ const Svg2 = () => (
 const Svg3 = () => (
   <svg viewBox="0 0 400 400" className="w-full h-full drop-shadow-[0_0_20px_rgba(0,212,178,0.4)]">
     <motion.g animate={{rotate: 360}} transition={{repeat: Infinity, duration: 15, ease: "linear"}} style={{transformOrigin: "150px 250px"}}>
-       <circle cx="150" cy="250" r="70" fill="none" stroke="#0efbba" strokeWidth="15" strokeDasharray="25 10"/>
-       <circle cx="150" cy="250" r="50" fill="none" stroke="#0efbba" strokeWidth="5" />
+       <circle cx="150" cy="250" r="70" fill="none" stroke="#14B8A6" strokeWidth="15" strokeDasharray="25 10"/>
+       <circle cx="150" cy="250" r="50" fill="none" stroke="#14B8A6" strokeWidth="5" />
        <circle cx="150" cy="250" r="20" fill="#14B8A6" />
     </motion.g>
     
     <motion.g animate={{rotate: -360}} transition={{repeat: Infinity, duration: 10, ease: "linear"}} style={{transformOrigin: "270px 180px"}}>
        <circle cx="270" cy="180" r="45" fill="none" stroke="#14B8A6" strokeWidth="12" strokeDasharray="15 8"/>
-       <circle cx="270" cy="180" r="25" fill="#0efbba" />
+       <circle cx="270" cy="180" r="25" fill="#14B8A6" />
     </motion.g>
 
     <motion.path 
@@ -147,7 +147,7 @@ const Svg4 = () => (
          y={300 - bar.h} 
          width="20" 
          height={bar.h} 
-         fill="#0efbba" 
+         fill="#14B8A6" 
          initial={{scaleY:0, transformOrigin:"bottom"}} 
          animate={{scaleY:1}} 
          transition={{duration:0.8, delay: bar.delay}} 
@@ -177,7 +177,7 @@ const Svg5 = () => (
      <motion.path 
         d="M 220 50 C 150 50, 100 100, 100 170 C 100 220, 120 250, 140 280 L 140 330 L 280 330 L 280 250 C 310 220, 320 180, 320 140 C 320 80, 270 50, 220 50 Z" 
         fill="none" 
-        stroke="#0efbba" 
+        stroke="#14B8A6" 
         strokeWidth="6" 
         initial={{pathLength:0}} 
         animate={{pathLength:1}} 
@@ -232,11 +232,11 @@ export function AdTechSolutions() {
                                 className="w-full text-left flex justify-between items-center py-4 focus:outline-none"
                                 onClick={() => setOpenIndex(idx)}
                              >
-                                 <h3 className={`text-lg sm:text-xl md:text-2xl font-extrabold pr-8 transition-colors duration-300 tracking-tight ${isOpen ? 'text-[#0efbba]' : 'text-white/70 hover:text-white'}`}>
+                                 <h3 className={`text-lg sm:text-xl md:text-2xl font-extrabold pr-8 transition-colors duration-300 tracking-tight ${isOpen ? 'text-[#14B8A6]' : 'text-white/70 hover:text-white'}`}>
                                      {sol.title}
                                  </h3>
                                  <motion.div animate={{ rotate: isOpen ? 180 : 0 }} className="flex-shrink-0">
-                                     <ChevronDown className={`w-6 h-6 transition-colors ${isOpen ? 'text-[#0efbba]' : 'text-white/30'}`} />
+                                     <ChevronDown className={`w-6 h-6 transition-colors ${isOpen ? 'text-[#14B8A6]' : 'text-white/30'}`} />
                                  </motion.div>
                              </button>
                              <AnimatePresence>

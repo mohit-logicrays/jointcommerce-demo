@@ -54,11 +54,11 @@ export function DirectPurchase() {
               ))}
             </div>
 
-            <div className="bg-white p-6 rounded-2xl border-l-[6px] border-[#0dcaf0] shadow-md max-w-lg">
+            <div className="bg-white p-6 rounded-2xl border-l-[6px] border-[#14B8A6] shadow-md max-w-lg">
               <div className="flex items-start gap-3">
-                <Info className="w-5 h-5 text-[#0dcaf0] flex-shrink-0 mt-0.5" />
+                <Info className="w-5 h-5 text-[#14B8A6] flex-shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-[11px] font-bold text-[#0dcaf0] uppercase tracking-widest mb-1.5">SYSTEM COMPLIANCE NOTE</h4>
+                  <h4 className="text-[11px] font-bold text-[#14B8A6] uppercase tracking-widest mb-1.5">SYSTEM COMPLIANCE NOTE</h4>
                   <p className="text-[13px] text-gray-600 leading-relaxed">
                     Retailers retain 100% control of pricing and fulfillment logic.<br />
                     <strong className="text-gray-900 font-semibold">JointCommerce</strong> acts as the facilitator and is not the merchant of record.
@@ -110,7 +110,7 @@ export function DirectPurchase() {
 
                 {/* Page Content */}
                 <div className="flex-1 overflow-hidden flex flex-col px-4 pt-2">
-                  <div className="text-[8px] text-[#20c997] mb-2 flex items-center gap-1 font-medium">
+                  <div className="text-[8px] text-[#14B8A6] mb-2 flex items-center gap-1 font-medium">
                      Home <span className="text-gray-300">/</span> Happy Days <span className="text-gray-300">/</span> Flower <span className="text-gray-300">/</span> <span className="text-gray-500">G13 Haze | 3.5g</span>
                   </div>
                   
@@ -122,18 +122,18 @@ export function DirectPurchase() {
                       </div>
                       <div className="flex gap-2 mb-6">
                         <div className="w-10 bg-white border border-gray-200 rounded p-1"><img src="https://picsum.photos/seed/retail1/40/40" className="w-full h-full object-cover" /></div>
-                        <div className="w-10 bg-white border border-[#20c997] rounded p-1"><img src="https://picsum.photos/seed/retail/40/40" className="w-full h-full object-cover" /></div>
+                        <div className="w-10 bg-white border border-[#14B8A6] rounded p-1"><img src="https://picsum.photos/seed/retail/40/40" className="w-full h-full object-cover" /></div>
                         <div className="w-10 bg-[#0b5cff] rounded p-1 flex relative overflow-hidden"><img src="https://picsum.photos/seed/retail2/40/40" className="w-full h-full object-cover opacity-50 mix-blend-overlay" /> <div className="absolute inset-0 flex items-center justify-center"><div className="w-3 h-3 bg-white rotate-45"></div></div></div>
                       </div>
                     </div>
 
                     {/* Middle - Details */}
                     <div className="w-1/3 pt-1">
-                       <p className="text-[9px] text-[#20c997] mb-0.5">Visit Happy Days Store</p>
+                       <p className="text-[9px] text-[#14B8A6] mb-0.5">Visit Happy Days Store</p>
                        <h1 className="text-lg font-bold text-gray-900 leading-tight mb-1">G13 Haze | 3.5g</h1>
                        <p className="text-[10px] text-gray-600 font-medium mb-1">Size: <span className="font-bold">14g</span></p>
                        <div className="flex gap-1 items-center mb-4">
-                         <div className="flex text-[#20c997]">
+                         <div className="flex text-[#14B8A6]">
                            <Star className="w-2.5 h-2.5 fill-current" />
                            <Star className="w-2.5 h-2.5 fill-current" />
                            <Star className="w-2.5 h-2.5 fill-current" />
@@ -141,20 +141,20 @@ export function DirectPurchase() {
                            <Star className="w-2.5 h-2.5 text-gray-300" />
                          </div>
                          <span className="text-[9px] font-bold">4.4</span>
-                         <span className="text-[9px] text-[#20c997]">7 reviews</span>
+                         <span className="text-[9px] text-[#14B8A6]">7 reviews</span>
                        </div>
 
                        <h3 className="text-[10px] font-bold border-b border-gray-100 pb-1 mb-2">Product Details</h3>
                        <div className="grid grid-cols-2 gap-y-1 text-[9px] mb-4">
                          <span className="text-gray-500">Category:</span><span className="font-medium text-gray-800">Flower</span>
                          <span className="text-gray-500">THC:</span><span className="font-medium text-gray-800">29.12%</span>
-                         <span className="text-gray-500">Brand:</span><span className="font-medium text-[#20c997]">Fx</span>
+                         <span className="text-gray-500">Brand:</span><span className="font-medium text-[#14B8A6]">Fx</span>
                        </div>
 
                        <div className="flex items-center justify-between mb-2">
                          <h3 className="text-[10px] font-bold">About this item</h3>
                          <div className="flex bg-gray-100 rounded-md p-0.5">
-                           <div className="bg-[#0dcaf0] text-white text-[7px] font-bold px-2 py-0.5 rounded shadow-sm">Store's Description</div>
+                           <div className="bg-[#14B8A6] text-white text-[7px] font-bold px-2 py-0.5 rounded shadow-sm">Store's Description</div>
                            <div className="text-gray-500 text-[7px] font-bold px-2 py-0.5">JC's Description</div>
                          </div>
                        </div>
@@ -167,15 +167,15 @@ export function DirectPurchase() {
                     <div className="w-1/3 pt-1">
                        <div className="border border-gray-100 rounded-xl p-3 shadow-sm h-full flex flex-col">
                          <div className="text-xl font-bold text-gray-900 mb-1">$150.00</div>
-                         <div className="text-[10px] font-bold text-[#20c997] mb-1">In Stock</div>
-                         <div className="text-[8px] text-gray-500 mb-3 border-b border-gray-100 pb-2">Sold by: <span className="text-[#20c997]">Happy Days</span></div>
+                         <div className="text-[10px] font-bold text-[#14B8A6] mb-1">In Stock</div>
+                         <div className="text-[8px] text-gray-500 mb-3 border-b border-gray-100 pb-2">Sold by: <span className="text-[#14B8A6]">Happy Days</span></div>
                          
                          <div className="flex items-center gap-2 mb-3">
                            <span className="text-[9px] font-medium">Qty:</span>
                            <div className="border border-gray-200 rounded px-2 py-1 text-[9px] flex items-center justify-between w-12 bg-gray-50">1 <span className="text-[6px]">▼</span></div>
                          </div>
                          
-                         <button className="w-full bg-[#20c997] text-white rounded-full py-1.5 text-[10px] font-bold mb-3 hover:bg-[#1ba87e] transition-colors">
+                         <button className="w-full bg-[#14B8A6] text-white rounded-full py-1.5 text-[10px] font-bold mb-3 hover:bg-[#1ba87e] transition-colors">
                            Add to Cart
                          </button>
                          <div className="flex items-center gap-1 text-[7px] text-gray-400 mb-3 border-b border-gray-100 pb-2">
@@ -219,7 +219,7 @@ export function DirectPurchase() {
               animate={{ y: [0, -8, 0] }}
               transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut" }}
             >
-              <span className="text-[#0dcaf0] font-black text-xl md:text-2xl leading-none">100%</span>
+              <span className="text-[#14B8A6] font-black text-xl md:text-2xl leading-none">100%</span>
               <span className="text-[6px] md:text-[7px] font-bold text-gray-400 uppercase tracking-widest mt-1 text-center leading-tight">RETAILER<br/>CONTROL</span>
             </motion.div>
 
@@ -251,7 +251,7 @@ export function DirectPurchase() {
                 </div>
                 <div className="flex-1 space-y-2">
                    <div className="h-2 w-2/3 bg-gray-200 rounded-full"></div>
-                   <div className="text-[#0dcaf0] font-bold text-xs">$150.00</div>
+                   <div className="text-[#14B8A6] font-bold text-xs">$150.00</div>
                 </div>
                 <div className="text-[8px] text-gray-400 self-end mb-1">Qty:<br/>1</div>
               </div>
@@ -268,13 +268,13 @@ export function DirectPurchase() {
                 </div>
               </div>
 
-              <button className="w-full py-3 bg-[#0dcaf0] text-white font-bold text-xs rounded-xl md:rounded-2xl tracking-wide flex items-center justify-center gap-2 hover:bg-[#0bacce] transition-all shadow-[0_10px_20px_-10px_rgba(13,202,240,0.5)]">
+              <button className="w-full py-3 bg-[#14B8A6] text-white font-bold text-xs rounded-xl md:rounded-2xl tracking-wide flex items-center justify-center gap-2 hover:bg-[#0bacce] transition-all shadow-[0_10px_20px_-10px_rgba(13,202,240,0.5)]">
                 COMPLETE PURCHASE <Lock className="w-3 h-3" />
               </button>
               
               <div className="mt-4 flex justify-between px-2">
                 <span className="flex items-center gap-1 text-[7px] text-gray-500 font-medium">
-                  <div className="w-4 h-4 rounded-full bg-[#e6fcf5] flex items-center justify-center"><CheckCircle2 className="w-2.5 h-2.5 text-[#0dcaf0]" /></div>
+                  <div className="w-4 h-4 rounded-full bg-[#e6fcf5] flex items-center justify-center"><CheckCircle2 className="w-2.5 h-2.5 text-[#14B8A6]" /></div>
                   NATIVE INTEGRATION<br/><span className="font-bold text-gray-700">Direct-to-Consumer</span>
                 </span>
                 <span className="flex items-center gap-1 text-[7px] font-bold text-gray-400">

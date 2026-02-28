@@ -107,14 +107,14 @@ function BlinkingDot({ x, y, r = 4, delay = 0 }: { x: number; y: number; r?: num
       {/* Pulsing outer ring */}
       <motion.circle
         cx={x} cy={y} r={r + 6}
-        fill="none" stroke="#00ffcc" strokeWidth="1"
+        fill="none" stroke="#14B8A6" strokeWidth="1"
         animate={{ r: [r + 4, r + 14, r + 4], opacity: [0.6, 0, 0.6] }}
         transition={{ duration: 2.5, repeat: Infinity, delay, ease: 'easeOut' }}
       />
       {/* Solid core dot */}
       <motion.circle
         cx={x} cy={y} r={r}
-        fill="#00ffcc"
+        fill="#14B8A6"
         animate={{ opacity: [1, 0.5, 1] }}
         transition={{ duration: 1.8, repeat: Infinity, delay, ease: 'easeInOut' }}
       />
@@ -126,7 +126,7 @@ function StaticDot({ x, y, r = 4, delay = 0 }: { x: number; y: number; r?: numbe
   return (
     <motion.circle
       cx={x} cy={y} r={r}
-      fill="#00ffcc"
+      fill="#14B8A6"
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 0.9, scale: 1 }}
       transition={{ duration: 0.4, delay }}
@@ -147,13 +147,13 @@ function StateShape({ name, d, isHovered, onEnter, onLeave }: StateProps) {
     <motion.path
       d={d}
       fill={isHovered ? 'rgba(0,255,204,0.15)' : 'rgba(255,255,255,0.03)'}
-      stroke={isHovered ? '#00ffcc' : '#4b5563'}
+      stroke={isHovered ? '#14B8A6' : '#4b5563'}
       strokeWidth={isHovered ? 1.5 : 1}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
       animate={{
         fill: isHovered ? 'rgba(0,255,204,0.15)' : 'rgba(255,255,255,0.03)',
-        stroke: isHovered ? '#00ffcc' : '#4b5563',
+        stroke: isHovered ? '#14B8A6' : '#4b5563',
       }}
       transition={{ duration: 0.2 }}
       style={{ cursor: 'pointer' }}
@@ -196,7 +196,7 @@ function USAMap() {
               cy={dot.y}
               r={dot.r}
               fill="none"
-              stroke="#00ffcc"
+              stroke="#14B8A6"
               strokeWidth="1"
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 0.4, scale: 1 }}
@@ -244,7 +244,7 @@ function USAMap() {
           initial={{ opacity: 0, y: 5 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
-          className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/80 border border-[#00ffcc]/40 text-[#00ffcc] px-4 py-1.5 rounded-full text-sm font-semibold backdrop-blur-sm pointer-events-none"
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/80 border border-[#14B8A6]/40 text-[#14B8A6] px-4 py-1.5 rounded-full text-sm font-semibold backdrop-blur-sm pointer-events-none"
         >
           {hoveredState}
         </motion.div>
@@ -267,7 +267,7 @@ export function AdvertisingPlatform() {
               viewport={{ once: true }}
               className="text-4xl md:text-[2.6rem] font-bold leading-[1.15] mb-5 tracking-tight"
             >
-              The <span className="text-[#00ffcc]">#1</span> Cannabis Advertising Platform — Powering 12,000+ Dispensary Menus
+              The <span className="text-[#14B8A6]">#1</span> Cannabis Advertising Platform — Powering 12,000+ Dispensary Menus
             </motion.h2>
 
             <motion.p
@@ -287,10 +287,10 @@ export function AdvertisingPlatform() {
               transition={{ delay: 0.2 }}
               className="flex flex-col sm:flex-row gap-4 mb-10"
             >
-              <button className="px-7 py-3 bg-[#00ffcc] hover:bg-[#00e6b8] text-black font-semibold rounded-[4px] transition-colors text-sm whitespace-nowrap">
+              <button className="px-7 py-3 bg-[#14B8A6] hover:bg-[#00e6b8] text-black font-semibold rounded-[4px] transition-colors text-sm whitespace-nowrap">
                 Request Demo
               </button>
-              <button className="px-7 py-3 bg-transparent border border-[#00ffcc] text-[#00ffcc] hover:bg-[#00ffcc]/10 font-semibold rounded-[4px] transition-colors text-sm whitespace-nowrap">
+              <button className="px-7 py-3 bg-transparent border border-[#14B8A6] text-[#14B8A6] hover:bg-[#14B8A6]/10 font-semibold rounded-[4px] transition-colors text-sm whitespace-nowrap">
                 View Marketplace
               </button>
             </motion.div>
@@ -307,10 +307,10 @@ export function AdvertisingPlatform() {
                 <span key={step} className="flex items-center gap-1.5">
                   <span className="text-gray-300">{step}</span>
                   {i < arr.length - 1 && (
-                    <span className="flex items-center gap-0.5 text-[#00ffcc]">
-                      <span className="w-1.5 h-1.5 rounded-full border border-[#00ffcc]" />
+                    <span className="flex items-center gap-0.5 text-[#14B8A6]">
+                      <span className="w-1.5 h-1.5 rounded-full border border-[#14B8A6]" />
                       <span className="tracking-widest text-[9px]">- - -</span>
-                      <svg viewBox="0 0 12 12" className="w-2.5 h-2.5 fill-[#00ffcc]">
+                      <svg viewBox="0 0 12 12" className="w-2.5 h-2.5 fill-[#14B8A6]">
                         <path d="M3 2l6 4-6 4V2z"/>
                       </svg>
                     </span>

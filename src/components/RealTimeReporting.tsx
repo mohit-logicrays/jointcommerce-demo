@@ -233,12 +233,12 @@ export function RealTimeReporting() {
 
                   {/* Floating Interactive "Driven Revenue" Card */}
                   <motion.div 
-                    className="absolute top-4 md:top-8 left-4 md:left-12 bg-[#bcf5e7] rounded-xl md:rounded-2xl p-4 md:p-6 shadow-[0_20px_40px_-5px_rgba(0,0,0,0.15)] border border-white z-30 min-w-[140px] md:min-w-[180px] cursor-pointer"
+                    className="absolute top-4 md:top-8 left-4 md:left-12 bg-[#6EDDD2] rounded-xl md:rounded-2xl p-4 md:p-6 shadow-[0_20px_40px_-5px_rgba(0,0,0,0.15)] border border-white z-30 min-w-[140px] md:min-w-[180px] cursor-pointer"
                     whileHover={{ scale: 1.05, y: -5 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   >
                     <div className="w-8 md:w-10 h-8 md:h-10 rounded-lg md:rounded-xl bg-[#20222a] flex items-center justify-center mb-3 md:mb-4 shadow-md">
-                      <Receipt className="w-4 md:w-5 h-4 md:h-5 text-[#bcf5e7]" />
+                      <Receipt className="w-4 md:w-5 h-4 md:h-5 text-[#6EDDD2]" />
                     </div>
                     <h3 className="text-sm md:text-sm font-bold text-[#20222a] tracking-wider uppercase">Driven Revenue</h3>
                   </motion.div>
