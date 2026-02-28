@@ -2,6 +2,7 @@ import { Hero } from '../components/Hero';
 import { Challenges } from '../components/Challenges';
 import { DirectoryPromo } from '../components/DirectoryPromo';
 import { AdvertisingPlatform } from '../components/AdvertisingPlatform';
+import { BrandsBar } from '../components/BrandsBar';
 import { CommerceNetwork } from '../components/CommerceNetwork';
 import { ShoppableMedia } from '../components/ShoppableMedia';
 import { ConnectedSystem } from '../components/ConnectedSystem';
@@ -19,6 +20,7 @@ export function HomePage() {
       <Hero />
       <DirectoryPromo />
       <AdvertisingPlatform />
+      <BrandsBar />
       <Challenges />
       <CommerceNetwork />
       <ShoppableMedia />
