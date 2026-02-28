@@ -217,7 +217,7 @@ export function AdTechSolutions() {
                viewport={{ once: true }}
                className="text-3xl md:text-5xl lg:text-5xl font-extrabold tracking-tight max-w-3xl leading-[1.2]"
              >
-                Consistent and Reliable Ad Tech Solutions To Help You Grow Your Business
+                Consistent and Reliable <span className="text-[#14B8A6] hover:text-[#6EDDD2] transition-colors cursor-default">Ad Tech Solutions</span> To Help You <span className="text-[#14B8A6] hover:text-[#6EDDD2] transition-colors cursor-default">Grow Your Business</span>
              </motion.h2>
           </div>
 
