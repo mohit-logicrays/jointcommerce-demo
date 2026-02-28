@@ -77,7 +77,7 @@ export function Hero() {
             <div className="w-full mb-10">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight drop-shadow-md leading-[1.1]">
                 Turn High-Intent Discovery<br />
-                Into <span className="text-jc-teal border-b-[4px] border-jc-teal pb-1">Direct Purchases</span>
+                Into <span className="text-jc-teal border-b-[4px] border-jc-teal pb-1 hover:text-jc-mint hover:border-jc-mint transition-colors cursor-default">Direct Purchases</span>
               </h1>
             </div>
 
@@ -87,10 +87,10 @@ export function Hero() {
               <div className="lg:col-span-8 bg-black/40 backdrop-blur-md rounded-2xl p-8 lg:p-10 border border-white/10 shadow-lg flex flex-col justify-center">
                 <div className="text-white/80 text-[1.05rem] lg:text-[1.1rem] leading-relaxed space-y-6 font-medium">
                   <p>
-                    <strong className="text-white">JointCommerce</strong> captures <span className="text-jc-teal font-bold">A21+ shoppers</span> actively searching <span className="text-jc-teal font-bold">"where to buy"</span> through our SEO-powered shopper directory and amplifies that demand with shoppable activation across curated premium publisher environments — routing consumers directly to purchase on JointCommerce (when enabled) and across participating retailer, brand, and marketplace commerce systems.
+                    <strong className="text-white">JointCommerce</strong> captures <span className="text-jc-teal font-bold hover:text-jc-mint transition-colors cursor-default">A21+ shoppers</span> actively searching <span className="text-jc-teal font-bold hover:text-jc-mint transition-colors cursor-default">"where to buy"</span> through our SEO-powered shopper directory and amplifies that demand with shoppable activation across curated premium publisher environments — routing consumers directly to purchase on JointCommerce (when enabled) and across participating retailer, brand, and marketplace commerce systems.
                   </p>
                   <p>
-                    As the <span className="text-jc-teal font-bold">infrastructure layer</span> connecting discovery to commerce, JointCommerce enables <strong className="text-white">always-on activation</strong> with <strong className="text-white">real-time, measurable online revenue performance.</strong>
+                    As the <span className="text-jc-teal font-bold hover:text-jc-mint transition-colors cursor-default">infrastructure layer</span> connecting discovery to commerce, JointCommerce enables <span className="text-jc-teal font-bold hover:text-jc-mint transition-colors cursor-default">always-on activation</span> with <strong className="text-white">real-time, measurable online revenue performance.</strong>
                   </p>
                   <p className="font-extrabold text-white text-2xl pt-2 tracking-tight">
                     Launch quickly. Scale continuously. Measure confidently.
@@ -127,12 +127,12 @@ export function Hero() {
                   
                   <h3 className="text-white font-bold text-lg leading-snug mb-4 tracking-tight">
                     Drive Measurable Online Sales<br />From<br />
-                    <span className="text-jc-teal">Verified A21+</span><br />
+                    <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">Verified A21+</span><br />
                     <span className="text-[0.9rem] font-medium text-white/80">Zero Party High-Intent Shoppers</span>
                   </h3>
                   
                   <p className="text-white/80 text-[0.85rem] leading-relaxed mx-auto">
-                    <span className="text-jc-teal font-semibold">JointCommerce</span> captures shoppers actively searching <span className="text-jc-teal">"where to buy,"</span> activates them across <span className="text-jc-teal">premium publisher environments</span>, and routes them directly to purchase - with <span className="text-jc-teal font-medium">real-time revenue reporting.</span>
+                    <span className="text-jc-teal font-semibold hover:text-jc-mint transition-colors cursor-default">JointCommerce</span> captures shoppers actively searching <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">"where to buy,"</span> activates them across <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">premium publisher environments</span>, and routes them directly to purchase - with <span className="text-jc-teal font-medium hover:text-jc-mint transition-colors cursor-default">real-time revenue reporting.</span>
                   </p>
                 </div>
               </div>

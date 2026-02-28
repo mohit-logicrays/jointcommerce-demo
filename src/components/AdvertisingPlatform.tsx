@@ -267,7 +267,7 @@ export function AdvertisingPlatform() {
               viewport={{ once: true }}
               className="text-4xl md:text-[2.6rem] font-bold leading-[1.15] mb-5 tracking-tight"
             >
-              The <span className="text-[#14B8A6]">#1</span> Cannabis Advertising Platform — Powering 12,000+ Dispensary Menus
+              The <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">#1</span> Cannabis Advertising Platform — Powering <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">12,000+</span> Dispensary Menus
             </motion.h2>
 
             <motion.p
@@ -277,7 +277,7 @@ export function AdvertisingPlatform() {
               transition={{ delay: 0.1 }}
               className="text-[#a1a1a1] text-base md:text-lg font-medium mb-10 leading-relaxed"
             >
-              A premium publisher marketplace connected directly to SEO-powered dispensary menus — turning A21+ cannabis demand into measurable online sales for cannabis and non-cannabis brands
+              A premium publisher marketplace connected directly to SEO-powered dispensary menus — turning <span className="text-jc-teal font-semibold hover:text-jc-mint transition-colors cursor-default">A21+ cannabis demand</span> into <span className="text-jc-teal font-semibold hover:text-jc-mint transition-colors cursor-default">measurable online sales</span> for cannabis and non-cannabis brands
             </motion.p>
 
             <motion.div
@@ -287,10 +287,10 @@ export function AdvertisingPlatform() {
               transition={{ delay: 0.2 }}
               className="flex flex-col sm:flex-row gap-4 mb-10"
             >
-              <button className="px-7 py-3 bg-[#14B8A6] hover:bg-[#00e6b8] text-black font-semibold rounded-[4px] transition-colors text-sm whitespace-nowrap">
+              <button className="px-7 py-3 bg-jc-teal hover:bg-jc-mint text-black font-semibold rounded-[4px] transition-colors text-sm whitespace-nowrap">
                 Request Demo
               </button>
-              <button className="px-7 py-3 bg-transparent border border-[#14B8A6] text-[#14B8A6] hover:bg-[#14B8A6]/10 font-semibold rounded-[4px] transition-colors text-sm whitespace-nowrap">
+              <button className="px-7 py-3 bg-transparent border border-jc-teal text-jc-teal hover:bg-jc-teal/10 font-semibold rounded-[4px] transition-colors text-sm whitespace-nowrap">
                 View Marketplace
               </button>
             </motion.div>

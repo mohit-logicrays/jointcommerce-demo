@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 /** Step 1: A21+ cannabis shopper reaching across premium publishers (TV/phone/display) */
 function IconReach({ on }: { on: boolean }) {
-  const s = on ? '#00ffcc' : '#14B8A6';
+  const s = on ? '#6EDDD2' : '#14B8A6';
   return (
     <svg viewBox="0 0 120 120" fill="none" className="w-full h-full">
       {/* Broadcast / signal source */}
@@ -43,7 +43,7 @@ function IconReach({ on }: { on: boolean }) {
 
 /** Step 2: Brand placement on a dispensary ecommerce menu (cart + store + tag) */
 function IconActivate({ on }: { on: boolean }) {
-  const s = on ? '#00ffcc' : '#14B8A6';
+  const s = on ? '#6EDDD2' : '#14B8A6';
   return (
     <svg viewBox="0 0 120 120" fill="none" className="w-full h-full">
       {/* Dispensary storefront */}
@@ -74,7 +74,7 @@ function IconActivate({ on }: { on: boolean }) {
 
 /** Step 3: Shopper engaging with product page / store / brand natively */
 function IconEngage({ on }: { on: boolean }) {
-  const s = on ? '#00ffcc' : '#14B8A6';
+  const s = on ? '#6EDDD2' : '#14B8A6';
   return (
     <svg viewBox="0 0 120 120" fill="none" className="w-full h-full">
       {/* Product card */}
@@ -108,7 +108,7 @@ function IconEngage({ on }: { on: boolean }) {
 
 /** Step 4: Real order / attribution — checkout + rising bar chart + checkmark */
 function IconConvert({ on }: { on: boolean }) {
-  const s = on ? '#00ffcc' : '#14B8A6';
+  const s = on ? '#6EDDD2' : '#14B8A6';
   const bars = [28, 42, 35, 55, 68];
   return (
     <svg viewBox="0 0 120 120" fill="none" className="w-full h-full">
@@ -145,7 +145,7 @@ function IconConvert({ on }: { on: boolean }) {
 // Connector arrow — fixed in middle row, never touches text
 // ─────────────────────────────────────────────────────────────────────────────
 function ConnectorArrow({ glow }: { glow: boolean }) {
-  const c = glow ? '#00ffcc' : 'rgba(0,201,139,0.45)';
+  const c = glow ? '#6EDDD2' : 'rgba(20,184,166,0.45)';
   return (
     <div className="hidden lg:flex items-center justify-center w-14 xl:w-20 flex-shrink-0 self-center" style={{ marginTop: '-20px' }}>
       <svg viewBox="0 0 64 18" className="w-full" fill="none">
@@ -197,10 +197,10 @@ export function HowItWorks() {
       {/* Very subtle grid */}
       <div className="absolute inset-0 pointer-events-none opacity-100"
         style={{
-          backgroundImage: 'linear-gradient(rgba(0,201,139,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,201,139,0.04) 1px,transparent 1px)',
+          backgroundImage: 'linear-gradient(rgba(20,184,166,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(20,184,166,0.04) 1px,transparent 1px)',
           backgroundSize: '60px 60px',
         }} />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(0,160,90,0.07),transparent)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(20,184,166,0.07),transparent)] pointer-events-none" />
 
       <div className="relative max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12">
 
@@ -212,7 +212,7 @@ export function HowItWorks() {
           className="text-center mb-16 md:mb-20"
         >
           <h2 className="text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-white leading-tight tracking-tight">
-            How JointCommerce Works{' '}
+            How <span className="text-[#14B8A6] hover:text-[#6EDDD2] transition-colors cursor-default">JointCommerce</span> <span className="text-[#14B8A6] hover:text-[#6EDDD2] transition-colors cursor-default">Works</span>{' '}
             <span className="font-light text-white/45">(Why Others Can't)</span>
           </h2>
         </motion.div>
@@ -235,7 +235,7 @@ export function HowItWorks() {
                   transition={{ delay: i * 0.13, duration: 0.45 }}
                 >
                   {/* Step number badge */}
-                  <div className={`mb-4 text-xs font-bold tracking-[0.2em] uppercase transition-colors duration-200 ${isOn ? 'text-[#00ffcc]' : 'text-[#14B8A6]/60'}`}>
+                  <div className={`mb-4 text-xs font-bold tracking-[0.2em] uppercase transition-colors duration-200 ${isOn ? 'text-[#6EDDD2]' : 'text-[#14B8A6]/60'}`}>
                     Step {step.num}
                   </div>
 
@@ -248,7 +248,7 @@ export function HowItWorks() {
                     {isOn && (
                       <motion.div
                         className="absolute inset-0 rounded-full"
-                        style={{ boxShadow: '0 0 50px 12px rgba(0,255,204,0.12)' }}
+                        style={{ boxShadow: '0 0 50px 12px rgba(110,221,210,0.12)' }}
                         initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2 }}
                       />
                     )}
