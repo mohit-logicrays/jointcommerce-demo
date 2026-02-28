@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { STATE_PATHS } from './statePaths';
 
@@ -101,7 +101,7 @@ const PULSING_DOTS = DOT_MARKERS.filter(d => d.pulse);
 const VB_W = 960;
 const VB_H = 600;
 
-function BlinkingDot({ x, y, r = 4, delay = 0 }: { x: number; y: number; r?: number; delay?: number }) {
+function BlinkingDot({ x, y, r = 4, delay = 0, key }: { x: number; y: number; r?: number; delay?: number; key?: React.Key }) {
   return (
     <g>
       {/* Pulsing outer ring */}
@@ -122,7 +122,7 @@ function BlinkingDot({ x, y, r = 4, delay = 0 }: { x: number; y: number; r?: num
   );
 }
 
-function StaticDot({ x, y, r = 4, delay = 0 }: { x: number; y: number; r?: number; delay?: number }) {
+function StaticDot({ x, y, r = 4, delay = 0, key }: { x: number; y: number; r?: number; delay?: number; key?: React.Key }) {
   return (
     <motion.circle
       cx={x} cy={y} r={r}
@@ -140,19 +140,20 @@ interface StateProps {
   isHovered: boolean;
   onEnter: () => void;
   onLeave: () => void;
+  key?: React.Key;
 }
 
 function StateShape({ name, d, isHovered, onEnter, onLeave }: StateProps) {
   return (
     <motion.path
       d={d}
-      fill={isHovered ? 'rgba(0,255,204,0.15)' : 'rgba(255,255,255,0.03)'}
+      fill={isHovered ? 'rgba(110,221,210,0.15)' : 'rgba(255,255,255,0.03)'}
       stroke={isHovered ? '#14B8A6' : '#4b5563'}
       strokeWidth={isHovered ? 1.5 : 1}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
       animate={{
-        fill: isHovered ? 'rgba(0,255,204,0.15)' : 'rgba(255,255,255,0.03)',
+        fill: isHovered ? 'rgba(110,221,210,0.15)' : 'rgba(255,255,255,0.03)',
         stroke: isHovered ? '#14B8A6' : '#4b5563',
       }}
       transition={{ duration: 0.2 }}
@@ -171,7 +172,7 @@ function USAMap() {
       <svg
         viewBox={`0 0 ${VB_W} ${VB_H}`}
         className="w-full h-full"
-        style={{ filter: 'drop-shadow(0 0 20px rgba(0,255,204,0.08))' }}
+        style={{ filter: 'drop-shadow(0 0 20px rgba(20,184,166,0.08))' }}
       >
         {/* State fills */}
         <g>
@@ -238,7 +239,7 @@ function USAMap() {
         })()}
       </svg>
 
-      {/* Hovered state label badge */}
+      {/* Hovered state label badge
       {hoveredState && (
         <motion.div
           initial={{ opacity: 0, y: 5 }}
@@ -248,7 +249,7 @@ function USAMap() {
         >
           {hoveredState}
         </motion.div>
-      )}
+      )} */}
     </div>
   );
 }
@@ -330,7 +331,7 @@ export function AdvertisingPlatform() {
               className="relative"
             >
               {/* Subtle green ambient glow behind the map */}
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_50%,rgba(0,255,204,0.06),transparent)] pointer-events-none" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_50%,rgba(20,184,166,0.06),transparent)] pointer-events-none" />
               <USAMap />
             </motion.div>
           </div>

@@ -53,7 +53,7 @@ export function ConnectedSystem() {
              viewport={{ once: true }}
              className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-white tracking-tight leading-tight w-full max-w-none break-words"
           >
-            From Search to Sale — <span className="text-jc-teal">One Connected System</span>
+            From Search to Sale — <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">One Connected System</span>
           </motion.h2>
         </div>
 
@@ -110,7 +110,7 @@ export function ConnectedSystem() {
                 >
                   <div className="flex-shrink-0 mt-1">
                     <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300 ${
-                      isActive ? "bg-[#0c2419] border border-jc-teal/40" : "bg-transparent border border-gray-700 group-hover:border-jc-teal/50"
+                      isActive ? "bg-jc-teal/20 border border-jc-teal/40" : "bg-transparent border border-gray-700 group-hover:border-jc-teal/50"
                     }`}>
                       <feature.icon className={`w-5 h-5 transition-colors duration-300 ${isActive ? "text-jc-teal" : "text-gray-500 group-hover:text-jc-teal"}`} />
                     </div>

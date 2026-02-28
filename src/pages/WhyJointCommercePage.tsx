@@ -27,7 +27,7 @@ const FlowSvg = () => (
       <linearGradient id="gradient-flow" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stopColor="#14B8A6" stopOpacity="0" />
         <stop offset="50%" stopColor="#14B8A6" stopOpacity="1" />
-        <stop offset="100%" stopColor="#0efbba" stopOpacity="0" />
+        <stop offset="100%" stopColor="#6EDDD2" stopOpacity="0" />
       </linearGradient>
     </defs>
   </svg>
@@ -144,7 +144,7 @@ export function WhyJointCommercePage() {
               </div>
               
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter uppercase leading-[0.9] drop-shadow-2xl">
-                Why Joint<br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-jc-teal to-white">Commerce</span>
+                Why <span className="text-[#14B8A6] hover:text-[#6EDDD2] transition-colors cursor-default">Joint</span><br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#14B8A6] to-white hover:from-[#6EDDD2] transition-all cursor-default">Commerce</span>
               </h1>
               
               <div className="space-y-3 relative">
@@ -161,12 +161,12 @@ export function WhyJointCommercePage() {
                  >
                    Others sell listings.
                  </motion.p>
-                 <motion.p 
-                   initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.5 }}
-                   className="text-2xl text-jc-teal font-extrabold uppercase tracking-widest drop-shadow-[0_0_10px_rgba(0,212,178,0.5)]"
-                 >
-                   Others sit inside one ecosystem.
-                 </motion.p>
+                  <motion.p 
+                    initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.5 }}
+                    className="text-2xl text-jc-teal hover:text-jc-mint font-extrabold uppercase tracking-widest drop-shadow-[0_0_10px_rgba(20,184,166,0.5)] transition-colors cursor-default"
+                  >
+                    Others sit inside one ecosystem.
+                  </motion.p>
               </div>
             </motion.div>
 
@@ -185,9 +185,9 @@ export function WhyJointCommercePage() {
                  {/* Central Core */}
                  <div className="absolute inset-0 flex items-center justify-center transform-style-preserve-3d translate-z-[50px]">
                     <div className="w-32 h-32 rounded-full border-2 border-jc-teal flex items-center justify-center relative shadow-[0_0_50px_rgba(0,212,178,0.3)] bg-black/50 backdrop-blur-md">
-                       <motion.div className="w-24 h-24 rounded-full bg-jc-teal/20 border border-jc-teal/50 flex flex-col items-center justify-center" animate={{ scale: [1, 1.1, 1] }} transition={{ repeat: Infinity, duration: 2 }}>
-                          <span className="text-[10px] font-black tracking-widest text-[#0efbba]">CORE</span>
-                       </motion.div>
+                        <motion.div className="w-24 h-24 rounded-full bg-jc-teal/20 border border-jc-teal/50 flex flex-col items-center justify-center" animate={{ scale: [1, 1.1, 1] }} transition={{ repeat: Infinity, duration: 2 }}>
+                          <span className="text-[10px] font-black tracking-widest text-[#6EDDD2]">CORE</span>
+                        </motion.div>
                        
                        {/* Radiating Rings */}
                        <motion.div className="absolute inset-[-50px] border border-jc-teal/20 rounded-full" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} />
@@ -230,7 +230,7 @@ export function WhyJointCommercePage() {
               viewport={{ once: true, margin: "-100px" }}
               className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white uppercase"
             >
-              Why We Are A <span className="text-transparent bg-clip-text bg-gradient-to-r from-jc-teal to-[#e0fcf6]">Must-Buy</span>
+              Why We Are A <span className="text-transparent bg-clip-text bg-gradient-to-r from-jc-teal to-[#6EDDD2] hover:from-[#6EDDD2] hover:to-[#14B8A6] transition-all cursor-default">Must-Buy</span>
             </motion.h2>
           </div>
 
@@ -305,11 +305,11 @@ export function WhyJointCommercePage() {
             </motion.div>
 
             <h3 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase mb-8">
-              What Makes Us <span className="text-transparent bg-clip-text bg-gradient-to-r from-jc-teal to-[#5ce6d0]">Different</span>
+              What Makes Us <span className="text-transparent bg-clip-text bg-gradient-to-r from-jc-teal to-[#6EDDD2] hover:from-[#6EDDD2] hover:to-[#14B8A6] transition-all cursor-default">Different</span>
             </h3>
             
             <p className="text-xl md:text-3xl text-white/80 font-medium leading-relaxed max-w-4xl mx-auto">
-              JointCommerce controls discovery, activation, commerce routing, and revenue reporting in <strong className="text-white bg-jc-teal/20 px-2 rounded-md border border-jc-teal/30">one infrastructure layer.</strong>
+              JointCommerce controls discovery, activation, commerce routing, and revenue reporting in <strong className="text-jc-teal hover:text-jc-mint bg-jc-teal/20 px-2 rounded-md border border-jc-teal/30 transition-colors cursor-default">one infrastructure layer.</strong>
             </p>
 
             <motion.button 
