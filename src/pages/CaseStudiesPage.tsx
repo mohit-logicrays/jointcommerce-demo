@@ -123,17 +123,17 @@ export function CaseStudiesPage() {
                </div>
                <div className="p-8 md:p-12 bg-white flex flex-col sm:flex-row justify-between gap-8 h-full">
                   <div className="space-y-2 relative">
-                     <div className="absolute -top-12 left-0 w-8 h-1 bg-[#0efbba]" />
+                     <div className="absolute -top-12 left-0 w-8 h-1 bg-jc-teal" />
                      <h3 className="text-4xl lg:text-5xl font-light text-[#20222a] tracking-tight">10<span className="font-bold">x+</span></h3>
                      <p className="text-[#20222a]/70 font-medium text-sm lg:text-base leading-tight">Return on ad<br/>spend</p>
                   </div>
                   <div className="space-y-2 relative">
-                     <div className="absolute -top-12 left-0 w-8 h-1 bg-[#0efbba]" />
+                     <div className="absolute -top-12 left-0 w-8 h-1 bg-jc-teal" />
                      <h3 className="text-4xl lg:text-5xl font-light text-[#20222a] tracking-tight">&lt;$<span className="font-bold">5</span></h3>
                      <p className="text-[#20222a]/70 font-medium text-sm lg:text-base leading-tight">Cost Per<br/>Acquisition</p>
                   </div>
                   <div className="space-y-2 relative">
-                     <div className="absolute -top-12 left-0 w-8 h-1 bg-[#0efbba]" />
+                     <div className="absolute -top-12 left-0 w-8 h-1 bg-jc-teal" />
                      <h3 className="text-4xl lg:text-5xl font-light text-[#20222a] tracking-tight">28<span className="font-bold">%</span></h3>
                      <p className="text-[#20222a]/70 font-medium text-sm lg:text-base leading-tight max-w-[140px]">Increase in new<br/>customers</p>
                   </div>

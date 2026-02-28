@@ -92,7 +92,7 @@ export function PremiumActivation() {
   const beamProps = {
     pathColor: '#14B8A6', // Teal line
     pathOpacity: 0.3,     // Increased opacity for visibility
-    gradientStartColor: '#0efbba', // Bright mint
+    gradientStartColor: '#14B8A6', // New brand teal
     gradientStopColor: '#14B8A6', // jc-teal
   };
 

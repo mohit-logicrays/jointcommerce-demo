@@ -98,7 +98,7 @@ export function RealTimeReporting() {
                   <div className="flex items-end gap-1.5 h-20">
                     {[30, 80, 45, 100, 60, 90, 75].map((height, i) => (
                       <div key={i} className="w-5 bg-jc-teal/20 rounded-t-sm group relative">
-                        <div className="absolute bottom-0 left-0 right-0 bg-jc-teal rounded-t-sm transition-all duration-300 group-hover:bg-[#1ba87e]" style={{ height: `${height * 0.9}%` }}/>
+                        <div className="absolute bottom-0 left-0 right-0 bg-jc-teal rounded-t-sm transition-all duration-300 group-hover:bg-jc-mint" style={{ height: `${height * 0.9}%` }}/>
                       </div>
                     ))}
                   </div>

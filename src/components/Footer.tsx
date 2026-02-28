@@ -10,6 +10,7 @@ export function Footer() {
       {/* CTA Section with Background Video */}
       <div className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black/50 z-10" />
+        <div className="absolute -top-12 left-0 w-8 h-1 bg-jc-teal" />
         <video 
           src={footerVideo}
           autoPlay 
@@ -29,7 +30,7 @@ export function Footer() {
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-8 tracking-tight">
             Ready to scale your brand?
           </h2>
-          <button className="px-8 py-3.5 rounded-full bg-[#0efbba] text-jc-dark font-bold hover:bg-white transition-colors uppercase tracking-widest text-xs shadow-[0_0_20px_rgba(14,251,186,0.4)]">
+          <button className="px-8 py-3.5 rounded-full bg-jc-teal text-jc-dark font-bold hover:bg-jc-mint hover:text-white transition-colors uppercase tracking-widest text-xs shadow-[0_0_20px_rgba(20,184,166,0.4)]">
             BOOK LIVE DEMO
           </button>
         </motion.div>
