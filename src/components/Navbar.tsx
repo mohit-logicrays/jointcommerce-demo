@@ -1,9 +1,10 @@
+"use client";
+
 import { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '../lib/utils';
-import logoImage from '../static/marketing/logos/logo-without-text.png';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,8 +60,8 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0 flex items-center gap-3 text-white font-bold text-xl tracking-tight z-50">
-            <img src={logoImage} alt="JointCommerce Logo" className="h-8 w-auto brightness-0 invert" />
+          <Link href="/" className="flex-shrink-0 flex items-center gap-3 text-white font-bold text-xl tracking-tight z-50">
+            <img src="/logos/logo-without-text.png" alt="JointCommerce Logo" className="h-8 w-auto brightness-0 invert" />
             JointCommerce
           </Link>
 
@@ -80,7 +81,7 @@ export function Navbar() {
                       {item.children.map((child) => (
                         <Link
                           key={child.name}
-                          to={child.href}
+                          href={child.href}
                           className="block px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 rounded-xl transition-colors"
                         >
                           {child.name}
@@ -90,7 +91,7 @@ export function Navbar() {
                   </>
                 ) : (
                   <Link
-                    to={item.href!}
+                    href={item.href!}
                     className="text-sm font-medium text-white/80 hover:text-white transition-colors py-8 block"
                   >
                     {item.name}
@@ -102,7 +103,7 @@ export function Navbar() {
 
           {/* Contact Button */}
           <div className="hidden lg:flex items-center">
-            <Link to="/contact" className="px-6 py-2.5 rounded-full border border-jc-teal text-jc-teal hover:bg-jc-mint hover:text-jc-dark transition-colors text-sm font-bold shadow-lg shadow-jc-teal/10 inline-block">
+            <Link href="/contact" className="px-6 py-2.5 rounded-full border border-jc-teal text-jc-teal hover:bg-jc-mint hover:text-jc-dark transition-colors text-sm font-bold shadow-lg shadow-jc-teal/10 inline-block">
               Contact Us
             </Link>
           </div>
@@ -152,7 +153,7 @@ export function Navbar() {
                               {item.children.map((child) => (
                                 <Link
                                   key={child.name}
-                                  to={child.href}
+                                  href={child.href}
                                   onClick={handleMobileNavClick}
                                   className="block px-3 py-2.5 rounded-lg text-base font-medium text-white/70 hover:text-white hover:bg-white/10"
                                 >
@@ -166,7 +167,7 @@ export function Navbar() {
                     </div>
                   ) : (
                     <Link
-                      to={item.href!}
+                      href={item.href!}
                       onClick={handleMobileNavClick}
                       className="block px-3 py-3 rounded-xl text-lg font-medium text-white hover:bg-white/5"
                     >
@@ -176,7 +177,7 @@ export function Navbar() {
                 </div>
               ))}
               <div className="pt-6 pb-2 px-3">
-                <Link to="/contact" onClick={handleMobileNavClick} className="w-full px-6 py-4 rounded-full border-2 border-jc-teal font-bold bg-jc-teal text-jc-dark transition-colors shadow-lg shadow-jc-teal/20 text-lg block text-center">
+                <Link href="/contact" onClick={handleMobileNavClick} className="w-full px-6 py-4 rounded-full border-2 border-jc-teal font-bold bg-jc-teal text-jc-dark transition-colors shadow-lg shadow-jc-teal/20 text-lg block text-center">
                   Contact Us
                 </Link>
               </div>

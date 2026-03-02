@@ -1,6 +1,8 @@
+"use client";
+
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Search, MonitorPlay, Route, LineChart } from 'lucide-react';
-import investingVideo from '../static/marketing/videos/investing.mp4';
 
 export function InvestingInMedia() {
   const features = [
@@ -84,7 +86,7 @@ export function InvestingInMedia() {
                 playsInline
                 className="w-full h-full object-cover scale-[1.02]"
               >
-                <source src={investingVideo} type="video/mp4" />
+                <source src="/videos/investing.mp4" type="video/mp4" />
               </video>
               
               <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/10 pointer-events-none" />

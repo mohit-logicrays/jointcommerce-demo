@@ -1,6 +1,7 @@
+"use client";
+
+import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { useRef, useState } from 'react';
-import systemVideo from '../static/marketing/videos/6802bef7f0d9c9a024a7972d_1efbdc56490687326b08fdc33cc93706fd96a97b (2) (1)-transcode (1).mp4';
 import { Search, Radio, MousePointerClick, ShoppingBag, Settings2 } from 'lucide-react';
 
 export function ConnectedSystem() {
@@ -73,7 +74,7 @@ export function ConnectedSystem() {
                 playsInline
                 className="w-full h-full object-cover scale-[1.02]"
               >
-                <source src={systemVideo} type="video/mp4" />
+                <source src="/videos/6802bef7f0d9c9a024a7972d_1efbdc56490687326b08fdc33cc93706fd96a97b (2) (1)-transcode (1).mp4" type="video/mp4" />
               </video>
             </motion.div>
             <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/5 pointer-events-none" />
@@ -87,7 +88,7 @@ export function ConnectedSystem() {
                 playsInline
                 className="w-full h-full object-cover scale-[1.02]"
               >
-                <source src={systemVideo} type="video/mp4" />
+                <source src="/videos/6802bef7f0d9c9a024a7972d_1efbdc56490687326b08fdc33cc93706fd96a97b (2) (1)-transcode (1).mp4" type="video/mp4" />
               </video>
           </div>
 

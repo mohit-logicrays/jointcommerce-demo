@@ -1,3 +1,5 @@
+"use client";
+
 import React, { RefObject, useEffect, useId, useState } from "react"
 import { motion } from "framer-motion"
 
@@ -30,7 +32,7 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
   toRef,
   curvature = 0,
   reverse = false, // Include the reverse prop
-  duration = Math.random() * 3 + 4,
+  duration: initialDuration,
   delay = 0,
   pathColor = "gray",
   pathWidth = 2,
@@ -43,7 +45,14 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
   endYOffset = 0,
 }) => {
   const id = useId()
+  const [duration, setDuration] = useState(initialDuration || 7)
   const [pathD, setPathD] = useState("")
+
+  useEffect(() => {
+    if (!initialDuration) {
+      setDuration(Math.random() * 3 + 4)
+    }
+  }, [initialDuration])
   const [svgDimensions, setSvgDimensions] = useState({ width: 0, height: 0 })
 
   // Calculate the gradient coordinates based on the reverse prop

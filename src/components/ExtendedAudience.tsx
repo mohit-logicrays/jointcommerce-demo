@@ -1,6 +1,8 @@
+"use client";
+
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Users, RadioTower } from 'lucide-react';
-import bgVideo from '../static/marketing/videos/6802bef7f0d9c9a024a79671_5eca3fffe575b1eed852c2467f9b2a0f90f4ea6f (1)-transcode.mp4';
 
 export function ExtendedAudience() {
   const cards = [
@@ -33,14 +35,14 @@ export function ExtendedAudience() {
       >
         {/* Background Video inside the angled section */}
         <div className="absolute inset-0 opacity-40 mix-blend-screen">
-           <video 
-             src={bgVideo} 
-             autoPlay 
-             muted 
-             loop 
-             playsInline 
-             className="w-full h-full object-cover"
-           />
+            <video 
+              src="/videos/6802bef7f0d9c9a024a79671_5eca3fffe575b1eed852c2467f9b2a0f90f4ea6f (1)-transcode.mp4" 
+              autoPlay 
+              muted 
+              loop 
+              playsInline 
+              className="w-full h-full object-cover"
+            />
            {/* Gradient Overlay for better text legibility */}
            <div className="absolute inset-0 bg-gradient-to-b from-[#14151a]/80 via-transparent to-[#14151a]"></div>
         </div>

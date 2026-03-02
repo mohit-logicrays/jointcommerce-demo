@@ -1,3 +1,6 @@
+"use client";
+
+import React from 'react';
 import { motion } from 'framer-motion';
 
 // Individual brand components rendered as inline SVGs / styled text matching the screenshot

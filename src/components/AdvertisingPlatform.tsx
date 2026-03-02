@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { STATE_PATHS } from './statePaths';
@@ -101,7 +103,7 @@ const PULSING_DOTS = DOT_MARKERS.filter(d => d.pulse);
 const VB_W = 960;
 const VB_H = 600;
 
-function BlinkingDot({ x, y, r = 4, delay = 0, key }: { x: number; y: number; r?: number; delay?: number; key?: React.Key }) {
+function BlinkingDot({ x, y, r = 4, delay = 0 }: { x: number; y: number; r?: number; delay?: number }) {
   return (
     <g>
       {/* Pulsing outer ring */}
@@ -122,7 +124,7 @@ function BlinkingDot({ x, y, r = 4, delay = 0, key }: { x: number; y: number; r?
   );
 }
 
-function StaticDot({ x, y, r = 4, delay = 0, key }: { x: number; y: number; r?: number; delay?: number; key?: React.Key }) {
+function StaticDot({ x, y, r = 4, delay = 0 }: { x: number; y: number; r?: number; delay?: number }) {
   return (
     <motion.circle
       cx={x} cy={y} r={r}
@@ -140,7 +142,6 @@ interface StateProps {
   isHovered: boolean;
   onEnter: () => void;
   onLeave: () => void;
-  key?: React.Key;
 }
 
 function StateShape({ name, d, isHovered, onEnter, onLeave }: StateProps) {

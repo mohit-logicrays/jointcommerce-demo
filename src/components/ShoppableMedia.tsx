@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+"use client";
+
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
-import shoppableVideo from '../static/marketing/videos/Comp dsds1.mp4';
-import ctvVideo from '../static/marketing/videos/Frosted NUG CTV.mp4';
 
 // ── Animated counter — mount-based (works inside AnimatePresence) ─────────────
 function Counter({ value, suffix = '' }: { value: number | string; suffix?: string }) {
@@ -140,7 +140,7 @@ function PreviewCTV() {
       {/* TV bezel */}
       <div className="relative w-full rounded-lg overflow-hidden border-[6px] border-[#222] shadow-2xl" style={{ aspectRatio: '16/9', maxHeight: '85%' }}>
         <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-          <source src={ctvVideo} type="video/mp4" />
+          <source src="/videos/Frosted NUG CTV.mp4" type="video/mp4" />
         </video>
         {/* Channel bug */}
         <div className="absolute top-2 right-2 bg-black/70 text-[#14B8A6] text-[9px] font-bold px-2 py-0.5 rounded tracking-widest">● LIVE AD</div>
@@ -446,8 +446,8 @@ export function ShoppableMedia() {
               >
                 <div className="relative z-10 bg-[#111] rounded-lg p-2 md:p-3 shadow-[0_25px_60px_rgba(0,0,0,0.3)] border-2 border-gray-800 aspect-[16/9] overflow-hidden">
                   <video autoPlay loop muted playsInline className="w-full h-full object-cover rounded-sm">
-                    <source src={shoppableVideo} type="video/mp4" />
-                  </video>
+                <source src="/videos/Comp dsds1.mp4" type="video/mp4" />
+              </video>
                 </div>
                 <div className="absolute top-0 inset-x-0 h-full bg-gray-900 rounded-lg translate-y-1 -z-10" />
                 <div className="absolute -bottom-8 md:-bottom-12 left-1/2 -translate-x-1/2 flex justify-between w-[50%] z-0">

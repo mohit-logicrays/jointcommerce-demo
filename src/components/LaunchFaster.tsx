@@ -1,6 +1,9 @@
-import { motion } from 'framer-motion';
+"use client";
+
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Monitor, Tv, Package, Video, Layers, RefreshCw, CheckCircle2, Zap, TrendingUp, Users } from 'lucide-react';
-import frostedVideo from '../static/marketing/videos/Frosted NUG CTV.mp4';
+const frostedVideo = "/videos/Frosted NUG CTV.mp4";
 
 export function LaunchFaster() {
   const features = [

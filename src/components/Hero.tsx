@@ -1,7 +1,9 @@
+"use client";
+
+import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef, useState } from 'react';
+import Link from 'next/link';
 import { ArrowRight, Volume2, VolumeX } from 'lucide-react';
-import heroVideo from '../static/marketing/videos/uhhu.mp4';
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -40,7 +42,7 @@ export function Hero() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src={heroVideo} type="video/mp4" />
+            <source src="/videos/uhhu.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

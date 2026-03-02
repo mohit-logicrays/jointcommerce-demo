@@ -1,6 +1,9 @@
-import { motion } from 'framer-motion';
+"use client";
+
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Search, ShoppingCart, Lock, Info, CheckCircle2, Menu, Bell, User, Star, ShieldCheck } from 'lucide-react';
-import logoImage from '../static/marketing/logos/logo-without-text.png';
+const logoImage = "/logos/logo-without-text.png";
 
 export function DirectPurchase() {
   const features = [

@@ -1,5 +1,8 @@
+"use client";
+
 import React from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import Link from 'next/link';
 
 const LeafSvg = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
@@ -55,16 +58,16 @@ export function DirectoryPromo() {
 
         {/* Content */}
         <div className="relative z-10 max-w-lg">
-          <h2 className="text-4xl md:text-5xl font-black text-[#a1a1a1] mb-6 tracking-tight leading-tight transition-transform duration-500 group-hover:-translate-y-1">
+          <h2 className="text-4xl md:text-5xl font-black text-[#2e3b36] mb-6 tracking-tight leading-tight transition-transform duration-500 group-hover:-translate-y-1">
             Looking for a trusted<br/>local provider?
           </h2>
-          <p className="text-[#c1c1c1] text-lg lg:text-xl font-medium mb-10 transition-transform duration-500 delay-75 group-hover:-translate-y-1">
+          <p className="text-[#2e3b36] text-lg lg:text-xl font-medium mb-10 transition-transform duration-500 delay-75 group-hover:-translate-y-1">
             Enter your location and customize your search to find the best local dispensaries and brands near you.
           </p>
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 rounded-md border border-gray-300 text-gray-400 font-medium hover:text-gray-600 hover:border-gray-400 transition-colors shadow-sm bg-white"
+            className="px-8 py-3 rounded-md border border-[#2e3b36] text-[#2e3b36] font-medium hover:text-gray-600 hover:border-gray-400 transition-colors shadow-sm bg-white"
           >
             Search Our Directory
           </motion.button>

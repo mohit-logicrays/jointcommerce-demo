@@ -1,8 +1,9 @@
+"use client";
+
 import { AnimatedBeam } from './ui/animated-beam';
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
 import { Handshake, Eye, ShieldCheck, Network, Archive, Smartphone } from 'lucide-react';
-import logoImage from '../static/marketing/logos/logo-without-text.png';
 
 /* ─── Stagger parent variant ────────────────────────────────────── */
 const containerVariants = {
@@ -22,7 +23,7 @@ const nodeVariants = {
     opacity: 1,
     scale: 1,
     y: 0,
-    transition: { type: 'spring', stiffness: 100, damping: 15 },
+    transition: { type: 'spring', stiffness: 100, damping: 15 } as any,
   },
 };
 
@@ -32,7 +33,7 @@ const mobileItemVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { type: 'spring', stiffness: 110, damping: 16 },
+    transition: { type: 'spring', stiffness: 110, damping: 16 } as any,
   },
 };
 
@@ -42,7 +43,7 @@ const centerVariants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { type: 'spring', stiffness: 100, damping: 20, delay: 0.1 },
+    transition: { type: 'spring', stiffness: 100, damping: 20, delay: 0.1 } as any,
   },
 };
 
@@ -52,7 +53,7 @@ const headingVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] as any },
   },
 };
 
@@ -61,7 +62,7 @@ const subVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.12 },
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as any, delay: 0.12 },
   },
 };
 
@@ -96,7 +97,14 @@ export function PremiumActivation() {
     gradientStopColor: '#14B8A6', // jc-teal
   };
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const particles = React.useMemo(() => {
+    if (!mounted) return [];
     return [...Array(15)].map((_, i) => ({
       id: i,
       xStart: (Math.random() - 0.5) * 800,
@@ -107,7 +115,7 @@ export function PremiumActivation() {
       delay: Math.random() * 5,
       size: Math.random() * 2 + 2,
     }));
-  }, []);
+  }, [mounted]);
 
   /**
    * Layout fixes:
@@ -215,7 +223,7 @@ export function PremiumActivation() {
 
           {/* ── Floating Particles ─────────────────────────────── */}
           <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden mix-blend-multiply">
-            {particles.map((p) => (
+            {mounted && particles.map((p) => (
               <motion.div
                 key={p.id}
                 className="absolute rounded-full bg-jc-teal/60 blur-[1px]"
@@ -294,7 +302,7 @@ export function PremiumActivation() {
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 2.66 }}
             />
             <img 
-              src={logoImage} 
+              src="/logos/logo-without-text.png" 
               alt="JointCommerce" 
               className="w-14 h-14 xl:w-16 xl:h-16 mb-2 object-contain filter brightness-0 invert drop-shadow-[0_0_12px_rgba(0,212,178,0.4)] transition-transform duration-500 group-hover:scale-110" 
             />
@@ -374,7 +382,7 @@ export function PremiumActivation() {
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 2.66 }}
             />
             <img 
-              src={logoImage} 
+              src="/logos/logo-without-text.png" 
               alt="JointCommerce" 
               className="w-12 h-12 mb-1 object-contain filter brightness-0 invert drop-shadow-[0_0_10px_rgba(0,212,178,0.4)]" 
             />

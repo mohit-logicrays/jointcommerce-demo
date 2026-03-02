@@ -1,8 +1,8 @@
+"use client";
+
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Mail, Phone } from 'lucide-react';
-import footerVideo from '../static/marketing/videos/ijijijli.mp4';
-import logoImage from '../static/marketing/logos/logo-without-text.png';
 
 export function Footer() {
   return (
@@ -12,7 +12,7 @@ export function Footer() {
         <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="absolute -top-12 left-0 w-8 h-1 bg-jc-teal" />
         <video 
-          src={footerVideo}
+          src="/videos/ijijijli.mp4"
           autoPlay 
           muted 
           loop 
@@ -45,12 +45,12 @@ export function Footer() {
             <div className="col-span-1">
               <h4 className="font-medium text-jc-dark mb-6 text-sm">Platform & Discovery</h4>
               <ul className="space-y-4 text-xs font-medium text-jc-dark/70">
-                <li><Link to="/platform" className="hover:text-jc-teal transition-colors">Platform</Link></li>
-                <li><Link to="/our-technology" className="hover:text-jc-teal transition-colors">Our Technology</Link></li>
-                <li><Link to="/why-jointcommerce" className="hover:text-jc-teal transition-colors">Why JointCommerce</Link></li>
-                <li><Link to="/demand-infrastructure" className="hover:text-jc-teal transition-colors">Demand</Link></li>
-                <li><Link to="/directory" className="hover:text-jc-teal transition-colors">Directory</Link></li>
-                <li><Link to="/shoppers" className="hover:text-jc-teal transition-colors">For Shoppers</Link></li>
+                <li><Link href="/platform" className="hover:text-jc-teal transition-colors">Platform</Link></li>
+                <li><Link href="/our-technology" className="hover:text-jc-teal transition-colors">Our Technology</Link></li>
+                <li><Link href="/why-jointcommerce" className="hover:text-jc-teal transition-colors">Why JointCommerce</Link></li>
+                <li><Link href="/demand-infrastructure" className="hover:text-jc-teal transition-colors">Demand</Link></li>
+                <li><Link href="/directory" className="hover:text-jc-teal transition-colors">Directory</Link></li>
+                <li><Link href="/shoppers" className="hover:text-jc-teal transition-colors">For Shoppers</Link></li>
               </ul>
             </div>
 
@@ -58,10 +58,10 @@ export function Footer() {
             <div className="col-span-1">
               <h4 className="font-medium text-jc-dark mb-6 text-sm">Ecosystem</h4>
               <ul className="space-y-4 text-xs font-medium text-jc-dark/70">
-                <li><Link to="/retailers" className="hover:text-jc-teal transition-colors">Retailers</Link></li>
-                <li><Link to="/brands" className="hover:text-jc-teal transition-colors">Brands</Link></li>
-                <li><Link to="/partners" className="hover:text-jc-teal transition-colors">Partners</Link></li>
-                <li><Link to="/agencies" className="hover:text-jc-teal transition-colors">Agencies</Link></li>
+                <li><Link href="/retailers" className="hover:text-jc-teal transition-colors">Retailers</Link></li>
+                <li><Link href="/brands" className="hover:text-jc-teal transition-colors">Brands</Link></li>
+                <li><Link href="/partners" className="hover:text-jc-teal transition-colors">Partners</Link></li>
+                <li><Link href="/agencies" className="hover:text-jc-teal transition-colors">Agencies</Link></li>
               </ul>
             </div>
 
@@ -69,9 +69,9 @@ export function Footer() {
             <div className="col-span-1">
               <h4 className="font-medium text-jc-dark mb-6 text-sm">Contact & Legal</h4>
               <ul className="space-y-4 text-xs font-medium text-jc-dark/70">
-                <li><Link to="/enterprise" className="hover:text-jc-teal transition-colors">Enterprise</Link></li>
-                <li><Link to="/advertisers" className="hover:text-jc-teal transition-colors">Advertisers</Link></li>
-                <li><Link to="/contact" className="hover:text-jc-teal transition-colors">Contact Us</Link></li>
+                <li><Link href="/enterprise" className="hover:text-jc-teal transition-colors">Enterprise</Link></li>
+                <li><Link href="/advertisers" className="hover:text-jc-teal transition-colors">Advertisers</Link></li>
+                <li><Link href="/contact" className="hover:text-jc-teal transition-colors">Contact Us</Link></li>
                 <li><a href="#" className="hover:text-jc-teal transition-colors">Privacy Policy</a></li>
                 <li><a href="#" className="hover:text-jc-teal transition-colors">Terms of Service</a></li>
               </ul>
@@ -93,7 +93,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-20 text-center text-[10px] text-jc-dark/60">
+          <div className="mt-20 text-center text-[10px] text-jc-dark/60" suppressHydrationWarning>
             Copyright © {new Date().getFullYear()} JointCommerce. All Rights Reserved
           </div>
         </div>
