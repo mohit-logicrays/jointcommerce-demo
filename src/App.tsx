@@ -25,6 +25,7 @@ import { WhyJointCommercePage } from './pages/WhyJointCommercePage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
+  console.log("test")
 
   useEffect(() => {
     window.scrollTo(0, 0);
