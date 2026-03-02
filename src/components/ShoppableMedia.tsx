@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import shoppableVideo from '../static/marketing/videos/Comp dsds1.mp4';
 import ctvVideo from '../static/marketing/videos/Frosted NUG CTV.mp4';
 
@@ -377,196 +377,226 @@ const ACCORDION_ITEMS = [
 export function ShoppableMedia() {
   const [open, setOpen] = useState(0);
   const active = ACCORDION_ITEMS[open];
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
+
+  // Animated values for the hero section
+  const bgColor = useTransform(scrollYProgress, [0, 0.6], ["#6EDDD2", "#111111"]);
+  const tvScale = useTransform(scrollYProgress, [0.3, 0.9], [1, 1.3]);
+  const tvY = useTransform(scrollYProgress, [0.3, 0.9], ["0%", "5%"]);
+  const tvX = useTransform(scrollYProgress, [0.3, 0.7], ["0%", "-55%"]); // Only for desktop
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  const contentY = useTransform(scrollYProgress, [0, 0.3], [0, -40]);
+
+  // Handle window width for responsive TV centering
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const checkSize = () => setIsDesktop(window.innerWidth >= 1024);
+    checkSize();
+    window.addEventListener('resize', checkSize);
+    return () => window.removeEventListener('resize', checkSize);
+  }, []);
 
   return (
-    <section className="py-16 md:py-24 bg-[#6EDDD2] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <>
+      <div ref={containerRef} className="relative h-[200vh]">
+        <motion.section 
+          style={{ backgroundColor: bgColor }}
+          className="sticky top-0 h-screen flex items-center overflow-hidden z-10"
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            {/* Hero: text + video */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <motion.div
+                style={{ opacity: contentOpacity, y: contentY }}
+                className="space-y-5 lg:pr-8"
+              >
+                <div className="space-y-4 text-lg sm:text-xl text-jc-dark/80 leading-relaxed">
+                  <p>
+                    Our advanced <span className="font-semibold text-jc-dark">Demand Side Platform (DSP)</span> and{' '}
+                    <span className="font-semibold text-jc-dark">Consumer Data Platform (CDP)</span> maximize advertising
+                    effectiveness to help you accomplish your business objectives.
+                  </p>
+                  <p>
+                    We navigate strict advertising restrictions, find new customers, and boost sales growth. Our unique
+                    buying practices optimize your ad placement across curated publishers and drive positive ROI.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-3 pt-2">
+                  {['DSP Technology', 'CDP Integration', 'Positive ROI'].map(tag => (
+                    <span key={tag} className="bg-white/60 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/80 shadow-sm text-jc-dark font-semibold text-sm">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
 
-        {/* Hero: text + video */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+              {/* TV mockup */}
+              <motion.div
+                style={{ 
+                  scale: tvScale, 
+                  y: tvY,
+                  x: isDesktop ? tvX : 0
+                }}
+                className="relative w-full"
+              >
+                <div className="relative z-10 bg-[#111] rounded-lg p-2 md:p-3 shadow-[0_25px_60px_rgba(0,0,0,0.3)] border-2 border-gray-800 aspect-[16/9] overflow-hidden">
+                  <video autoPlay loop muted playsInline className="w-full h-full object-cover rounded-sm">
+                    <source src={shoppableVideo} type="video/mp4" />
+                  </video>
+                </div>
+                <div className="absolute top-0 inset-x-0 h-full bg-gray-900 rounded-lg translate-y-1 -z-10" />
+                <div className="absolute -bottom-8 md:-bottom-12 left-1/2 -translate-x-1/2 flex justify-between w-[50%] z-0">
+                  <div className="w-3 h-12 bg-gray-800 rotate-[30deg] origin-top rounded-b-sm" />
+                  <div className="w-3 h-12 bg-gray-800 -rotate-[30deg] origin-top rounded-b-sm" />
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </motion.section>
+      </div>
+
+      <section className="py-16 md:py-24 bg-[#6EDDD2] overflow-hidden relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          {/* ── Accordion + Dynamic right panel ── */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="space-y-5 lg:pr-8"
+            className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-6 lg:gap-8 items-stretch"
           >
-            <div className="space-y-4 text-lg sm:text-xl text-jc-dark/80 leading-relaxed">
-              <p>
-                Our advanced <span className="font-semibold text-jc-dark">Demand Side Platform (DSP)</span> and{' '}
-                <span className="font-semibold text-jc-dark">Consumer Data Platform (CDP)</span> maximize advertising
-                effectiveness to help you accomplish your business objectives.
-              </p>
-              <p>
-                We navigate strict advertising restrictions, find new customers, and boost sales growth. Our unique
-                buying practices optimize your ad placement across curated publishers and drive positive ROI.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3 pt-2">
-              {['DSP Technology', 'CDP Integration', 'Positive ROI'].map(tag => (
-                <span key={tag} className="bg-white/60 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/80 shadow-sm text-jc-dark font-semibold text-sm">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </motion.div>
+            {/* Accordion */}
+            <div className="flex flex-col gap-3">
+              {ACCORDION_ITEMS.map((item, i) => {
+                const isOpen = open === i;
+                return (
+                  <motion.div
+                    key={i}
+                    className={`rounded-2xl border cursor-pointer overflow-hidden transition-colors duration-300 ${isOpen ? 'bg-jc-dark border-jc-dark' : 'bg-white/50 border-white/80 hover:bg-white/70'}`}
+                    onClick={() => setOpen(i)}
+                    layout
+                  >
+                    {/* Header */}
+                    <div className="flex items-center justify-between px-5 py-4">
+                      <span className={`font-semibold text-base leading-snug ${isOpen ? 'text-white' : 'text-jc-dark'}`}>
+                        {item.title}
+                      </span>
+                      <motion.div
+                        animate={{ rotate: isOpen ? 180 : 0 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                        className={`flex-shrink-0 ml-3 ${isOpen ? 'text-jc-teal' : 'text-jc-dark/40'}`}
+                      >
+                        <svg viewBox="0 0 20 20" className="w-5 h-5" fill="none">
+                          <path d="M5 7.5 L10 12.5 L15 7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </motion.div>
+                    </div>
 
-          {/* TV mockup */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.92, x: 40 }}
-            whileInView={{ opacity: 1, scale: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="relative w-full"
-          >
-            <div className="relative z-10 bg-[#111] rounded-lg p-2 md:p-3 shadow-[0_25px_60px_rgba(0,0,0,0.3)] border-2 border-gray-800 aspect-[16/9] overflow-hidden">
-              <video autoPlay loop muted playsInline className="w-full h-full object-cover rounded-sm">
-                <source src={shoppableVideo} type="video/mp4" />
-              </video>
+                    {/* Expandable content */}
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          key="body"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: 'easeInOut' }}
+                          className="overflow-hidden"
+                        >
+                          <ul className="px-5 pb-5 space-y-2.5">
+                            {item.features.map((f, fi) => (
+                              <motion.li
+                                key={fi}
+                                initial={{ opacity: 0, x: -10 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: fi * 0.07 }}
+                                className="flex items-start gap-2.5 text-white/85 text-sm"
+                              >
+                                <span className="text-jc-teal mt-0.5 text-xs">✓</span>
+                                {f}
+                              </motion.li>
+                            ))}
+                          </ul>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                );
+              })}
             </div>
-            <div className="absolute top-0 inset-x-0 h-full bg-gray-900 rounded-lg translate-y-1 -z-10" />
-            <div className="absolute -bottom-8 md:-bottom-12 left-1/2 -translate-x-1/2 flex justify-between w-[50%] z-0">
-              <div className="w-3 h-12 bg-gray-800 rotate-[30deg] origin-top rounded-b-sm" />
-              <div className="w-3 h-12 bg-gray-800 -rotate-[30deg] origin-top rounded-b-sm" />
-            </div>
+
+            {/* Dynamic right panel */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={open}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.32, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="bg-jc-dark rounded-2xl p-6 flex flex-col gap-6 border border-gray-800 shadow-xl"
+              >
+                {/* Premium & Direct badge */}
+                <div className="flex items-center gap-2">
+                  <svg viewBox="0 0 22 22" className="w-5 h-5" fill="none">
+                    <motion.circle cx="11" cy="11" r="9" stroke="#14B8A6" strokeWidth="1.5"
+                      animate={{ rotate: 360 }} style={{ originX: '11px', originY: '11px' }}
+                      transition={{ duration: 10, repeat: Infinity, ease: 'linear' }} />
+                    <path d="M11 6l1.3 2.8 3.1.5-2.3 2.1.5 3-2.6-1.4-2.6 1.4.5-3-2.3-2.1 3.1-.5Z" fill="#14B8A6" />
+                  </svg>
+                  <span className="text-jc-teal text-xs font-semibold tracking-widest uppercase">Premium &amp; Direct</span>
+                </div>
+
+                {/* SVG Preview */}
+                <div className="w-full aspect-[16/10] rounded-xl overflow-hidden bg-black/30">
+                  <active.Preview />
+                </div>
+
+                {/* Stats */}
+                <div className="flex items-center gap-8 pt-1">
+                  <div>
+                    <div className="flex items-center gap-1 text-white/50 text-xs mb-1">
+                      <svg viewBox="0 0 14 14" className="w-3 h-3" fill="none" stroke="#14B8A6" strokeWidth="1.3">
+                        <circle cx="7" cy="7" r="5.5" /><path d="M7 2C7 2 5 4 5 7C5 10 7 12 7 12C7 12 9 10 9 7C9 4 7 2 7 2Z" /><line x1="1.5" y1="7" x2="12.5" y2="7" />
+                      </svg>
+                      {active.stat1Label}
+                    </div>
+                    <div className="flex items-center gap-1.5 text-white font-black text-3xl leading-none">
+                      <Counter value={active.stat1Value} suffix={active.stat1Suffix} />
+                      <motion.svg viewBox="0 0 28 16" className="w-7 h-4" fill="none"
+                        initial={{ opacity: 0, x: -4 }} animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.9, duration: 0.4 }}>
+                        <path d="M2 13 L8 7 L14 10 L26 2" stroke="#14B8A6" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M21 2 H26 V7" stroke="#14B8A6" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                      </motion.svg>
+                    </div>
+                    <div className="mt-1.5 h-0.5 w-20 rounded bg-[#14B8A6]" />
+                  </div>
+
+                  <div className="w-px h-10 bg-white/10" />
+
+                  <div>
+                    <div className="flex items-center gap-1 text-white/50 text-xs mb-1">
+                      <svg viewBox="0 0 14 10" className="w-3.5 h-2.5" fill="none" stroke="#14B8A6" strokeWidth="1.3">
+                        <path d="M1 5C3 1.5 11 1.5 13 5C11 8.5 3 8.5 1 5Z" /><circle cx="7" cy="5" r="2" fill="#14B8A6" />
+                      </svg>
+                      {active.stat2Label}
+                    </div>
+                    <div className="text-white font-black text-3xl leading-none">
+                      <Counter value={active.stat2Value} suffix={active.stat2Suffix} />
+                    </div>
+                    <div className="mt-1.5 h-0.5 w-20 rounded bg-[#14B8A6]" />
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </motion.div>
         </div>
-
-        {/* ── Accordion + Dynamic right panel ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-6 lg:gap-8 items-stretch"
-        >
-          {/* Accordion */}
-          <div className="flex flex-col gap-3">
-            {ACCORDION_ITEMS.map((item, i) => {
-              const isOpen = open === i;
-              return (
-                <motion.div
-                  key={i}
-                  className={`rounded-2xl border cursor-pointer overflow-hidden transition-colors duration-300 ${isOpen ? 'bg-jc-dark border-jc-dark' : 'bg-white/50 border-white/80 hover:bg-white/70'}`}
-                  onClick={() => setOpen(i)}
-                  layout
-                >
-                  {/* Header */}
-                  <div className="flex items-center justify-between px-5 py-4">
-                    <span className={`font-semibold text-base leading-snug ${isOpen ? 'text-white' : 'text-jc-dark'}`}>
-                      {item.title}
-                    </span>
-                    <motion.div
-                      animate={{ rotate: isOpen ? 180 : 0 }}
-                      transition={{ duration: 0.3, ease: 'easeInOut' }}
-                      className={`flex-shrink-0 ml-3 ${isOpen ? 'text-jc-teal' : 'text-jc-dark/40'}`}
-                    >
-                      <svg viewBox="0 0 20 20" className="w-5 h-5" fill="none">
-                        <path d="M5 7.5 L10 12.5 L15 7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </motion.div>
-                  </div>
-
-                  {/* Expandable content */}
-                  <AnimatePresence initial={false}>
-                    {isOpen && (
-                      <motion.div
-                        key="body"
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: 'easeInOut' }}
-                        className="overflow-hidden"
-                      >
-                        <ul className="px-5 pb-5 space-y-2.5">
-                          {item.features.map((f, fi) => (
-                            <motion.li
-                              key={fi}
-                              initial={{ opacity: 0, x: -10 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: fi * 0.07 }}
-                              className="flex items-start gap-2.5 text-white/85 text-sm"
-                            >
-                              <span className="text-jc-teal mt-0.5 text-xs">✓</span>
-                              {f}
-                            </motion.li>
-                          ))}
-                        </ul>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* Dynamic right panel */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={open}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.32, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="bg-jc-dark rounded-2xl p-6 flex flex-col gap-6 border border-gray-800 shadow-xl"
-            >
-              {/* Premium & Direct badge */}
-              <div className="flex items-center gap-2">
-                <svg viewBox="0 0 22 22" className="w-5 h-5" fill="none">
-                  <motion.circle cx="11" cy="11" r="9" stroke="#14B8A6" strokeWidth="1.5"
-                    animate={{ rotate: 360 }} style={{ originX: '11px', originY: '11px' }}
-                    transition={{ duration: 10, repeat: Infinity, ease: 'linear' }} />
-                  <path d="M11 6l1.3 2.8 3.1.5-2.3 2.1.5 3-2.6-1.4-2.6 1.4.5-3-2.3-2.1 3.1-.5Z" fill="#14B8A6" />
-                </svg>
-                <span className="text-jc-teal text-xs font-semibold tracking-widest uppercase">Premium &amp; Direct</span>
-              </div>
-
-              {/* SVG Preview */}
-              <div className="w-full aspect-[16/10] rounded-xl overflow-hidden bg-black/30">
-                <active.Preview />
-              </div>
-
-              {/* Stats */}
-              <div className="flex items-center gap-8 pt-1">
-                <div>
-                  <div className="flex items-center gap-1 text-white/50 text-xs mb-1">
-                    <svg viewBox="0 0 14 14" className="w-3 h-3" fill="none" stroke="#14B8A6" strokeWidth="1.3">
-                      <circle cx="7" cy="7" r="5.5" /><path d="M7 2C7 2 5 4 5 7C5 10 7 12 7 12C7 12 9 10 9 7C9 4 7 2 7 2Z" /><line x1="1.5" y1="7" x2="12.5" y2="7" />
-                    </svg>
-                    {active.stat1Label}
-                  </div>
-                  <div className="flex items-center gap-1.5 text-white font-black text-3xl leading-none">
-                    <Counter value={active.stat1Value} suffix={active.stat1Suffix} />
-                    <motion.svg viewBox="0 0 28 16" className="w-7 h-4" fill="none"
-                      initial={{ opacity: 0, x: -4 }} animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.9, duration: 0.4 }}>
-                      <path d="M2 13 L8 7 L14 10 L26 2" stroke="#14B8A6" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M21 2 H26 V7" stroke="#14B8A6" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                    </motion.svg>
-                  </div>
-                  <div className="mt-1.5 h-0.5 w-20 rounded bg-[#14B8A6]" />
-                </div>
-
-                <div className="w-px h-10 bg-white/10" />
-
-                <div>
-                  <div className="flex items-center gap-1 text-white/50 text-xs mb-1">
-                    <svg viewBox="0 0 14 10" className="w-3.5 h-2.5" fill="none" stroke="#14B8A6" strokeWidth="1.3">
-                      <path d="M1 5C3 1.5 11 1.5 13 5C11 8.5 3 8.5 1 5Z" /><circle cx="7" cy="5" r="2" fill="#14B8A6" />
-                    </svg>
-                    {active.stat2Label}
-                  </div>
-                  <div className="text-white font-black text-3xl leading-none">
-                    <Counter value={active.stat2Value} suffix={active.stat2Suffix} />
-                  </div>
-                  <div className="mt-1.5 h-0.5 w-20 rounded bg-[#14B8A6]" />
-                </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
-
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
