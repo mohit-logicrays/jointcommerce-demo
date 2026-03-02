@@ -6,15 +6,15 @@ export function DirectPurchase() {
   const features = [
     {
       icon: <Search className="w-5 h-5 text-jc-teal" />,
-      title: "Browse live inventory"
+      title: "Real-Time Inventory Access"
     },
     {
       icon: <ShoppingCart className="w-5 h-5 text-jc-teal" />,
-      title: "Seamlessly add to cart"
+      title: "Direct-to-Cart Routing"
     },
     {
       icon: <Lock className="w-5 h-5 text-jc-teal" />,
-      title: "Securely complete checkout"
+      title: "Secure Transaction Processing"
     }
   ];
 
@@ -29,11 +29,11 @@ export function DirectPurchase() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-jc-dark leading-[1.1] tracking-tight mb-6 uppercase">
-              <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">DIRECT</span><br />
-              <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">PURCHASE</span>
+              <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">FRICTIONLESS</span><br />
+              <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">CHECKOUT</span>
             </h2>
             <p className="text-xl text-jc-dark/80 mb-12 font-light">
-              Consumers can buy directly on <strong className="font-bold">JointCommerce</strong>.
+              Turn <strong className="font-bold text-jc-dark">high-intent discovery</strong> into immediate sales.
             </p>
 
             <div className="space-y-6 mb-12">

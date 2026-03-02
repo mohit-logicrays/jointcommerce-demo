@@ -6,19 +6,19 @@ import brandCarouselVideo from '../static/marketing/videos/6802bef7f0d9c9a024a79
 
 const solutions = [
   {
-    title: "Private Inventory Marketplace of Compliant Website and App Publishers",
+    title: "Premium Private Marketplace",
     content: "Run your ad placements across premium policy-compliant publishers such as ESPN, HGTV, Food Network, Hollywood Reporter, and more."
   },
   {
-    title: "Proven Customer Acquisition and Retention Strategies",
+    title: "Full-Funnel Audience Strategy",
     content: "Our meticulous approach to acquiring and retaining customers is rooted in our expert ability to drive target audiences down the purchase funnel to buy with lookalike modeling and retargeting."
   },
   {
-    title: "Optimization Recommendation Engine",
+    title: "Algorithmic Optimization Engine",
     content: "Analyzes campaign trends and provides recommendations on improving campaign performance with data and analytics in real-time with self-service and managed service."
   },
   {
-    title: "Proprietary Reporting and Analytics",
+    title: "Advanced Measurement & Attribution",
     content: "Measure online sales with closed-loop attribution for insightful campaign optimization and strategic decision-making."
   },
   {
@@ -215,9 +215,10 @@ export function AdTechSolutions() {
                initial={{ opacity: 0, y: 20 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
-               className="text-3xl md:text-5xl lg:text-5xl font-extrabold tracking-tight max-w-3xl leading-[1.2]"
+               className="text-3xl md:text-5xl lg:text-5xl font-extrabold tracking-tight max-w-3xl leading-[1.2] uppercase"
              >
-                Consistent and Reliable <span className="text-[#14B8A6] hover:text-[#6EDDD2] transition-colors cursor-default">Ad Tech Solutions</span> To Help You <span className="text-[#14B8A6] hover:text-[#6EDDD2] transition-colors cursor-default">Grow Your Business</span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-jc-teal to-[#6EDDD2]">POWERFUL AD SOLUTIONS</span><br />
+                <span className="text-white text-2xl md:text-3xl lg:text-3xl font-light mt-2 block tracking-normal normal-case">Built for scale, precision, and measurable growth.</span>
              </motion.h2>
           </div>
 

@@ -46,12 +46,12 @@ export function LaunchFaster() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-jc-dark leading-[1.1] tracking-tight mb-6">
-              Launch Faster.<br />
-              Convert Better.
+            <h2 className="text-4xl lg:text-5xl font-bold text-jc-dark leading-[1.1] tracking-tight mb-6 uppercase">
+              ACCELERATE CREATIVE<br />
+              DEPLOYMENT
             </h2>
             <p className="text-lg text-jc-dark/70 mb-12">
-              Every JointCommerce activation includes access to our Integrated Creative Studio — built specifically for shoppable commerce campaigns.
+              Every JointCommerce activation includes access to our Integrated Creative Studio — built specifically to translate your assets into high-performing, commerce-ready units.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
@@ -77,7 +77,7 @@ export function LaunchFaster() {
 
             <div className="flex items-center gap-2 text-sm font-medium text-jc-dark bg-white/50 p-4 rounded-xl border border-white/20">
               <CheckCircle2 className="w-5 h-5 text-jc-teal" />
-              Creative built for verified A21+ commerce activation.
+              Creative standardized for verified A21+ commerce activation.
             </div>
           </motion.div>
 
@@ -241,17 +241,17 @@ export function LaunchFaster() {
         >
           <div className="flex items-center gap-3 text-jc-dark font-medium text-sm">
             <Zap className="w-5 h-5 text-jc-teal" />
-            <span>No production delays</span>
+            <span>Zero production delays</span>
           </div>
           <div className="flex items-center gap-3 text-jc-dark font-medium text-sm">
             <RefreshCw className="w-5 h-5 text-jc-teal" />
-            <span>Faster deployment</span>
+            <span>Rapid campaign deployment</span>
           </div>
           <div className="flex items-center gap-3 text-jc-dark font-medium text-sm">
             <TrendingUp className="w-5 h-5 text-jc-teal" />
-            <span>Higher conversion alignment</span>
+            <span>Maximized conversion rates</span>
           </div>
-          <button className="px-6 py-2 rounded-full bg-jc-teal text-jc-dark font-bold text-sm hover:bg-jc-mint/90 transition-colors">
+          <button className="px-6 py-2 rounded-full bg-jc-teal text-jc-dark font-bold text-sm hover:bg-jc-mint/90 transition-colors uppercase tracking-wider">
             Get Started
           </button>
         </motion.div>

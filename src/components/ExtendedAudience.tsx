@@ -57,8 +57,8 @@ export function ExtendedAudience() {
           <h2 className="text-3xl lg:text-4xl font-bold mb-4 uppercase tracking-widest">
             EXTENDED AUDIENCE ACTIVATION
           </h2>
-          <p className="text-lg text-jc-teal max-w-2xl mx-auto font-medium">
-            For approved non-endemic and ancillary advertisers seeking verified A21+ discovery-driven audiences within premium publisher environments.
+          <p className="text-lg text-jc-teal max-w-2xl mx-auto font-light leading-relaxed">
+            Reach highly engaged, verified <strong className="font-bold text-white">A21+ consumers</strong> across premium publisher environments. Exclusively available for approved non-endemic and ancillary advertisers seeking measurable discovery-driven growth.
           </p>
         </motion.div>
 

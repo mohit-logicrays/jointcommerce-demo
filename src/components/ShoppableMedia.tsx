@@ -415,19 +415,21 @@ export function ShoppableMedia() {
                 style={{ opacity: contentOpacity, y: contentY }}
                 className="space-y-5 lg:pr-8"
               >
-                <div className="space-y-4 text-lg sm:text-xl text-jc-dark/80 leading-relaxed">
+                <h2 className="text-4xl lg:text-5xl font-extrabold text-jc-dark leading-[1.1] tracking-tight mb-6 uppercase">
+                  OMNICHANNEL<br />
+                  ACTIVATION AT SCALE
+                </h2>
+                <div className="space-y-4 text-lg sm:text-xl text-jc-dark/80 leading-relaxed font-light">
                   <p>
-                    Our advanced <span className="font-semibold text-jc-dark">Demand Side Platform (DSP)</span> and{' '}
-                    <span className="font-semibold text-jc-dark">Consumer Data Platform (CDP)</span> maximize advertising
-                    effectiveness to help you accomplish your business objectives.
+                    Power your campaigns with our advanced <strong className="font-bold text-jc-dark">Demand Side Platform (DSP)</strong> and{' '}
+                    <strong className="font-bold text-jc-dark">Consumer Data Platform (CDP)</strong>. We turn data into measurable outcomes.
                   </p>
                   <p>
-                    We navigate strict advertising restrictions, find new customers, and boost sales growth. Our unique
-                    buying practices optimize your ad placement across curated publishers and drive positive ROI.
+                    Reach your ideal audience across premium, brand-safe publishers. Our algorithmic bidding strategies optimize every impression to drive verified incremental sales and maximize <strong className="font-bold text-jc-dark">Return on Ad Spend (ROAS)</strong>.
                   </p>
                 </div>
-                <div className="flex flex-wrap gap-3 pt-2">
-                  {['DSP Technology', 'CDP Integration', 'Positive ROI'].map(tag => (
+                <div className="flex flex-wrap gap-3 pt-4">
+                  {['Intelligent Bidding', 'Identity Resolution', 'Closed-Loop ROAS'].map(tag => (
                     <span key={tag} className="bg-white/60 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/80 shadow-sm text-jc-dark font-semibold text-sm">
                       {tag}
                     </span>

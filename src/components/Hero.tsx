@@ -65,19 +65,19 @@ export function Hero() {
         {/* Floating Content over the Video */}
         {/* We absolutely position it in the center of the viewport and animate its Y, Scale, and Opacity */}
         <motion.div 
-          className="absolute inset-0 z-20 flex flex-col justify-center pt-24 pb-10"
+          className="absolute inset-0 z-20 flex flex-col justify-center pt-28 pb-6"
           style={{ 
             y: contentY, 
             opacity: contentOpacity, 
             scale: contentScale 
           }}
         >
-          <div className="relative max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 w-full mt-auto mb-auto">
+          <div className="relative max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 w-full">
             {/* Title */}
-            <div className="w-full mb-10">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight drop-shadow-md leading-[1.1]">
+            <div className="w-full mb-4">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight drop-shadow-md leading-[1.1] uppercase">
                 Turn High-Intent Discovery<br />
-                Into <span className="text-jc-teal border-b-[4px] border-jc-teal pb-1 hover:text-jc-mint hover:border-jc-mint transition-colors cursor-default">Direct Purchases</span>
+                Into <span className="text-jc-teal border-b-[4px] border-jc-teal pb-1 hover:text-jc-mint hover:border-jc-mint transition-colors cursor-default">Measurable Sales</span>
               </h1>
             </div>
 
@@ -86,15 +86,17 @@ export function Hero() {
               {/* Left Column */}
               <div className="lg:col-span-8 bg-black/40 backdrop-blur-md rounded-2xl p-8 lg:p-10 border border-white/10 shadow-lg flex flex-col justify-center">
                 <div className="text-white/80 text-[1.05rem] lg:text-[1.1rem] leading-relaxed space-y-6 font-medium">
-                  <p>
-                    <strong className="text-white">JointCommerce</strong> captures <span className="text-jc-teal font-bold hover:text-jc-mint transition-colors cursor-default">A21+ shoppers</span> actively searching <span className="text-jc-teal font-bold hover:text-jc-mint transition-colors cursor-default">"where to buy"</span> through our SEO-powered shopper directory and amplifies that demand with shoppable activation across curated premium publisher environments — routing consumers directly to purchase on JointCommerce (when enabled) and across participating retailer, brand, and marketplace commerce systems.
+                  <p className="text-2xl text-white font-bold tracking-tight">
+                    The premium advertising platform built to reach verified A21+ shoppers and drive closed-loop commerce at every stage of the consumer journey.
                   </p>
                   <p>
-                    As the <span className="text-jc-teal font-bold hover:text-jc-mint transition-colors cursor-default">infrastructure layer</span> connecting discovery to commerce, JointCommerce enables <span className="text-jc-teal font-bold hover:text-jc-mint transition-colors cursor-default">always-on activation</span> with <strong className="text-white">real-time, measurable online revenue performance.</strong>
+                    Transform how you acquire customers and drive revenue with a platform that directly connects discovery to point-of-sale.
                   </p>
-                  <p className="font-extrabold text-white text-2xl pt-2 tracking-tight">
-                    Launch quickly. Scale continuously. Measure confidently.
-                  </p>
+                  <ul className="list-disc pl-5 space-y-2 mt-4 text-white">
+                    <li><strong className="text-jc-teal">Reach Customers Where They Browse:</strong> Amplify your brand across premium publisher environments.</li>
+                    <li><strong className="text-jc-teal">Activate High-Intent Demand:</strong> Capture shoppers actively searching "where to buy."</li>
+                    <li><strong className="text-jc-teal">Drive Immediate Purchases:</strong> Turn every impression into action by bridging digital engagement with an active cart.</li>
+                  </ul>
                 </div>
               </div>
 
@@ -126,20 +128,19 @@ export function Hero() {
                   </div>
                   
                   <h3 className="text-white font-bold text-lg leading-snug mb-4 tracking-tight">
-                    Drive Measurable Online Sales<br />From<br />
-                    <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">Verified A21+</span><br />
-                    <span className="text-[0.9rem] font-medium text-white/80">Zero Party High-Intent Shoppers</span>
+                    Built for Cannabis Brands<br />and Retailers<br />
+                    <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">of All Sizes</span>
                   </h3>
                   
                   <p className="text-white/80 text-[0.85rem] leading-relaxed mx-auto">
-                    <span className="text-jc-teal font-semibold hover:text-jc-mint transition-colors cursor-default">JointCommerce</span> captures shoppers actively searching <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">"where to buy,"</span> activates them across <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">premium publisher environments</span>, and routes them directly to purchase - with <span className="text-jc-teal font-medium hover:text-jc-mint transition-colors cursor-default">real-time revenue reporting.</span>
+                    Confidently target, engage, and convert verified shoppers with <span className="text-jc-teal font-medium hover:text-jc-mint transition-colors cursor-default">real-time revenue reporting.</span>
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-wrap items-center gap-4 mt-8">
+            <div className="flex flex-wrap items-center gap-4 mt-5">
               <button className="h-[48px] px-8 rounded-lg bg-jc-teal text-jc-dark font-bold hover:bg-white transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md group border border-transparent">
                 Book Demo <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
@@ -155,7 +156,7 @@ export function Hero() {
             </div>
 
             {/* Bottom Stats Pills */}
-            <div className="inline-flex flex-wrap items-center justify-start gap-x-8 gap-y-4 px-6 md:px-8 py-4 bg-black/60 backdrop-blur-md rounded-2xl border border-white/10 mt-6 lg:mt-8 w-full sm:w-auto shadow-sm">
+            <div className="inline-flex flex-wrap items-center justify-start gap-x-8 gap-y-4 px-6 md:px-8 py-3 bg-black/60 backdrop-blur-md rounded-2xl border border-white/10 mt-4 w-full sm:w-auto shadow-sm">
               <div className="flex items-center gap-2.5">
                 <div className="w-2 h-2 rounded-full bg-jc-teal shadow-[0_0_6px_rgba(0,212,178,0.5)]"></div>
                 <span className="text-white/90 text-[13px] font-semibold tracking-wide">12,000+ Retail Menus Connected</span>

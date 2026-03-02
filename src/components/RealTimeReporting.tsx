@@ -24,35 +24,55 @@ export function RealTimeReporting() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-jc-dark leading-[1.1] tracking-tight mb-6 uppercase">
-              REAL-TIME<br />
-              REPORTING
+              ANALYTICS THAT<br />
+              PROVE PERFORMANCE
             </h2>
-            <p className="text-xl text-jc-dark/80 mb-12 font-light">
-              See Exactly What Drove Sales.
+            <p className="text-lg lg:text-xl text-jc-dark mb-10 font-medium">
+              Validate the impact of your ad spend with deterministic data and transparent outcomes.
             </p>
 
-            <p className="text-sm font-bold text-jc-dark mb-6 uppercase tracking-wider">Dashboards include (where enabled):</p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
-              {metrics.map((metric, index) => (
-                <motion.div 
-                  key={index}
-                  className="flex items-center gap-3"
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                >
-                  <CheckCircle2 className="w-5 h-5 text-jc-teal flex-shrink-0" />
-                  <span className="text-sm font-medium text-jc-dark/80">{metric}</span>
-                </motion.div>
-              ))}
-            </div>
-            <div className="mt-12 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-jc-teal/10 flex items-center justify-center">
-                <BarChart3 className="w-6 h-6 text-jc-teal" />
-              </div>
-              <p className="text-sm font-medium text-jc-dark/60">Full placement transparency</p>
+            <div className="flex flex-col gap-6">
+              <motion.div 
+                className="flex items-start gap-4"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4 }}
+              >
+                <CheckCircle2 className="w-6 h-6 text-[#14B8A6] flex-shrink-0 mt-0.5" />
+                <div>
+                  <span className="text-base font-bold text-jc-dark block mb-1 uppercase tracking-wider">Real-Time Reporting</span>
+                  <span className="text-sm font-medium text-jc-dark/80 leading-relaxed block">Monitor full-funnel performance as it happens, with instant visibility into impressions, clicks, and cart actions.</span>
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                className="flex items-start gap-4"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+              >
+                <CheckCircle2 className="w-6 h-6 text-[#14B8A6] flex-shrink-0 mt-0.5" />
+                <div>
+                  <span className="text-base font-bold text-jc-dark block mb-1 uppercase tracking-wider">Closed-Loop Attribution</span>
+                  <span className="text-sm font-medium text-jc-dark/80 leading-relaxed block">Prove true ROI by tying every marketing dollar directly to a completed online transaction and verified digital sale.</span>
+                </div>
+              </motion.div>
+
+              <motion.div 
+                className="flex items-start gap-4"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+              >
+                <CheckCircle2 className="w-6 h-6 text-[#14B8A6] flex-shrink-0 mt-0.5" />
+                <div>
+                  <span className="text-base font-bold text-jc-dark block mb-1 uppercase tracking-wider">Always-On Optimization</span>
+                  <span className="text-sm font-medium text-jc-dark/80 leading-relaxed block">Continuously refine targeting, creative, and media placement strategies using rich, cross-device revenue data.</span>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
 

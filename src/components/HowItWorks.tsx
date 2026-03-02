@@ -165,26 +165,26 @@ function ConnectorArrow({ glow }: { glow: boolean }) {
 const STEPS = [
   {
     num: 1,
-    label: 'Reach A21+',
-    body: 'cannabis shoppers across premium publishers and omnichannel media',
+    label: 'Reach',
+    body: 'Identify and target verified A21+ consumers across premium media networks without friction.',
     Icon: IconReach,
   },
   {
     num: 2,
     label: 'Activate',
-    body: 'co-brand placements across 12,000+ dispensary ecommerce menus',
+    body: 'Seamlessly deploy co-branded ad placements across our network of 12,000+ dispensary menus.',
     Icon: IconActivate,
   },
   {
     num: 3,
     label: 'Engage',
-    body: 'shoppers natively at product, brand, and store level',
+    body: 'Guide shoppers through the purchasing funnel using dynamic, shoppable creative.',
     Icon: IconEngage,
   },
   {
     num: 4,
-    label: 'Convert & Measure',
-    body: 'real online orders with full attribution',
+    label: 'Convert',
+    body: 'Route consumers directly to your brand page, marketplace, or retailer menu to complete purchase.',
     Icon: IconConvert,
   },
 ];
@@ -212,9 +212,12 @@ export function HowItWorks() {
           className="text-center mb-16 md:mb-20"
         >
           <h2 className="text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-white leading-tight tracking-tight">
-            How <span className="text-[#14B8A6] hover:text-[#6EDDD2] transition-colors cursor-default">JointCommerce</span> <span className="text-[#14B8A6] hover:text-[#6EDDD2] transition-colors cursor-default">Works</span>{' '}
-            <span className="font-light text-white/45">(Why Others Can't)</span>
+            How It Works:{' '}
+            <span className="text-[#14B8A6] hover:text-[#6EDDD2] transition-colors cursor-default">One Connected System</span>
           </h2>
+          <p className="mt-4 text-xl text-white/60">
+            A complete infrastructure layer that powers full-funnel activation from the first impression to the final checkout.
+          </p>
         </motion.div>
 
         {/* ── Main row: [Icon] → [Icon] → [Icon] → [Icon] ── */}

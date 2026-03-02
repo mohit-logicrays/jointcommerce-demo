@@ -268,7 +268,7 @@ export function AdvertisingPlatform() {
               viewport={{ once: true }}
               className="text-4xl md:text-[2.6rem] font-bold leading-[1.15] mb-5 tracking-tight"
             >
-              The <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">#1</span> Cannabis Advertising Platform — Powering <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">12,000+</span> Dispensary Menus
+              Ad Solutions to <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">Accelerate</span> Brand Growth
             </motion.h2>
 
             <motion.p
@@ -276,10 +276,22 @@ export function AdvertisingPlatform() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-[#a1a1a1] text-base md:text-lg font-medium mb-10 leading-relaxed"
+              className="text-[#a1a1a1] text-base md:text-lg font-medium mb-8 leading-relaxed"
             >
-              A premium publisher marketplace connected directly to SEO-powered dispensary menus — turning <span className="text-jc-teal font-semibold hover:text-jc-mint transition-colors cursor-default">A21+ cannabis demand</span> into <span className="text-jc-teal font-semibold hover:text-jc-mint transition-colors cursor-default">measurable online sales</span> for cannabis and non-cannabis brands
+              Confident, scalable advertising infrastructure designed for enterprise brands and agencies.
             </motion.p>
+
+            <motion.ul 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.15 }}
+              className="text-[#a1a1a1] space-y-4 mb-10 text-sm md:text-base"
+            >
+              <li><strong className="text-white">Launch Faster:</strong> Execute sophisticated campaigns quickly leveraging automated tools and deep, pre-built retailer integrations.</li>
+              <li><strong className="text-white">Extend Your Audience Reach:</strong> Expand beyond endemic constraints to safely engage high-value A21+ buyers across top-tier publisher environments.</li>
+              <li><strong className="text-white">Direct-to-Cart Routing:</strong> Eliminate friction within the customer journey by sending verified, high-intent clicks straight to the point of sale.</li>
+            </motion.ul>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}

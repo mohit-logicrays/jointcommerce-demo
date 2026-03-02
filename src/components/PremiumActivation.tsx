@@ -175,7 +175,7 @@ export function PremiumActivation() {
               animate={{ backgroundPosition: ['0% center', '200% center'] }}
               transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
             >
-              PREMIUM ACTIVATION
+              PREMIUM INVENTORY ACTIVATION
             </motion.span>
           </motion.h2>
 
@@ -195,7 +195,7 @@ export function PremiumActivation() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            PREMIUM INVENTORY. FULL TRANSPARENCY.
+            BRAND-SAFE ENVIRONMENTS. FULL TRANSPARENCY.
           </motion.p>
         </div>
 
