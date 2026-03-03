@@ -2,13 +2,13 @@ import { motion } from 'framer-motion';
 
 // Individual brand components rendered as inline SVGs / styled text matching the screenshot
 const CuraleafLogo = () => (
-  <span className="font-semibold tracking-widest text-white text-[13px] uppercase">curaleaf</span>
+  <span className="font-semibold tracking-widest text-gray-500 text-[13px] uppercase">curaleaf</span>
 );
 
 const WanaLogo = () => (
-  <span className="flex items-center gap-1.5 text-white">
+  <span className="flex items-center gap-1.5 text-gray-500">
     {/* Stylized "W" leaf icon */}
-    <svg viewBox="0 0 28 28" className="w-7 h-7 fill-white">
+    <svg viewBox="0 0 28 28" className="w-7 h-7 fill-gray-500">
       <path d="M14 2 C14 2 8 10 8 16 C8 20 10 23 14 25 C18 23 20 20 20 16 C20 10 14 2 14 2Z M10 14 C10 14 6 16 5 20 C8 21 11 20 13 18Z M18 14 C18 14 22 16 23 20 C20 21 17 20 15 18Z" />
     </svg>
     <span className="font-bold tracking-wide text-[14px]">wana</span>
@@ -16,12 +16,12 @@ const WanaLogo = () => (
 );
 
 const UnrivaledLogo = () => (
-  <span className="font-black tracking-[0.2em] text-white text-[11px] uppercase">UNRIVALED.</span>
+  <span className="font-black tracking-[0.2em] text-gray-500 text-[11px] uppercase">UNRIVALED.</span>
 );
 
 const AristocraftLogo = () => (
-  <span className="flex items-center gap-1.5 text-white">
-    <svg viewBox="0 0 32 32" className="w-6 h-6 fill-white">
+  <span className="flex items-center gap-1.5 text-gray-500">
+    <svg viewBox="0 0 32 32" className="w-6 h-6 fill-gray-500">
       <circle cx="16" cy="16" r="12" fill="none" stroke="currentColor" strokeWidth="2" />
       <path d="M10 20 L16 10 L22 20 Z M12 17 H20" />
     </svg>
@@ -34,8 +34,8 @@ const AristocraftLogo = () => (
 );
 
 const BuddiesLogo = () => (
-  <span className="flex items-center gap-1.5 text-white">
-    <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white">
+  <span className="flex items-center gap-1.5 text-gray-500">
+    <svg viewBox="0 0 24 24" className="w-5 h-5 fill-gray-500">
       <circle cx="12" cy="8" r="5" />
       <path d="M5 22 C5 16 19 16 19 22" />
     </svg>
@@ -44,36 +44,36 @@ const BuddiesLogo = () => (
 );
 
 const EmeraldLogo = () => (
-  <span className="flex items-center justify-center w-8 h-8 border-2 border-white rounded text-white font-black text-lg leading-none">
+  <span className="flex items-center justify-center w-8 h-8 border-2 border-gray-400 rounded text-gray-500 font-black text-lg leading-none">
     E
   </span>
 );
 
 const JettyLogo = () => (
-  <span className="flex flex-col items-start text-white leading-none">
+  <span className="flex flex-col items-start text-gray-500 leading-none">
     <span className="font-black text-[16px] tracking-widest uppercase">JETTY</span>
-    <span className="text-[7px] tracking-[0.15em] text-white/70 uppercase">EXTRACTS</span>
+    <span className="text-[7px] tracking-[0.15em] text-gray-400 uppercase">EXTRACTS</span>
   </span>
 );
 
 const CatalystLogo = () => (
-  <span className="flex flex-col items-center leading-none text-white">
+  <span className="flex flex-col items-center leading-none text-gray-500">
     <span className="font-black text-[14px] tracking-[0.25em] uppercase">CATALYST</span>
-    <span className="text-[7px] tracking-[0.12em] text-white/60 uppercase">CANNABIS DISPENSARY</span>
+    <span className="text-[7px] tracking-[0.12em] text-gray-400 uppercase">CANNABIS DISPENSARY</span>
   </span>
 );
 
 const SparcLogo = () => (
-  <span className="font-light tracking-[0.35em] text-white text-[14px] uppercase">sparc</span>
+  <span className="font-light tracking-[0.35em] text-gray-500 text-[14px] uppercase">sparc</span>
 );
 
 const DeepRootsLogo = () => (
-  <span className="flex items-center gap-1.5 text-white">
-    <svg viewBox="0 0 24 24" className="w-6 h-6 fill-white">
+  <span className="flex items-center gap-1.5 text-gray-500">
+    <svg viewBox="0 0 24 24" className="w-6 h-6 fill-gray-500">
       <path d="M12 2 C12 2 6 7 6 12 C6 17 9 20 12 22 C15 20 18 17 18 12 C18 7 12 2 12 2 Z" />
-      <path d="M12 12 L12 22" stroke="white" strokeWidth="1.5" />
-      <path d="M12 17 L8 14" stroke="white" strokeWidth="1" />
-      <path d="M12 15 L16 12" stroke="white" strokeWidth="1" />
+      <path d="M12 12 L12 22" stroke="currentColor" strokeWidth="1.5" fill="none" />
+      <path d="M12 17 L8 14" stroke="currentColor" strokeWidth="1" fill="none" />
+      <path d="M12 15 L16 12" stroke="currentColor" strokeWidth="1" fill="none" />
     </svg>
     <span className="text-[10px] font-bold uppercase leading-none tracking-wide">
       <span className="block">deep</span>
@@ -84,12 +84,12 @@ const DeepRootsLogo = () => (
 );
 
 const VibeLogo = () => (
-  <span className="text-white italic font-black text-[18px] tracking-wide">Vibe</span>
+  <span className="text-gray-500 italic font-black text-[18px] tracking-wide">Vibe</span>
 );
 
 const SmoaklandLogo = () => (
-  <span className="flex items-center gap-1.5 text-white">
-    <svg viewBox="0 0 20 20" className="w-4 h-4 fill-white opacity-80">
+  <span className="flex items-center gap-1.5 text-gray-500">
+    <svg viewBox="0 0 20 20" className="w-4 h-4 fill-gray-500 opacity-80">
       <path d="M10 2 C10 2 7 6 7 9 C7 12 8 14 10 15 C12 14 13 12 13 9 C13 6 10 2 10 2Z" />
     </svg>
     <span className="font-bold tracking-[0.15em] text-[12px] uppercase">SmoakLanD</span>
@@ -116,12 +116,12 @@ const ALL_BRANDS = [...BRANDS, ...BRANDS];
 
 export function BrandsBar() {
   return (
-    <section className="w-full bg-[#0a0a0a] border-y border-white/5 py-5 overflow-hidden">
+    <section className="w-full bg-gray-50 border-y border-gray-200 py-5 overflow-hidden">
       <div className="relative flex overflow-hidden">
         {/* Left fade */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
         {/* Right fade */}
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
 
         {/* Scrolling track */}
         <motion.div
@@ -137,7 +137,7 @@ export function BrandsBar() {
           {ALL_BRANDS.map((brand, i) => (
             <div
               key={`${brand.id}-${i}`}
-              className="flex items-center justify-center px-8 md:px-12 opacity-70 hover:opacity-100 transition-opacity duration-300 shrink-0"
+              className="flex items-center justify-center px-8 md:px-12 opacity-100 hover:opacity-90 transition-opacity duration-300 shrink-0"
             >
               {brand.element}
             </div>

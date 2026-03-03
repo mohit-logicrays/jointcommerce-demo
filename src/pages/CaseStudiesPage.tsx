@@ -21,7 +21,7 @@ export function CaseStudiesPage() {
             className="absolute top-0 right-0 w-96 h-96 pointer-events-none select-none -z-10"
          >
             {/* Massive Abstract Asterisk/Leaf Graphic Background */}
-            <svg viewBox="0 0 100 100" className="w-full h-full text-white fill-current">
+            <svg viewBox="0 0 100 100" className="w-full h-full text-gray-900 fill-current">
                <path d="M45 0h10v40l34.6-20 5 8.6-34.6 20 34.6 20-5 8.6-34.6-20v40H45v-40l-34.6 20-5-8.6 34.6-20-34.6-20 5-8.6 34.6 20V0z"/>
             </svg>
          </motion.div>
@@ -31,10 +31,10 @@ export function CaseStudiesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
          >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight">
                Real Results / Case <br className="hidden md:block" /> Studies
             </h1>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 justify-center text-gray-600">
                <ShieldCheck className="w-5 h-5 text-jc-teal" />
                Private inventory marketplace of policy-compliant website and app publishers
             </div>
@@ -42,7 +42,7 @@ export function CaseStudiesPage() {
       </div>
 
       {/* Publisher Marquee */}
-      <div className="w-full bg-black/40 border-y border-white/5 py-8 mb-24 relative overflow-hidden flex">
+      <div className="w-full bg-gray-50 border-y border-gray-200 py-8 mb-24 relative overflow-hidden flex">
          <motion.div
             initial={{ x: "0%" }}
             animate={{ x: "-50%" }}
@@ -50,19 +50,19 @@ export function CaseStudiesPage() {
             className="flex items-center gap-16 whitespace-nowrap px-8"
          >
             {[...publishers, ...publishers].map((pub, i) => (
-               <span key={i} className="text-xl md:text-3xl font-black text-white/40 uppercase tracking-widest font-mono">
+               <span key={i} className="text-xl md:text-3xl font-black text-gray-400 uppercase tracking-widest font-mono">
                   {pub}
                </span>
             ))}
          </motion.div>
          {/* Gradients to fade edges */}
-         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-jc-dark to-transparent" />
-         <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-jc-dark to-transparent" />
+         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-50 to-transparent" />
+         <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-gray-50 to-transparent" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-4">Real Results</h2>
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">Real Results</h2>
             <div className="w-24 h-1 bg-jc-teal mx-auto rounded-full" />
          </div>
 
@@ -72,9 +72,9 @@ export function CaseStudiesPage() {
                initial={{ opacity: 0, x: -30 }}
                whileInView={{ opacity: 1, x: 0 }}
                viewport={{ once: true }}
-               className="bg-white/5 rounded-[2rem] overflow-hidden border border-white/10 group"
+               className="bg-white rounded-[2rem] overflow-hidden border border-gray-200 group shadow-sm"
             >
-               <div className="aspect-[4/3] bg-black relative overflow-hidden flex items-center justify-center p-8">
+               <div className="aspect-[4/3] bg-gray-900 relative overflow-hidden flex items-center justify-center p-8">
                   <div className="absolute inset-0 bg-jc-teal/10 group-hover:bg-jc-mint/0 transition-colors z-10" />
                   <video 
                      src={ijijijli} 
@@ -108,9 +108,9 @@ export function CaseStudiesPage() {
                initial={{ opacity: 0, x: 30 }}
                whileInView={{ opacity: 1, x: 0 }}
                viewport={{ once: true }}
-               className="bg-white/5 rounded-[2rem] overflow-hidden border border-white/10 group"
+               className="bg-white rounded-[2rem] overflow-hidden border border-gray-200 group shadow-sm"
             >
-               <div className="aspect-[4/3] bg-black relative overflow-hidden flex items-center justify-center p-8">
+               <div className="aspect-[4/3] bg-gray-900 relative overflow-hidden flex items-center justify-center p-8">
                   <div className="absolute inset-0 bg-jc-teal/10 group-hover:bg-jc-mint/0 transition-colors z-10" />
                   <video 
                      src={investing} 
@@ -148,7 +148,7 @@ export function CaseStudiesPage() {
             viewport={{ once: true }}
             className="flex justify-center"
          >
-            <button className="px-10 py-5 bg-jc-teal hover:bg-white text-jc-dark font-black tracking-wide uppercase text-sm lg:text-base rounded-full transition-colors flex items-center gap-3 group shadow-[0_0_30px_rgba(0,163,143,0.3)] hover:shadow-[0_0_40px_rgba(255,255,255,0.4)]">
+            <button className="px-10 py-5 bg-jc-teal hover:bg-jc-mint text-white font-black tracking-wide uppercase text-sm lg:text-base rounded-full transition-colors flex items-center gap-3 group shadow-md">
                Get Started Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
          </motion.div>

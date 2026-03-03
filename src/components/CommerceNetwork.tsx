@@ -57,13 +57,7 @@ export function CommerceNetwork() {
   ];
 
   return (
-    <section className="relative w-full bg-black overflow-hidden py-14 md:py-20">
-
-      {/* Soft green radial glows that match the dark green theme */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[55%] h-[80%] bg-[radial-gradient(ellipse_at_80%_50%,rgba(0,180,80,0.10),transparent_70%)]" />
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[40%] h-[70%] bg-[radial-gradient(ellipse_at_20%_50%,rgba(0,120,50,0.07),transparent_65%)]" />
-      </div>
+    <section className="relative w-full bg-white overflow-hidden py-14 md:py-20 border-b border-gray-200">
 
       <div className="relative max-w-[1240px] mx-auto px-4 sm:px-8 lg:px-12">
         <div className="flex flex-col lg:flex-row items-stretch gap-10 lg:gap-16">
@@ -89,7 +83,7 @@ export function CommerceNetwork() {
                   </svg>
                   Monthly reach
                 </div>
-                <div className="flex items-center gap-2 text-white font-black text-[2.4rem] leading-none">
+                <div className="flex items-center gap-2 text-gray-900 font-black text-[2.4rem] leading-none">
                   <AnimatedNumber target={12} /><span>.0M</span>
                   {/* Trend arrow */}
                   <svg viewBox="0 0 34 18" className="w-8 h-5" fill="none">
@@ -99,7 +93,7 @@ export function CommerceNetwork() {
                 </div>
               </div>
 
-              <div className="w-px h-10 bg-white/10" />
+              <div className="w-px h-10 bg-gray-200" />
 
               {/* Avg viewability */}
               <div>
@@ -110,7 +104,7 @@ export function CommerceNetwork() {
                   </svg>
                   Avg viewability
                 </div>
-                <div className="text-white font-black text-[2.4rem] leading-none">
+                <div className="text-gray-900 font-black text-[2.4rem] leading-none">
                   <AnimatedNumber target={85} suffix="%" />
                 </div>
               </div>
@@ -122,7 +116,7 @@ export function CommerceNetwork() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.65, delay: 0.12 }}
-              className="relative flex-1 rounded-2xl overflow-hidden border border-[#14B8A6]/15 bg-black"
+              className="relative flex-1 rounded-2xl overflow-hidden border border-gray-200 bg-gray-100"
               style={{ minHeight: 280 }}
             >
               {/* Video — luminosity blend so its colours mix with the green bg */}
@@ -134,14 +128,11 @@ export function CommerceNetwork() {
                 <source src={brandCarouselVideo} type="video/mp4" />
               </video>
 
-              {/* Dark colour wash to blend video */}
-              <div className="absolute inset-0 bg-black/30 mix-blend-multiply pointer-events-none" />
-
-              {/* Edge fades into black section bg */}
-              <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-black to-transparent pointer-events-none" />
-              <div className="absolute top-0 inset-x-0 h-10 bg-gradient-to-b from-black to-transparent pointer-events-none" />
-              <div className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-black to-transparent pointer-events-none" />
-              <div className="absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-black to-transparent pointer-events-none" />
+              {/* Edge fades into white section bg */}
+              <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+              <div className="absolute top-0 inset-x-0 h-10 bg-gradient-to-b from-white to-transparent pointer-events-none" />
+              <div className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-white to-transparent pointer-events-none" />
+              <div className="absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-white to-transparent pointer-events-none" />
             </motion.div>
           </div>
 
@@ -176,7 +167,7 @@ export function CommerceNetwork() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-[2.8rem] md:text-5xl font-extrabold text-white leading-[1.08] tracking-tight mb-4"
+              className="text-[2.8rem] md:text-5xl font-extrabold text-gray-900 leading-[1.08] tracking-tight mb-4"
             >
               Premium Publisher<br />Marketplace
             </motion.h2>
@@ -187,13 +178,13 @@ export function CommerceNetwork() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.16 }}
-              className="text-white/50 text-base md:text-[1.05rem] font-medium mb-7"
+              className="text-gray-500 text-base md:text-[1.05rem] font-medium mb-7"
             >
               A True Premium Publisher Marketplace
             </motion.p>
 
             {/* Divider */}
-            <motion.div className="h-px bg-white/[0.08] mb-7 origin-left"
+            <motion.div className="h-px bg-gray-200 mb-7 origin-left"
               initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }}
               transition={{ duration: 0.65, delay: 0.22 }} />
 
@@ -211,7 +202,7 @@ export function CommerceNetwork() {
                   <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#14B8A6]/12 shrink-0 group-hover:bg-jc-mint/22 transition-colors">
                     <CheckIcon delay={0.38 + i * 0.1} />
                   </span>
-                  <span className="text-white/80 text-[0.97rem] md:text-base font-medium group-hover:text-white transition-colors leading-snug">
+                  <span className="text-gray-700 text-[0.97rem] md:text-base font-medium group-hover:text-gray-900 transition-colors leading-snug">
                     {item}
                   </span>
                 </motion.li>
@@ -224,7 +215,7 @@ export function CommerceNetwork() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.52 }}
-              className="flex items-center gap-5 bg-white/[0.05] border border-white/[0.09] rounded-xl p-4 hover:border-[#14B8A6]/30 hover:bg-white/[0.08] transition-all duration-300"
+              className="flex items-center gap-5 bg-gray-50 border border-gray-200 rounded-xl p-4 hover:border-jc-teal/30 hover:bg-gray-100 transition-all duration-300"
             >
               {/* Ring */}
               <div className="relative w-14 h-14 shrink-0">
@@ -242,8 +233,8 @@ export function CommerceNetwork() {
                 <span className="absolute inset-0 flex items-center justify-center text-white text-[10px] font-bold">85%</span>
               </div>
               <div>
-                <p className="text-white/40 text-[9px] uppercase tracking-[0.16em] font-semibold mb-0.5">Average Viewability</p>
-                <p className="text-white font-bold text-base leading-tight">Above Industry Standard</p>
+                <p className="text-gray-400 text-[9px] uppercase tracking-[0.16em] font-semibold mb-0.5">Average Viewability</p>
+                <p className="text-gray-900 font-bold text-base leading-tight">Above Industry Standard</p>
                 <p className="text-[#14B8A6] text-xs font-semibold mt-0.5">Industry avg: ~52%</p>
               </div>
             </motion.div>

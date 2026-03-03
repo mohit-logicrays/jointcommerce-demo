@@ -206,8 +206,8 @@ export function AdTechSolutions() {
   const [openIndex, setOpenIndex] = useState<number>(0);
 
   return (
-    <section className="py-24 bg-[#0a0f0f] text-white overflow-hidden relative border-y border-white/5">
-       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,212,178,0.05)_0%,transparent_70%)] pointer-events-none" />
+    <section className="py-24 bg-white text-gray-900 overflow-hidden relative border-y border-gray-200">
+       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(20,184,166,0.03)_0%,transparent_70%)] pointer-events-none" />
        
        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mb-16 lg:mb-20 text-left">
@@ -217,7 +217,7 @@ export function AdTechSolutions() {
                viewport={{ once: true }}
                className="text-3xl md:text-5xl lg:text-5xl font-extrabold tracking-tight max-w-3xl leading-[1.2]"
              >
-                Consistent and Reliable <span className="text-[#14B8A6] hover:text-[#6EDDD2] transition-colors cursor-default">Ad Tech Solutions</span> To Help You <span className="text-[#14B8A6] hover:text-[#6EDDD2] transition-colors cursor-default">Grow Your Business</span>
+                Consistent and Reliable Ad Tech Solutions To Help You Grow Your Business
              </motion.h2>
           </div>
 
@@ -227,16 +227,16 @@ export function AdTechSolutions() {
                  {solutions.map((sol, idx) => {
                      const isOpen = openIndex === idx;
                      return (
-                         <div key={idx} className={`border-b border-white/10 transition-all ${isOpen ? 'pb-6' : 'pb-4'}`}>
+                         <div key={idx} className={`border-b border-gray-200 transition-all ${isOpen ? 'pb-6' : 'pb-4'}`}>
                              <button
                                 className="w-full text-left flex justify-between items-center py-4 focus:outline-none"
                                 onClick={() => setOpenIndex(idx)}
                              >
-                                 <h3 className={`text-lg sm:text-xl md:text-2xl font-extrabold pr-8 transition-colors duration-300 tracking-tight ${isOpen ? 'text-[#14B8A6]' : 'text-white/70 hover:text-white'}`}>
+                                 <h3 className={`text-lg sm:text-xl md:text-2xl font-extrabold pr-8 transition-colors duration-300 tracking-tight ${isOpen ? 'text-[#14B8A6]' : 'text-gray-600 hover:text-gray-900'}`}>
                                      {sol.title}
                                  </h3>
                                  <motion.div animate={{ rotate: isOpen ? 180 : 0 }} className="flex-shrink-0">
-                                     <ChevronDown className={`w-6 h-6 transition-colors ${isOpen ? 'text-[#14B8A6]' : 'text-white/30'}`} />
+                                     <ChevronDown className={`w-6 h-6 transition-colors ${isOpen ? 'text-[#14B8A6]' : 'text-gray-400'}`} />
                                  </motion.div>
                              </button>
                              <AnimatePresence>
@@ -247,12 +247,12 @@ export function AdTechSolutions() {
                                         exit={{ height: 0, opacity: 0 }}
                                         className="overflow-hidden"
                                      >
-                                         <p className="text-white/70 leading-relaxed mb-6 font-medium text-sm md:text-base">
+                                         <p className="text-gray-600 leading-relaxed mb-6 font-medium text-sm md:text-base">
                                              {sol.content}
                                          </p>
                                          <Link 
                                             to="/solutions" 
-                                            className="inline-block px-8 py-3 bg-white/5 border border-white/20 text-white rounded-lg hover:bg-white/10 hover:border-white/30 transition-all font-semibold tracking-wide text-sm"
+                                            className="inline-block px-8 py-3 bg-white border border-gray-200 text-gray-900 rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-all font-semibold tracking-wide text-sm shadow-sm"
                                          >
                                             Learn More
                                          </Link>

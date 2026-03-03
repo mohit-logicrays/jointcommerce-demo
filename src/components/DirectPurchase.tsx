@@ -29,8 +29,8 @@ export function DirectPurchase() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-jc-dark leading-[1.1] tracking-tight mb-6 uppercase">
-              <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">DIRECT</span><br />
-              <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">PURCHASE</span>
+              <span className="text-gray-900 cursor-default">DIRECT</span><br />
+              <span className="text-gray-900 cursor-default">PURCHASE</span>
             </h2>
             <p className="text-xl text-jc-dark/80 mb-12 font-light">
               Consumers can buy directly on <strong className="font-bold">JointCommerce</strong>.

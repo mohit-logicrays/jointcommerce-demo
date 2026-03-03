@@ -24,7 +24,7 @@ export function HomePage() {
       <BrandsBar />
       <CommerceNetwork />
       <Challenges />
-      <HowItWorks />
+      {/* <HowItWorks /> */}
       <ShoppableMedia />
       <ConnectedSystem />
       <InvestingInMedia />

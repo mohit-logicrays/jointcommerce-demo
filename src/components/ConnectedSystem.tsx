@@ -43,7 +43,7 @@ export function ConnectedSystem() {
   ];
 
   return (
-    <section ref={containerRef} className="py-24 md:py-32 bg-jc-dark overflow-hidden relative min-h-screen flex flex-col justify-center">
+    <section ref={containerRef} className="py-24 md:py-32 bg-gray-50 overflow-hidden relative min-h-screen flex flex-col justify-center border-b border-gray-200">
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         <div className="text-center mb-16 lg:mb-24 flex justify-center">
@@ -51,9 +51,9 @@ export function ConnectedSystem() {
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
-             className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-white tracking-tight leading-tight w-full max-w-none break-words"
+             className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight w-full max-w-none break-words"
           >
-            From Search to Sale — <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">One Connected System</span>
+            From Search to Sale - One Connected System
           </motion.h2>
         </div>
 
@@ -105,18 +105,18 @@ export function ConnectedSystem() {
                   transition={{ duration: 0.6, delay: idx * 0.1 }}
                   onClick={() => setActiveIndex(isActive ? -1 : idx)}
                   className={`flex gap-5 cursor-pointer rounded-2xl p-4 transition-all duration-300 group ${
-                    isActive ? "bg-gray-800/50 shadow-sm border border-gray-700/50" : "bg-transparent border border-transparent hover:bg-gray-800/30"
+                    isActive ? "bg-white shadow-sm border border-gray-200" : "bg-transparent border border-transparent hover:bg-white/70"
                   }`}
                 >
                   <div className="flex-shrink-0 mt-1">
                     <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300 ${
-                      isActive ? "bg-jc-teal/20 border border-jc-teal/40" : "bg-transparent border border-gray-700 group-hover:border-jc-teal/50"
+                      isActive ? "bg-jc-teal/20 border border-jc-teal/40" : "bg-transparent border border-gray-300 group-hover:border-jc-teal/50"
                     }`}>
-                      <feature.icon className={`w-5 h-5 transition-colors duration-300 ${isActive ? "text-jc-teal" : "text-gray-500 group-hover:text-jc-teal"}`} />
+                      <feature.icon className={`w-5 h-5 transition-colors duration-300 ${isActive ? "text-jc-teal" : "text-gray-400 group-hover:text-jc-teal"}`} />
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className={`text-lg font-bold mb-1 transition-colors duration-300 ${isActive ? "text-white" : "text-gray-400 group-hover:text-gray-200"}`}>
+                    <h3 className={`text-lg font-bold mb-1 transition-colors duration-300 ${isActive ? "text-gray-900" : "text-gray-500 group-hover:text-gray-800"}`}>
                       {feature.title}
                     </h3>
                     
@@ -129,7 +129,7 @@ export function ConnectedSystem() {
                           transition={{ duration: 0.3, ease: "easeInOut" }}
                           className="overflow-hidden"
                         >
-                          <p className="text-[14px] sm:text-[15px] text-gray-400 leading-relaxed font-medium pb-2 pt-1 pr-4">
+                          <p className="text-[14px] sm:text-[15px] text-gray-600 leading-relaxed font-medium pb-2 pt-1 pr-4">
                             {feature.description}
                           </p>
                         </motion.div>

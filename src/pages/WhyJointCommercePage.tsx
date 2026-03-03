@@ -4,7 +4,7 @@ import React, { useRef, useState, useEffect } from 'react';
 
 // --- Reusable SVG Assets --- 
 const FlowSvg = () => (
-  <svg viewBox="0 0 800 400" className="w-full h-full opacity-30 mix-blend-screen absolute inset-0 pointer-events-none" preserveAspectRatio="none">
+  <svg viewBox="0 0 800 400" className="w-full h-full opacity-20 absolute inset-0 pointer-events-none" preserveAspectRatio="none">
     <motion.path 
       d="M 100 200 C 200 100, 300 300, 400 200 C 500 100, 600 300, 700 200"
       fill="none" 
@@ -34,7 +34,7 @@ const FlowSvg = () => (
 );
 
 const AbstractNodes = () => (
-  <svg viewBox="0 0 400 400" className="w-[150%] h-[150%] absolute -top-[25%] -right-[25%] opacity-20 pointer-events-none rotate-12">
+  <svg viewBox="0 0 400 400" className="w-[150%] h-[150%] absolute -top-[25%] -right-[25%] opacity-5 pointer-events-none rotate-12">
     <motion.g animate={{ rotate: 360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }} style={{ transformOrigin: "200px 200px" }}>
       <circle cx="200" cy="200" r="150" fill="none" stroke="#14B8A6" strokeWidth="1" strokeDasharray="10 20" />
       <circle cx="200" cy="200" r="100" fill="none" stroke="#14B8A6" strokeWidth="2" strokeDasharray="5 15" />
@@ -67,7 +67,6 @@ export function WhyJointCommercePage() {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      // Calculate relative position for the glow effect
       const x = (e.clientX / window.innerWidth - 0.5) * 40;
       const y = (e.clientY / window.innerHeight - 0.5) * 40;
       setMousePos({ x, y });
@@ -77,55 +76,28 @@ export function WhyJointCommercePage() {
   }, []);
 
   const mustBuys = [
-    {
-      icon: <Database />,
-      title: "Owned A21+ high-intent audience infrastructure",
-      delay: 0.1
-    },
-    {
-      icon: <ShieldCheck />,
-      title: "Direct premium publisher approvals for compliant advertising",
-      delay: 0.2
-    },
-    {
-      icon: <Target />,
-      title: "Cross-retailer Buy-Now store locator",
-      delay: 0.3
-    },
-    {
-      icon: <BarChart3 />,
-      title: "Blended view-through and click-through revenue model",
-      delay: 0.4
-    },
-    {
-      icon: <LayoutDashboard />,
-      title: "Order-level revenue reporting updated every 30 minutes",
-      delay: 0.5
-    },
-    {
-      icon: <CheckCircle2 />,
-      title: "Guaranteed 100% viewable impressions every 30-day cycle",
-      delay: 0.6
-    },
-    {
-      icon: <Network />,
-      title: "Activation across CTV, display, and video",
-      delay: 0.7
-    }
+    { icon: <Database />, title: "Owned A21+ high-intent audience infrastructure", delay: 0.1 },
+    { icon: <ShieldCheck />, title: "Direct premium publisher approvals for compliant advertising", delay: 0.2 },
+    { icon: <Target />, title: "Cross-retailer Buy-Now store locator", delay: 0.3 },
+    { icon: <BarChart3 />, title: "Blended view-through and click-through revenue model", delay: 0.4 },
+    { icon: <LayoutDashboard />, title: "Order-level revenue reporting updated every 30 minutes", delay: 0.5 },
+    { icon: <CheckCircle2 />, title: "Guaranteed 100% viewable impressions every 30-day cycle", delay: 0.6 },
+    { icon: <Network />, title: "Activation across CTV, display, and video", delay: 0.7 }
   ];
 
   return (
-    <div className="bg-[#0a0f0f] min-h-screen pt-20 overflow-hidden font-sans" ref={containerRef}>
+    <div className="w-full bg-white text-gray-900 min-h-screen">
+    <div className="bg-white min-h-screen pt-20 overflow-hidden font-sans" ref={containerRef}>
       
       {/* ─── Hero Section ────────────────────────────────────── */}
-      <section className="relative min-h-[70vh] flex items-center justify-center border-b border-white/5 py-24">
-        {/* Dynamic Abstract Background */}
+      <section className="relative min-h-[70vh] flex items-center justify-center border-b border-gray-200 py-24">
+        {/* Soft gradient background */}
         <motion.div 
           className="absolute inset-0 z-0 pointer-events-none"
           style={{ y: yBg }}
         >
-          <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,rgba(0,212,178,0.15),transparent_60%)] mix-blend-screen" />
-          <div className="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_left,rgba(0,212,178,0.05),transparent_50%)] mix-blend-screen" />
+          <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,rgba(20,184,166,0.06),transparent_60%)]" />
+          <div className="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_left,rgba(20,184,166,0.03),transparent_50%)]" />
           <AbstractNodes />
         </motion.div>
 
@@ -143,27 +115,27 @@ export function WhyJointCommercePage() {
                 <Zap className="w-4 h-4" /> The Infrastructure Layer
               </div>
               
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter uppercase leading-[0.9] drop-shadow-2xl">
-                Why <span className="text-[#14B8A6] hover:text-[#6EDDD2] transition-colors cursor-default">Joint</span><br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#14B8A6] to-white hover:from-[#6EDDD2] transition-all cursor-default">Commerce</span>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 tracking-tighter uppercase leading-[0.9]">
+                Why Joint<br/>Commerce
               </h1>
               
               <div className="space-y-3 relative">
                  <div className="absolute -left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-jc-teal via-jc-teal/50 to-transparent rounded-full hidden md:block" />
                  <motion.p 
                    initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }}
-                   className="text-2xl text-white/50 font-bold uppercase tracking-widest"
+                   className="text-2xl text-gray-400 font-bold uppercase tracking-widest"
                  >
                    Others sell impressions.
                  </motion.p>
                  <motion.p 
                    initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.5 }}
-                   className="text-2xl text-white/70 font-bold uppercase tracking-widest"
+                   className="text-2xl text-gray-500 font-bold uppercase tracking-widest"
                  >
                    Others sell listings.
                  </motion.p>
                   <motion.p 
                     initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.5 }}
-                    className="text-2xl text-jc-teal hover:text-jc-mint font-extrabold uppercase tracking-widest drop-shadow-[0_0_10px_rgba(20,184,166,0.5)] transition-colors cursor-default"
+                    className="text-2xl text-jc-teal hover:text-jc-mint font-extrabold uppercase tracking-widest transition-colors cursor-default"
                   >
                     Others sit inside one ecosystem.
                   </motion.p>
@@ -184,9 +156,9 @@ export function WhyJointCommercePage() {
                >
                  {/* Central Core */}
                  <div className="absolute inset-0 flex items-center justify-center transform-style-preserve-3d translate-z-[50px]">
-                    <div className="w-32 h-32 rounded-full border-2 border-jc-teal flex items-center justify-center relative shadow-[0_0_50px_rgba(0,212,178,0.3)] bg-black/50 backdrop-blur-md">
-                        <motion.div className="w-24 h-24 rounded-full bg-jc-teal/20 border border-jc-teal/50 flex flex-col items-center justify-center" animate={{ scale: [1, 1.1, 1] }} transition={{ repeat: Infinity, duration: 2 }}>
-                          <span className="text-[10px] font-black tracking-widest text-[#6EDDD2]">CORE</span>
+                    <div className="w-32 h-32 rounded-full border-2 border-jc-teal flex items-center justify-center relative shadow-[0_0_50px_rgba(20,184,166,0.2)] bg-white backdrop-blur-md">
+                        <motion.div className="w-24 h-24 rounded-full bg-jc-teal/10 border border-jc-teal/50 flex flex-col items-center justify-center" animate={{ scale: [1, 1.1, 1] }} transition={{ repeat: Infinity, duration: 2 }}>
+                          <span className="text-[10px] font-black tracking-widest text-[#14B8A6]">CORE</span>
                         </motion.div>
                        
                        {/* Radiating Rings */}
@@ -199,7 +171,7 @@ export function WhyJointCommercePage() {
                  {[0, 120, 240].map((angle, i) => (
                     <motion.div 
                       key={i} 
-                      className="absolute top-1/2 left-1/2 w-4 h-4 bg-white rounded-full shadow-[0_0_15px_#fff] translate-z-[100px]"
+                      className="absolute top-1/2 left-1/2 w-4 h-4 bg-jc-teal rounded-full shadow-[0_0_15px_rgba(20,184,166,0.5)] translate-z-[100px]"
                       animate={{ 
                         x: [
                           Math.cos(angle * Math.PI / 180) * 150, 
@@ -228,9 +200,9 @@ export function WhyJointCommercePage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white uppercase"
+              className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-gray-900 uppercase"
             >
-              Why We Are A <span className="text-transparent bg-clip-text bg-gradient-to-r from-jc-teal to-[#6EDDD2] hover:from-[#6EDDD2] hover:to-[#14B8A6] transition-all cursor-default">Must-Buy</span>
+              Why We Are A <span className="text-jc-teal">Must-Buy</span>
             </motion.h2>
           </div>
 
@@ -243,18 +215,18 @@ export function WhyJointCommercePage() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: feature.delay, ease: "easeOut" }}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="group relative bg-[#111] border border-white/10 rounded-3xl p-8 flex flex-col h-full overflow-hidden"
+                className="group relative bg-white border border-gray-200 rounded-3xl p-8 flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-all"
               >
                 {/* Hover Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-jc-teal/0 to-jc-teal/0 group-hover:from-jc-teal/10 group-hover:to-transparent transition-all duration-500 opacity-0 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-br from-jc-teal/0 to-jc-teal/0 group-hover:from-jc-teal/5 group-hover:to-transparent transition-all duration-500 opacity-0 group-hover:opacity-100" />
                 
                 {/* Animated Border Glow */}
-                <div className="absolute inset-0 border border-jc-teal/0 group-hover:border-jc-teal/50 rounded-3xl transition-colors duration-500" />
+                <div className="absolute inset-0 border border-jc-teal/0 group-hover:border-jc-teal/30 rounded-3xl transition-colors duration-500" />
 
                 <div className="relative z-10 flex flex-col h-full">
-                  <div className="w-14 h-14 rounded-2xl bg-black/50 border border-white/5 flex items-center justify-center mb-8 shadow-inner group-hover:border-jc-teal/30 group-hover:shadow-[0_0_15px_rgba(0,212,178,0.2)] transition-all duration-300">
+                  <div className="w-14 h-14 rounded-2xl bg-gray-50 border border-gray-200 flex items-center justify-center mb-8 shadow-sm group-hover:border-jc-teal/30 group-hover:shadow-[0_0_15px_rgba(20,184,166,0.1)] transition-all duration-300">
                     <motion.div 
-                      className="text-white/70 group-hover:text-jc-teal transition-colors"
+                      className="text-gray-400 group-hover:text-jc-teal transition-colors"
                       whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
                       transition={{ duration: 0.4 }}
                     >
@@ -262,7 +234,7 @@ export function WhyJointCommercePage() {
                     </motion.div>
                   </div>
                   
-                  <h3 className="text-xl lg:text-2xl font-extrabold text-white/90 leading-snug tracking-tight group-hover:text-white mt-auto">
+                  <h3 className="text-xl lg:text-2xl font-extrabold text-gray-800 leading-snug tracking-tight group-hover:text-gray-900 mt-auto">
                     {feature.title}
                   </h3>
 
@@ -281,9 +253,9 @@ export function WhyJointCommercePage() {
       </section>
 
       {/* ─── Differentiator Full-Width Banner ────────────────────────────────────── */}
-      <section className="py-24 relative border-t border-white/5 overflow-hidden">
+      <section className="py-24 relative border-t border-gray-200 overflow-hidden">
         <FlowSvg />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f0f] via-transparent to-[#0a0f0f] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50/50 to-white pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -291,10 +263,10 @@ export function WhyJointCommercePage() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="bg-[#111]/80 backdrop-blur-xl border border-jc-teal/20 rounded-[2.5rem] p-10 md:p-16 text-center shadow-[0_0_50px_rgba(0,212,178,0.05)] relative overflow-hidden group"
+            className="bg-white backdrop-blur-xl border border-gray-200 rounded-[2.5rem] p-10 md:p-16 text-center shadow-md relative overflow-hidden group"
           >
-            {/* Ambient inner glow */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,212,178,0.1)_0%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+            {/* Ambient inner glow on hover */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(20,184,166,0.05)_0%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
             
             <motion.div 
               className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-jc-teal/10 border border-jc-teal/30 mb-8"
@@ -304,16 +276,16 @@ export function WhyJointCommercePage() {
               <Network className="w-8 h-8 text-jc-teal" />
             </motion.div>
 
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase mb-8">
-              What Makes Us <span className="text-transparent bg-clip-text bg-gradient-to-r from-jc-teal to-[#6EDDD2] hover:from-[#6EDDD2] hover:to-[#14B8A6] transition-all cursor-default">Different</span>
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tighter uppercase mb-8">
+              What Makes Us <span className="text-jc-teal">Different</span>
             </h3>
             
-            <p className="text-xl md:text-3xl text-white/80 font-medium leading-relaxed max-w-4xl mx-auto">
-              JointCommerce controls discovery, activation, commerce routing, and revenue reporting in <strong className="text-jc-teal hover:text-jc-mint bg-jc-teal/20 px-2 rounded-md border border-jc-teal/30 transition-colors cursor-default">one infrastructure layer.</strong>
+            <p className="text-xl md:text-3xl text-gray-600 font-medium leading-relaxed max-w-4xl mx-auto">
+              JointCommerce controls discovery, activation, commerce routing, and revenue reporting in <strong className="text-jc-teal bg-jc-teal/10 px-2 rounded-md border border-jc-teal/20">one infrastructure layer.</strong>
             </p>
 
             <motion.button 
-              className="mt-12 inline-flex items-center gap-2 bg-white text-black font-bold px-8 py-4 rounded-full text-sm tracking-widest uppercase hover:bg-jc-mint transition-colors"
+              className="mt-12 inline-flex items-center gap-2 bg-gray-900 text-white font-bold px-8 py-4 rounded-full text-sm tracking-widest uppercase hover:bg-gray-800 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -323,6 +295,7 @@ export function WhyJointCommercePage() {
         </div>
       </section>
 
+    </div>
     </div>
   );
 }

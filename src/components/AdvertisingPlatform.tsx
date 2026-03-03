@@ -147,14 +147,14 @@ function StateShape({ name, d, isHovered, onEnter, onLeave }: StateProps) {
   return (
     <motion.path
       d={d}
-      fill={isHovered ? 'rgba(110,221,210,0.15)' : 'rgba(255,255,255,0.03)'}
-      stroke={isHovered ? '#14B8A6' : '#4b5563'}
-      strokeWidth={isHovered ? 1.5 : 1}
+      fill={isHovered ? 'rgba(20,184,166,0.12)' : 'rgba(240,240,240,0.6)'}
+      stroke={isHovered ? '#14B8A6' : '#d1d5db'}
+      strokeWidth={isHovered ? 1.5 : 0.8}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
       animate={{
-        fill: isHovered ? 'rgba(110,221,210,0.15)' : 'rgba(255,255,255,0.03)',
-        stroke: isHovered ? '#14B8A6' : '#4b5563',
+        fill: isHovered ? 'rgba(20,184,166,0.12)' : 'rgba(240,240,240,0.6)',
+        stroke: isHovered ? '#14B8A6' : '#d1d5db',
       }}
       transition={{ duration: 0.2 }}
       style={{ cursor: 'pointer' }}
@@ -256,7 +256,7 @@ function USAMap() {
 
 export function AdvertisingPlatform() {
   return (
-    <section className="w-full bg-[#050505] text-white py-16 md:py-24 border-b border-white/5 overflow-hidden">
+    <section className="w-full bg-white text-gray-900 py-16 md:py-24 border-b border-gray-200 overflow-hidden">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-6">
 
@@ -266,7 +266,7 @@ export function AdvertisingPlatform() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-[2.6rem] font-bold leading-[1.15] mb-5 tracking-tight"
+              className="text-4xl md:text-[2.6rem] font-bold leading-[1.15] mb-5 tracking-tight text-gray-900"
             >
               The <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">#1</span> Cannabis Advertising Platform — Powering <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">12,000+</span> Dispensary Menus
             </motion.h2>
@@ -276,9 +276,9 @@ export function AdvertisingPlatform() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-[#a1a1a1] text-base md:text-lg font-medium mb-10 leading-relaxed"
+              className="text-[#3c4a44] text-lg lg:text-xl font-medium mb-10 transition-transform duration-500 delay-75 group-hover:-translate-y-1"
             >
-              A premium publisher marketplace connected directly to SEO-powered dispensary menus — turning <span className="text-jc-teal font-semibold hover:text-jc-mint transition-colors cursor-default">A21+ cannabis demand</span> into <span className="text-jc-teal font-semibold hover:text-jc-mint transition-colors cursor-default">measurable online sales</span> for cannabis and non-cannabis brands
+              A premium publisher marketplace connected directly to SEO-powered dispensary menus — turning A21+ cannabis demand into measurable online sales for cannabis and non-cannabis brands
             </motion.p>
 
             <motion.div
@@ -302,11 +302,11 @@ export function AdvertisingPlatform() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="flex flex-wrap items-center gap-x-2 gap-y-2 text-[11px] text-gray-400 font-medium"
+              className="flex flex-wrap items-center gap-x-2 gap-y-2 text-[12px] text-gray-900 font-medium"
             >
               {['Publisher Ad', 'Product Page', 'Dispensary Menu', 'Checkout'].map((step, i, arr) => (
                 <span key={step} className="flex items-center gap-1.5">
-                  <span className="text-gray-300">{step}</span>
+                  <span className="text-gray-900">{step}</span>
                   {i < arr.length - 1 && (
                     <span className="flex items-center gap-0.5 text-[#14B8A6]">
                       <span className="w-1.5 h-1.5 rounded-full border border-[#14B8A6]" />

@@ -171,16 +171,14 @@ export function PremiumActivation() {
             viewport={{ once: true }}
           >
             <motion.span
-              className="bg-gradient-to-r from-jc-teal via-[#5ce6d0] to-jc-teal bg-[length:200%_auto] text-transparent bg-clip-text inline-block"
-              animate={{ backgroundPosition: ['0% center', '200% center'] }}
-              transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
+              className="text-gray-900 inline-block"
             >
               PREMIUM ACTIVATION
             </motion.span>
           </motion.h2>
 
           <motion.div
-            className="mx-auto h-[3px] bg-gradient-to-r from-transparent via-jc-teal to-transparent rounded-full mb-5"
+            className="mx-auto h-[3px] bg-gradient-to-r from-transparent via-gray-400 to-transparent rounded-full mb-5"
             initial={{ scaleX: 0, opacity: 0 }}
             whileInView={{ scaleX: 1, opacity: 1 }}
             viewport={{ once: true }}

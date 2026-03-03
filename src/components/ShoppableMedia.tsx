@@ -385,7 +385,7 @@ export function ShoppableMedia() {
   });
 
   // Animated values for the hero section
-  const bgColor = useTransform(scrollYProgress, [0, 0.6], ["#6EDDD2", "#111111"]);
+  const bgColor = useTransform(scrollYProgress, [0, 0.6], ["#6EDDD2", "#f9fafb"]);
   const tvScale = useTransform(scrollYProgress, [0.3, 0.9], [1, 1.3]);
   const tvY = useTransform(scrollYProgress, [0.3, 0.9], ["0%", "5%"]);
   const tvX = useTransform(scrollYProgress, [0.3, 0.7], ["0%", "-55%"]); // Only for desktop
@@ -460,7 +460,7 @@ export function ShoppableMedia() {
         </motion.section>
       </div>
 
-      <section className="py-16 md:py-24 bg-[#6EDDD2] overflow-hidden relative z-20">
+      <section className="py-16 md:py-24 bg-gray-50 overflow-hidden relative z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           {/* ── Accordion + Dynamic right panel ── */}
           <motion.div
@@ -477,19 +477,19 @@ export function ShoppableMedia() {
                 return (
                   <motion.div
                     key={i}
-                    className={`rounded-2xl border cursor-pointer overflow-hidden transition-colors duration-300 ${isOpen ? 'bg-jc-dark border-jc-dark' : 'bg-white/50 border-white/80 hover:bg-white/70'}`}
+                    className={`rounded-2xl border cursor-pointer overflow-hidden transition-colors duration-300 ${isOpen ? 'bg-white border-gray-200 shadow-sm' : 'bg-transparent border-transparent hover:bg-gray-200/50'}`}
                     onClick={() => setOpen(i)}
                     layout
                   >
                     {/* Header */}
                     <div className="flex items-center justify-between px-5 py-4">
-                      <span className={`font-semibold text-base leading-snug ${isOpen ? 'text-white' : 'text-jc-dark'}`}>
+                      <span className={`font-bold text-base leading-snug ${isOpen ? 'text-gray-900' : 'text-gray-600'}`}>
                         {item.title}
                       </span>
                       <motion.div
                         animate={{ rotate: isOpen ? 180 : 0 }}
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
-                        className={`flex-shrink-0 ml-3 ${isOpen ? 'text-jc-teal' : 'text-jc-dark/40'}`}
+                        className={`flex-shrink-0 ml-3 ${isOpen ? 'text-jc-teal' : 'text-gray-400'}`}
                       >
                         <svg viewBox="0 0 20 20" className="w-5 h-5" fill="none">
                           <path d="M5 7.5 L10 12.5 L15 7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -515,7 +515,7 @@ export function ShoppableMedia() {
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: fi * 0.07 }}
-                                className="flex items-start gap-2.5 text-white/85 text-sm"
+                                className="flex items-start gap-2.5 text-gray-600 text-sm font-medium"
                               >
                                 <span className="text-jc-teal mt-0.5 text-xs">✓</span>
                                 {f}
@@ -538,7 +538,7 @@ export function ShoppableMedia() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.32, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="bg-jc-dark rounded-2xl p-6 flex flex-col gap-6 border border-gray-800 shadow-xl"
+                className="bg-white rounded-2xl p-6 flex flex-col gap-6 border border-gray-200 shadow-xl"
               >
                 {/* Premium & Direct badge */}
                 <div className="flex items-center gap-2">
@@ -552,20 +552,20 @@ export function ShoppableMedia() {
                 </div>
 
                 {/* SVG Preview */}
-                <div className="w-full aspect-[16/10] rounded-xl overflow-hidden bg-black/30">
+                <div className="w-full aspect-[16/10] rounded-xl overflow-hidden bg-gray-100 border border-gray-200">
                   <active.Preview />
                 </div>
 
                 {/* Stats */}
                 <div className="flex items-center gap-8 pt-1">
                   <div>
-                    <div className="flex items-center gap-1 text-white/50 text-xs mb-1">
+                    <div className="flex items-center gap-1 text-gray-500 text-xs mb-1 font-semibold">
                       <svg viewBox="0 0 14 14" className="w-3 h-3" fill="none" stroke="#14B8A6" strokeWidth="1.3">
                         <circle cx="7" cy="7" r="5.5" /><path d="M7 2C7 2 5 4 5 7C5 10 7 12 7 12C7 12 9 10 9 7C9 4 7 2 7 2Z" /><line x1="1.5" y1="7" x2="12.5" y2="7" />
                       </svg>
                       {active.stat1Label}
                     </div>
-                    <div className="flex items-center gap-1.5 text-white font-black text-3xl leading-none">
+                    <div className="flex items-center gap-1.5 text-gray-900 font-black text-3xl leading-none">
                       <Counter value={active.stat1Value} suffix={active.stat1Suffix} />
                       <motion.svg viewBox="0 0 28 16" className="w-7 h-4" fill="none"
                         initial={{ opacity: 0, x: -4 }} animate={{ opacity: 1, x: 0 }}
@@ -577,16 +577,16 @@ export function ShoppableMedia() {
                     <div className="mt-1.5 h-0.5 w-20 rounded bg-[#14B8A6]" />
                   </div>
 
-                  <div className="w-px h-10 bg-white/10" />
+                  <div className="w-px h-10 bg-gray-200" />
 
                   <div>
-                    <div className="flex items-center gap-1 text-white/50 text-xs mb-1">
+                    <div className="flex items-center gap-1 text-gray-500 text-xs mb-1 font-semibold">
                       <svg viewBox="0 0 14 10" className="w-3.5 h-2.5" fill="none" stroke="#14B8A6" strokeWidth="1.3">
                         <path d="M1 5C3 1.5 11 1.5 13 5C11 8.5 3 8.5 1 5Z" /><circle cx="7" cy="5" r="2" fill="#14B8A6" />
                       </svg>
                       {active.stat2Label}
                     </div>
-                    <div className="text-white font-black text-3xl leading-none">
+                    <div className="text-gray-900 font-black text-3xl leading-none">
                       <Counter value={active.stat2Value} suffix={active.stat2Suffix} />
                     </div>
                     <div className="mt-1.5 h-0.5 w-20 rounded bg-[#14B8A6]" />

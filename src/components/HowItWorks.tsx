@@ -193,14 +193,14 @@ export function HowItWorks() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section className="relative w-full bg-black py-20 md:py-28 overflow-hidden border-b border-white/5">
+    <section className="relative w-full bg-white py-20 md:py-28 overflow-hidden border-b border-gray-200">
       {/* Very subtle grid */}
       <div className="absolute inset-0 pointer-events-none opacity-100"
         style={{
           backgroundImage: 'linear-gradient(rgba(20,184,166,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(20,184,166,0.04) 1px,transparent 1px)',
           backgroundSize: '60px 60px',
         }} />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(20,184,166,0.07),transparent)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(20,184,166,0.04),transparent)] pointer-events-none" />
 
       <div className="relative max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12">
 
@@ -211,9 +211,9 @@ export function HowItWorks() {
           viewport={{ once: true }}
           className="text-center mb-16 md:mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-white leading-tight tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-gray-900 leading-tight tracking-tight">
             How <span className="text-[#14B8A6] hover:text-[#6EDDD2] transition-colors cursor-default">JointCommerce</span> <span className="text-[#14B8A6] hover:text-[#6EDDD2] transition-colors cursor-default">Works</span>{' '}
-            <span className="font-light text-white/45">(Why Others Can't)</span>
+            <span className="font-light text-gray-400">(Why Others Can't)</span>
           </h2>
         </motion.div>
 
@@ -235,7 +235,7 @@ export function HowItWorks() {
                   transition={{ delay: i * 0.13, duration: 0.45 }}
                 >
                   {/* Step number badge */}
-                  <div className={`mb-4 text-xs font-bold tracking-[0.2em] uppercase transition-colors duration-200 ${isOn ? 'text-[#6EDDD2]' : 'text-[#14B8A6]/60'}`}>
+                  <div className={`mb-4 text-xs font-bold tracking-[0.2em] uppercase transition-colors duration-200 ${isOn ? 'text-[#14B8A6]' : 'text-[#14B8A6]/50'}`}>
                     Step {step.num}
                   </div>
 
@@ -256,12 +256,12 @@ export function HowItWorks() {
                   </motion.div>
 
                   {/* Title */}
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-tight">
                     {step.label}
                   </h3>
 
                   {/* Description */}
-                  <p className={`text-base md:text-[1.05rem] leading-relaxed transition-colors duration-200 max-w-[220px] ${isOn ? 'text-white/80' : 'text-white/45'}`}>
+                  <p className={`text-base md:text-[1.05rem] leading-relaxed transition-colors duration-200 max-w-[220px] ${isOn ? 'text-gray-700' : 'text-gray-400'}`}>
                     {step.body}
                   </p>
                 </motion.div>

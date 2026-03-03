@@ -4,7 +4,7 @@
  */
 
 import { useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
 import { Layout } from './components/Layout';
 import { HomePage } from './pages/HomePage';
@@ -23,6 +23,17 @@ import { TechnologyPage } from './pages/TechnologyPage';
 import { CaseStudiesPage } from './pages/CaseStudiesPage';
 import { WhyJointCommercePage } from './pages/WhyJointCommercePage';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  console.log("test")
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 export default function App() {
   useEffect(() => {
     const lenis = new Lenis({
@@ -37,7 +48,9 @@ export default function App() {
   }, []);
 
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/platform" element={<PlatformPage />} />
@@ -54,6 +67,7 @@ export default function App() {
         <Route path="/our-technology" element={<TechnologyPage />} />
         <Route path="/why-jointcommerce" element={<WhyJointCommercePage />} />
       </Route>
-    </Routes>
+      </Routes>
+    </>
   );
 }
