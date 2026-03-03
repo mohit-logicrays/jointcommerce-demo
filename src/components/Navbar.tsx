@@ -76,7 +76,7 @@ export function Navbar() {
                     </button>
                     {/* Seamless Invisible Bridge */}
                     <div className="absolute top-full left-0 w-full h-4" />
-                    <div className="absolute top-[calc(100%-8px)] left-1/2 -translate-x-1/2 w-56 bg-[#111] border border-white/10 rounded-2xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl z-50 translate-y-2 group-hover:translate-y-0">
+                    <div className="absolute top-[calc(100%-8px)] left-1/2 -translate-x-1/2 w-56 bg-[#000] border border-white/10 rounded-2xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl z-50 translate-y-2 group-hover:translate-y-0">
                       {item.children.map((child) => (
                         <Link
                           key={child.name}

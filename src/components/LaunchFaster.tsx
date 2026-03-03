@@ -98,11 +98,11 @@ export function LaunchFaster() {
               </div>
 
               {/* Green Dashboard Container */}
-              <div className="bg-[#5fb291] rounded-xl p-4 md:p-6 mb-4 relative overflow-hidden shadow-inner">
+              <div className="bg-[#14B8A6] rounded-xl p-4 md:p-6 mb-4 relative overflow-hidden shadow-inner">
                 <div className="bg-white rounded-xl p-4 shadow-xl w-full flex flex-col">
                   {/* Top Bar inside Dash */}
                   <div className="flex justify-between items-center mb-4">
-                     <div className="font-extrabold text-[12px] tracking-widest text-[#5fb291]">CREATIVE ANALYTICS</div>
+                     <div className="font-extrabold text-[12px] tracking-widest text-[#14B8A6]">CREATIVE ANALYTICS</div>
                      <div className="w-16 h-4 bg-gray-100 rounded-full"></div>
                   </div>
                   <div className="flex gap-4">

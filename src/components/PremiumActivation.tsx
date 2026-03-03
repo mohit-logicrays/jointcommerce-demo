@@ -90,10 +90,10 @@ export function PremiumActivation() {
   const maskImage = useMotionTemplate`radial-gradient(300px at ${mouseX}px ${mouseY}px, black 0%, transparent 100%)`;
 
   const beamProps = {
-    pathColor: '#00D4B2', // Teal line
+    pathColor: '#14B8A6', // Teal line
     pathOpacity: 0.3,     // Increased opacity for visibility
-    gradientStartColor: '#0efbba', // Bright mint
-    gradientStopColor: '#00D4B2', // jc-teal
+    gradientStartColor: '#14B8A6', // Bright mint
+    gradientStopColor: '#14B8A6', // jc-teal
   };
 
   const particles = React.useMemo(() => {
@@ -145,7 +145,7 @@ export function PremiumActivation() {
     <div className="w-12 h-12 rounded-2xl bg-[#0a0a0a] flex items-center justify-center flex-shrink-0
                     shadow-[inset_0_2px_10px_rgba(255,255,255,0.05)] transition-all duration-500
                     relative z-10 group-hover:shadow-[0_0_15px_rgba(0,212,178,0.3)]
-                    group-hover:bg-[#111]">
+                    group-hover:bg-[#000]">
       <motion.div
         animate={{ y: [0, -3, 0] }}
         transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: index * 0.2 }}
@@ -171,7 +171,7 @@ export function PremiumActivation() {
             viewport={{ once: true }}
           >
             <motion.span
-              className="bg-gradient-to-r from-jc-teal via-[#5ce6d0] to-jc-teal bg-[length:200%_auto] text-transparent bg-clip-text inline-block"
+              className="bg-gradient-to-r from-jc-teal via-[#14B8A6] to-jc-teal bg-[length:200%_auto] text-transparent bg-clip-text inline-block"
               animate={{ backgroundPosition: ['0% center', '200% center'] }}
               transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
             >
@@ -265,8 +265,8 @@ export function PremiumActivation() {
                        w-36 h-36 xl:w-44 xl:h-44 rounded-full bg-[#0a0a0a]
                        flex flex-col items-center justify-center
                        shadow-[0_0_60px_rgba(0,212,178,0.25)]
-                       border-4 border-[#e0fcf6]
-                       cursor-pointer group hover:border-[#bcf4e9] transition-colors"
+                       border-4 border-[#6EDDD2]
+                       cursor-pointer group hover:border-[#6EDDD2] transition-colors"
             variants={centerVariants}
             initial="hidden"
             whileInView="visible"
@@ -351,7 +351,7 @@ export function PremiumActivation() {
           {/* Mobile Center Badge */}
           <motion.div
             className="self-center w-32 h-32 rounded-full bg-[#0a0a0a] flex flex-col items-center justify-center
-                       shadow-[0_8px_30px_rgba(0,212,178,0.25)] border-4 border-[#e0fcf6] mb-6 relative"
+                       shadow-[0_8px_30px_rgba(0,212,178,0.25)] border-4 border-[#6EDDD2] mb-6 relative"
             variants={centerVariants}
             initial="hidden"
             whileInView="visible"

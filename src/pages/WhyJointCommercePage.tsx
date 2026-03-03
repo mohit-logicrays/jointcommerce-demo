@@ -25,9 +25,9 @@ const FlowSvg = () => (
     />
     <defs>
       <linearGradient id="gradient-flow" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="#00D4B2" stopOpacity="0" />
-        <stop offset="50%" stopColor="#00D4B2" stopOpacity="1" />
-        <stop offset="100%" stopColor="#0efbba" stopOpacity="0" />
+        <stop offset="0%" stopColor="#14B8A6" stopOpacity="0" />
+        <stop offset="50%" stopColor="#14B8A6" stopOpacity="1" />
+        <stop offset="100%" stopColor="#14B8A6" stopOpacity="0" />
       </linearGradient>
     </defs>
   </svg>
@@ -36,17 +36,17 @@ const FlowSvg = () => (
 const AbstractNodes = () => (
   <svg viewBox="0 0 400 400" className="w-[150%] h-[150%] absolute -top-[25%] -right-[25%] opacity-20 pointer-events-none rotate-12">
     <motion.g animate={{ rotate: 360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }} style={{ transformOrigin: "200px 200px" }}>
-      <circle cx="200" cy="200" r="150" fill="none" stroke="#00D4B2" strokeWidth="1" strokeDasharray="10 20" />
-      <circle cx="200" cy="200" r="100" fill="none" stroke="#00D4B2" strokeWidth="2" strokeDasharray="5 15" />
+      <circle cx="200" cy="200" r="150" fill="none" stroke="#14B8A6" strokeWidth="1" strokeDasharray="10 20" />
+      <circle cx="200" cy="200" r="100" fill="none" stroke="#14B8A6" strokeWidth="2" strokeDasharray="5 15" />
       {[0, 1, 2, 3, 4, 5].map((i) => {
         const rad = (i * 60 * Math.PI) / 180;
         return (
           <g key={i}>
-            <circle cx={200 + Math.cos(rad) * 150} cy={200 + Math.sin(rad) * 150} r="4" fill="#00D4B2" />
+            <circle cx={200 + Math.cos(rad) * 150} cy={200 + Math.sin(rad) * 150} r="4" fill="#14B8A6" />
             <motion.line 
               x1="200" y1="200" 
               x2={200 + Math.cos(rad) * 150} y2={200 + Math.sin(rad) * 150} 
-              stroke="#00D4B2" strokeWidth="1" opacity="0.5"
+              stroke="#14B8A6" strokeWidth="1" opacity="0.5"
               animate={{ opacity: [0.1, 0.7, 0.1] }}
               transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}
             />
@@ -186,7 +186,7 @@ export function WhyJointCommercePage() {
                  <div className="absolute inset-0 flex items-center justify-center transform-style-preserve-3d translate-z-[50px]">
                     <div className="w-32 h-32 rounded-full border-2 border-jc-teal flex items-center justify-center relative shadow-[0_0_50px_rgba(0,212,178,0.3)] bg-black/50 backdrop-blur-md">
                        <motion.div className="w-24 h-24 rounded-full bg-jc-teal/20 border border-jc-teal/50 flex flex-col items-center justify-center" animate={{ scale: [1, 1.1, 1] }} transition={{ repeat: Infinity, duration: 2 }}>
-                          <span className="text-[10px] font-black tracking-widest text-[#0efbba]">CORE</span>
+                          <span className="text-[10px] font-black tracking-widest text-[#14B8A6]">CORE</span>
                        </motion.div>
                        
                        {/* Radiating Rings */}
@@ -230,7 +230,7 @@ export function WhyJointCommercePage() {
               viewport={{ once: true, margin: "-100px" }}
               className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white uppercase"
             >
-              Why We Are A <span className="text-transparent bg-clip-text bg-gradient-to-r from-jc-teal to-[#e0fcf6]">Must-Buy</span>
+              Why We Are A <span className="text-transparent bg-clip-text bg-gradient-to-r from-jc-teal to-[#6EDDD2]">Must-Buy</span>
             </motion.h2>
           </div>
 
@@ -243,7 +243,7 @@ export function WhyJointCommercePage() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: feature.delay, ease: "easeOut" }}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="group relative bg-[#111] border border-white/10 rounded-3xl p-8 flex flex-col h-full overflow-hidden"
+                className="group relative bg-[#000] border border-white/10 rounded-3xl p-8 flex flex-col h-full overflow-hidden"
               >
                 {/* Hover Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-jc-teal/0 to-jc-teal/0 group-hover:from-jc-teal/10 group-hover:to-transparent transition-all duration-500 opacity-0 group-hover:opacity-100" />
@@ -291,7 +291,7 @@ export function WhyJointCommercePage() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="bg-[#111]/80 backdrop-blur-xl border border-jc-teal/20 rounded-[2.5rem] p-10 md:p-16 text-center shadow-[0_0_50px_rgba(0,212,178,0.05)] relative overflow-hidden group"
+            className="bg-[#000]/80 backdrop-blur-xl border border-jc-teal/20 rounded-[2.5rem] p-10 md:p-16 text-center shadow-[0_0_50px_rgba(0,212,178,0.05)] relative overflow-hidden group"
           >
             {/* Ambient inner glow */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,212,178,0.1)_0%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
@@ -305,7 +305,7 @@ export function WhyJointCommercePage() {
             </motion.div>
 
             <h3 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase mb-8">
-              What Makes Us <span className="text-transparent bg-clip-text bg-gradient-to-r from-jc-teal to-[#5ce6d0]">Different</span>
+              What Makes Us <span className="text-transparent bg-clip-text bg-gradient-to-r from-jc-teal to-[#14B8A6]">Different</span>
             </h3>
             
             <p className="text-xl md:text-3xl text-white/80 font-medium leading-relaxed max-w-4xl mx-auto">

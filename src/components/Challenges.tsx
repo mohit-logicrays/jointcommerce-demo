@@ -23,17 +23,17 @@ const tabs = [
 
 const Background0 = () => (
   <svg className="w-full h-full opacity-60" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice">
-     <motion.path d="M 0 250 L 300 250 C 400 250, 400 100, 500 100 L 900 100" stroke="#00D4B2" strokeWidth="3" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, ease: "easeInOut" }} />
+     <motion.path d="M 0 250 L 300 250 C 400 250, 400 100, 500 100 L 900 100" stroke="#14B8A6" strokeWidth="3" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, ease: "easeInOut" }} />
      <motion.circle cx="900" cy="100" r="6" fill="#ef4444" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.3 }} />
      <motion.circle cx="900" cy="100" r="12" fill="none" stroke="#ef4444" strokeWidth="2" animate={{ scale: [1, 1.5, 1], opacity: [0.8, 0, 0.8] }} transition={{ repeat: Infinity, duration: 2 }} />
 
-     <motion.path d="M 0 250 L 300 250 C 400 250, 400 350, 500 350 L 800 350" stroke="#00D4B2" strokeWidth="3" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, delay: 0.2, ease: "easeInOut" }} />
+     <motion.path d="M 0 250 L 300 250 C 400 250, 400 350, 500 350 L 800 350" stroke="#14B8A6" strokeWidth="3" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, delay: 0.2, ease: "easeInOut" }} />
      <motion.circle cx="800" cy="350" r="6" fill="#ef4444" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.5 }} />
      <motion.circle cx="800" cy="350" r="12" fill="none" stroke="#ef4444" strokeWidth="2" animate={{ scale: [1, 1.5, 1], opacity: [0.8, 0, 0.8] }} transition={{ repeat: Infinity, duration: 2, delay: 0.5 }} />
 
-     <motion.path d="M 0 250 L 950 250" stroke="#00D4B2" strokeWidth="5" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, delay: 0.1, ease: "easeInOut" }} />
+     <motion.path d="M 0 250 L 950 250" stroke="#14B8A6" strokeWidth="5" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, delay: 0.1, ease: "easeInOut" }} />
      
-     <motion.path d="M 0 250 L 300 250 C 400 250, 400 180, 500 180 L 850 180" stroke="#00D4B2" strokeWidth="3" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, delay: 0.3, ease: "easeInOut" }} />
+     <motion.path d="M 0 250 L 300 250 C 400 250, 400 180, 500 180 L 850 180" stroke="#14B8A6" strokeWidth="3" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, delay: 0.3, ease: "easeInOut" }} />
      <motion.circle cx="850" cy="180" r="6" fill="#ef4444" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.6 }} />
      <motion.circle cx="850" cy="180" r="12" fill="none" stroke="#ef4444" strokeWidth="2" animate={{ scale: [1, 1.5, 1], opacity: [0.8, 0, 0.8] }} transition={{ repeat: Infinity, duration: 2, delay: 0.2 }} />
   </svg>
@@ -41,10 +41,10 @@ const Background0 = () => (
 
 const Background1 = () => (
   <svg className="w-full h-full opacity-60" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice">
-     <motion.path d="M 0 250 C 150 450, 250 100, 450 150 S 650 450, 850 350 S 950 400, 1000 400" stroke="#00D4B2" strokeWidth="4" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, ease: "easeInOut" }} />
+     <motion.path d="M 0 250 C 150 450, 250 100, 450 150 S 650 450, 850 350 S 950 400, 1000 400" stroke="#14B8A6" strokeWidth="4" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, ease: "easeInOut" }} />
      <g transform="translate(450, 150)">
-       <motion.circle cx="0" cy="0" r="6" fill="#00D4B2" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.8 }} />
-       <motion.circle cx="0" cy="0" r="16" fill="none" stroke="#00D4B2" animate={{ scale: [1, 1.5, 1], opacity: [0.8, 0, 0.8] }} transition={{ repeat: Infinity, duration: 2 }} />
+       <motion.circle cx="0" cy="0" r="6" fill="#14B8A6" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.8 }} />
+       <motion.circle cx="0" cy="0" r="16" fill="none" stroke="#14B8A6" animate={{ scale: [1, 1.5, 1], opacity: [0.8, 0, 0.8] }} transition={{ repeat: Infinity, duration: 2 }} />
      </g>
      <g transform="translate(250, 270)">
        <motion.circle cx="0" cy="0" r="6" fill="#ef4444" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.5 }} />
@@ -55,8 +55,8 @@ const Background1 = () => (
        <motion.circle cx="0" cy="0" r="16" fill="none" stroke="#ef4444" animate={{ scale: [1, 1.5, 1], opacity: [0.8, 0, 0.8] }} transition={{ repeat: Infinity, duration: 2, delay: 1 }} />
      </g>
      <g transform="translate(850, 350)">
-       <motion.circle cx="0" cy="0" r="6" fill="#00D4B2" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.6 }} />
-       <motion.circle cx="0" cy="0" r="16" fill="none" stroke="#00D4B2" animate={{ scale: [1, 1.5, 1], opacity: [0.8, 0, 0.8] }} transition={{ repeat: Infinity, duration: 2, delay: 1.5 }} />
+       <motion.circle cx="0" cy="0" r="6" fill="#14B8A6" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.6 }} />
+       <motion.circle cx="0" cy="0" r="16" fill="none" stroke="#14B8A6" animate={{ scale: [1, 1.5, 1], opacity: [0.8, 0, 0.8] }} transition={{ repeat: Infinity, duration: 2, delay: 1.5 }} />
      </g>
   </svg>
 );
@@ -98,7 +98,7 @@ const Background3 = () => (
      <motion.g animate={{ y: [0, -10, 0], rotate: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 4.5, delay: 0.5 }}>
          <rect x="700" y="80" width="160" height="200" rx="6" fill="#374151" stroke="#6b7280" strokeWidth="3" transform="rotate(-5 700 80)" />
          <rect x="715" y="100" width="130" height="40" fill="#9ca3af" />
-         <text x="735" y="130" fill="#111827" fontSize="28" fontWeight="bold">$$$$$</text>
+         <text x="735" y="130" fill="#000000" fontSize="28" fontWeight="bold">$$$$$</text>
          {/* keys */}
          <rect x="720" y="160" width="30" height="30" fill="#1f2937" />
          <rect x="760" y="160" width="30" height="30" fill="#1f2937" />
@@ -160,9 +160,9 @@ export function Challenges() {
                            animate={{ opacity: 1, y: 0 }}
                            exit={{ opacity: 0, y: 5 }}
                            transition={{ duration: 0.2 }}
-                           className="absolute bottom-[calc(100%+12px)] left-0 w-full min-w-[280px] bg-[#111] border border-white/10 rounded-xl p-6 shadow-xl z-50 pointer-events-auto"
+                           className="absolute bottom-[calc(100%+12px)] left-0 w-full min-w-[280px] bg-[#000] border border-white/10 rounded-xl p-6 shadow-xl z-50 pointer-events-auto"
                         >
-                           <h3 className="text-lg font-bold text-[#bcf4e9] mb-4 whitespace-pre-line tracking-wide">
+                           <h3 className="text-lg font-bold text-[#6EDDD2] mb-4 whitespace-pre-line tracking-wide">
                               {tab.title}
                            </h3>
                            <p className="text-[#cccccc] text-sm mb-6 leading-relaxed font-medium">
@@ -180,7 +180,7 @@ export function Challenges() {
 
                   {/* The Bottom Box Outline */}
                   <div className={`w-full p-4 lg:p-6 border rounded-xl transition-all h-[100px] flex items-center ${
-                     activeTab === i ? 'border-jc-teal/50 bg-[#111]/80 shadow-md' : 'border-white/10 hover:border-white/30 bg-black/40 backdrop-blur-sm'
+                     activeTab === i ? 'border-jc-teal/50 bg-[#000]/80 shadow-md' : 'border-white/10 hover:border-white/30 bg-black/40 backdrop-blur-sm'
                   }`}>
                      <h3 className={`font-semibold whitespace-pre-line text-sm lg:text-base transition-colors ${
                         activeTab === i ? 'text-white' : 'text-gray-400'

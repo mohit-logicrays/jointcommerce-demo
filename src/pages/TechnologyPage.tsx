@@ -81,7 +81,7 @@ export function TechnologyPage() {
             </div>
             <div className="flex-1 grid grid-cols-3 gap-4">
                <div className="col-span-2 space-y-4">
-                  <div className="h-32 bg-gradient-to-br from-jc-teal/20 to-[#0efbba]/5 rounded-xl border border-jc-teal/20 p-4 flex flex-col justify-end">
+                  <div className="h-32 bg-gradient-to-br from-jc-teal/20 to-[#14B8A6]/5 rounded-xl border border-jc-teal/20 p-4 flex flex-col justify-end">
                      <div className="w-full h-1/2 flex items-end gap-2">
                         {[40, 70, 45, 90, 65, 100, 80].map((h, i) => (
                            <motion.div 
@@ -164,7 +164,7 @@ export function TechnologyPage() {
                 </div>
                 <div className="mt-4 pt-4 border-t border-white/10 flex justify-between items-center">
                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded bg-[#0efbba] text-[#0a0f0f] flex items-center justify-center font-bold">Buy</div>
+                      <div className="w-8 h-8 rounded bg-[#14B8A6] text-[#0a0f0f] flex items-center justify-center font-bold">Buy</div>
                       <span className="text-white/80 text-sm font-medium">Direct Placement</span>
                    </div>
                    <CheckCircle2 className="w-5 h-5 text-jc-teal" />
@@ -182,7 +182,7 @@ export function TechnologyPage() {
         >
            <div className="space-y-6">
               <h2 className="text-3xl lg:text-4xl font-bold text-white leading-tight">
-                 Utilizing <span className="text-transparent bg-clip-text bg-gradient-to-r from-jc-teal to-[#0efbba]">dynamic CPM (dCPM)</span>
+                 Utilizing <span className="text-transparent bg-clip-text bg-gradient-to-r from-jc-teal to-[#14B8A6]">dynamic CPM (dCPM)</span>
               </h2>
               <p className="text-lg text-white/80 leading-relaxed">
                  Our bid strategy wins every time, serving ads high on the publisher page and increasing in-view rate and click-through opportunities for regulated advertisers.

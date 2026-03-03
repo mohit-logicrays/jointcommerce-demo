@@ -122,7 +122,7 @@ export function ShoppableMedia() {
             className="relative w-full"
           >
             {/* TV Screen / Frame */}
-            <div className="relative z-10 bg-[#111] rounded-lg p-2 md:p-3 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border-2 md:border-[3px] border-gray-800 aspect-[16/9] overflow-hidden">
+            <div className="relative z-10 bg-[#000] rounded-lg p-2 md:p-3 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border-2 md:border-[3px] border-gray-800 aspect-[16/9] overflow-hidden">
                <video 
                 autoPlay 
                 loop 

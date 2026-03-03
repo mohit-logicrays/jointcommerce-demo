@@ -31,7 +31,7 @@ export function RetailersPage() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative aspect-square rounded-[2rem] bg-gradient-to-br from-[#111] to-[#0a0a0a] border border-white/10 p-8 shadow-2xl flex items-center justify-center overflow-hidden"
+          className="relative aspect-square rounded-[2rem] bg-gradient-to-br from-[#000] to-[#0a0a0a] border border-white/10 p-8 shadow-2xl flex items-center justify-center overflow-hidden"
         >
           {/* Abstract Graphic */}
           <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-jc-teal/20 via-transparent to-transparent opacity-50 blur-2xl"></div>
