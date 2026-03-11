@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -19,14 +19,14 @@ interface CaseStudy {
 export function CaseStudies() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Auto-slide functionality
+  // Auto-slide functionality - resets when currentSlide changes
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % caseStudiesData.length);
     }, 5000); // Change slide every 5 seconds
 
     return () => clearInterval(timer);
-  }, []);
+  }, [currentSlide]); // Reset timer when slide changes manually
 
   const currentCaseStudy = (caseStudiesData as CaseStudy[])[currentSlide];
 
@@ -36,14 +36,15 @@ export function CaseStudies() {
 
         {/* Carousel Content */}
         <div className="relative">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="text-center"
+            >
             {/* Main Visual */}
             {currentCaseStudy.homepageImage && (
               <div className="mb-12 flex justify-center">
@@ -80,7 +81,8 @@ export function CaseStudies() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
-          </motion.div>
+            </motion.div>
+          </AnimatePresence>
 
           {/* Carousel Dots */}
           <div className="flex justify-center gap-3">
