@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import caseStudiesData from '../data/caseStudies.json';
 
 interface CaseStudy {
@@ -18,15 +18,30 @@ interface CaseStudy {
 
 export function CaseStudies() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Auto-slide functionality - resets when currentSlide changes
+  // Auto-slide functionality
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % caseStudiesData.length);
-    }, 5000); // Change slide every 5 seconds
+    // Clear any existing timer
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
 
-    return () => clearInterval(timer);
-  }, [currentSlide]); // Reset timer when slide changes manually
+    // Start new timer
+    timerRef.current = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % caseStudiesData.length);
+    }, 5000);
+
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, [currentSlide]);
+
+  const handleSlideChange = (index: number) => {
+    setCurrentSlide(index);
+  };
 
   const currentCaseStudy = (caseStudiesData as CaseStudy[])[currentSlide];
 
@@ -89,7 +104,7 @@ export function CaseStudies() {
             {caseStudiesData.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentSlide(index)}
+                onClick={() => handleSlideChange(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
                   ? 'bg-jc-dark'
                   : 'bg-gray-300 hover:bg-gray-400'
