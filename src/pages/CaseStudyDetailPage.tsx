@@ -86,8 +86,8 @@ export function CaseStudyDetailPage() {
         transition={{ duration: 0.6 }}
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Left: Logo and Description */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+          {/* Left: Logo, Description, and Metrics */}
           <div>
             <div className="mb-8">
               {caseStudy.brandLogo ? (
@@ -98,9 +98,66 @@ export function CaseStudyDetailPage() {
                 </h1>
               )}
             </div>
-            <p className="text-md leading-relaxed font-medium">
+            <p className="text-md leading-relaxed font-medium mb-8">
               {caseStudy.description}
             </p>
+
+            {/* Metrics Grid - Flexible Layout */}
+            {(() => {
+              const r = caseStudy.results;
+              const availableMetrics = [
+                { label: 'ROAS', value: r?.roas, icon: TrendingUp },
+                { label: 'DRIVEN REVENUE', value: r?.revenue, icon: BarChart3 },
+                { label: 'CTR', value: r?.ctr, icon: Target },
+                { label: 'VISITS', value: r?.visits, icon: Users }
+              ].filter(metric => metric.value && metric.value !== 'N/A');
+              
+              if (availableMetrics.length === 0) return null;
+              
+              return (
+                <div className="grid grid-cols-2 gap-4 mt-8">
+                  {availableMetrics.map((metric, idx) => (
+                    <motion.div
+                      key={idx}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: idx * 0.1 }}
+                      whileHover="hover"
+                      variants={{
+                        hover: {
+                          y: -8,
+                          scale: 1.05,
+                          transition: { duration: 0.3 }
+                        }
+                      }}
+                      className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 hover:border-jc-teal hover:bg-gray-50 text-center cursor-pointer transition-colors duration-300 group"
+                    >
+                      {/* Label and Icon in horizontal layout */}
+                      <div className="flex items-center justify-center gap-2 mb-3">
+                        <p className="text-[10px] text-gray-500 tracking-wider font-bold">
+                          {metric.label}
+                        </p>
+                        <motion.div
+                          variants={{
+                            hover: {
+                              rotate: [0, -10, 10, -10, 0],
+                              scale: 1.2,
+                              transition: { duration: 0.5 }
+                            }
+                          }}
+                        >
+                          <metric.icon className="w-4 h-4 text-jc-teal" />
+                        </motion.div>
+                      </div>
+                      {/* Value below */}
+                      <p className="text-2xl font-black text-jc-dark whitespace-nowrap">
+                        {metric.value}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              );
+            })()}
           </div>
 
           {/* Right: Homepage / Product Image */}
@@ -119,61 +176,15 @@ export function CaseStudyDetailPage() {
 
       </motion.div>
 
-      {/* Metrics Section with Gray Background — only shown when all four values are available */}
-      {(() => {
-        const r = caseStudy.results;
-        const allPresent =
-          r?.roas && r.roas !== 'N/A' &&
-          r?.revenue && r.revenue !== 'N/A' &&
-          r?.ctr && r.ctr !== 'N/A' &&
-          r?.visits && r.visits !== 'N/A';
-        if (!allPresent) return null;
-        return (
-          <div className="bg-gray-100 py-16">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              {/* Metrics Grid */}
-              <div className="flex justify-center items-center gap-8 md:gap-12 lg:gap-16">
-                {[
-                  { label: 'ROAS', value: r.roas, icon: TrendingUp },
-                  { label: 'DRIVEN REVENUE', value: r.revenue, icon: BarChart3 },
-                  { label: 'CTR', value: r.ctr, icon: Target },
-                  { label: 'VISITS', value: r.visits, icon: Users }
-                ].map((metric, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: idx * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center flex-shrink-0 min-w-[160px]"
-                  >
-                    {/* Label and Icon in horizontal layout */}
-                    <div className="flex items-center justify-center gap-2 mb-4">
-                      <p className="text-xs text-gray-500 tracking-wider font-bold">
-                        {metric.label}
-                      </p>
-                      <metric.icon className="w-5 h-5 text-jc-teal" />
-                    </div>
-                    {/* Value below */}
-                    <p className="text-3xl font-black text-jc-dark whitespace-nowrap">
-                      {metric.value}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        );
-      })()}
-
       {/* Campaign Strategy Section */}
       <div className={`bg-white ${(() => {
-        const r = caseStudy.results;
-        const allPresent =
-          r?.roas && r.roas !== 'N/A' &&
-          r?.revenue && r.revenue !== 'N/A' &&
-          r?.ctr && r.ctr !== 'N/A' &&
-          r?.visits && r.visits !== 'N/A';
-        return allPresent ? 'py-20' : 'py-8';
+        // const r = caseStudy.results;
+        // const allPresent =
+        //   r?.roas && r.roas !== 'N/A' &&
+        //   r?.revenue && r.revenue !== 'N/A' &&
+        //   r?.ctr && r.ctr !== 'N/A' &&
+        //   r?.visits && r.visits !== 'N/A';
+        // return allPresent ? 'py-20' : 'py-8';
       })()}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
