@@ -2,8 +2,6 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ShoppingBag, Truck, BarChart3, Palette, Shield, TrendingUp, Users, Target } from 'lucide-react';
 import { motion } from 'framer-motion';
 import caseStudiesData from '../data/caseStudies.json';
-import AiroImage from "../../public/brands/Airo-Image.webp";
-import AiroProductImage from "../../public/brands/Airo-Products.png";
 
 interface CaseStudy {
   id: string;
@@ -11,6 +9,8 @@ interface CaseStudy {
   slug: string;
   description: string;
   thumbnail: string;
+  brandLogo?: string;
+  homepageImage?: string;
   category: string;
   results: {
     roas: string;
@@ -70,8 +70,8 @@ export function CaseStudyDetailPage() {
     <div className="min-h-screen bg-white">
       {/* Back Button */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <Link 
-          to="/" 
+        <Link
+          to="/"
           className="inline-flex items-center gap-2 text-jc-dark hover:text-jc-teal transition-colors duration-300 font-medium"
         >
           <ArrowLeft className="w-5 h-5" />
@@ -90,22 +90,26 @@ export function CaseStudyDetailPage() {
           {/* Left: Logo and Description */}
           <div>
             <div className="mb-8">
-              <h1 className="text-6xl font-bold text-jc-dark mb-2 uppercase tracking-tight">
-                <img src={AiroImage} alt="Airo Brand" className="h-16" />
-              </h1>
+              {caseStudy.brandLogo ? (
+                <img src={caseStudy.brandLogo} alt={`${caseStudy.title} Brand Logo`} className="h-16 object-contain" />
+              ) : (
+                <h1 className="text-6xl font-bold text-jc-dark mb-2 uppercase tracking-tight">
+                  {caseStudy.title}
+                </h1>
+              )}
             </div>
             <p className="text-xl leading-relaxed">
-              Co-Op Advertising Program With <span className="font-bold text-jc-dark">Airo Brands</span> To Drive Sell-Thru And Measurable Online Sales
+              {caseStudy.description}
             </p>
           </div>
 
-          {/* Right: Product Image */}
+          {/* Right: Homepage / Product Image */}
           <div className="relative">
             <div className="bg-[#6EDDD2] rounded-2xl p-8 shadow-2xl">
               <div className="relative">
-                <img 
-                  src={AiroProductImage} 
-                  alt="Airo Product Showcase" 
+                <img
+                  src={caseStudy.thumbnail}
+                  alt={`${caseStudy.title} Product Showcase`}
                   className="w-full h-auto rounded-lg shadow-xl"
                 />
               </div>
@@ -115,40 +119,51 @@ export function CaseStudyDetailPage() {
 
       </motion.div>
 
-      {/* Metrics Section with Gray Background */}
-      <div className="bg-gray-100 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Metrics Grid */}
-          <div className="flex justify-center items-center gap-8 md:gap-12 lg:gap-16">
-            {[
-              { label: 'ROAS', value: caseStudy.results?.roas || '27.48X', icon: TrendingUp },
-              { label: 'DRIVEN REVENUE', value: caseStudy.results?.revenue || '$192,290', icon: BarChart3 },
-              { label: 'CTR', value: caseStudy.results?.ctr || '0.15%', icon: Target },
-              { label: 'VISITS', value: caseStudy.results?.visits || '522', icon: Users }
-            ].map((metric, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center flex-shrink-0 min-w-[160px]"
-              >
-                {/* Label and Icon in horizontal layout */}
-                <div className="flex items-center justify-center gap-2 mb-4">
-                  <p className="text-xs text-gray-500 uppercase tracking-wider font-bold">
-                    {metric.label}
-                  </p>
-                  <metric.icon className="w-5 h-5 text-jc-teal" />
-                </div>
-                {/* Value below */}
-                <p className="text-3xl font-black text-jc-dark whitespace-nowrap">
-                  {metric.value}
-                </p>
-              </motion.div>
-            ))}
+      {/* Metrics Section with Gray Background — only shown when all four values are available */}
+      {(() => {
+        const r = caseStudy.results;
+        const allPresent =
+          r?.roas && r.roas !== 'N/A' &&
+          r?.revenue && r.revenue !== 'N/A' &&
+          r?.ctr && r.ctr !== 'N/A' &&
+          r?.visits && r.visits !== 'N/A';
+        if (!allPresent) return null;
+        return (
+          <div className="bg-gray-100 py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              {/* Metrics Grid */}
+              <div className="flex justify-center items-center gap-8 md:gap-12 lg:gap-16">
+                {[
+                  { label: 'ROAS', value: r.roas, icon: TrendingUp },
+                  { label: 'DRIVEN REVENUE', value: r.revenue, icon: BarChart3 },
+                  { label: 'CTR', value: r.ctr, icon: Target },
+                  { label: 'VISITS', value: r.visits, icon: Users }
+                ].map((metric, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center flex-shrink-0 min-w-[160px]"
+                  >
+                    {/* Label and Icon in horizontal layout */}
+                    <div className="flex items-center justify-center gap-2 mb-4">
+                      <p className="text-xs text-gray-500 uppercase tracking-wider font-bold">
+                        {metric.label}
+                      </p>
+                      <metric.icon className="w-5 h-5 text-jc-teal" />
+                    </div>
+                    {/* Value below */}
+                    <p className="text-3xl font-black text-jc-dark whitespace-nowrap">
+                      {metric.value}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        );
+      })()}
 
       {/* Campaign Strategy Section */}
       <div className="bg-white py-20">
@@ -215,7 +230,7 @@ export function CaseStudyDetailPage() {
               {caseStudy.whyBothWin?.benefits.map((benefit, idx) => {
                 const icons = [Shield, TrendingUp, Users, Target];
                 const Icon = icons[idx] || Shield;
-                
+
                 return (
                   <motion.div
                     key={idx}
@@ -223,17 +238,35 @@ export function CaseStudyDetailPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
-                    className="bg-white rounded-xl p-6 border border-gray-200 hover:border-jc-teal transition-all duration-300 hover:shadow-lg"
+                    whileHover={{
+                      y: -8,
+                      scale: 1.02,
+                      transition: { duration: 0.3, ease: "easeOut" }
+                    }}
+                    className="bg-white rounded-xl p-6 border border-gray-200 hover:border-jc-teal transition-all duration-300 hover:shadow-2xl cursor-pointer group"
                   >
-                    <div className="w-12 h-12 bg-jc-teal/10 rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-jc-teal" />
-                    </div>
-                    <h3 className="text-sm font-bold text-jc-dark mb-3 uppercase tracking-wider">
+                    <motion.div
+                      className="w-12 h-12 bg-jc-teal/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-jc-teal/20 transition-all duration-300"
+                      whileHover={{
+                        rotate: 5,
+                        scale: 1.1,
+                        transition: { duration: 0.3 }
+                      }}
+                    >
+                      <Icon className="w-6 h-6 text-jc-teal group-hover:text-jc-teal group-hover:scale-110 transition-all duration-300" />
+                    </motion.div>
+                    <motion.h3
+                      className="text-sm font-bold text-jc-dark mb-3 uppercase tracking-wider group-hover:text-jc-teal transition-colors duration-300"
+                      whileHover={{ x: 2 }}
+                    >
                       {benefit.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">
+                    </motion.h3>
+                    <motion.p
+                      className="text-sm text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300"
+                      whileHover={{ x: 2 }}
+                    >
                       {benefit.description}
-                    </p>
+                    </motion.p>
                   </motion.div>
                 );
               })}
@@ -285,35 +318,6 @@ export function CaseStudyDetailPage() {
               );
             })}
           </div>
-        </div>
-      </div>
-
-      {/* CTA Section - Light Gray Background with Black Box */}
-      <div className="bg-gray-100 py-20 relative">
-        {/* Teal accent line at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-2 bg-[#6EDDD2]"></div>
-        
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-[#6EDDD2] rounded-2xl p-12 text-center shadow-2xl"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              Ready to replicate these results for your brand?
-            </h2>
-            <p className="text-black-400 mb-8 text-lg">
-              Schedule a 15-minute consultation with our growth experts to see how we can drive your sell-thru.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-block bg-black text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider shadow-lg"
-            >
-              Book a Demo
-            </Link>
-          </motion.div>
         </div>
       </div>
     </div>

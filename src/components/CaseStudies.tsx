@@ -33,18 +33,6 @@ export function CaseStudies() {
   return (
     <section className="py-24 bg-white relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl lg:text-5xl font-bold text-jc-teal leading-[1.1] tracking-tight mb-4 uppercase">
-            CASE STUDY
-          </h2>
-        </motion.div>
 
         {/* Carousel Content */}
         <div className="relative">
@@ -57,7 +45,7 @@ export function CaseStudies() {
             className="text-center"
           >
             {/* Brand Logo */}
-            <div className="mb-12">
+            {/* <div className="mb-12">
               {currentCaseStudy.brandLogo ? (
                 <img 
                   src={currentCaseStudy.brandLogo} 
@@ -69,7 +57,7 @@ export function CaseStudies() {
                   {currentCaseStudy.title}
                 </h3>
               )}
-            </div>
+            </div> */}
 
             {/* Main Visual */}
             <div className="mb-12 flex justify-center">
@@ -78,7 +66,7 @@ export function CaseStudies() {
                   <img 
                     src={currentCaseStudy.homepageImage} 
                     alt={`${currentCaseStudy.title} Case Study Visual`} 
-                    className="w-full h-auto rounded-lg shadow-2xl"
+                    className="w-full h-auto rounded-lg"
                   />
                 ) : (
                   <div className="w-full h-64 bg-gradient-to-br from-jc-teal/20 to-jc-mint/20 rounded-lg shadow-2xl flex items-center justify-center">

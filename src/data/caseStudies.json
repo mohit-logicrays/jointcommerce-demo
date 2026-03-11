@@ -4,7 +4,7 @@
     "title": "Airo",
     "slug": "airo",
     "description": "Co-Op Advertising Program With Airo Brands To Drive Sell-Thru And Measurable Online Sales",
-    "thumbnail": "/case-studies/airo-thumbnail.jpg",
+    "thumbnail": "/brands/Airo-Thumbnail.png",
     "brandLogo": "/brands/Airo-Image.webp",
     "homepageImage": "/brands/Airo-Homepage.png",
     "category": "Retail",
@@ -66,6 +66,148 @@
         {
           "title": "CLOSED-LOOP ATTRIBUTION",
           "description": "Measure units, revenue, ROAS,conversions, timestamps, and Order IDs."
+        }
+      ]
+    }
+  },
+  {
+    "id": "eureka",
+    "title": "Eureka",
+    "slug": "eureka",
+    "description": "Co-Op Advertising Program With Eureka To Drive Sell-Thru And Measurable Online Sales",
+    "thumbnail": "/brands/Eureka-Homepage.png",
+    "brandLogo": "/brands/Eureka-Logo.png",
+    "homepageImage": "/brands/Eureka-Homepage.png",
+    "category": "Retail",
+    "results": {
+      "roas": "7.47X",
+      "revenue": "$47,635",
+      "ctr": "0.14%",
+      "visits": "432"
+    },
+    "howItWorks": [
+      {
+        "step": "1. Subscription",
+        "title": "Brand funds the display flight (monthly subscription).",
+        "icon": "subscription"
+      },
+      {
+        "step": "2. Delivery",
+        "title": "JC delivers best-in-class programmatic display (prospecting, conquesting, retargeting).",
+        "icon": "delivery"
+      },
+      {
+        "step": "3. Attribution",
+        "title": "JC Pixel attributes SKU-level sales back to media.",
+        "icon": "attribution"
+      },
+      {
+        "step": "4. Creative",
+        "title": "JointCommerce builds all ad creatives as an added value - approved by Eureka.",
+        "icon": "creative"
+      }
+    ],
+    "campaignStrategy": {
+      "description": "JointCommerce geo-targets first-party cannabis shoppers across our curated publisher network on mobile, tablet, and desktop, driving them directly to the Eureka product page on partnered retailers' online menus.",
+      "technology": "Our pixel technology dynamically retargets high-intent shoppers who abandon carts or leave before completing their purchase, bringing them back to their last point of engagement.",
+      "reporting": "All Eureka sales are tracked down to the product and order ID within the JointCommerce real-time reporting dashboard."
+    },
+    "campaignObjective": [
+      "Increase sell-through of partnered retailers",
+      "Drive measurable online revenue",
+      "Reach high-intent cannabis consumers",
+      "Track sales with closed-loop attribution"
+    ],
+    "whyBothWin": {
+      "title": "WHY BOTH EUREKA AND PARTNERED RETAILERS WIN",
+      "description": "Advertising drives consumer demand for Eureka while retailers gain qualified traffic, new customers, repeat engagement, and faster product sell-through.",
+      "benefits": [
+        {
+          "title": "PRIVACY-FIRST",
+          "description": "Retailer retains full data ownership."
+        },
+        {
+          "title": "MEDIA THAT MOVES UNITS",
+          "description": "High-intent placements across ESPN, HGTV, Food Network, HBO Max, Paramount+, NBC, ABC, and more."
+        },
+        {
+          "title": "NET-NEW SHOPPERS",
+          "description": "A21+ cannabis audiences + mainstream reach drive incremental demand."
+        },
+        {
+          "title": "CLOSED-LOOP ATTRIBUTION",
+          "description": "Measure units, revenue, ROAS, conversions, timestamps, and Order IDs."
+        }
+      ]
+    }
+  },
+  {
+    "id": "timeless",
+    "title": "Timeless",
+    "slug": "timeless",
+    "description": "Co-Op Advertising Program With Timeless To Drive Sell-Thru And Measurable Online Sales",
+    "thumbnail": "/brands/Timeless-Homepage.png",
+    "brandLogo": "/brands/Timeless-Logo.png",
+    "homepageImage": "/brands/Timeless-Homepage.png",
+    "category": "Retail",
+    "results": {
+      "roas": "12.49X",
+      "revenue": "N/A",
+      "ctr": "N/A",
+      "visits": "N/A"
+    },
+    "howItWorks": [
+      {
+        "step": "1. Subscription",
+        "title": "Brand funds the display flight (monthly subscription).",
+        "icon": "subscription"
+      },
+      {
+        "step": "2. Delivery",
+        "title": "JC delivers best-in-class programmatic display (prospecting, conquesting, retargeting).",
+        "icon": "delivery"
+      },
+      {
+        "step": "3. Attribution",
+        "title": "JC Pixel attributes SKU-level sales back to media.",
+        "icon": "attribution"
+      },
+      {
+        "step": "4. Creative",
+        "title": "JointCommerce builds all ad creatives as an added value - approved by Timeless.",
+        "icon": "creative"
+      }
+    ],
+    "campaignStrategy": {
+      "description": "JointCommerce geo-targets first-party cannabis shoppers across our curated publisher network on mobile, tablet, and desktop, driving them directly to the Timeless' product page on partnered retailers' online menus.",
+      "technology": "Our pixel technology dynamically retargets high-intent shoppers who abandon carts or leave before completing their purchase, bringing them back to their last point of engagement.",
+      "reporting": "All Timeless sales are tracked down to the product and order ID within the JointCommerce real-time reporting dashboard."
+    },
+    "campaignObjective": [
+      "Increase sell-through of partnered retailers",
+      "Drive measurable online revenue",
+      "Reach high-intent cannabis consumers",
+      "Track sales with closed-loop attribution"
+    ],
+    "whyBothWin": {
+      "title": "WHY BOTH TIMELESS AND PARTNERED RETAILERS WIN",
+      "description": "Advertising drives consumer demand for Timeless while retailers gain qualified traffic, new customers, repeat engagement, and faster product sell-through.",
+      "benefits": [
+        {
+          "title": "PRIVACY-FIRST",
+          "description": "Retailer retains full data ownership."
+        },
+        {
+          "title": "MEDIA THAT MOVES UNITS",
+          "description": "High-intent placements across ESPN, HGTV, Food Network, HBO Max, Paramount+, NBC, ABC, and more."
+        },
+        {
+          "title": "NET-NEW SHOPPERS",
+          "description": "A21+ cannabis audiences + mainstream reach drive incremental demand."
+        },
+        {
+          "title": "CLOSED-LOOP ATTRIBUTION",
+          "description": "Measure units, revenue, ROAS, conversions, timestamps, and Order IDs."
         }
       ]
     }
