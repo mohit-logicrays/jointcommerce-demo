@@ -309,7 +309,7 @@ export function CaseStudyDetailPage() {
             </p>
             <Link
               to="/contact"
-              className="inline-block bg-white text-jc-dark px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-jc-teal hover:text-white transition-all duration-300 shadow-lg"
+              className="inline-block bg-black text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider shadow-lg"
             >
               Book a Demo
             </Link>
