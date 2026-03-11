@@ -1,0 +1,136 @@
+import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import caseStudiesData from '../data/caseStudies.json';
+
+interface CaseStudy {
+  id: string;
+  title: string;
+  slug: string;
+  description: string;
+  thumbnail: string;
+  category: string;
+  brandLogo?: string;
+  homepageImage?: string;
+  results: Record<string, string>;
+}
+
+export function CaseStudies() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Auto-slide functionality
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % caseStudiesData.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const currentCaseStudy = (caseStudiesData as CaseStudy[])[currentSlide];
+
+  return (
+    <section className="py-24 bg-white relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl lg:text-5xl font-bold text-jc-teal leading-[1.1] tracking-tight mb-4 uppercase">
+            CASE STUDY
+          </h2>
+        </motion.div>
+
+        {/* Carousel Content */}
+        <div className="relative">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            {/* Brand Logo */}
+            <div className="mb-12">
+              {currentCaseStudy.brandLogo ? (
+                <img 
+                  src={currentCaseStudy.brandLogo} 
+                  alt={`${currentCaseStudy.title} Brand Logo`} 
+                  className="h-16 mx-auto"
+                />
+              ) : (
+                <h3 className="text-4xl font-bold text-jc-dark uppercase tracking-tight">
+                  {currentCaseStudy.title}
+                </h3>
+              )}
+            </div>
+
+            {/* Main Visual */}
+            <div className="mb-12 flex justify-center">
+              <div className="relative max-w-4xl">
+                {currentCaseStudy.homepageImage ? (
+                  <img 
+                    src={currentCaseStudy.homepageImage} 
+                    alt={`${currentCaseStudy.title} Case Study Visual`} 
+                    className="w-full h-auto rounded-lg shadow-2xl"
+                  />
+                ) : (
+                  <div className="w-full h-64 bg-gradient-to-br from-jc-teal/20 to-jc-mint/20 rounded-lg shadow-2xl flex items-center justify-center">
+                    <span className="text-2xl font-bold text-jc-teal uppercase">
+                      {currentCaseStudy.title} Case Study
+                    </span>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Description */}
+            <div className="mb-12">
+              <p className="text-xl text-jc-dark font-medium max-w-3xl mx-auto leading-relaxed">
+                {currentCaseStudy.id === 'airo' ? (
+                  <>
+                    Co-Op Advertising Program With <span className="font-bold">Airo Brands</span> To Drive Sell-Thru And Measurable Online Sales
+                  </>
+                ) : (
+                  currentCaseStudy.description
+                )}
+              </p>
+            </div>
+
+            {/* View Case Study Button */}
+            <div className="mb-12">
+              <Link
+                to={`/case-studies/${currentCaseStudy.slug}`}
+                className="inline-flex items-center gap-3 bg-[#6EDDD2] text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider shadow-lg group"
+              >
+                <span>View Case Study</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* Carousel Dots */}
+          <div className="flex justify-center gap-3">
+            {caseStudiesData.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide 
+                    ? 'bg-jc-dark' 
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

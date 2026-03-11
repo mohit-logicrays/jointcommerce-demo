@@ -1,0 +1,73 @@
+[
+  {
+    "id": "airo",
+    "title": "Airo",
+    "slug": "airo",
+    "description": "Co-Op Advertising Program With Airo Brands To Drive Sell-Thru And Measurable Online Sales",
+    "thumbnail": "/case-studies/airo-thumbnail.jpg",
+    "brandLogo": "/brands/Airo-Image.webp",
+    "homepageImage": "/brands/Airo-Homepage.png",
+    "category": "Retail",
+    "results": {
+      "roas": "27.48X",
+      "revenue": "$192,290",
+      "ctr": "0.15%",
+      "visits": "522"
+    },
+    "howItWorks": [
+      {
+        "step": "1. Subscription",
+        "title": "Brand funds the display flight",
+        "icon": "subscription"
+      },
+      {
+        "step": "2. Delivery",
+        "title": "JC delivers best-in-class programmatic display (prospecting, conquesting, retargeting).",
+        "icon": "delivery"
+      },
+      {
+        "step": "3. Attribution",
+        "title": "JC Pixel attributes SKU- level sales back to media.",
+        "icon": "attribution"
+      },
+      {
+        "step": "4. Creative",
+        "title": "JointCommerce builds all ad creatives as an added value - approved by Glass Meadows.",
+        "icon": "creative"
+      }
+    ],
+    "campaignStrategy": {
+      "description": "JointCommerce targeted Airo's product shoppers across a curated publisher network, placing Airo's products directly in front of high-intent consumers. These shoppers were directed directly to the Airo Brands product pages on partnered retailer online stores, reducing friction in the purchase journey and increasing the likelihood of conversion.",
+      "technology": "Our pixel technology continuously identified high-intent consumers who left the site or abandoned their cart and dynamically re-engaged them. This strategy re-engaged potential buyers and guided them back to the exact point where they previously left off.",
+      "reporting": "All campaign activity and resulting purchases were reported through the JointCommerce real-time reporting dashboard, enabling SKU-level sales tracking, order ID visibility, and full attribution to media exposure."
+    },
+    "campaignObjective": [
+      "Increase sell-through of partnered retailers",
+      "Drive measurable online revenue",
+      "Reach high-intent consumers",
+      "Track sales with closed-loop attribution"
+    ],
+    "whyBothWin": {
+      "title": "WHY BOTH GLASS MEADOWS AND PARTNERED RETAILERS WIN",
+      "description": "Advertising drives consumer demand for Glass Meadows while retailers gain qualified traffic, new customers, repeat engagement, and faster product sell-through.",
+      "benefits": [
+        {
+          "title": "PRIVACY-FIRST",
+          "description": "Retailer retains full data ownership."
+        },
+        {
+          "title": "MEDIA THAT MOVES UNITS",
+          "description": "High-intent placements across ESPN, HGTV, Food Network, HBO Max, Paramount+, NBC, ABC, and more"
+        },
+        {
+          "title": "NET-NEW SHOPPERS",
+          "description": "A21+ cannabis audiences + mainstream reach drive incremental demand."
+        },
+        {
+          "title": "CLOSED-LOOP ATTRIBUTION",
+          "description": "Measure units, revenue, ROAS,conversions, timestamps, and Order IDs."
+        }
+      ]
+    }
+  }
+]

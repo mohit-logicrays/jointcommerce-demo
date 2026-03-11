@@ -20,7 +20,7 @@ import { ShoppersPage } from './pages/ShoppersPage';
 import { EnterprisePage } from './pages/EnterprisePage';
 import { ContactPage } from './pages/ContactPage';
 import { TechnologyPage } from './pages/TechnologyPage';
-import { CaseStudiesPage } from './pages/CaseStudiesPage';
+import { CaseStudyDetailPage } from './pages/CaseStudyDetailPage';
 import { WhyJointCommercePage } from './pages/WhyJointCommercePage';
 
 function ScrollToTop({ lenis }: { lenis: Lenis | null }) {
@@ -71,6 +71,7 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/our-technology" element={<TechnologyPage />} />
         <Route path="/why-jointcommerce" element={<WhyJointCommercePage />} />
+        <Route path="/case-studies/:slug" element={<CaseStudyDetailPage />} />
       </Route>
       </Routes>
     </>
