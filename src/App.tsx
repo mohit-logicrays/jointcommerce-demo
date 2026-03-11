@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
 import { Layout } from './components/Layout';
@@ -23,33 +23,38 @@ import { TechnologyPage } from './pages/TechnologyPage';
 import { CaseStudiesPage } from './pages/CaseStudiesPage';
 import { WhyJointCommercePage } from './pages/WhyJointCommercePage';
 
-function ScrollToTop() {
+function ScrollToTop({ lenis }: { lenis: Lenis | null }) {
   const { pathname } = useLocation();
-  console.log("test")
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: false });
+    }
+  }, [pathname, lenis]);
 
   return null;
 }
 
 export default function App() {
+  const [lenis, setLenis] = useState<Lenis | null>(null);
+
   useEffect(() => {
-    const lenis = new Lenis({
+    const lenisInstance = new Lenis({
       autoRaf: true,
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
 
+    setLenis(lenisInstance);
+
     return () => {
-      lenis.destroy();
+      lenisInstance.destroy();
     };
   }, []);
 
   return (
     <>
-      <ScrollToTop />
+      <ScrollToTop lenis={lenis} />
       <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
