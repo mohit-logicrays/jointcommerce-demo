@@ -42,9 +42,20 @@ export function Navbar() {
     },
     { name: 'Enterprise', href: '/enterprise' },
     { name: 'Shoppers', href: '/shoppers' },
+    { name: 'Case Studies', href: '/#case-studies', scrollTo: 'case-studies' },
   ];
 
   const handleMobileNavClick = () => {
+    setIsMobileMenuOpen(false);
+    setOpenMobileDropdown(null);
+  };
+
+  const handleScrollToSection = (e: MouseEvent, sectionId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
     setIsMobileMenuOpen(false);
     setOpenMobileDropdown(null);
   };
@@ -106,6 +117,14 @@ export function Navbar() {
                 ) : (
                   <Link
                     to={item.href!}
+                    onClick={(e) => {
+                      if (item.scrollTo) {
+                        if (pathname === '/') {
+                          e.preventDefault();
+                          handleScrollToSection(e, item.scrollTo);
+                        }
+                      }
+                    }}
                     className={cn(
                       "text-md font-semibold transition-colors py-8 block",
                       navScrolledState ? "text-gray-600 hover:text-gray-900" : "text-white/80 hover:text-white"
@@ -185,7 +204,17 @@ export function Navbar() {
                   ) : (
                     <Link
                       to={item.href!}
-                      onClick={handleMobileNavClick}
+                      onClick={(e) => {
+                        if (item.scrollTo) {
+                          if (pathname === '/') {
+                            handleScrollToSection(e, item.scrollTo);
+                          } else {
+                            handleMobileNavClick();
+                          }
+                        } else {
+                          handleMobileNavClick();
+                        }
+                      }}
                       className="block px-3 py-3 rounded-xl text-lg font-medium text-gray-800 hover:bg-gray-50"
                     >
                       {item.name}
