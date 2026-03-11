@@ -44,39 +44,18 @@ export function CaseStudies() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            {/* Brand Logo */}
-            {/* <div className="mb-12">
-              {currentCaseStudy.brandLogo ? (
-                <img 
-                  src={currentCaseStudy.brandLogo} 
-                  alt={`${currentCaseStudy.title} Brand Logo`} 
-                  className="h-16 mx-auto"
-                />
-              ) : (
-                <h3 className="text-4xl font-bold text-jc-dark uppercase tracking-tight">
-                  {currentCaseStudy.title}
-                </h3>
-              )}
-            </div> */}
-
             {/* Main Visual */}
-            <div className="mb-12 flex justify-center">
-              <div className="relative max-w-4xl">
-                {currentCaseStudy.homepageImage ? (
-                  <img 
-                    src={currentCaseStudy.homepageImage} 
-                    alt={`${currentCaseStudy.title} Case Study Visual`} 
-                    className="w-full h-auto rounded-lg"
+            {currentCaseStudy.homepageImage && (
+              <div className="mb-12 flex justify-center">
+                <div className="relative w-full max-w-4xl">
+                  <img
+                    src={currentCaseStudy.homepageImage}
+                    alt={`${currentCaseStudy.title} Case Study Visual`}
+                    className="w-full h-auto rounded-lg object-cover"
                   />
-                ) : (
-                  <div className="w-full h-64 bg-gradient-to-br from-jc-teal/20 to-jc-mint/20 rounded-lg shadow-2xl flex items-center justify-center">
-                    <span className="text-2xl font-bold text-jc-teal uppercase">
-                      {currentCaseStudy.title} Case Study
-                    </span>
-                  </div>
-                )}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Description */}
             <div className="mb-12">
@@ -109,11 +88,10 @@ export function CaseStudies() {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide 
-                    ? 'bg-jc-dark' 
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
+                  ? 'bg-jc-dark'
+                  : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
               />
             ))}
           </div>
