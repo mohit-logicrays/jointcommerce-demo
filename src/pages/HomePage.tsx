@@ -19,23 +19,23 @@ import { HowItWorks } from '../components/HowItWorks';
 export function HomePage() {
   return (
     <>
-      <Hero />
-      <DirectoryPromo />
-      <AdvertisingPlatform />
-      <BrandsBar />
-      <CommerceNetwork />
-      <Challenges />
+      <div id="hero"><Hero /></div>
+      <div id="directory"><DirectoryPromo /></div>
+      <div id="advertising-platform"><AdvertisingPlatform /></div>
+      <div id="brands"><BrandsBar /></div>
+      <div id="commerce-network"><CommerceNetwork /></div>
+      <div id="challenges"><Challenges /></div>
       {/* <HowItWorks /> */}
-      <ShoppableMedia />
-      <ConnectedSystem />
-      <InvestingInMedia />
-      <PremiumActivation />
-      <AdTechSolutions />
-      <LaunchFaster />
-      <DirectPurchase />
-      <RealTimeReporting />
-      <CaseStudies />
-      <ExtendedAudience />
+      <div id="shoppable-media"><ShoppableMedia /></div>
+      <div id="connected-system"><ConnectedSystem /></div>
+      <div id="investing-in-media"><InvestingInMedia /></div>
+      <div id="premium-activation"><PremiumActivation /></div>
+      <div id="adtech-solutions"><AdTechSolutions /></div>
+      <div id="launch-faster"><LaunchFaster /></div>
+      <div id="direct-purchase"><DirectPurchase /></div>
+      <div id="real-time-reporting"><RealTimeReporting /></div>
+      <div id="case-studies"><CaseStudies /></div>
+      <div id="extended-audience"><ExtendedAudience /></div>
     </>
   );
 }

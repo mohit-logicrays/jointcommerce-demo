@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, MouseEvent } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -52,6 +52,8 @@ export function Navbar() {
 
   const handleScrollToSection = (e: MouseEvent, sectionId: string) => {
     e.preventDefault();
+    // Update URL hash
+    window.history.pushState(null, '', `/#${sectionId}`);
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });

@@ -24,13 +24,25 @@ import { CaseStudyDetailPage } from './pages/CaseStudyDetailPage';
 import { WhyJointCommercePage } from './pages/WhyJointCommercePage';
 
 function ScrollToTop({ lenis }: { lenis: Lenis | null }) {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
     if (lenis) {
-      lenis.scrollTo(0, { immediate: false });
+      // If there's a hash, scroll to that section
+      if (hash) {
+        // Small delay to ensure DOM is ready
+        setTimeout(() => {
+          const element = document.querySelector(hash);
+          if (element instanceof HTMLElement) {
+            lenis.scrollTo(element, { offset: -80, duration: 1.2 });
+          }
+        }, 100);
+      } else {
+        // Otherwise scroll to top
+        lenis.scrollTo(0, { immediate: false });
+      }
     }
-  }, [pathname, lenis]);
+  }, [pathname, hash, lenis]);
 
   return null;
 }
