@@ -1,6 +1,8 @@
+'use client';
+
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import brandCarouselVideo from '../static/marketing/videos/6802bef7f0d9c9a024a7960e_683890a46e00ce1107736896_Brand Carousel-transcode.mp4';
+const brandCarouselVideo = '/marketing/videos/6802bef7f0d9c9a024a7960e_683890a46e00ce1107736896_Brand Carousel-transcode.mp4';
 
 // ── Animated Counter ──────────────────────────────────────────────────────────
 function AnimatedNumber({ target, suffix = '' }: { target: number; suffix?: string }) {

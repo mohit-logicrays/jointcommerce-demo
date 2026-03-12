@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { CheckCircle2, BarChart3, Receipt } from 'lucide-react';
 

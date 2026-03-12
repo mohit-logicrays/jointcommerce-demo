@@ -1,8 +1,12 @@
+'use client';
+
+'use client';
+
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
-import brandCarouselVideo from '../static/marketing/videos/6802bef7f0d9c9a024a7960e_683890a46e00ce1107736896_Brand Carousel-transcode.mp4';
+const brandCarouselVideo = '/marketing/videos/6802bef7f0d9c9a024a7960e_683890a46e00ce1107736896_Brand Carousel-transcode.mp4';
 
 const solutions = [
   {
@@ -251,7 +255,7 @@ export function AdTechSolutions() {
                                              {sol.content}
                                          </p>
                                          <Link 
-                                            to="/solutions" 
+                                            href="/solutions" 
                                             className="inline-block px-8 py-3 bg-white border border-gray-200 text-gray-900 rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-all font-semibold tracking-wide text-sm shadow-sm"
                                          >
                                             Learn More

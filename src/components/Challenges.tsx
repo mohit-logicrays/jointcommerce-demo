@@ -1,6 +1,8 @@
+'use client';
+
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const tabs = [
   {
@@ -121,7 +123,7 @@ export function Challenges() {
       
       {/* Dynamic Backgrounds */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-         <AnimatePresence mode="crossfade">
+         <AnimatePresence mode="wait">
             {activeTab === 0 && <motion.div key="0" className="absolute inset-0" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><Background0 /></motion.div>}
             {activeTab === 1 && <motion.div key="1" className="absolute inset-0" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><Background1 /></motion.div>}
             {activeTab === 2 && <motion.div key="2" className="absolute inset-0" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><Background2 /></motion.div>}
@@ -167,7 +169,7 @@ export function Challenges() {
                               {tab.content}
                            </p>
                            <Link 
-                              to="/solutions" 
+                              href="/solutions" 
                               className="inline-block w-full text-center px-4 py-3 border border-gray-200 rounded-lg hover:border-jc-teal hover:bg-jc-teal/5 hover:text-jc-teal transition-all text-gray-700 font-medium text-sm bg-transparent"
                            >
                               Discover More

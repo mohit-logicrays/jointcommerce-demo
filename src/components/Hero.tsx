@@ -1,7 +1,9 @@
+'use client';
+
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { ArrowRight, Volume2, VolumeX } from 'lucide-react';
-import heroVideo from '../static/marketing/videos/uhhu.mp4';
+const heroVideo = '/marketing/videos/uhhu.mp4';
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);

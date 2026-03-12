@@ -1,18 +1,15 @@
+'use client';
+
 import { AnimatedBeam } from './ui/animated-beam';
 import React, { useRef } from 'react';
 import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
 import { Handshake, Eye, ShieldCheck, Network, Archive, Smartphone } from 'lucide-react';
-import logoImage from '../static/marketing/logos/logo-without-text.png';
+const logoImage = '/marketing/logos/logo-without-text.png';
 
 /* ─── Stagger parent variant ────────────────────────────────────── */
 const containerVariants = {
   hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.2,
-    },
-  },
+  visible: {},
 };
 
 /* ─── Individual node card ──────────────────────────────────────── */
@@ -22,7 +19,6 @@ const nodeVariants = {
     opacity: 1,
     scale: 1,
     y: 0,
-    transition: { type: 'spring', stiffness: 100, damping: 15 },
   },
 };
 
@@ -32,7 +28,6 @@ const mobileItemVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { type: 'spring', stiffness: 110, damping: 16 },
   },
 };
 
@@ -42,7 +37,6 @@ const centerVariants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { type: 'spring', stiffness: 100, damping: 20, delay: 0.1 },
   },
 };
 
@@ -52,7 +46,6 @@ const headingVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
@@ -61,7 +54,6 @@ const subVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.12 },
   },
 };
 
@@ -169,6 +161,7 @@ export function PremiumActivation() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
+            transition={{ duration: 0.65, ease: "easeOut" }}
           >
             <motion.span
               className="text-gray-900 inline-block"
@@ -182,7 +175,7 @@ export function PremiumActivation() {
             initial={{ scaleX: 0, opacity: 0 }}
             whileInView={{ scaleX: 1, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
             style={{ width: '200px' }}
           />
 
@@ -191,6 +184,7 @@ export function PremiumActivation() {
             variants={subVariants}
             initial="hidden"
             whileInView="visible"
+            transition={{ duration: 0.55, ease: "easeOut", delay: 0.12 }}
             viewport={{ once: true }}
           >
             PREMIUM INVENTORY. FULL TRANSPARENCY.
@@ -307,6 +301,7 @@ export function PremiumActivation() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
+            transition={{ staggerChildren: 0.12, delayChildren: 0.2 }}
             className="relative w-full h-full"
           >
             {allNodes.map((node, index) => {

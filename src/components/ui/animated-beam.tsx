@@ -1,3 +1,5 @@
+'use client';
+
 import React, { RefObject, useEffect, useId, useState } from "react"
 import { motion } from "framer-motion"
 
@@ -163,7 +165,7 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
           transition={{
             delay,
             duration,
-            ease: [0.16, 1, 0.3, 1], // https://easings.net/#easeOutExpo
+            ease: "easeOut", // https://easings.net/#easeOutExpo
             repeat: Infinity,
             repeatDelay: 0,
           }}

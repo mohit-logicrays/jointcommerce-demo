@@ -1,6 +1,8 @@
+'use client';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import caseStudiesData from '../data/caseStudies.json';
 
@@ -92,7 +94,7 @@ export function CaseStudies() {
             {/* View Case Study Button */}
             <div className="mb-12">
               <Link
-                to={`/case-studies/${currentCaseStudy.slug}`}
+                href={`/case-studies/${currentCaseStudy.slug}`}
                 className="inline-flex items-center gap-3 bg-[#6EDDD2] text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider shadow-lg group"
               >
                 <span>View Case Study</span>

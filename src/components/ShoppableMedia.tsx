@@ -1,7 +1,9 @@
+'use client';
+
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
-import shoppableVideo from '../static/marketing/videos/Comp dsds1.mp4';
-import ctvVideo from '../static/marketing/videos/Frosted NUG CTV.mp4';
+const shoppableVideo = '/marketing/videos/Comp dsds1.mp4';
+const ctvVideo = '/marketing/videos/Frosted NUG CTV.mp4';
 
 // ── Animated counter — mount-based (works inside AnimatePresence) ─────────────
 function Counter({ value, suffix = '' }: { value: number | string; suffix?: string }) {
@@ -537,7 +539,7 @@ export function ShoppableMedia() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.32, ease: [0.25, 0.46, 0.45, 0.94] }}
+                transition={{ duration: 0.32, ease: "easeOut" }}
                 className="bg-white rounded-2xl p-6 flex flex-col gap-6 border border-gray-200 shadow-xl"
               >
                 {/* Premium & Direct badge */}

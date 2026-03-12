@@ -1,6 +1,8 @@
+'use client';
+
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { useRef, useState } from 'react';
-import systemVideo from '../static/marketing/videos/6802bef7f0d9c9a024a7972d_1efbdc56490687326b08fdc33cc93706fd96a97b (2) (1)-transcode (1).mp4';
+const systemVideo = '/marketing/videos/6802bef7f0d9c9a024a7972d_1efbdc56490687326b08fdc33cc93706fd96a97b (2) (1)-transcode (1).mp4';
 import { Search, Radio, MousePointerClick, ShoppingBag, Settings2 } from 'lucide-react';
 
 export function ConnectedSystem() {

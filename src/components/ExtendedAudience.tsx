@@ -1,6 +1,8 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Target, Users, RadioTower } from 'lucide-react';
-import bgVideo from '../static/marketing/videos/6802bef7f0d9c9a024a79671_5eca3fffe575b1eed852c2467f9b2a0f90f4ea6f (1)-transcode.mp4';
+const bgVideo = '/marketing/videos/6802bef7f0d9c9a024a79671_5eca3fffe575b1eed852c2467f9b2a0f90f4ea6f (1)-transcode.mp4';
 
 export function ExtendedAudience() {
   const cards = [

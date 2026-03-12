@@ -1,6 +1,8 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Search, MonitorPlay, Route, LineChart } from 'lucide-react';
-import investingVideo from '../static/marketing/videos/investing.mp4';
+const investingVideo = '/marketing/videos/investing.mp4';
 
 export function InvestingInMedia() {
   const features = [
