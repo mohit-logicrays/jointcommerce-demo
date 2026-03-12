@@ -161,7 +161,7 @@ function StateShape({ name, d, isHovered, onEnter, onLeave }: StateProps) {
       transition={{ duration: 0.2 }}
       style={{ cursor: 'pointer' }}
     >
-      <title>{name}</title>
+      {/* <title>{name}</title> */}
     </motion.path>
   );
 }
@@ -241,7 +241,6 @@ function USAMap() {
         })()}
       </svg>
 
-      {/* Hovered state label badge
       {hoveredState && (
         <motion.div
           initial={{ opacity: 0, y: 5 }}
@@ -251,7 +250,7 @@ function USAMap() {
         >
           {hoveredState}
         </motion.div>
-      )} */}
+      )} 
     </div>
   );
 }
