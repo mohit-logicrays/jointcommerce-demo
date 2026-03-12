@@ -19,28 +19,31 @@ interface CaseStudy {
 export function CaseStudies() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const lastInteractionRef = useRef<number>(Date.now());
 
-  // Auto-slide functionality
+  // Auto-slide functionality - only runs on mount
   useEffect(() => {
-    // Clear any existing timer
-    if (timerRef.current) {
-      clearInterval(timerRef.current);
-    }
+    const startAutoSlide = () => {
+      timerRef.current = setInterval(() => {
+        // Only auto-advance if user hasn't interacted recently
+        if (Date.now() - lastInteractionRef.current > 4500) {
+          setCurrentSlide((prev) => (prev + 1) % caseStudiesData.length);
+        }
+      }, 5000);
+    };
 
-    // Start new timer
-    timerRef.current = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % caseStudiesData.length);
-    }, 5000);
+    startAutoSlide();
 
     return () => {
       if (timerRef.current) {
         clearInterval(timerRef.current);
       }
     };
-  }, [currentSlide]);
+  }, []);
 
   const handleSlideChange = (index: number) => {
     setCurrentSlide(index);
+    lastInteractionRef.current = Date.now(); // Track user interaction
   };
 
   const currentCaseStudy = (caseStudiesData as CaseStudy[])[currentSlide];
@@ -51,23 +54,23 @@ export function CaseStudies() {
 
         {/* Carousel Content */}
         <div className="relative">
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={currentSlide}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
               className="text-center"
             >
             {/* Main Visual */}
             {currentCaseStudy.homepageImage && (
               <div className="mb-12 flex justify-center">
-                <div className="relative w-full max-w-4xl">
+                <div className="relative w-full max-w-4xl h-[400px]">
                   <img
                     src={currentCaseStudy.homepageImage}
                     alt={`${currentCaseStudy.title} Case Study Visual`}
-                    className="w-full h-auto rounded-lg object-cover"
+                    className="w-full h-full rounded-lg object-contain"
                   />
                 </div>
               </div>
