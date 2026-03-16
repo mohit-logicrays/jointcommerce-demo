@@ -6,11 +6,94 @@
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --color-jc-dark: #111111;
-  --color-jc-teal: #14B8A6;
-  --color-jc-light-teal: #6EDDD2;
-  --color-jc-mint: #6EDDD2;
-  --color-jc-gray: #F5F5F5;
+  
+  /* New Design System Colors */
+  --color-deep-evergreen: #0E3B2E;
+  --color-charcoal-black: #1C1C1C;
+  --color-warm-cream: #F7F6F2;
+  --color-soft-gray: #F1F1F1;
+  --color-fresh-green: #2EB67D;
+  --color-bright-emerald: #1DB954;
+  
+  /* Legacy colors for compatibility */
+  --color-jc-dark: #1C1C1C;
+  --color-jc-teal: #1DB954;
+  --color-jc-light-teal: #2EB67D;
+  --color-jc-mint: #2EB67D;
+  --color-jc-gray: #F1F1F1;
+}
+
+/* Additional color utilities */
+@utility bg-deep-evergreen {
+  background-color: #0E3B2E;
+}
+
+@utility bg-charcoal-black {
+  background-color: #1C1C1C;
+}
+
+@utility bg-warm-cream {
+  background-color: #F7F6F2;
+}
+
+@utility bg-soft-gray {
+  background-color: #F1F1F1;
+}
+
+@utility bg-fresh-green {
+  background-color: #2EB67D;
+}
+
+@utility bg-bright-emerald {
+  background-color: #1DB954;
+}
+
+@utility text-deep-evergreen {
+  color: #0E3B2E;
+}
+
+@utility text-charcoal-black {
+  color: #1C1C1C;
+}
+
+@utility text-warm-cream {
+  color: #F7F6F2;
+}
+
+@utility text-soft-gray {
+  color: #F1F1F1;
+}
+
+@utility text-fresh-green {
+  color: #2EB67D;
+}
+
+@utility text-bright-emerald {
+  color: #1DB954;
+}
+
+@utility border-deep-evergreen {
+  border-color: #0E3B2E;
+}
+
+@utility border-charcoal-black {
+  border-color: #1C1C1C;
+}
+
+@utility border-warm-cream {
+  border-color: #F7F6F2;
+}
+
+@utility border-soft-gray {
+  border-color: #F1F1F1;
+}
+
+@utility border-fresh-green {
+  border-color: #2EB67D;
+}
+
+@utility border-bright-emerald {
+  border-color: #1DB954;
 }
 
 @layer utilities {

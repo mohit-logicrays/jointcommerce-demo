@@ -89,7 +89,7 @@ export default function RootLayout({
       </head>
       <body>
         <LenisProvider>
-          <div className="min-h-screen flex flex-col bg-jc-dark font-sans selection:bg-jc-teal selection:text-jc-dark">
+          <div className="min-h-screen flex flex-col font-sans" style={{ backgroundColor: '#F7F6F2' }}>
             <Navbar />
             <main className="flex-grow">
               {children}
