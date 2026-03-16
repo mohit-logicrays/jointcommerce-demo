@@ -1,7 +1,38 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useSpring, useInView } from 'framer-motion';
 import { TrendingUp, ShoppingCart, Eye } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+
+function AnimatedCounter({ value, duration = 2 }: { value: number; duration?: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const motionValue = useMotionValue(0);
+  const springValue = useSpring(motionValue, { 
+    duration: duration * 1000,
+    bounce: 0
+  });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    if (isInView && !hasAnimated) {
+      motionValue.set(value);
+      setHasAnimated(true);
+    }
+  }, [motionValue, isInView, value, hasAnimated]);
+
+  useEffect(() => {
+    const unsubscribe = springValue.on("change", (latest) => {
+      if (ref.current) {
+        ref.current.textContent = Intl.NumberFormat("en-US").format(Math.floor(latest));
+      }
+    });
+
+    return () => unsubscribe();
+  }, [springValue]);
+
+  return <div ref={ref} className="text-3xl font-bold text-gray-900">0</div>;
+}
 
 export function LiveActivity() {
   return (
@@ -23,15 +54,25 @@ export function LiveActivity() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="bg-white rounded-xl p-6 shadow-sm border border-soft-gray"
+            className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
           >
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-full bg-emerald-600/10 flex items-center justify-center">
+              <motion.div 
+                className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center"
+                animate={{ 
+                  scale: [1, 1.05, 1],
+                }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
                 <Eye className="w-5 h-5 text-emerald-600" />
-              </div>
-              <div className="text-3xl font-bold text-gray-900">2,184</div>
+              </motion.div>
+              <AnimatedCounter value={2184} duration={2.5} />
             </div>
-            <p className="text-sm text-gray-900/70">shoppers exploring today</p>
+            <p className="text-sm text-gray-600">shoppers exploring today</p>
           </motion.div>
 
           <motion.div
@@ -39,15 +80,26 @@ export function LiveActivity() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-white rounded-xl p-6 shadow-sm border border-soft-gray"
+            className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
           >
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center">
-                <TrendingUp className="w-5 h-5 text-emerald-500" />
-              </div>
-              <div className="text-3xl font-bold text-gray-900">417</div>
+              <motion.div 
+                className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center"
+                animate={{ 
+                  scale: [1, 1.05, 1],
+                }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.3
+                }}
+              >
+                <TrendingUp className="w-5 h-5 text-emerald-600" />
+              </motion.div>
+              <AnimatedCounter value={417} duration={2} />
             </div>
-            <p className="text-sm text-gray-900/70">menus browsed in the last hour</p>
+            <p className="text-sm text-gray-600">menus browsed in the last hour</p>
           </motion.div>
 
           <motion.div
@@ -55,15 +107,26 @@ export function LiveActivity() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="bg-white rounded-xl p-6 shadow-sm border border-soft-gray"
+            className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
           >
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-full bg-emerald-600/10 flex items-center justify-center">
+              <motion.div 
+                className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center"
+                animate={{ 
+                  scale: [1, 1.05, 1],
+                }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.6
+                }}
+              >
                 <ShoppingCart className="w-5 h-5 text-emerald-600" />
-              </div>
-              <div className="text-3xl font-bold text-gray-900">86</div>
+              </motion.div>
+              <AnimatedCounter value={86} duration={1.5} />
             </div>
-            <p className="text-sm text-gray-900/70">products added to cart today</p>
+            <p className="text-sm text-gray-600">products added to cart today</p>
           </motion.div>
         </div>
       </div>

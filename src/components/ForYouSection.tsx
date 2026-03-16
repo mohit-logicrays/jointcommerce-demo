@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Gamepad2, Tv, UtensilsCrossed } from 'lucide-react';
+import { Gamepad2, Tv, UtensilsCrossed, MapPin } from 'lucide-react';
 
 const FOR_YOU_CARDS = [
   {
@@ -25,6 +25,13 @@ const FOR_YOU_CARDS = [
     icon: UtensilsCrossed,
     gradient: 'from-orange-500/10 to-red-500/10',
   },
+  {
+    id: 4,
+    title: 'Where to Buy Locally',
+    description: 'See what shoppers are buying near you',
+    icon: MapPin,
+    gradient: 'from-emerald-500/10 to-green-500/10',
+  },
 ];
 
 export function ForYouSection() {
@@ -41,7 +48,7 @@ export function ForYouSection() {
           <p className="text-lg text-gray-900/70">Personalized recommendations</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {FOR_YOU_CARDS.map((card, index) => (
             <motion.div
               key={card.id}
@@ -49,7 +56,7 @@ export function ForYouSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`bg-gradient-to-br ${card.gradient} rounded-xl p-8 cursor-pointer hover:scale-105 transition-transform border border-soft-gray`}
+              className={`bg-gradient-to-br ${card.gradient} rounded-xl p-8 cursor-pointer hover:scale-105 transition-transform border border-gray-100`}
             >
               <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-4">
                 <card.icon className="w-7 h-7 text-gray-900" />

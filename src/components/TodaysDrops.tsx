@@ -21,13 +21,7 @@ const NEW_PRODUCTS = [
     name: 'THC + CBN Sleep Gummies',
     category: 'New Edible',
     image: '/marketing/product-placeholder.jpg',
-  },
-  {
-    id: 4,
-    name: 'Diamond Infused Pre-Roll',
-    category: 'New Pre-Roll',
-    image: '/marketing/product-placeholder.jpg',
-  },
+  }
 ];
 
 export function TodaysDrops() {
@@ -44,7 +38,7 @@ export function TodaysDrops() {
           <p className="text-lg text-gray-900/70">Fresh products just added</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {NEW_PRODUCTS.map((product, index) => (
             <motion.div
               key={product.id}

@@ -15,13 +15,7 @@ const RETAILERS = [
     name: 'High Garden Collective',
     distance: '1.2 miles away',
     deal: 'Pre-roll deals available',
-  },
-  {
-    id: 3,
-    name: 'Emerald City Cannabis',
-    distance: '1.8 miles away',
-    deal: 'New customer discount',
-  },
+  }
 ];
 
 export function RetailersNearYou() {
@@ -38,7 +32,7 @@ export function RetailersNearYou() {
           <p className="text-lg text-gray-900/70">Licensed dispensaries in your area</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           {RETAILERS.map((retailer, index) => (
             <motion.div
               key={retailer.id}

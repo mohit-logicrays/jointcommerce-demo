@@ -27,15 +27,7 @@ const TRENDING_PRODUCTS = [
     badge: 'Trending Edible',
     shoppers: '98 shoppers exploring nearby',
     image: '/marketing/product-placeholder.jpg',
-  },
-  {
-    id: 4,
-    name: 'Sour Diesel Pre-Roll',
-    category: 'Pre-Roll',
-    badge: 'Trending',
-    shoppers: '76 shoppers exploring nearby',
-    image: '/marketing/product-placeholder.jpg',
-  },
+  }
 ];
 
 export function TrendingToday() {
@@ -52,7 +44,7 @@ export function TrendingToday() {
           <p className="text-lg text-gray-900/70">Most popular products near you</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {TRENDING_PRODUCTS.map((product, index) => (
             <motion.div
               key={product.id}
