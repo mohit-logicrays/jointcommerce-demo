@@ -8,11 +8,11 @@ import { StructuredData, organizationStructuredData, websiteStructuredData, serv
 export const metadata: Metadata = {
   metadataBase: new URL('https://jointcommerce.co'),
   title: {
-    default: 'JointCommerce - Leading Commerce Media Platform',
+    default: 'JointCommerce - The Cannabis Discovery-to-Checkout Network',
     template: '%s | JointCommerce',
   },
-  description: 'The leading commerce media platform connecting brands, retailers, and shoppers. Drive growth with our comprehensive advertising solutions and retail partnerships.',
-  keywords: ['commerce media', 'retail advertising', 'brand marketing', 'shopper marketing', 'retail partnerships', 'advertising platform', 'JointCommerce'],
+  description: 'The Cannabis Discovery-to-Checkout Network. Discover what\'s trending. Buy it nearby. JointCommerce connects A21+ verified cannabis shoppers with licensed retailers.',
+  keywords: ['cannabis discovery', 'cannabis marketplace', 'dispensary finder', 'cannabis products', 'licensed retailers', 'cannabis shopping', 'JointCommerce'],
   authors: [{ name: 'JointCommerce' }],
   creator: 'JointCommerce',
   publisher: 'JointCommerce',
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://jointcommerce.co',
     siteName: 'JointCommerce',
-    title: 'JointCommerce - Leading Commerce Media Platform',
-    description: 'The leading commerce media platform connecting brands, retailers, and shoppers. Drive growth with our comprehensive advertising solutions and retail partnerships.',
+    title: 'JointCommerce - The Cannabis Discovery-to-Checkout Network',
+    description: 'Discover what\'s trending. Buy it nearby. Connect with A21+ verified cannabis shoppers and licensed retailers.',
     images: [
       {
         url: '/marketing/logos/logo-without-text.png',
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'JointCommerce - Leading Commerce Media Platform',
-    description: 'The leading commerce media platform connecting brands, retailers, and shoppers. Drive growth with our comprehensive advertising solutions and retail partnerships.',
+    title: 'JointCommerce - The Cannabis Discovery-to-Checkout Network',
+    description: 'Discover what\'s trending. Buy it nearby. Connect with A21+ verified cannabis shoppers and licensed retailers.',
     images: ['/marketing/logos/logo-without-text.png'],
     creator: '@jointcommerce',
   },

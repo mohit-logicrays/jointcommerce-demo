@@ -24,6 +24,16 @@ export function Hero() {
             <span style={{ color: '#1DB954' }}>Dispensary And Brand</span>
           </motion.h1>
 
+          {/* Homepage Tagline */}
+          <motion.div
+            className="text-2xl sm:text-3xl font-bold text-white/95 mb-4"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+          >
+            Discover What's Trending. Buy It Nearby.
+          </motion.div>
+
           {/* Subtext */}
           <motion.p 
             className="text-xl sm:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed"
