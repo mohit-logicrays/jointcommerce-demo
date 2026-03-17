@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { MapPin, Tag } from 'lucide-react';
+import Image from 'next/image';
 
 const RETAILERS = [
   {
@@ -9,12 +10,14 @@ const RETAILERS = [
     name: 'Greenleaf Dispensary',
     distance: '0.7 miles away',
     deal: '20% off vape carts',
+    image: '/brands/Greenleft-store.jpg',
   },
   {
     id: 2,
     name: 'High Garden Collective',
     distance: '1.2 miles away',
     deal: 'Pre-roll deals available',
+    image: '/brands/Pre-Rolls-Store.jpg',
   }
 ];
 
@@ -42,8 +45,13 @@ export function RetailersNearYou() {
               transition={{ delay: index * 0.1 }}
               className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow cursor-pointer group"
             >
-              <div className="w-full h-32 bg-gradient-to-br from-deep-evergreen/10 to-fresh-green/10 rounded-lg mb-4 flex items-center justify-center">
-                <div className="text-5xl">🏪</div>
+              <div className="relative w-full h-48 bg-gradient-to-br from-deep-evergreen/10 to-fresh-green/10 rounded-lg mb-4 overflow-hidden">
+                <Image
+                  src={retailer.image}
+                  alt={retailer.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
                 {retailer.name}

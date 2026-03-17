@@ -7,20 +7,34 @@ const FAVORITES = [
   {
     id: 1,
     name: 'Gelato Flower',
-    type: 'Recently viewed',
+    category: 'Flower',
+    badge: 'Recently viewed',
     icon: Heart,
+    image: '/marketing/product-placeholder.jpg',
   },
   {
     id: 2,
     name: 'Blue Dream Pre-Roll',
-    type: 'Favorite strain',
+    category: 'Pre-Roll',
+    badge: 'Favorite strain',
     icon: Heart,
+    image: '/marketing/product-placeholder.jpg',
   },
   {
     id: 3,
     name: 'Greenleaf Dispensary',
-    type: 'Preferred retailer',
+    category: 'Retailer',
+    badge: 'Preferred retailer',
     icon: Store,
+    image: '/marketing/product-placeholder.jpg',
+  },
+  {
+    id: 4,
+    name: 'Live Resin Vape Cart',
+    category: 'Vape',
+    badge: 'Saved product',
+    icon: Store,
+    image: '/marketing/product-placeholder.jpg',
   },
 ];
 
@@ -35,10 +49,10 @@ export function YourFavorites() {
           className="mb-10"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-2">Your Favorites</h2>
-          <p className="text-lg text-gray-900/70">Quick access to your saved items</p>
+          <p className="text-lg text-gray-900/70">Quickly return to products and retailers you love</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {FAVORITES.map((item, index) => (
             <motion.div
               key={item.id}
@@ -46,18 +60,23 @@ export function YourFavorites() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gray-100 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow cursor-pointer group"
+              className="bg-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer group"
             >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-emerald-600/10 flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-6 h-6 text-emerald-600" />
+              <div className="relative aspect-square bg-gradient-to-br from-deep-evergreen/5 to-fresh-green/5 flex items-center justify-center">
+                <div className="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                  <item.icon className="w-3 h-3" />
+                  {item.badge}
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-emerald-600 transition-colors">
-                    {item.name}
-                  </h3>
-                  <p className="text-sm text-gray-900/60">{item.type}</p>
-                </div>
+                <div className="text-6xl">🌿</div>
+              </div>
+              <div className="p-4">
+                <div className="text-xs text-emerald-500 font-semibold mb-1">{item.category}</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-4 group-hover:text-emerald-600 transition-colors">
+                  {item.name}
+                </h3>
+                <button className="w-full py-2.5 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-500 transition-colors">
+                  Buy Now
+                </button>
               </div>
             </motion.div>
           ))}

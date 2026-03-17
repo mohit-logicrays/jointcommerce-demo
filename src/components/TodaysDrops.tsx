@@ -35,7 +35,7 @@ export function TodaysDrops() {
           className="mb-10"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-2">New Today</h2>
-          <p className="text-lg text-gray-900/70">Fresh products just added</p>
+          <p className="text-lg text-gray-900/70">New products and menu drops from nearby retailers</p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
