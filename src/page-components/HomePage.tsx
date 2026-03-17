@@ -9,6 +9,7 @@ import { YourFavorites } from '../components/YourFavorites';
 import { TrendingNearYou } from '../components/TrendingNearYou';
 import { ExploreCannabis } from '../components/ExploreCannabis';
 import { RetailersNearYou } from '../components/RetailersNearYou';
+import { CommerceNetworkDiagram } from '../components/CommerceNetworkDiagram';
 import { ForRetailers } from '../components/ForRetailers';
 import { ForBrands } from '../components/ForBrands';
 import { FinalCTA } from '../components/FinalCTA';
@@ -25,6 +26,7 @@ export function HomePage() {
       <div id="trending-near-you"><TrendingNearYou /></div>
       <div id="explore-cannabis"><ExploreCannabis /></div>
       <div id="retailers-near-you"><RetailersNearYou /></div>
+      <div id="commerce-network"><CommerceNetworkDiagram /></div>
       <div id="for-retailers"><ForRetailers /></div>
       <div id="for-brands"><ForBrands /></div>
       <div id="final-cta"><FinalCTA /></div>
