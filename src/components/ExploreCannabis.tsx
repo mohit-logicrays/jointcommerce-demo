@@ -1,14 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const CATEGORIES = [
-  { id: 1, name: 'Flower', emoji: '🌿' },
-  { id: 2, name: 'Edibles', emoji: '🍫' },
-  { id: 3, name: 'Vapes', emoji: '💨' },
-  { id: 4, name: 'Pre-Rolls', emoji: '🚬' },
-  { id: 5, name: 'Concentrates', emoji: '💎' },
-  { id: 6, name: 'Topicals', emoji: '🧴' },
+  { id: 1, name: 'Flower', icon: '/marketing/logos/Flower.svg' },
+  { id: 2, name: 'Edibles', icon: '/marketing/logos/Edibles.svg' },
+  { id: 3, name: 'Vapes', icon: '/marketing/logos/Vapes.svg' },
+  { id: 4, name: 'Pre-Rolls', icon: '/marketing/logos/Pre-Rolls.svg' },
+  { id: 5, name: 'Concentrates', icon: '/marketing/logos/Concentrates.svg' },
+  { id: 6, name: 'Topicals', icon: '/marketing/logos/Topicals.svg' },
 ];
 
 export function ExploreCannabis() {
@@ -35,7 +36,15 @@ export function ExploreCannabis() {
               transition={{ delay: index * 0.05 }}
               className="bg-gray-100 rounded-xl p-6 text-center cursor-pointer hover:bg-emerald-600/10 hover:scale-105 transition-all group"
             >
-              <div className="text-5xl mb-3">{category.emoji}</div>
+              <div className="flex items-center justify-center mb-3 h-16">
+                <Image
+                  src={category.icon}
+                  alt={category.name}
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 object-contain"
+                />
+              </div>
               <div className="text-lg font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">
                 {category.name}
               </div>
