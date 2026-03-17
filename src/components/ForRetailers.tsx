@@ -54,7 +54,7 @@ export function ForRetailers() {
               </div>
             </div>
 
-            <button className="px-8 py-4 bg-emerald-600 text-white font-bold text-lg rounded-lg hover:bg-emerald-700 transition-colors flex items-center gap-2 group">
+            <button className="px-8 py-4 bg-[#1DB954] text-white font-bold text-lg rounded-lg hover:bg-[#2EB67D] transition-colors flex items-center gap-2 group">
               Integrate Your Menu
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </button>

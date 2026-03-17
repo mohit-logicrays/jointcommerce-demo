@@ -74,7 +74,7 @@ export function RetailersNearYou() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <button className="px-8 py-3 bg-emerald-900 text-white font-bold rounded-lg hover:bg-emerald-600 transition-colors">
+          <button className="px-8 py-3 bg-[#1DB954] text-white font-bold rounded-lg hover:bg-[#2EB67D] transition-colors">
             Browse Menu
           </button>
         </motion.div>

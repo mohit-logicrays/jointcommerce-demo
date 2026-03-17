@@ -81,7 +81,7 @@ export function TrendingToday() {
                   {product.name}
                 </h3>
                 <p className="text-sm text-gray-900/60 mb-4">{product.shoppers}</p>
-                <button className="w-full py-2.5 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-500 transition-colors">
+                <button className="w-full py-2.5 bg-[#1DB954] text-white font-bold rounded-lg hover:bg-[#2EB67D] transition-colors">
                   Buy Now
                 </button>
               </div>

@@ -253,7 +253,7 @@ export function LaunchFaster() {
             <TrendingUp className="w-5 h-5 text-jc-teal" />
             <span>Higher conversion alignment</span>
           </div>
-          <button className="px-6 py-2 rounded-full bg-jc-teal text-jc-dark font-bold text-sm hover:bg-jc-mint/90 transition-colors">
+          <button className="px-6 py-2 rounded-full bg-[#1DB954] text-white font-bold text-sm hover:bg-[#2EB67D] transition-colors">
             Get Started
           </button>
         </motion.div>

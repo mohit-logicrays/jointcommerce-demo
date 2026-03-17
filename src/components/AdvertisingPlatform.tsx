@@ -289,10 +289,10 @@ export function AdvertisingPlatform() {
               transition={{ delay: 0.2 }}
               className="flex flex-col sm:flex-row gap-4 mb-10"
             >
-              <button className="px-7 py-3 bg-jc-teal hover:bg-jc-mint text-black font-semibold rounded-[4px] transition-colors text-sm whitespace-nowrap">
+              <button className="px-7 py-3 bg-[#1DB954] hover:bg-[#2EB67D] text-white font-semibold rounded-[4px] transition-colors text-sm whitespace-nowrap">
                 Request Demo
               </button>
-              <button className="px-7 py-3 bg-transparent border border-jc-teal text-jc-teal hover:bg-jc-teal/10 font-semibold rounded-[4px] transition-colors text-sm whitespace-nowrap">
+              <button className="px-7 py-3 bg-transparent border border-[#1DB954] text-[#1DB954] hover:bg-[#1DB954]/10 font-semibold rounded-[4px] transition-colors text-sm whitespace-nowrap">
                 View Marketplace
               </button>
             </motion.div>

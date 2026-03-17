@@ -80,7 +80,7 @@ export function YourFavorites() {
                 <h3 className="text-lg font-bold text-gray-900 mb-4 group-hover:text-emerald-600 transition-colors">
                   {item.name}
                 </h3>
-                <button className="w-full py-2.5 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-500 transition-colors">
+                <button className="w-full py-2.5 bg-[#1DB954] text-white font-bold rounded-lg hover:bg-[#2EB67D] transition-colors">
                   Buy Now
                 </button>
               </div>

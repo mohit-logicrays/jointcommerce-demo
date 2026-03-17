@@ -24,7 +24,7 @@ export function RetailersPage() {
             JointCommerce empowers your retail business with a data-driven, strategic approach to overcome advertising restrictions, find new customers, and boost sales growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="h-[48px] px-8 rounded-full bg-jc-teal text-white font-bold hover:bg-jc-mint transition-colors flex items-center justify-center gap-2">
+            <button className="h-[48px] px-8 rounded-full bg-[#1DB954] text-white font-bold hover:bg-[#2EB67D] transition-colors flex items-center justify-center gap-2">
               Enable Direct Purchase
             </button>
           </div>

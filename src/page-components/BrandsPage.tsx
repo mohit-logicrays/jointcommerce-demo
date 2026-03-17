@@ -70,7 +70,7 @@ export function BrandsPage() {
             </div>
           </div>
 
-          <button className="mt-8 h-[56px] px-8 rounded-full bg-jc-teal text-white font-bold hover:bg-jc-mint transition-colors flex items-center gap-2 group shadow-sm">
+          <button className="mt-8 h-[56px] px-8 rounded-full bg-[#1DB954] text-white font-bold hover:bg-[#2EB67D] transition-colors flex items-center gap-2 group shadow-sm">
             Discuss Brand Programs <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
         </motion.div>

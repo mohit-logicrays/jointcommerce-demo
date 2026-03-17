@@ -205,11 +205,11 @@ export function TechnologyPage() {
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                 <button className="px-6 py-4 bg-transparent border-2 border-gray-300 hover:border-jc-teal text-gray-700 font-semibold rounded-xl transition-all group flex justify-center items-center gap-2">
-                    Managed-Service <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-jc-teal" />
+                 <button className="px-6 py-4 bg-transparent border-2 border-gray-300 hover:border-[#2EB67D] text-gray-700 font-semibold rounded-xl transition-all group flex justify-center items-center gap-2">
+                    Managed-Service <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-[#2EB67D]" />
                  </button>
-                 <button className="px-6 py-4 bg-transparent border-2 border-gray-300 hover:border-jc-teal text-gray-700 font-semibold rounded-xl transition-all group flex justify-center items-center gap-2">
-                    Self-Service <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-jc-teal" />
+                 <button className="px-6 py-4 bg-transparent border-2 border-gray-300 hover:border-[#2EB67D] text-gray-700 font-semibold rounded-xl transition-all group flex justify-center items-center gap-2">
+                    Self-Service <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-[#2EB67D]" />
                  </button>
               </div>
            </div>

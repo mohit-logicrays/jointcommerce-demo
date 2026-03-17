@@ -18,7 +18,7 @@ export function FinalCTA() {
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
             JointCommerce connects shoppers, brands, and licensed retailers in a live marketplace where cannabis discovery becomes instantly shoppable.
           </p>
-          <button className="px-10 py-4 bg-emerald-600 text-white font-bold text-lg rounded-lg hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2 mx-auto shadow-lg group">
+          <button className="px-10 py-4 bg-[#1DB954] text-white font-bold text-lg rounded-lg hover:bg-[#2EB67D] transition-colors flex items-center justify-center gap-2 mx-auto shadow-lg group">
             Start Discovering
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </button>

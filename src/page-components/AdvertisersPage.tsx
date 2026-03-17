@@ -74,7 +74,7 @@ export function AdvertisersPage() {
               </div>
            </div>
            
-           <button className="mt-8 px-8 py-4 bg-jc-teal text-white font-bold text-lg rounded-full hover:bg-jc-mint transition-colors duration-300 shadow-sm">
+           <button className="mt-8 px-8 py-4 bg-[#1DB954] text-white font-bold text-lg rounded-full hover:bg-[#2EB67D] transition-colors duration-300 shadow-sm">
               Access The Network
            </button>
         </motion.div>

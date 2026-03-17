@@ -177,7 +177,7 @@ export function DirectPurchase() {
                            <div className="border border-gray-200 rounded px-2 py-1 text-[9px] flex items-center justify-between w-12 bg-gray-50">1 <span className="text-[6px]">▼</span></div>
                          </div>
                          
-                         <button className="w-full bg-jc-teal text-white rounded-full py-1.5 text-[10px] font-bold mb-3 hover:bg-jc-mint transition-colors">
+                         <button className="w-full bg-[#1DB954] text-white rounded-full py-1.5 text-[10px] font-bold mb-3 hover:bg-[#2EB67D] transition-colors">
                            Add to Cart
                          </button>
                          <div className="flex items-center gap-1 text-[7px] text-gray-400 mb-3 border-b border-gray-100 pb-2">
@@ -270,7 +270,7 @@ export function DirectPurchase() {
                 </div>
               </div>
 
-              <button className="w-full py-3 bg-jc-teal text-white font-bold text-xs rounded-xl md:rounded-2xl tracking-wide flex items-center justify-center gap-2 hover:bg-jc-mint transition-all shadow-[0_10px_20px_-10px_rgba(20,184,166,0.5)]">
+              <button className="w-full py-3 bg-[#1DB954] text-white font-bold text-xs rounded-xl md:rounded-2xl tracking-wide flex items-center justify-center gap-2 hover:bg-[#2EB67D] transition-all shadow-[0_10px_20px_-10px_rgba(29,185,84,0.5)]">
                 COMPLETE PURCHASE <Lock className="w-3 h-3" />
               </button>
               

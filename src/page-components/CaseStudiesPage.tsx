@@ -150,7 +150,7 @@ export function CaseStudiesPage() {
             viewport={{ once: true }}
             className="flex justify-center"
          >
-            <button className="px-10 py-5 bg-jc-teal hover:bg-jc-mint text-white font-black tracking-wide uppercase text-sm lg:text-base rounded-full transition-colors flex items-center gap-3 group shadow-md">
+            <button className="px-10 py-5 bg-[#1DB954] hover:bg-[#2EB67D] text-white font-black tracking-wide uppercase text-sm lg:text-base rounded-full transition-colors flex items-center gap-3 group shadow-md">
                Get Started Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
          </motion.div>

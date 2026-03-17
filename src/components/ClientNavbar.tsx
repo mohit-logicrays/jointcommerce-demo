@@ -77,7 +77,7 @@ export function ClientNavbar() {
 
           {/* Auth Button */}
           <div className="hidden lg:flex items-center">
-            <button className="px-6 py-2.5 rounded-lg border-2 border-emerald-600 bg-emerald-600 text-white hover:bg-emerald-700 hover:border-emerald-700 transition-colors text-sm font-bold shadow-sm">
+            <button className="px-6 py-2.5 rounded-lg border-2 border-[#1DB954] bg-[#1DB954] text-white hover:bg-[#2EB67D] hover:border-[#2EB67D] transition-colors text-sm font-bold shadow-sm">
               Login / Verify A21+
             </button>
           </div>
@@ -116,7 +116,7 @@ export function ClientNavbar() {
                 </div>
               ))}
               <div className="pt-6 pb-2 px-3">
-                <button className="w-full px-6 py-4 rounded-lg border-2 border-emerald-600 font-bold bg-emerald-600 text-white hover:bg-emerald-700 hover:border-emerald-700 transition-colors shadow-md text-lg block text-center">
+                <button className="w-full px-6 py-4 rounded-lg border-2 border-[#1DB954] font-bold bg-[#1DB954] text-white hover:bg-[#2EB67D] hover:border-[#2EB67D] transition-colors shadow-md text-lg block text-center">
                   Login / Verify A21+
                 </button>
               </div>
