@@ -36,13 +36,14 @@ export function ExploreCannabis() {
               transition={{ delay: index * 0.05 }}
               className="bg-gray-100 rounded-xl p-6 text-center cursor-pointer hover:bg-emerald-600/10 hover:scale-105 transition-all group"
             >
-              <div className="flex items-center justify-center mb-3 h-16">
+              <div className="flex items-center justify-center mb-3 h-16 [&_svg]:fill-emerald-600 [&_path]:fill-emerald-600">
                 <Image
                   src={category.icon}
                   alt={category.name}
                   width={64}
                   height={64}
-                  className="w-16 h-16 object-contain"
+                  className="w-16 h-16 object-contain brightness-0 saturate-100"
+                  style={{ filter: 'brightness(0) saturate(100%) invert(58%) sepia(89%) saturate(1277%) hue-rotate(115deg) brightness(96%) contrast(101%)' }}
                 />
               </div>
               <div className="text-lg font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">

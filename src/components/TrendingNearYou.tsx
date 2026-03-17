@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { TrendingUp, Tag } from 'lucide-react';
+import Image from 'next/image';
 
 const LOCAL_TRENDING = [
   {
@@ -10,7 +11,7 @@ const LOCAL_TRENDING = [
     category: 'Flower',
     badge: 'Popular strain nearby',
     icon: TrendingUp,
-    image: '/marketing/product-placeholder.jpg',
+    image: '/brands/Live_Resin_Blue_Dream_Cart.jpg',
   },
   {
     id: 2,
@@ -18,7 +19,7 @@ const LOCAL_TRENDING = [
     category: 'Vape',
     badge: 'Trending tonight',
     icon: TrendingUp,
-    image: '/marketing/product-placeholder.jpg',
+    image: '/brands/Live_Resin_Blue_Dream_Cart.jpg',
   },
   {
     id: 3,
@@ -26,7 +27,7 @@ const LOCAL_TRENDING = [
     category: 'Deal',
     badge: 'Nearby retailer deal',
     icon: Tag,
-    image: '/marketing/product-placeholder.jpg',
+    image: '/brands/Late_Night_Munchies.jpg',
   },
 ];
 
@@ -54,8 +55,17 @@ export function TrendingNearYou() {
               transition={{ delay: index * 0.1 }}
               className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer group"
             >
-              <div className="relative aspect-square bg-gradient-to-br from-bright-emerald/5 to-fresh-green/5 flex items-center justify-center">
-                <div className="text-6xl">📍</div>
+              <div className="relative aspect-square bg-gradient-to-br from-bright-emerald/5 to-fresh-green/5 flex items-center justify-center overflow-hidden">
+                <div className="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 z-10">
+                  <item.icon className="w-3 h-3" />
+                  LOCAL
+                </div>
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-4">
                 <div className="text-xs text-emerald-500 font-semibold mb-1">{item.category}</div>

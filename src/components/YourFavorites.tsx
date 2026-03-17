@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Heart, Store } from 'lucide-react';
+import Image from 'next/image';
 
 const FAVORITES = [
   {
@@ -10,7 +11,7 @@ const FAVORITES = [
     category: 'Flower',
     badge: 'Recently viewed',
     icon: Heart,
-    image: '/marketing/product-placeholder.jpg',
+    image: '/brands/Gelato_Flower.jpg',
   },
   {
     id: 2,
@@ -18,7 +19,7 @@ const FAVORITES = [
     category: 'Pre-Roll',
     badge: 'Favorite strain',
     icon: Heart,
-    image: '/marketing/product-placeholder.jpg',
+    image: '/brands/Live_Resin_Blue_Dream_Cart.jpg',
   },
   {
     id: 3,
@@ -26,7 +27,7 @@ const FAVORITES = [
     category: 'Retailer',
     badge: 'Preferred retailer',
     icon: Store,
-    image: '/marketing/product-placeholder.jpg',
+    image: '/brands/Greenleft-store.jpg',
   },
   {
     id: 4,
@@ -34,7 +35,7 @@ const FAVORITES = [
     category: 'Vape',
     badge: 'Saved product',
     icon: Store,
-    image: '/marketing/product-placeholder.jpg',
+    image: '/brands/Live_Resin_Blue_Dream_Cart.jpg',
   },
 ];
 
@@ -62,12 +63,17 @@ export function YourFavorites() {
               transition={{ delay: index * 0.1 }}
               className="bg-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer group"
             >
-              <div className="relative aspect-square bg-gradient-to-br from-deep-evergreen/5 to-fresh-green/5 flex items-center justify-center">
-                <div className="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+              <div className="relative aspect-square bg-gradient-to-br from-deep-evergreen/5 to-fresh-green/5 flex items-center justify-center overflow-hidden">
+                <div className="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 z-10">
                   <item.icon className="w-3 h-3" />
                   {item.badge}
                 </div>
-                <div className="text-6xl">🌿</div>
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-4">
                 <div className="text-xs text-emerald-500 font-semibold mb-1">{item.category}</div>

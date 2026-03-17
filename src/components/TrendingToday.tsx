@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { TrendingUp } from 'lucide-react';
+import Image from 'next/image';
 
 const TRENDING_PRODUCTS = [
   {
@@ -10,7 +11,7 @@ const TRENDING_PRODUCTS = [
     category: 'Flower',
     badge: 'Trending Now',
     shoppers: '184 shoppers exploring nearby',
-    image: '/marketing/product-placeholder.jpg',
+    image: '/brands/Gelato_Flower.jpg',
   },
   {
     id: 2,
@@ -18,7 +19,7 @@ const TRENDING_PRODUCTS = [
     category: 'Vape',
     badge: 'Trending Vape',
     shoppers: '142 shoppers exploring nearby',
-    image: '/marketing/product-placeholder.jpg',
+    image: '/brands/Live_Resin_Blue_Dream_Cart.jpg',
   },
   {
     id: 3,
@@ -26,15 +27,15 @@ const TRENDING_PRODUCTS = [
     category: 'Edible',
     badge: 'Trending Edible',
     shoppers: '98 shoppers exploring nearby',
-    image: '/marketing/product-placeholder.jpg',
+    image: '/brands/Chocolate_Sleep_Gummies.jpg',
   },
-    {
+  {
     id: 4,
     name: 'Game Night Picks',
     category: 'Moment',
     badge: 'Trending Moment',
     shoppers: '98 shoppers exploring nearby',
-    image: '/marketing/product-placeholder.jpg',
+    image: '/brands/Game_Night_Picks.jpg',
   }
 ];
 
@@ -62,12 +63,17 @@ export function TrendingToday() {
               transition={{ delay: index * 0.1 }}
               className="bg-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer group"
             >
-              <div className="relative aspect-square bg-gradient-to-br from-deep-evergreen/5 to-fresh-green/5 flex items-center justify-center">
-                <div className="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+              <div className="relative aspect-square bg-gradient-to-br from-deep-evergreen/5 to-fresh-green/5 flex items-center justify-center overflow-hidden">
+                <div className="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 z-10">
                   <TrendingUp className="w-3 h-3" />
                   {product.badge}
                 </div>
-                <div className="text-6xl">🌿</div>
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-4">
                 <div className="text-xs text-emerald-500 font-semibold mb-1">{product.category}</div>

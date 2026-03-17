@@ -2,25 +2,26 @@
 
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
+import Image from 'next/image';
 
 const NEW_PRODUCTS = [
   {
     id: 1,
     name: 'Gelato Reserve',
     category: 'New Flower Drop',
-    image: '/marketing/product-placeholder.jpg',
+    image: '/brands/Gelato_Flower.jpg',
   },
   {
     id: 2,
     name: 'Live Resin Cart',
     category: 'New Vape',
-    image: '/marketing/product-placeholder.jpg',
+    image: '/brands/Live_Resin_Blue_Dream_Cart.jpg',
   },
   {
     id: 3,
     name: 'THC + CBN Sleep Gummies',
     category: 'New Edible',
-    image: '/marketing/product-placeholder.jpg',
+    image: '/brands/Chocolate_Sleep_Gummies.jpg',
   }
 ];
 
@@ -48,12 +49,17 @@ export function TodaysDrops() {
               transition={{ delay: index * 0.1 }}
               className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer group"
             >
-              <div className="relative aspect-square bg-gradient-to-br from-bright-emerald/5 to-fresh-green/5 flex items-center justify-center">
-                <div className="absolute top-3 left-3 bg-emerald-900 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+              <div className="relative aspect-square bg-gradient-to-br from-bright-emerald/5 to-fresh-green/5 flex items-center justify-center overflow-hidden">
+                <div className="absolute top-3 left-3 bg-emerald-900 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 z-10">
                   <Sparkles className="w-3 h-3" />
                   NEW
                 </div>
-                <div className="text-6xl">✨</div>
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-4">
                 <div className="text-xs text-emerald-900 font-semibold mb-1">{product.category}</div>
