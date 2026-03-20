@@ -8,6 +8,7 @@ import { ShoppableMedia } from '../components/ShoppableMedia';
 import { ConnectedSystem } from '../components/ConnectedSystem';
 import { InvestingInMedia } from '../components/InvestingInMedia';
 import { PremiumActivation } from '../components/PremiumActivation';
+import { CTVMarketplace } from '../components/CTVMarketplace';
 import { LaunchFaster } from '../components/LaunchFaster';
 import { DirectPurchase } from '../components/DirectPurchase';
 import { RealTimeReporting } from '../components/RealTimeReporting';
@@ -29,6 +30,7 @@ export function HomePage() {
       <ConnectedSystem />
       {/* <InvestingInMedia /> */}
       <PremiumActivation />
+      <CTVMarketplace />
       <AdTechSolutions />
       <LaunchFaster />
       <DirectPurchase />
