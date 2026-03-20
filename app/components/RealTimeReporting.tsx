@@ -223,20 +223,20 @@ export function RealTimeReporting() {
                     {/* Bars & Lines */}
                     <div className="absolute inset-0 flex items-end justify-between px-4 md:px-12 pointer-events-none z-10">
                        {[
-                        { bar1: 50, bar2: 5, label: "Nov '23" },
-                        { bar1: 50, bar2: 30, label: "02 Nov" },
-                        { bar1: 50, bar2: 0, label: "03 Nov" },
-                        { bar1: 50, bar2: 45, label: "04 Nov" },
-                        { bar1: 50, bar2: 45, label: "05 Nov" },
-                        { bar1: 50, bar2: 45, label: "06 Nov" },
-                        { bar1: 50, bar2: 0, label: "07 Nov" }
+                        { bar1: 70, bar2: 15, label: "Nov '23" },
+                        { bar1: 60, bar2: 45, label: "02 Nov" },
+                        { bar1: 75, bar2: 20, label: "03 Nov" },
+                        { bar1: 85, bar2: 75, label: "04 Nov" },
+                        { bar1: 95, bar2: 90, label: "05 Nov" },
+                        { bar1: 88, bar2: 80, label: "06 Nov" },
+                        { bar1: 92, bar2: 85, label: "07 Nov" }
                       ].map((data, idx) => (
                         <div key={idx} className="relative flex flex-col items-center h-[90%] w-8 justify-end">
                            <div className="flex items-end gap-1 w-full h-full relative">
                              {/* Light Teal Bar */}
-                             <div className="w-1/2 bg-[#b9f2e5] opacity-50 absolute bottom-0 left-0" style={{ height: `${data.bar1}%` }}></div>
+                             <div className="w-1/2 bg-[#b9f2e5] opacity-50 absolute bottom-0 left-0 rounded-t" style={{ height: `${data.bar1}%` }}></div>
                              {/* Black Bar */}
-                             <div className="w-1/2 bg-[#20222a] absolute bottom-0 right-0 z-10" style={{ height: `${data.bar2}%` }}></div>
+                             <div className="w-1/2 bg-[#20222a] absolute bottom-0 right-0 z-10 rounded-t" style={{ height: `${data.bar2}%` }}></div>
                            </div>
                            <span className="absolute -bottom-6 text-[8px] text-gray-400 text-center uppercase tracking-widest">{data.label}</span>
                         </div>
@@ -245,11 +245,14 @@ export function RealTimeReporting() {
 
                     {/* Connecting Line Graph */}
                     <svg className="absolute inset-0 w-full h-[90%] left-0 bottom-[10%] drop-shadow-sm pointer-events-none z-20" preserveAspectRatio="none" viewBox="0 0 100 100">
-                      <path d="M 8 98 L 22 55 L 36 98 L 50 15 L 64 5 L 78 15 L 92 98" fill="none" stroke="#20222a" strokeWidth="1.5" />
-                      <circle cx="22" cy="55" r="1.5" fill="#20222a" className="hidden md:block"/>
-                      <circle cx="36" cy="98" r="1.5" fill="#20222a" className="hidden md:block"/>
-                      <circle cx="50" cy="15" r="1.5" fill="#20222a" className="hidden md:block"/>
-                      <circle cx="64" cy="5" r="1.5" fill="#20222a" className="hidden md:block"/>
+                      <path d="M 8 70 L 22 45 L 36 70 L 50 25 L 64 10 L 78 20 L 92 15" fill="none" stroke="#20222a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <circle cx="8" cy="70" r="2" fill="#20222a" className="hidden md:block"/>
+                      <circle cx="22" cy="45" r="2" fill="#20222a" className="hidden md:block"/>
+                      <circle cx="36" cy="70" r="2" fill="#20222a" className="hidden md:block"/>
+                      <circle cx="50" cy="25" r="2" fill="#20222a" className="hidden md:block"/>
+                      <circle cx="64" cy="10" r="2" fill="#20222a" className="hidden md:block"/>
+                      <circle cx="78" cy="20" r="2" fill="#20222a" className="hidden md:block"/>
+                      <circle cx="92" cy="15" r="2" fill="#20222a" className="hidden md:block"/>
                     </svg>
                   </div>
 
