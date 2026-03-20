@@ -1,20 +1,27 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# JointCommerce - Next.js
 
-# Run and deploy your AI Studio app
+Shoppable media platform built with Next.js 15, TypeScript, and Tailwind CSS.
 
-This contains everything you need to run your app locally.
+## Quick Start
 
-View your app in AI Studio: https://ai.studio/apps/ae500abe-205f-4c30-9032-1232cd6e6b1e
+```bash
+npm install
+cp .env.example .env.local
+npm run dev
+```
 
-## Run Locally
+Open [http://localhost:3000](http://localhost:3000)
 
-**Prerequisites:**  Node.js
+## Build
 
+```bash
+npm run build
+npm start
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Environment Variables
+
+```env
+GEMINI_API_KEY=your_api_key
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
