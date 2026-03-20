@@ -17,7 +17,6 @@ import { AdTechSolutions } from '@/app/components/AdTechSolutions';
 import { HowItWorks } from '@/app/components/HowItWorks';
 
 export const metadata: Metadata = {
-  title: 'Home',
   description: 'JointCommerce - The leading shoppable media platform connecting brands, retailers, and shoppers through innovative advertising solutions.',
   openGraph: {
     title: 'JointCommerce - Shoppable Media Platform',

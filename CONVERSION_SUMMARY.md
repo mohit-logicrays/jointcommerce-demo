@@ -1,5 +1,14 @@
 # Next.js Conversion Complete ✅
 
+## ✅ Latest Updates
+
+### Favicon & Branding
+
+- ✅ Added JointCommerce favicon
+- ✅ Created dynamic icon.tsx for favicon
+- ✅ Created apple-icon.tsx for iOS devices
+- ✅ Home page title now shows "JointCommerce - Shoppable Media Platform" (not "Home | JointCommerce")
+
 ## Project Structure
 
 ```

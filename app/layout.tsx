@@ -10,9 +10,16 @@ export const metadata: Metadata = {
     default: 'JointCommerce - Shoppable Media Platform',
     template: '%s | JointCommerce',
   },
-  description: 'Transform your advertising with JointCommerce\'s shoppable media platform. Connect brands, retailers, and shoppers seamlessly.',
+  description: 'Transform your advertising with JointCommerce shoppable media platform. Connect brands, retailers, and shoppers seamlessly.',
   keywords: ['shoppable media', 'advertising platform', 'commerce network', 'retail media', 'CTV marketplace'],
   authors: [{ name: 'JointCommerce' }],
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/static/marketing/logos/logo-without-text.png', type: 'image/png' },
+    ],
+    apple: '/static/marketing/logos/logo-without-text.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
