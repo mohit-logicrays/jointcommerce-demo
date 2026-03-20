@@ -5,32 +5,32 @@ import frostedVideo from '../static/marketing/videos/Frosted NUG CTV.mp4';
 export function LaunchFaster() {
   const features = [
     {
-      icon: <Monitor className="w-5 h-5 text-jc-teal" />,
+      icon: <Monitor className="w-5 h-5 text-[#1B675E]" />,
       title: "Display",
       description: "High-impact responsive ads"
     },
     {
-      icon: <Video className="w-5 h-5 text-jc-teal" />,
+      icon: <Video className="w-5 h-5 text-[#1B675E]" />,
       title: "Video",
       description: "Optimized shoppable video units"
     },
     {
-      icon: <Tv className="w-5 h-5 text-jc-teal" />,
+      icon: <Tv className="w-5 h-5 text-[#1B675E]" />,
       title: "Connected TV",
       description: "Premium streaming placements"
     },
     {
-      icon: <Layers className="w-5 h-5 text-jc-teal" />,
+      icon: <Layers className="w-5 h-5 text-[#1B675E]" />,
       title: "Retailer-specific overlays",
       description: "Specific-retailer creative layers"
     },
     {
-      icon: <Package className="w-5 h-5 text-jc-teal" />,
+      icon: <Package className="w-5 h-5 text-[#1B675E]" />,
       title: "Product-level Units",
       description: "Granular SKU-based creative"
     },
     {
-      icon: <RefreshCw className="w-5 h-5 text-jc-teal" />,
+      icon: <RefreshCw className="w-5 h-5 text-[#1B675E]" />,
       title: "Performance refresh cycles",
       description: "Continuous creative optimization"
     }

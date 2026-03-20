@@ -222,9 +222,9 @@ export function AdTechSolutions() {
              </motion.h2>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 xl:gap-28 items-stretch">
              {/* Accordion Left */}
-             <div className="flex-1 w-full space-y-4">
+             <div className="w-full space-y-4">
                  {solutions.map((sol, idx) => {
                      const isOpen = openIndex === idx;
                      return (
@@ -266,7 +266,7 @@ export function AdTechSolutions() {
              </div>
 
              {/* Visuals Right */}
-             <div className="flex-1 w-full relative min-h-[300px] lg:min-h-[500px] flex items-center justify-center lg:mt-0">
+             <div className="w-full h-full relative flex items-center justify-center">
                  <AnimatePresence mode="wait">
                      <motion.div
                         key={openIndex}
@@ -274,7 +274,7 @@ export function AdTechSolutions() {
                         animate={{ opacity: 1, scale: 1, x: 0 }}
                         exit={{ opacity: 0, scale: 0.95, x: -20 }}
                         transition={{ duration: 0.4 }}
-                        className="w-full max-w-sm md:max-w-md aspect-square relative flex items-center justify-center"
+                        className="w-full h-full relative flex items-center justify-center"
                      >
                          <div className="absolute inset-0 bg-[#14B8A6] blur-[100px] opacity-10 rounded-full pointer-events-none" />
                          {openIndex === 0 ? (

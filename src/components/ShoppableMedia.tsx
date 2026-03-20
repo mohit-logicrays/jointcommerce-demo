@@ -77,10 +77,10 @@ function PreviewDisplay() {
         <div className="ml-2 flex-1 bg-white/10 rounded h-4 text-[9px] text-white/30 flex items-center px-2 font-mono">dispensary.com/shop</div>
       </div>
       {/* Leaderboard banner */}
-      <div className="relative w-full overflow-hidden flex-shrink-0" style={{ height: '14%' }}>
+      <div className="relative w-full overflow-hidden flex-shrink-0 bg-white" style={{ height: '14%' }}>
         <AnimatePresence mode="wait">
           <motion.img key={li} src={DISPLAY_LEADER[li]} alt="ad"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-contain"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }} />
         </AnimatePresence>
@@ -92,10 +92,10 @@ function PreviewDisplay() {
           {[80,60,90,50,70,55].map((w,i) => <div key={i} className="h-1.5 rounded bg-white/10" style={{ width: `${w}%` }} />)}
         </div>
         {/* 300×250 rectangle ad */}
-        <div className="relative rounded overflow-hidden border border-white/10 flex-shrink-0" style={{ width: '35%' }}>
+        <div className="relative rounded overflow-hidden border border-white/10 flex-shrink-0 bg-white" style={{ width: '35%' }}>
           <AnimatePresence mode="wait">
             <motion.img key={ri} src={DISPLAY_RECT[ri]} alt="ad"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-contain"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }} />
           </AnimatePresence>
@@ -114,7 +114,7 @@ function PreviewVideo() {
     <div className="w-full h-full bg-black rounded-xl overflow-hidden relative border border-white/10">
       <AnimatePresence mode="wait">
         <motion.img key={vi} src={VIDEO_ADS[vi]} alt="preroll"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-contain"
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
           transition={{ duration: 0.6 }} />
       </AnimatePresence>
@@ -177,10 +177,10 @@ function PreviewMobileApp() {
             <div className="h-1 bg-white/6 rounded w-1/2" />
           </div>
           {/* Ad slot — real image carousel */}
-          <div className="relative w-full" style={{ aspectRatio: '1/1' }}>
+          <div className="relative w-full bg-white" style={{ aspectRatio: '1/1' }}>
             <AnimatePresence mode="wait">
               <motion.img key={adIdx} src={MOBILE_ADS_REAL[adIdx]} alt="in-app ad"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-contain"
                 initial={{ opacity: 0, scale: 1.04 }} animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }} transition={{ duration: 0.55 }} />
             </AnimatePresence>
@@ -229,10 +229,10 @@ function PreviewSocial() {
             <div className="w-5 h-5 rounded-full bg-[#14B8A6]/30 border border-[#14B8A6]/50" />
             <div><div className="h-1.5 w-14 bg-white/20 rounded mb-0.5" /><div className="text-[#14B8A6] text-[6px]">Sponsored</div></div>
           </div>
-          <div className="relative" style={{ aspectRatio: '1/1' }}>
+          <div className="relative bg-white" style={{ aspectRatio: '1/1' }}>
             <AnimatePresence mode="wait">
               <motion.img key={si} src={SOCIAL_ADS[si]} alt="social ad"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-contain"
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }} />
             </AnimatePresence>
@@ -273,10 +273,10 @@ function PreviewOnMenu() {
           ))}
         </div>
         {/* Co-brand ad tile */}
-        <div className="relative w-[38%] flex-shrink-0 rounded-xl overflow-hidden border border-[#14B8A6]/25">
+        <div className="relative w-[38%] flex-shrink-0 rounded-xl overflow-hidden border border-[#14B8A6]/25 bg-white">
           <AnimatePresence mode="wait">
             <motion.img key={mi} src={MENU_ADS[mi]} alt="co-brand ad"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-contain"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
               transition={{ duration: 0.6 }} />
           </AnimatePresence>

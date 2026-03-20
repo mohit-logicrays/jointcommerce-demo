@@ -27,7 +27,7 @@ export function HomePage() {
       <HowItWorks />
       <ShoppableMedia />
       <ConnectedSystem />
-      <InvestingInMedia />
+      {/* <InvestingInMedia /> */}
       <PremiumActivation />
       <AdTechSolutions />
       <LaunchFaster />
