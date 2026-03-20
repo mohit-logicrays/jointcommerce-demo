@@ -41,6 +41,7 @@ export function Navbar() {
     },
     { name: 'Enterprise', href: '/enterprise' },
     { name: 'Shoppers', href: '/shoppers' },
+    { name: 'Case Studies', href: '/#case-studies' },
   ];
 
   const handleMobileNavClick = () => {

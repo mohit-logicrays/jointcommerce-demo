@@ -15,6 +15,7 @@ import { RealTimeReporting } from '@/app/components/RealTimeReporting';
 import { ExtendedAudience } from '@/app/components/ExtendedAudience';
 import { AdTechSolutions } from '@/app/components/AdTechSolutions';
 import { HowItWorks } from '@/app/components/HowItWorks';
+import { CaseStudies } from '@/app/components/CaseStudies';
 
 export default function HomePage() {
   return (
@@ -34,6 +35,9 @@ export default function HomePage() {
       <LaunchFaster />
       <DirectPurchase />
       <RealTimeReporting />
+      <div id="case-studies">
+        <CaseStudies />
+      </div>
       <ExtendedAudience />
     </>
   );
