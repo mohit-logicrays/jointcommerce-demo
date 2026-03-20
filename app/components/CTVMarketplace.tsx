@@ -25,8 +25,7 @@ import { motion } from 'framer-motion';
 ;
 ;
 ;
-// E! logo import removed due to special character in filename
-const eLogo = '/brands/brand-01.jpg'; // Placeholder
+const eLogo = "/static/marketing/logos/OTTLogos/E_Logo_Flat_2012 1.png";
 ;
 ;
 ;

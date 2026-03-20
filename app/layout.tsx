@@ -15,10 +15,10 @@ export const metadata: Metadata = {
   authors: [{ name: 'JointCommerce' }],
   icons: {
     icon: [
-      { url: '/favicon.ico' },
-      { url: '/static/marketing/logos/logo-without-text.png', type: 'image/png' },
+      { url: '/favicon.png', type: 'image/png' },
+      { url: '/logo-jc/logo-jc.png', type: 'image/png' },
     ],
-    apple: '/static/marketing/logos/logo-without-text.png',
+    apple: '/logo-jc/logo-jc.png',
   },
   openGraph: {
     type: 'website',
