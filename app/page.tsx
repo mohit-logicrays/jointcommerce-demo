@@ -16,14 +16,6 @@ import { ExtendedAudience } from '@/app/components/ExtendedAudience';
 import { AdTechSolutions } from '@/app/components/AdTechSolutions';
 import { HowItWorks } from '@/app/components/HowItWorks';
 
-export const metadata: Metadata = {
-  description: 'JointCommerce - The leading shoppable media platform connecting brands, retailers, and shoppers through innovative advertising solutions.',
-  openGraph: {
-    title: 'JointCommerce - Shoppable Media Platform',
-    description: 'Transform your advertising with our shoppable media platform.',
-  },
-};
-
 export default function HomePage() {
   return (
     <>

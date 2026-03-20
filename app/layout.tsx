@@ -7,11 +7,11 @@ import '@/app/globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: {
-    default: 'JointCommerce - Shoppable Media Platform',
+    default: 'JointCommerce - Discovery Infrastructure for Performance Advertisers',
     template: '%s | JointCommerce',
   },
-  description: 'Transform your advertising with JointCommerce shoppable media platform. Connect brands, retailers, and shoppers seamlessly.',
-  keywords: ['shoppable media', 'advertising platform', 'commerce network', 'retail media', 'CTV marketplace'],
+  description: 'JointCommerce powers discovery-to-commerce activation for performance-driven advertisers. Premium publisher network, direct purchase enablement, and real-time reporting.',
+  keywords: ['discovery infrastructure', 'performance advertising', 'commerce activation', 'premium publishers', 'CTV marketplace', 'direct purchase', 'retail media'],
   authors: [{ name: 'JointCommerce' }],
   icons: {
     icon: [
@@ -24,9 +24,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'JointCommerce',
+    title: 'JointCommerce - Discovery Infrastructure for Performance Advertisers',
+    description: 'Premium publisher activation, flexible routing, and direct purchase enablement for performance-driven advertisers.',
   },
   twitter: {
     card: 'summary_large_image',
+    title: 'JointCommerce - Discovery Infrastructure',
+    description: 'Performance advertising platform for regulated industries.',
   },
   robots: {
     index: true,
