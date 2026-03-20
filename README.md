@@ -1,6 +1,6 @@
 # JointCommerce - Next.js
 
-Shoppable media platform built with Next.js 15, TypeScript, and Tailwind CSS.
+Shoppable media platform built with Next.js 15, TypeScript, and Tailwind CSS..
 
 ## Quick Start
 
