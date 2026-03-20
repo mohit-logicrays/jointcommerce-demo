@@ -130,7 +130,7 @@ export function Hero() {
                   </div>
                   
                   <h3 className="text-white font-bold text-lg leading-snug mb-4 tracking-tight">
-                    Built for Cannabis Brands<br />and Retailers<br />
+                    Built for Brands<br />and Retailers<br />
                     <span className="text-jc-teal hover:text-jc-mint transition-colors cursor-default">of All Sizes</span>
                   </h3>
                   

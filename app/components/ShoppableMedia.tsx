@@ -297,7 +297,7 @@ const ACCORDION_ITEMS = [
       'Drive Conversions',
       'Reach the Right Audience',
       'Audience availability',
-      'Reach A21+ cannabis shoppers across premium publishers',
+      'Reach A21+ shoppers across premium publishers',
       'Scale Efficiently',
     ],
     stat1Label: 'Monthly reach', stat1Value: 800, stat1Suffix: 'K',

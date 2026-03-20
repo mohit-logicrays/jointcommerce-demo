@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 // Contextual SVG Icons — each tells the story of its step
 // ─────────────────────────────────────────────────────────────────────────────
 
-/** Step 1: A21+ cannabis shopper reaching across premium publishers (TV/phone/display) */
+/** Step 1: A21+ shopper reaching across premium publishers (TV/phone/display) */
 function IconReach({ on }: { on: boolean }) {
   const s = on ? '#6EDDD2' : '#14B8A6';
   return (

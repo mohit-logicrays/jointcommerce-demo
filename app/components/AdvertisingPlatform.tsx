@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { STATE_PATHS } from './statePaths';
 
 // Positions of dispensary dots on the AlbersUSA 960x600 projection, scaled to our 960x600 viewBox
-// These represent major cannabis market locations across the US
+// These represent major market locations across the US
 const DISPENSARY_DOTS: Array<{ id: string; x: number; y: number; r?: number; pulse?: boolean }> = [
   // Pacific Northwest
   { id: 'wa1', x: 112, y: 65, r: 4, pulse: true },

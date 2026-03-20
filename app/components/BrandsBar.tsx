@@ -61,7 +61,7 @@ const JettyLogo = () => (
 const CatalystLogo = () => (
   <span className="flex flex-col items-center leading-none text-white">
     <span className="font-black text-[14px] tracking-[0.25em] uppercase">CATALYST</span>
-    <span className="text-[7px] tracking-[0.12em] text-white/60 uppercase">CANNABIS DISPENSARY</span>
+    <span className="text-[7px] tracking-[0.12em] text-white/60 uppercase">DISPENSARY</span>
   </span>
 );
 
