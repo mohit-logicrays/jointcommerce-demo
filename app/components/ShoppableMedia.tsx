@@ -301,7 +301,7 @@ const ACCORDION_ITEMS = [
       'Scale Efficiently',
     ],
     stat1Label: 'Monthly reach', stat1Value: 800, stat1Suffix: 'K',
-    stat2Label: 'Avg viewability', stat2Value: 90, stat2Suffix: '%',
+    stat2Label: 'Avg viewability', stat2Value: 100, stat2Suffix: '%',
     Preview: PreviewDisplay,
   },
   {
