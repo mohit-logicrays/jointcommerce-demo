@@ -113,7 +113,7 @@ export function CommerceNetwork() {
                   Avg viewability
                 </div>
                 <div className="text-white font-black text-[2.4rem] leading-none">
-                  <AnimatedNumber target={85} suffix="%" />
+                  <AnimatedNumber target={100} suffix="%" />
                 </div>
               </div>
             </motion.div>
@@ -236,12 +236,12 @@ export function CommerceNetwork() {
                     cx="28" cy="28" r="22" fill="none" stroke="#14B8A6" strokeWidth="6" strokeLinecap="round"
                     strokeDasharray={`${2 * Math.PI * 22}`}
                     initial={{ strokeDashoffset: 2 * Math.PI * 22 }}
-                    whileInView={{ strokeDashoffset: (2 * Math.PI * 22) * 0.15 }}
+                    whileInView={{ strokeDashoffset: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1.4, delay: 0.7, ease: 'easeOut' }}
                   />
                 </svg>
-                <span className="absolute inset-0 flex items-center justify-center text-white text-[10px] font-bold">85%</span>
+                <span className="absolute inset-0 flex items-center justify-center text-white text-[10px] font-bold">100%</span>
               </div>
               <div>
                 <p className="text-white/40 text-[9px] uppercase tracking-[0.16em] font-semibold mb-0.5">Average Viewability</p>
